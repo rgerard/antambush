@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>imageKey</key>
+		<string>gorilla.jpg</string>
+		<key>nameKey</key>
+		<string>Gorillas in the mist</string>
+	</dict>
+	<dict>
+		<key>imageKey</key>
+		<string>charlie_sheen.jpg</string>
+		<key>nameKey</key>
+		<string>Charlie Sheen</string>
+	</dict>
+	<dict>
+		<key>imageKey</key>
+		<string>poop.gif</string>
+		<key>nameKey</key>
+		<string>Poop</string>
+	</dict>
+	<dict>
+		<key>nameKey</key>
+		<string>Puppies</string>
+		<key>imageKey</key>
+		<string>maltese-puppies.jpg</string>
+	</dict>
+	<dict>
+		<key>nameKey</key>
+		<string>More pups</string>
+		<key>imageKey</key>
+		<string>cutest_puppies.jpg</string>
+	</dict>
+</array>
+</plist>

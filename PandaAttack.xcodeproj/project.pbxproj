@@ -1,0 +1,380 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* PandaAttackAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		2899E5220DE3E06400AC0155 /* PandaAttackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* PandaAttackViewController.xib */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		28D7ACF80DDB3853001CB0EB /* PandaAttackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* PandaAttackViewController.m */; };
+		94A725C01336CF8300414CF3 /* attackHistory.db in Resources */ = {isa = PBXBuildFile; fileRef = 94A725BF1336CF8300414CF3 /* attackHistory.db */; };
+		94A725C91336CFCA00414CF3 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A725C81336CFCA00414CF3 /* libsqlite3.0.dylib */; };
+		94A725CE1336D03C00414CF3 /* History.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A725CD1336D03C00414CF3 /* History.m */; };
+		94A728411338774C00414CF3 /* AttackHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A7283F1338774C00414CF3 /* AttackHistoryViewController.m */; };
+		94A728421338774C00414CF3 /* AttackHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94A728401338774C00414CF3 /* AttackHistoryViewController.xib */; };
+		94C417E7133321770032B2DA /* poop.gif in Resources */ = {isa = PBXBuildFile; fileRef = 94C417E2133321770032B2DA /* poop.gif */; };
+		94C417E8133321770032B2DA /* maltese-puppies.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94C417E3133321770032B2DA /* maltese-puppies.jpg */; };
+		94C417E9133321770032B2DA /* gorilla.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94C417E4133321770032B2DA /* gorilla.jpg */; };
+		94C417EA133321770032B2DA /* cutest_puppies.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94C417E5133321770032B2DA /* cutest_puppies.jpg */; };
+		94C417EB133321770032B2DA /* charlie_sheen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94C417E6133321770032B2DA /* charlie_sheen.jpg */; };
+		94C4182C133325F50032B2DA /* SendMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */; };
+		94C4182D133325F50032B2DA /* SendMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94C4182B133325F50032B2DA /* SendMessageViewController.xib */; };
+		94C41849133328770032B2DA /* mel-gibson-braveheart.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94C41848133328770032B2DA /* mel-gibson-braveheart.jpg */; };
+		94E933661322DAB70046EB0F /* AttackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E933641322DAB70046EB0F /* AttackViewController.m */; };
+		94E933671322DAB70046EB0F /* AttackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94E933651322DAB70046EB0F /* AttackViewController.xib */; };
+		94E93BA81331B4220046EB0F /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E93BA71331B4220046EB0F /* AddressBook.framework */; };
+		94E93BAA1331B4220046EB0F /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E93BA91331B4220046EB0F /* AddressBookUI.framework */; };
+		94E93C501331BE2B0046EB0F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E93C4F1331BE2B0046EB0F /* MessageUI.framework */; };
+		94E93C9E1331CCB80046EB0F /* WeaponScrollerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E93C9C1331CCB80046EB0F /* WeaponScrollerViewController.m */; };
+		94E93C9F1331CCB80046EB0F /* WeaponScrollerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94E93C9D1331CCB80046EB0F /* WeaponScrollerViewController.xib */; };
+		94E93CAF1331CE0C0046EB0F /* SingleWeaponViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E93CAD1331CE0C0046EB0F /* SingleWeaponViewController.m */; };
+		94E93CB01331CE0C0046EB0F /* SingleWeaponViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94E93CAE1331CE0C0046EB0F /* SingleWeaponViewController.xib */; };
+		94E93CD11331CF9B0046EB0F /* iphone_contents.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94E93CD01331CF9B0046EB0F /* iphone_contents.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PandaAttackAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PandaAttackAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* PandaAttack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PandaAttack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2899E5210DE3E06400AC0155 /* PandaAttackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PandaAttackViewController.xib; sourceTree = "<group>"; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* PandaAttackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PandaAttackViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* PandaAttackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PandaAttackViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* PandaAttack_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PandaAttack_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* PandaAttack-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PandaAttack-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		94A725BF1336CF8300414CF3 /* attackHistory.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = attackHistory.db; sourceTree = "<group>"; };
+		94A725C81336CFCA00414CF3 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		94A725CC1336D03C00414CF3 /* History.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = History.h; sourceTree = "<group>"; };
+		94A725CD1336D03C00414CF3 /* History.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = History.m; sourceTree = "<group>"; };
+		94A7283E1338774C00414CF3 /* AttackHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttackHistoryViewController.h; sourceTree = "<group>"; };
+		94A7283F1338774C00414CF3 /* AttackHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttackHistoryViewController.m; sourceTree = "<group>"; };
+		94A728401338774C00414CF3 /* AttackHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AttackHistoryViewController.xib; path = Classes/AttackHistoryViewController.xib; sourceTree = "<group>"; };
+		94A7289013387B5400414CF3 /* database.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = database.sql; sourceTree = "<group>"; };
+		94C417E2133321770032B2DA /* poop.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = poop.gif; sourceTree = "<group>"; };
+		94C417E3133321770032B2DA /* maltese-puppies.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "maltese-puppies.jpg"; sourceTree = "<group>"; };
+		94C417E4133321770032B2DA /* gorilla.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gorilla.jpg; sourceTree = "<group>"; };
+		94C417E5133321770032B2DA /* cutest_puppies.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cutest_puppies.jpg; sourceTree = "<group>"; };
+		94C417E6133321770032B2DA /* charlie_sheen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = charlie_sheen.jpg; sourceTree = "<group>"; };
+		94C41829133325F50032B2DA /* SendMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMessageViewController.h; sourceTree = "<group>"; };
+		94C4182A133325F50032B2DA /* SendMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendMessageViewController.m; sourceTree = "<group>"; };
+		94C4182B133325F50032B2DA /* SendMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SendMessageViewController.xib; path = Classes/SendMessageViewController.xib; sourceTree = "<group>"; };
+		94C41848133328770032B2DA /* mel-gibson-braveheart.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mel-gibson-braveheart.jpg"; sourceTree = "<group>"; };
+		94E933631322DAB70046EB0F /* AttackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttackViewController.h; sourceTree = "<group>"; };
+		94E933641322DAB70046EB0F /* AttackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttackViewController.m; sourceTree = "<group>"; };
+		94E933651322DAB70046EB0F /* AttackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AttackViewController.xib; path = Classes/AttackViewController.xib; sourceTree = "<group>"; };
+		94E93BA71331B4220046EB0F /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		94E93BA91331B4220046EB0F /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		94E93C4F1331BE2B0046EB0F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		94E93C9B1331CCB80046EB0F /* WeaponScrollerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeaponScrollerViewController.h; sourceTree = "<group>"; };
+		94E93C9C1331CCB80046EB0F /* WeaponScrollerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeaponScrollerViewController.m; sourceTree = "<group>"; };
+		94E93C9D1331CCB80046EB0F /* WeaponScrollerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WeaponScrollerViewController.xib; path = Classes/WeaponScrollerViewController.xib; sourceTree = "<group>"; };
+		94E93CAC1331CE0C0046EB0F /* SingleWeaponViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleWeaponViewController.h; sourceTree = "<group>"; };
+		94E93CAD1331CE0C0046EB0F /* SingleWeaponViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleWeaponViewController.m; sourceTree = "<group>"; };
+		94E93CAE1331CE0C0046EB0F /* SingleWeaponViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SingleWeaponViewController.xib; path = Classes/SingleWeaponViewController.xib; sourceTree = "<group>"; };
+		94E93CD01331CF9B0046EB0F /* iphone_contents.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = iphone_contents.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				94E93BA81331B4220046EB0F /* AddressBook.framework in Frameworks */,
+				94E93BAA1331B4220046EB0F /* AddressBookUI.framework in Frameworks */,
+				94E93C501331BE2B0046EB0F /* MessageUI.framework in Frameworks */,
+				94A725C91336CFCA00414CF3 /* libsqlite3.0.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */,
+				1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* PandaAttackViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* PandaAttackViewController.m */,
+				94E933A61322DDEA0046EB0F /* Attacks */,
+				94A725CC1336D03C00414CF3 /* History.h */,
+				94A725CD1336D03C00414CF3 /* History.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* PandaAttack.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				94E93BA71331B4220046EB0F /* AddressBook.framework */,
+				94E93BA91331B4220046EB0F /* AddressBookUI.framework */,
+				94E93C4F1331BE2B0046EB0F /* MessageUI.framework */,
+				94A725C81336CFCA00414CF3 /* libsqlite3.0.dylib */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* PandaAttack_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				94E93D511331D49E0046EB0F /* images */,
+				94A725BF1336CF8300414CF3 /* attackHistory.db */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				2899E5210DE3E06400AC0155 /* PandaAttackViewController.xib */,
+				94E933651322DAB70046EB0F /* AttackViewController.xib */,
+				94A728401338774C00414CF3 /* AttackHistoryViewController.xib */,
+				94E93C9D1331CCB80046EB0F /* WeaponScrollerViewController.xib */,
+				94E93CAE1331CE0C0046EB0F /* SingleWeaponViewController.xib */,
+				94C4182B133325F50032B2DA /* SendMessageViewController.xib */,
+				8D1107310486CEB800E47090 /* PandaAttack-Info.plist */,
+				94E93CD01331CF9B0046EB0F /* iphone_contents.plist */,
+				94A7289013387B5400414CF3 /* database.sql */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		94E933A61322DDEA0046EB0F /* Attacks */ = {
+			isa = PBXGroup;
+			children = (
+				94E933631322DAB70046EB0F /* AttackViewController.h */,
+				94E933641322DAB70046EB0F /* AttackViewController.m */,
+				94A7283E1338774C00414CF3 /* AttackHistoryViewController.h */,
+				94A7283F1338774C00414CF3 /* AttackHistoryViewController.m */,
+				94E93C9B1331CCB80046EB0F /* WeaponScrollerViewController.h */,
+				94E93C9C1331CCB80046EB0F /* WeaponScrollerViewController.m */,
+				94E93CAC1331CE0C0046EB0F /* SingleWeaponViewController.h */,
+				94E93CAD1331CE0C0046EB0F /* SingleWeaponViewController.m */,
+				94C41829133325F50032B2DA /* SendMessageViewController.h */,
+				94C4182A133325F50032B2DA /* SendMessageViewController.m */,
+			);
+			name = Attacks;
+			sourceTree = "<group>";
+		};
+		94E93D511331D49E0046EB0F /* images */ = {
+			isa = PBXGroup;
+			children = (
+				94C41848133328770032B2DA /* mel-gibson-braveheart.jpg */,
+				94C417E2133321770032B2DA /* poop.gif */,
+				94C417E3133321770032B2DA /* maltese-puppies.jpg */,
+				94C417E4133321770032B2DA /* gorilla.jpg */,
+				94C417E5133321770032B2DA /* cutest_puppies.jpg */,
+				94C417E6133321770032B2DA /* charlie_sheen.jpg */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* PandaAttack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "PandaAttack" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PandaAttack;
+			productName = PandaAttack;
+			productReference = 1D6058910D05DD3D006BFB54 /* PandaAttack.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PandaAttack" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* PandaAttack */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				2899E5220DE3E06400AC0155 /* PandaAttackViewController.xib in Resources */,
+				94E933671322DAB70046EB0F /* AttackViewController.xib in Resources */,
+				94E93C9F1331CCB80046EB0F /* WeaponScrollerViewController.xib in Resources */,
+				94E93CB01331CE0C0046EB0F /* SingleWeaponViewController.xib in Resources */,
+				94E93CD11331CF9B0046EB0F /* iphone_contents.plist in Resources */,
+				94C417E7133321770032B2DA /* poop.gif in Resources */,
+				94C417E8133321770032B2DA /* maltese-puppies.jpg in Resources */,
+				94C417E9133321770032B2DA /* gorilla.jpg in Resources */,
+				94C417EA133321770032B2DA /* cutest_puppies.jpg in Resources */,
+				94C417EB133321770032B2DA /* charlie_sheen.jpg in Resources */,
+				94C4182D133325F50032B2DA /* SendMessageViewController.xib in Resources */,
+				94C41849133328770032B2DA /* mel-gibson-braveheart.jpg in Resources */,
+				94A725C01336CF8300414CF3 /* attackHistory.db in Resources */,
+				94A728421338774C00414CF3 /* AttackHistoryViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* PandaAttackAppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* PandaAttackViewController.m in Sources */,
+				94E933661322DAB70046EB0F /* AttackViewController.m in Sources */,
+				94E93C9E1331CCB80046EB0F /* WeaponScrollerViewController.m in Sources */,
+				94E93CAF1331CE0C0046EB0F /* SingleWeaponViewController.m in Sources */,
+				94C4182C133325F50032B2DA /* SendMessageViewController.m in Sources */,
+				94A725CE1336D03C00414CF3 /* History.m in Sources */,
+				94A728411338774C00414CF3 /* AttackHistoryViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PandaAttack_Prefix.pch;
+				INFOPLIST_FILE = "PandaAttack-Info.plist";
+				PRODUCT_NAME = PandaAttack;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PandaAttack_Prefix.pch;
+				INFOPLIST_FILE = "PandaAttack-Info.plist";
+				PRODUCT_NAME = PandaAttack;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "PandaAttack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PandaAttack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
