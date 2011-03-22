@@ -17,8 +17,11 @@
 	AttackViewController *attackViewController;
 	UINavigationController *attackNavigationController;
 	
-	sqlite3 *database;
+	sqlite3 *historyDatabase;
 	NSMutableArray *dbHistory;
+	
+	sqlite3 *attacksDatabase;
+	NSMutableArray *dbAttacks;	
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
@@ -26,11 +29,13 @@
 @property (nonatomic, retain) IBOutlet AttackViewController *attackViewController;
 @property (nonatomic, retain) IBOutlet UINavigationController *attackNavigationController;
 @property (nonatomic, retain) NSMutableArray *dbHistory;
+@property (nonatomic, retain) NSMutableArray *dbAttacks;
 
 -(void)startTimer;
 -(void)viewSwitch;
--(void)createEditableCopyOfDatabase;
--(void)initializeDatabase;
+-(void)createEditableCopyOfDatabase:(NSString*)fileName;
+-(void)initializeHistoryDatabase:(NSString*)fileName;
+-(void)initializeAttacksDatabase:(NSString*)fileName;
 -(void)addAttack:(History*)historyItem;
 
 @end

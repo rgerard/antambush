@@ -38,6 +38,9 @@
 
 // respond to the ask button click
 -(void)attackBtnClick:(UIView*)clickedButton {
+	// Save the message
+	attackHistory.message = inputMessage.text;
+	
 	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
 	[appDelegate addAttack:attackHistory];
 	

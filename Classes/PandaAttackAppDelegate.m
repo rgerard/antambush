@@ -23,8 +23,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
 	// Init the DB
-	[self createEditableCopyOfDatabase];
-	[self initializeDatabase];
+	[self createEditableCopyOfDatabase:@"attackHistory.db"];
+	[self initializeHistoryDatabase:@"attackHistory.db"];
+
+	[self createEditableCopyOfDatabase:@"recentAttacks.db"];
+	[self initializeAttacksDatabase:@"recentAttacks.db"];	
 	
     // Init the controllers
 	attackViewController = [[AttackViewController alloc] init];
@@ -65,40 +68,42 @@
 	//[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(detectOrientation) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
 }
 
--(void)createEditableCopyOfDatabase {
+-(void)createEditableCopyOfDatabase:(NSString*)dbFileName {
 	BOOL success;
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	NSError *error;
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *documentsDirectory = [paths objectAtIndex:0];
-	NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"attackHistory.db"];
+	
+	// 
+	NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:dbFileName];
 	success = [fileManager fileExistsAtPath:writableDBPath];
 	if(success) {
 		return;
 	}
 	
-	NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"attackHistory.db"];
+	NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:dbFileName];
 	success = [fileManager copyItemAtPath:defaultDBPath toPath:writableDBPath error:&error];
 	if(!success) {
 		NSAssert1(0, @"Failed to create writable database: ", [error localizedDescription]);
 	}
 }
 
--(void)initializeDatabase {
+-(void)initializeHistoryDatabase:(NSString*)dbFileName {
 	dbHistory = [[NSMutableArray alloc] initWithCapacity:1];
 	
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *documentsDirectory = [paths objectAtIndex:0];
-	NSString *path = [documentsDirectory stringByAppendingPathComponent:@"attackHistory.db"];
+	NSString *path = [documentsDirectory stringByAppendingPathComponent:dbFileName];
 	
-	if(sqlite3_open([path UTF8String], &database) == SQLITE_OK) {
+	if(sqlite3_open([path UTF8String], &historyDatabase) == SQLITE_OK) {
 		const char* sql = "SELECT id FROM history";
 		sqlite3_stmt *statement;
 		
-		if(sqlite3_prepare_v2(database, sql, -1, &statement, NULL) == SQLITE_OK) {
+		if(sqlite3_prepare_v2(historyDatabase, sql, -1, &statement, NULL) == SQLITE_OK) {
 			while(sqlite3_step(statement) == SQLITE_ROW) {
 				int primaryKey = sqlite3_column_int(statement, 0);
-				History *hist = [[History alloc] initWithPrimaryKey:primaryKey database:database];
+				History *hist = [[History alloc] initWithPrimaryKey:primaryKey database:historyDatabase];
 				[dbHistory addObject:hist];
 				[hist release];
 			}
@@ -106,15 +111,42 @@
 		
 		sqlite3_finalize(statement);
 	} else {
-		sqlite3_close(database);
-		NSAssert1(0, @"Failed to open database: %s", sqlite3_errmsg(database));
+		sqlite3_close(historyDatabase);
+		NSAssert1(0, @"Failed to open database: %s", sqlite3_errmsg(historyDatabase));
+	}
+}
+
+-(void)initializeAttacksDatabase:(NSString*)dbFileName {
+	dbAttacks = [[NSMutableArray alloc] initWithCapacity:1];
+	
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *documentsDirectory = [paths objectAtIndex:0];
+	NSString *path = [documentsDirectory stringByAppendingPathComponent:dbFileName];
+	
+	if(sqlite3_open([path UTF8String], &attacksDatabase) == SQLITE_OK) {
+		const char* sql = "SELECT id FROM attacks";
+		sqlite3_stmt *statement;
+		
+		if(sqlite3_prepare_v2(attacksDatabase, sql, -1, &statement, NULL) == SQLITE_OK) {
+			while(sqlite3_step(statement) == SQLITE_ROW) {
+				int primaryKey = sqlite3_column_int(statement, 0);
+				//History *hist = [[History alloc] initWithPrimaryKey:primaryKey database:attacksDatabase];
+				//[dbAttacks addObject:hist];
+				//[hist release];
+			}
+		}
+		
+		sqlite3_finalize(statement);
+	} else {
+		sqlite3_close(attacksDatabase);
+		NSAssert1(0, @"Failed to open database: %s", sqlite3_errmsg(attacksDatabase));
 	}
 }
 
 -(void)addAttack:(History*)historyItem {
 	NSLog(@"Adding attack!");
-	NSInteger pk = [historyItem insertNewAttack:database];
-	History *item = [[History alloc] initWithPrimaryKey:pk database:database];
+	NSInteger pk = [historyItem insertNewAttack:historyDatabase];
+	History *item = [[History alloc] initWithPrimaryKey:pk database:historyDatabase];
 	[dbHistory addObject:item];
 }
 

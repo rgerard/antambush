@@ -20,6 +20,8 @@
 		94A725CE1336D03C00414CF3 /* History.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A725CD1336D03C00414CF3 /* History.m */; };
 		94A728411338774C00414CF3 /* AttackHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A7283F1338774C00414CF3 /* AttackHistoryViewController.m */; };
 		94A728421338774C00414CF3 /* AttackHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94A728401338774C00414CF3 /* AttackHistoryViewController.xib */; };
+		94A728AB1338820800414CF3 /* recentAttacks.db in Resources */ = {isa = PBXBuildFile; fileRef = 94A728AA1338820800414CF3 /* recentAttacks.db */; };
+		94A728C01338827900414CF3 /* Attack.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A728BF1338827900414CF3 /* Attack.m */; };
 		94C417E7133321770032B2DA /* poop.gif in Resources */ = {isa = PBXBuildFile; fileRef = 94C417E2133321770032B2DA /* poop.gif */; };
 		94C417E8133321770032B2DA /* maltese-puppies.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94C417E3133321770032B2DA /* maltese-puppies.jpg */; };
 		94C417E9133321770032B2DA /* gorilla.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94C417E4133321770032B2DA /* gorilla.jpg */; };
@@ -62,6 +64,9 @@
 		94A7283F1338774C00414CF3 /* AttackHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttackHistoryViewController.m; sourceTree = "<group>"; };
 		94A728401338774C00414CF3 /* AttackHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AttackHistoryViewController.xib; path = Classes/AttackHistoryViewController.xib; sourceTree = "<group>"; };
 		94A7289013387B5400414CF3 /* database.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = database.sql; sourceTree = "<group>"; };
+		94A728AA1338820800414CF3 /* recentAttacks.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = recentAttacks.db; sourceTree = "<group>"; };
+		94A728BE1338827900414CF3 /* Attack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attack.h; sourceTree = "<group>"; };
+		94A728BF1338827900414CF3 /* Attack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Attack.m; sourceTree = "<group>"; };
 		94C417E2133321770032B2DA /* poop.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = poop.gif; sourceTree = "<group>"; };
 		94C417E3133321770032B2DA /* maltese-puppies.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "maltese-puppies.jpg"; sourceTree = "<group>"; };
 		94C417E4133321770032B2DA /* gorilla.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gorilla.jpg; sourceTree = "<group>"; };
@@ -114,6 +119,8 @@
 				94E933A61322DDEA0046EB0F /* Attacks */,
 				94A725CC1336D03C00414CF3 /* History.h */,
 				94A725CD1336D03C00414CF3 /* History.m */,
+				94A728BE1338827900414CF3 /* Attack.h */,
+				94A728BF1338827900414CF3 /* Attack.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -156,6 +163,7 @@
 			children = (
 				94E93D511331D49E0046EB0F /* images */,
 				94A725BF1336CF8300414CF3 /* attackHistory.db */,
+				94A728AA1338820800414CF3 /* recentAttacks.db */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				2899E5210DE3E06400AC0155 /* PandaAttackViewController.xib */,
 				94E933651322DAB70046EB0F /* AttackViewController.xib */,
@@ -274,6 +282,7 @@
 				94C41849133328770032B2DA /* mel-gibson-braveheart.jpg in Resources */,
 				94A725C01336CF8300414CF3 /* attackHistory.db in Resources */,
 				94A728421338774C00414CF3 /* AttackHistoryViewController.xib in Resources */,
+				94A728AB1338820800414CF3 /* recentAttacks.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +302,7 @@
 				94C4182C133325F50032B2DA /* SendMessageViewController.m in Sources */,
 				94A725CE1336D03C00414CF3 /* History.m in Sources */,
 				94A728411338774C00414CF3 /* AttackHistoryViewController.m in Sources */,
+				94A728C01338827900414CF3 /* Attack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

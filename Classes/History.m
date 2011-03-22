@@ -52,7 +52,7 @@ static sqlite3_stmt *insertAttack = nil;
 	
 	// Create the attack statement
 	if(insertAttack == nil) {
-		const char *sql = "INSERT INTO history(contact,attack,message,time) VALUES(?,?,?)";
+		const char *sql = "INSERT INTO history(contact,attack,message,time) VALUES(?,?,?,?)";
 		if(sqlite3_prepare_v2(db, sql, -1, &insertAttack, NULL) != SQLITE_OK) {
 			NSAssert1(0, @"Error create sql for insert attack: %s", sqlite3_errmsg(db));
 		}
