@@ -10,29 +10,38 @@
 #import "PandaAttackViewController.h"
 #import "AttackViewController.h"
 #import <sqlite3.h>
+#import "ASIFormDataRequest.h"
+#import "SigninViewController.h"
 
 @interface PandaAttackAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
     PandaAttackViewController *viewController;
+	SigninViewController *signinViewController;
 	AttackViewController *attackViewController;
 	UINavigationController *attackNavigationController;
+	NSString *userEmail;
 	
 	sqlite3 *historyDatabase;
 	NSMutableArray *dbHistory;
 	
 	sqlite3 *attacksDatabase;
-	NSMutableArray *dbAttacks;	
+	NSMutableArray *dbAttacks;
+	
+	ASIFormDataRequest *request;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet PandaAttackViewController *viewController;
+@property (nonatomic, retain) IBOutlet SigninViewController *signinViewController;
 @property (nonatomic, retain) IBOutlet AttackViewController *attackViewController;
 @property (nonatomic, retain) IBOutlet UINavigationController *attackNavigationController;
 @property (nonatomic, retain) NSMutableArray *dbHistory;
 @property (nonatomic, retain) NSMutableArray *dbAttacks;
+@property (nonatomic, retain) NSString *userEmail;
 
 -(void)startTimer;
 -(void)viewSwitch;
+-(void)switchFromLoginView;
 -(void)createEditableCopyOfDatabase:(NSString*)fileName;
 -(void)initializeHistoryDatabase:(NSString*)fileName;
 -(void)initializeAttacksDatabase:(NSString*)fileName;

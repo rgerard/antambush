@@ -15,11 +15,13 @@
 	UIButton *imageBtn;
     UILabel *numberTitle;
     UIImageView *numberImage;
+	NSString *imageName;
 }
 
 @property (nonatomic, retain) IBOutlet UIButton *imageBtn;
 @property (nonatomic, retain) IBOutlet UILabel *numberTitle;
 @property (nonatomic, retain) IBOutlet UIImageView *numberImage;
+@property (nonatomic, retain) NSString *imageName;
 
 - (id)initWithPageNumber:(int)page;
 

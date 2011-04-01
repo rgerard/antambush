@@ -16,6 +16,8 @@
 @synthesize attackViewController;
 @synthesize attackNavigationController;
 @synthesize dbHistory;
+@synthesize userEmail;
+@synthesize signinViewController;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -29,7 +31,12 @@
 	[self createEditableCopyOfDatabase:@"recentAttacks.db"];
 	[self initializeAttacksDatabase:@"recentAttacks.db"];	
 	
+	// Check to see if we know who this user is
+	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+	self.userEmail = [prefs stringForKey:@"userEmail"];
+	
     // Init the controllers
+	signinViewController = [[SigninViewController alloc] init];
 	attackViewController = [[AttackViewController alloc] init];
 	attackNavigationController = [[UINavigationController alloc] initWithRootViewController:attackViewController];
 	
@@ -60,6 +67,30 @@
 	// Remove the opening view controller
 	[viewController.view removeFromSuperview];
 	
+	// Check for a user email -- prompt for signin view if not present
+	if([userEmail length] == 0) {
+		[window addSubview:signinViewController.view];
+	} else {
+		// Add the tab bar view to the window
+		[window addSubview:attackNavigationController.view];
+	}
+	// Subscribe to orientation changes
+	//[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+	//[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(detectOrientation) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
+}
+
+
+/*
+ Switches from login view to the main view
+ */
+- (void)switchFromLoginView {
+	// Get the users email address
+	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+	self.userEmail = [prefs stringForKey:@"userEmail"];
+	
+	// Remove the signin view controller
+	[signinViewController.view removeFromSuperview];
+	
 	// Add the tab bar view to the window
 	[window addSubview:attackNavigationController.view];
 	
@@ -67,6 +98,7 @@
 	//[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
 	//[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(detectOrientation) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
 }
+
 
 -(void)createEditableCopyOfDatabase:(NSString*)dbFileName {
 	BOOL success;
@@ -148,6 +180,29 @@
 	NSInteger pk = [historyItem insertNewAttack:historyDatabase];
 	History *item = [[History alloc] initWithPrimaryKey:pk database:historyDatabase];
 	[dbHistory addObject:item];
+	
+	// Send the data to the backend
+	NSURL *url = [NSURL URLWithString:@"http://localhost:3000/user_attacks"];
+	request = [ASIFormDataRequest requestWithURL:url];
+	[request setPostValue:userEmail forKey:@"user_attack[attacker_email]"];
+	[request setPostValue:[item contact] forKey:@"user_attack[victim_email]"];
+	[request setPostValue:[item attack] forKey:@"user_attack[attack_name]"];
+	[request setPostValue:[item message] forKey:@"user_attack[message]"];
+	[request setDelegate:self];
+	[request startAsynchronous];
+}
+
+-(void)requestFinished:(ASIHTTPRequest *)request {
+	// Use when fetching text data
+	NSString *responseString = [request responseString];
+	
+	NSLog(responseString);
+}
+
+-(void)requestFailed:(ASIHTTPRequest *)request {
+	NSError *error = [request error];
+	
+	NSLog(@"Error request: %@", [error localizedDescription]);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -199,6 +254,9 @@
 
 
 - (void)dealloc {
+	[request clearDelegatesAndCancel];
+	[request release];
+	
 	[dbHistory release];
     [viewController release];
 	[attackViewController release];

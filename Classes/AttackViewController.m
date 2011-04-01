@@ -39,10 +39,23 @@
 	// Create and track a local attackHistory object
 	attackHistory = [[History alloc] init];
 	
+	UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(logoutUser:)];          
+	self.navigationItem.rightBarButtonItem = anotherButton;
+	[anotherButton release];
+	
 	// Init the event handlers
 	[startAttackBtn addTarget:self action:@selector(startBtnClick:) forControlEvents:UIControlEventTouchUpInside];
 	[viewHistoryBtn addTarget:self action:@selector(viewHistoryBtnClick:) forControlEvents:UIControlEventTouchUpInside];
 }
+
+
+-(void)logoutUser:(id)sender{
+	// Clear the users email address
+	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+	[prefs setObject:@"" forKey:@"userEmail"];
+	[prefs synchronize];
+}
+
 
 // respond to the Attack button click
 -(void)startBtnClick:(UIView*)clickedButton {
@@ -76,26 +89,20 @@
 	if([name isEqualToString:@"zahra"]) {
 		startGame = true;
 	}
-    [name release];
-	
-    name = (NSString *)ABRecordCopyValue(person, kABPersonLastNameProperty);
 	NSLog(@"%s",name);
-    [name release];
 	
 	ABMultiValueRef email = ABRecordCopyValue(person, kABPersonEmailProperty);
 	CFStringRef emailAddress;
 	for (CFIndex i = 0; i < ABMultiValueGetCount(email); i++) {
 		emailAddress = ABMultiValueCopyValueAtIndex(email, i);
 		NSLog(@"%s",emailAddress);
-
-		CFRelease(emailAddress);
 	}
 	
     [self dismissModalViewControllerAnimated:YES];
 	
 	if(startGame) {
 		// Fill the History object
-		attackHistory.contact = (NSString *)ABRecordCopyValue(person, kABPersonFirstNameProperty);
+		attackHistory.contact = (NSString *)emailAddress;
 		
 		WeaponScrollerViewController *weaponViewController = [[WeaponScrollerViewController alloc] init];
 		weaponViewController.title = @"Weapon";
@@ -108,6 +115,10 @@
 		[alert show];
 		[alert release];
 	}
+	
+	[name release];
+	CFRelease(emailAddress);
+	
     return NO;
 }
 

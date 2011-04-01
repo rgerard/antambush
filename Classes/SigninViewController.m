@@ -1,26 +1,17 @@
 //
-//  SingleWeaponViewController.m
+//  SigninViewController.m
 //  PandaAttack
 //
-//  Created by Ryan Gerard on 3/16/11.
+//  Created by Ryan Gerard on 3/31/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "SingleWeaponViewController.h"
+#import "SigninViewController.h"
+#import "PandaAttackAppDelegate.h"
 
-@implementation SingleWeaponViewController
+@implementation SigninViewController
 
-@synthesize numberTitle, numberImage, imageBtn, imageName;
-
-// load the view nib and initialize the pageNumber ivar
-- (id)initWithPageNumber:(int)page
-{
-    if (self = [super initWithNibName:@"SingleWeaponViewController" bundle:nil])
-    {
-        pageNumber = page;
-    }
-    return self;
-}
+@synthesize startBtn, inputEmail;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -33,12 +24,32 @@
 }
 */
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
+	// Init the event handlers
+	[startBtn addTarget:self action:@selector(startBtnClick:) forControlEvents:UIControlEventTouchUpInside];	
 }
-*/
+
+
+// respond to the start button click
+-(void)startBtnClick:(UIView*)clickedButton {
+	// Save the users email address
+	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+	[prefs setObject:inputEmail.text forKey:@"userEmail"];
+	[prefs synchronize];
+	
+	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
+	[appDelegate switchFromLoginView];
+}
+
+
+-(IBAction) backgroundTap:(id) sender{
+	[self.inputEmail resignFirstResponder];
+}
+
 
 /*
 // Override to allow orientations other than the default portrait orientation.
@@ -63,8 +74,6 @@
 
 
 - (void)dealloc {
-    [numberTitle release];
-    [numberImage release];
     [super dealloc];
 }
 

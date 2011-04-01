@@ -82,6 +82,7 @@ static NSString *ImageKey = @"imageKey";
         NSDictionary *numberItem = [self.contentList objectAtIndex:page];
         controller.numberImage.image = [UIImage imageNamed:[numberItem valueForKey:ImageKey]];
         controller.numberTitle.text = [numberItem valueForKey:NameKey];
+		controller.imageName = [numberItem valueForKey:ImageKey];
 		
 		[controller.imageBtn addTarget:self action:@selector(imageBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -91,10 +92,10 @@ static NSString *ImageKey = @"imageKey";
 // respond to the ask button click
 -(void)imageBtnClick:(UIView*)clickedButton {
 	SingleWeaponViewController *controller = [viewControllers objectAtIndex:pageControl.currentPage];
-	NSLog(controller.numberTitle.text);
+	NSLog(@"Clicked %@", controller.imageName);
 	
 	// Fill the history item
-	attackHistory.attack = controller.numberTitle.text;
+	attackHistory.attack = controller.imageName;
 	
 	SendMessageViewController *messageViewController = [[SendMessageViewController alloc] init];
 	messageViewController.title = @"Send Message";
