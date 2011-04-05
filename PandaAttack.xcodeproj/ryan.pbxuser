@@ -297,6 +297,15 @@
 			94023ED6134AFEB60075148F /* PBXTextBookmark */ = 94023ED6134AFEB60075148F /* PBXTextBookmark */;
 			94023EDC134AFED80075148F /* PBXTextBookmark */ = 94023EDC134AFED80075148F /* PBXTextBookmark */;
 			94023EE2134AFEE50075148F /* PBXTextBookmark */ = 94023EE2134AFEE50075148F /* PBXTextBookmark */;
+			94023EE4134B00430075148F /* PBXTextBookmark */ = 94023EE4134B00430075148F /* PBXTextBookmark */;
+			94023EE5134B00430075148F /* PBXTextBookmark */ = 94023EE5134B00430075148F /* PBXTextBookmark */;
+			94023EE6134B00430075148F /* PBXTextBookmark */ = 94023EE6134B00430075148F /* PBXTextBookmark */;
+			94023EE7134B00430075148F /* PBXTextBookmark */ = 94023EE7134B00430075148F /* PBXTextBookmark */;
+			94023EE8134B00430075148F /* PBXTextBookmark */ = 94023EE8134B00430075148F /* PBXTextBookmark */;
+			94023EED134B00850075148F /* PBXTextBookmark */ = 94023EED134B00850075148F /* PBXTextBookmark */;
+			94023EEE134B00850075148F /* PBXTextBookmark */ = 94023EEE134B00850075148F /* PBXTextBookmark */;
+			94023EEF134B00850075148F /* PBXTextBookmark */ = 94023EEF134B00850075148F /* PBXTextBookmark */;
+			94023EF0134B00850075148F /* PBXTextBookmark */ = 94023EF0134B00850075148F /* PBXTextBookmark */;
 			94A7289A13387FE100414CF3 = 94A7289A13387FE100414CF3 /* PlistBookmark */;
 			94A7289D13387FE100414CF3 = 94A7289D13387FE100414CF3 /* PBXTextBookmark */;
 			94A7289E13387FE100414CF3 = 94A7289E13387FE100414CF3 /* PBXTextBookmark */;
@@ -1255,7 +1264,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 336";
 		rLen = 0;
-		rLoc = 11766;
+		rLoc = 12191;
 		rType = 0;
 		vrLen = 1121;
 		vrLoc = 10196;
@@ -1315,7 +1324,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 96";
 		rLen = 0;
-		rLoc = 3506;
+		rLoc = 3856;
 		rType = 0;
 		vrLen = 1330;
 		vrLoc = 2770;
@@ -1325,7 +1334,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 212";
 		rLen = 0;
-		rLoc = 7525;
+		rLoc = 7950;
 		rType = 0;
 		vrLen = 1150;
 		vrLoc = 6647;
@@ -1335,7 +1344,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 211";
 		rLen = 0;
-		rLoc = 7484;
+		rLoc = 7909;
 		rType = 0;
 		vrLen = 1218;
 		vrLoc = 6538;
@@ -1345,7 +1354,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 211";
 		rLen = 0;
-		rLoc = 7484;
+		rLoc = 7909;
 		rType = 0;
 		vrLen = 1201;
 		vrLoc = 6555;
@@ -1355,7 +1364,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 211";
 		rLen = 0;
-		rLoc = 7484;
+		rLoc = 7909;
 		rType = 0;
 		vrLen = 1201;
 		vrLoc = 6555;
@@ -1365,7 +1374,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 211";
 		rLen = 0;
-		rLoc = 7484;
+		rLoc = 7909;
 		rType = 0;
 		vrLen = 1363;
 		vrLoc = 2630;
@@ -1373,15 +1382,15 @@
 	94023E4C134AF6FA0075148F /* UIImageAlertView.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1100, 461}}";
-			sepNavSelRange = "{401, 0}";
-			sepNavVisRange = "{0, 443}";
+			sepNavSelRange = "{372, 0}";
+			sepNavVisRange = "{0, 480}";
 		};
 	};
 	94023E4D134AF6FA0075148F /* UIImageAlertView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1125, 1040}}";
-			sepNavSelRange = "{1666, 0}";
-			sepNavVisRange = "{1136, 1057}";
+			sepNavIntBoundsRect = "{{0, 0}, {1100, 1092}}";
+			sepNavSelRange = "{252, 0}";
+			sepNavVisRange = "{145, 802}";
 		};
 	};
 	94023E57134AF7410075148F /* PBXTextBookmark */ = {
@@ -1429,7 +1438,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 211";
 		rLen = 0;
-		rLoc = 7484;
+		rLoc = 7909;
 		rType = 0;
 		vrLen = 1406;
 		vrLoc = 2630;
@@ -1549,7 +1558,7 @@
 		fRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */;
 		name = "UIImageAlertView.m: 22";
 		rLen = 0;
-		rLoc = 376;
+		rLoc = 611;
 		rType = 0;
 		vrLen = 885;
 		vrLoc = 3;
@@ -1659,7 +1668,7 @@
 		fRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */;
 		name = "UIImageAlertView.m: 25";
 		rLen = 0;
-		rLoc = 659;
+		rLoc = 611;
 		rType = 0;
 		vrLen = 976;
 		vrLoc = 3;
@@ -1669,7 +1678,7 @@
 		fRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */;
 		name = "UIImageAlertView.m: 23";
 		rLen = 0;
-		rLoc = 468;
+		rLoc = 611;
 		rType = 0;
 		vrLen = 987;
 		vrLoc = 26;
@@ -1679,7 +1688,7 @@
 		fRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */;
 		name = "UIImageAlertView.m: 44";
 		rLen = 0;
-		rLoc = 2238;
+		rLoc = 1926;
 		rType = 0;
 		vrLen = 884;
 		vrLoc = 211;
@@ -1689,7 +1698,7 @@
 		fRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */;
 		name = "UIImageAlertView.m: 30";
 		rLen = 0;
-		rLoc = 938;
+		rLoc = 611;
 		rType = 0;
 		vrLen = 881;
 		vrLoc = 242;
@@ -1699,7 +1708,7 @@
 		fRef = 94023E4C134AF6FA0075148F /* UIImageAlertView.h */;
 		name = "UIImageAlertView.h: 20";
 		rLen = 0;
-		rLoc = 401;
+		rLoc = 438;
 		rType = 0;
 		vrLen = 443;
 		vrLoc = 0;
@@ -1709,7 +1718,7 @@
 		fRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */;
 		name = "UIImageAlertView.m: 30";
 		rLen = 0;
-		rLoc = 902;
+		rLoc = 611;
 		rType = 0;
 		vrLen = 1105;
 		vrLoc = 146;
@@ -1719,7 +1728,7 @@
 		fRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */;
 		name = "UIImageAlertView.m: 39";
 		rLen = 0;
-		rLoc = 1820;
+		rLoc = 1508;
 		rType = 0;
 		vrLen = 1082;
 		vrLoc = 175;
@@ -1729,7 +1738,7 @@
 		fRef = 94023E4C134AF6FA0075148F /* UIImageAlertView.h */;
 		name = "UIImageAlertView.h: 20";
 		rLen = 0;
-		rLoc = 401;
+		rLoc = 438;
 		rType = 0;
 		vrLen = 443;
 		vrLoc = 0;
@@ -1739,7 +1748,7 @@
 		fRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */;
 		name = "UIImageAlertView.m: 39";
 		rLen = 0;
-		rLoc = 1820;
+		rLoc = 1508;
 		rType = 0;
 		vrLen = 1084;
 		vrLoc = 175;
@@ -1749,7 +1758,7 @@
 		fRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */;
 		name = "UIImageAlertView.m: 28";
 		rLen = 0;
-		rLoc = 755;
+		rLoc = 611;
 		rType = 0;
 		vrLen = 1093;
 		vrLoc = 177;
@@ -1759,7 +1768,7 @@
 		fRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */;
 		name = "UIImageAlertView.m: 40";
 		rLen = 0;
-		rLoc = 1695;
+		rLoc = 1383;
 		rType = 0;
 		vrLen = 1207;
 		vrLoc = 177;
@@ -1769,7 +1778,7 @@
 		fRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */;
 		name = "UIImageAlertView.m: 46";
 		rLen = 0;
-		rLoc = 1693;
+		rLoc = 1381;
 		rType = 0;
 		vrLen = 1034;
 		vrLoc = 211;
@@ -1779,7 +1788,7 @@
 		fRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */;
 		name = "UIImageAlertView.m: 54";
 		rLen = 0;
-		rLoc = 1693;
+		rLoc = 1381;
 		rType = 0;
 		vrLen = 1072;
 		vrLoc = 945;
@@ -1789,7 +1798,7 @@
 		fRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */;
 		name = "UIImageAlertView.m: 55";
 		rLen = 0;
-		rLoc = 1616;
+		rLoc = 1304;
 		rType = 0;
 		vrLen = 1090;
 		vrLoc = 964;
@@ -1799,7 +1808,7 @@
 		fRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */;
 		name = "UIImageAlertView.m: 55";
 		rLen = 0;
-		rLoc = 1686;
+		rLoc = 1374;
 		rType = 0;
 		vrLen = 1029;
 		vrLoc = 939;
@@ -1809,7 +1818,7 @@
 		fRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */;
 		name = "UIImageAlertView.m: 54";
 		rLen = 0;
-		rLoc = 1605;
+		rLoc = 1293;
 		rType = 0;
 		vrLen = 990;
 		vrLoc = 962;
@@ -1819,7 +1828,7 @@
 		fRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */;
 		name = "UIImageAlertView.m: 55";
 		rLen = 0;
-		rLoc = 1588;
+		rLoc = 1276;
 		rType = 0;
 		vrLen = 1011;
 		vrLoc = 964;
@@ -1829,7 +1838,7 @@
 		fRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */;
 		name = "UIImageAlertView.m: 56";
 		rLen = 0;
-		rLoc = 1643;
+		rLoc = 1331;
 		rType = 0;
 		vrLen = 1086;
 		vrLoc = 1046;
@@ -1839,7 +1848,7 @@
 		fRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */;
 		name = "UIImageAlertView.m: 56";
 		rLen = 0;
-		rLoc = 1663;
+		rLoc = 1351;
 		rType = 0;
 		vrLen = 1049;
 		vrLoc = 1136;
@@ -1849,7 +1858,7 @@
 		fRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */;
 		name = "UIImageAlertView.m: 56";
 		rLen = 0;
-		rLoc = 1666;
+		rLoc = 1354;
 		rType = 0;
 		vrLen = 1062;
 		vrLoc = 1078;
@@ -1859,10 +1868,100 @@
 		fRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */;
 		name = "UIImageAlertView.m: 56";
 		rLen = 0;
-		rLoc = 1666;
+		rLoc = 1354;
 		rType = 0;
 		vrLen = 1057;
 		vrLoc = 1136;
+	};
+	94023EE4134B00430075148F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94023E4C134AF6FA0075148F /* UIImageAlertView.h */;
+		name = "UIImageAlertView.h: 20";
+		rLen = 0;
+		rLoc = 398;
+		rType = 0;
+		vrLen = 485;
+		vrLoc = 0;
+	};
+	94023EE5134B00430075148F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94C41829133325F50032B2DA /* SendMessageViewController.h */;
+		name = "SendMessageViewController.h: 24";
+		rLen = 38;
+		rLoc = 598;
+		rType = 0;
+		vrLen = 643;
+		vrLoc = 0;
+	};
+	94023EE6134B00430075148F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */;
+		name = "UIImageAlertView.m: 18";
+		rLen = 0;
+		rLoc = 368;
+		rType = 0;
+		vrLen = 807;
+		vrLoc = 145;
+	};
+	94023EE7134B00430075148F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 105";
+		rLen = 0;
+		rLoc = 3856;
+		rType = 0;
+		vrLen = 1526;
+		vrLoc = 2718;
+	};
+	94023EE8134B00430075148F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 108";
+		rLen = 0;
+		rLoc = 4276;
+		rType = 0;
+		vrLen = 1599;
+		vrLoc = 2718;
+	};
+	94023EED134B00850075148F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94023E4C134AF6FA0075148F /* UIImageAlertView.h */;
+		name = "UIImageAlertView.h: 20";
+		rLen = 0;
+		rLoc = 372;
+		rType = 0;
+		vrLen = 480;
+		vrLoc = 0;
+	};
+	94023EEE134B00850075148F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */;
+		name = "UIImageAlertView.m: 16";
+		rLen = 0;
+		rLoc = 252;
+		rType = 0;
+		vrLen = 802;
+		vrLoc = 145;
+	};
+	94023EEF134B00850075148F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 108";
+		rLen = 0;
+		rLoc = 4276;
+		rType = 0;
+		vrLen = 1599;
+		vrLoc = 2718;
+	};
+	94023EF0134B00850075148F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 108";
+		rLen = 0;
+		rLoc = 4276;
+		rType = 0;
+		vrLen = 1552;
+		vrLoc = 2765;
 	};
 	94A725CC1336D03C00414CF3 /* History.h */ = {
 		uiCtxt = {
@@ -2173,7 +2272,7 @@
 	};
 	94C41829133325F50032B2DA /* SendMessageViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1100, 495}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1100, 461}}";
 			sepNavSelRange = "{598, 38}";
 			sepNavVisRange = "{0, 643}";
 		};
@@ -2244,10 +2343,10 @@
 	};
 	94E933641322DAB70046EB0F /* AttackViewController.m */ = {
 		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{10731, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{10782, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{10832, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 11855}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1139, 4680}}";
-			sepNavSelRange = "{377, 0}";
-			sepNavVisRange = "{3, 1167}";
+			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{11156, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{11207, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{11257, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 12280}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {2308, 4550}}";
+			sepNavSelRange = "{4276, 0}";
+			sepNavVisRange = "{2765, 1552}";
 			sepNavWindowFrame = "{{15, 315}, {750, 558}}";
 		};
 	};

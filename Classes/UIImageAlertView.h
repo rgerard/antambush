@@ -17,6 +17,7 @@
 @property (nonatomic, retain) UIImage *image;
 @property (nonatomic, retain) UIImageView *imageView;
 
+-(void)setImage:(UIImage*)initimage;
 +(UIImage*)imageWithImage:(UIImage*)oldimage scaledToSize:(CGSize)newSize;
 
 @end

@@ -86,6 +86,11 @@
 	NSError *error = nil;
 	NSArray *attackData = [[CJSONDeserializer deserializer] deserializeAsArray:jsonData error:&error];
 	
+	// Prep the image list
+	NSString *ImageKey = @"imageKey";
+	NSString *path = [[NSBundle mainBundle] pathForResource:@"iphone_contents" ofType:@"plist"];
+	NSArray *contentList = [NSArray arrayWithContentsOfFile:path];	
+	
 	// Iterate over array
 	NSEnumerator *e = [attackData objectEnumerator];
 	id object;
@@ -95,8 +100,12 @@
 		NSLog(@"Email is %@", [dictionary objectForKey:@"attacker_email"]);
 		NSLog(@"Message is %@", [dictionary objectForKey:@"message"]);
 		
+		// Get the image to load from a plist file inside our app bundle
+		NSDictionary *numberItem = [contentList objectAtIndex:3];
+		
 		// Popup dialog now
 		UIImageAlertView *alert = [[UIImageAlertView alloc] initWithTitle:@"Attacked!" message:[NSString stringWithFormat:@"You were attacked by %@, who said '%@'",[dictionary objectForKey:@"attacker_name"], [dictionary objectForKey:@"message"]] delegate:self cancelButtonTitle:@"Wuss out" otherButtonTitles:@"Attack back",nil];
+		[alert setImage:[UIImage imageNamed:[numberItem valueForKey:ImageKey]]];
 		[alert show];
 		[alert release];
 	}

@@ -13,23 +13,20 @@
 
 @synthesize image, imageView;
 
+-(void)setImage:(UIImage*)initimage {
+	CGSize size = CGSizeMake(100, 100);
+	image = [UIImageAlertView imageWithImage:initimage scaledToSize:size];
+	
+	imageView = [[UIImageView alloc] initWithImage:image];
+	
+	[self addSubview:imageView];	
+}
+
 - (id)initWithFrame:(CGRect)frame {
     
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code.
-		
-		// load our data from a plist file inside our app bundle
-		NSString *ImageKey = @"imageKey";
-		NSString *path = [[NSBundle mainBundle] pathForResource:@"iphone_contents" ofType:@"plist"];
-		NSArray *contentList = [NSArray arrayWithContentsOfFile:path];
-		NSDictionary *numberItem = [contentList objectAtIndex:3];
-		CGSize size = CGSizeMake(100, 100);
-		image = [UIImageAlertView imageWithImage:[UIImage imageNamed:[numberItem valueForKey:ImageKey]] scaledToSize:size];
-		
-		imageView = [[UIImageView alloc] initWithImage:image];
-		
-		[self addSubview:imageView];
     }
     return self;
 }
@@ -41,7 +38,7 @@
 }
 
 
-// Layout the picture correctly
+// Layout the 100px by 100px picture correctly
 - (void)layoutSubviews {
 	CGFloat buttonTop;
 	for (UIView *view in self.subviews) {
