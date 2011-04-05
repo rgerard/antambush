@@ -182,7 +182,7 @@
 	[dbHistory addObject:item];
 	
 	// Send the data to the backend
-	NSURL *url = [NSURL URLWithString:@"http://localhost:3000/user_attacks"];
+	NSURL *url = [NSURL URLWithString:@"http://localhost:3000/user_attacks/createFromPhone"];
 	request = [ASIFormDataRequest requestWithURL:url];
 	[request setPostValue:userEmail forKey:@"user_attack[attacker_email]"];
 	[request setPostValue:[item contact] forKey:@"user_attack[victim_email]"];
@@ -192,15 +192,15 @@
 	[request startAsynchronous];
 }
 
--(void)requestFinished:(ASIHTTPRequest *)request {
+-(void)requestFinished:(ASIHTTPRequest *)requestCallback {
 	// Use when fetching text data
-	NSString *responseString = [request responseString];
+	NSString *responseString = [requestCallback responseString];
 	
-	NSLog(responseString);
+	NSLog(@"%@",responseString);
 }
 
--(void)requestFailed:(ASIHTTPRequest *)request {
-	NSError *error = [request error];
+-(void)requestFailed:(ASIHTTPRequest *)requestCallback {
+	NSError *error = [requestCallback error];
 	
 	NSLog(@"Error request: %@", [error localizedDescription]);
 }

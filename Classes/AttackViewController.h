@@ -12,17 +12,21 @@
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
 #import "History.h"
+#import "ASIHTTPRequest.h"
 
 @interface AttackViewController : UIViewController<ABPeoplePickerNavigationControllerDelegate,UIAlertViewDelegate,MFMailComposeViewControllerDelegate,UITableViewDelegate,UITableViewDataSource> {
 	UIButton *startAttackBtn;
 	UIButton *viewHistoryBtn;
 	UITableView *recentAttacksTable;
 	History *attackHistory;
+	UIActivityIndicatorView *spinner;
+	ASIHTTPRequest *request;
 }
 
 @property (nonatomic, retain) IBOutlet UIButton *startAttackBtn;
 @property (nonatomic, retain) IBOutlet UIButton *viewHistoryBtn;
 @property (nonatomic, retain) IBOutlet UITableView *recentAttacksTable;
+@property (nonatomic, retain) ASIHTTPRequest *request;
 
 -(void)personBtnClick:(UIView*)clickedButton;
 -(void)startBtnClick:(UIView*)clickedButton;

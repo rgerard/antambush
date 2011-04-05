@@ -11,10 +11,12 @@
 #import "PandaAttackAppDelegate.h"
 #import "History.h"
 #import "AttackHistoryViewController.h"
+#import "CJSONDeserializer.h"
+#import "UIImageAlertView.h"
 
 @implementation AttackViewController
 
-@synthesize recentAttacksTable, startAttackBtn, viewHistoryBtn;
+@synthesize recentAttacksTable, startAttackBtn, viewHistoryBtn, request;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -32,6 +34,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
+	// Init the spinner
+	spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+	[spinner setCenter:CGPointMake(self.view.frame.size.width/2.0, (self.view.frame.size.height-150)/2.0)]; 
+	
 	recentAttacksTable = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
 	recentAttacksTable.delegate = self;
 	recentAttacksTable.dataSource = self;
@@ -39,6 +45,7 @@
 	// Create and track a local attackHistory object
 	attackHistory = [[History alloc] init];
 	
+	// Create a logout button
 	UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(logoutUser:)];          
 	self.navigationItem.rightBarButtonItem = anotherButton;
 	[anotherButton release];
@@ -46,6 +53,63 @@
 	// Init the event handlers
 	[startAttackBtn addTarget:self action:@selector(startBtnClick:) forControlEvents:UIControlEventTouchUpInside];
 	[viewHistoryBtn addTarget:self action:@selector(viewHistoryBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+	
+	
+	// Check to see if we know who this user is
+	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+	NSString *userEmail = [prefs stringForKey:@"userEmail"];
+	
+	if([userEmail length] > 0) {
+		// Start the spinner
+		[self.view addSubview:spinner];
+		[spinner startAnimating];
+		
+		NSString *formatUrl = [NSString stringWithFormat:@"http://localhost:3000/user_attacks/lookup?email=%@",userEmail];
+		NSURL *url = [NSURL URLWithString:formatUrl];
+		request = [ASIHTTPRequest requestWithURL:url];
+		[request setDelegate:self];
+		[request startAsynchronous];
+	}
+}
+
+
+-(void)requestFinished:(ASIHTTPRequest *)requestCallback {
+	// Stop the spinner
+	[spinner stopAnimating];
+	[spinner removeFromSuperview];
+	
+	// Use when fetching text data
+	NSString *responseString = [requestCallback responseString];
+	NSLog(@"%@", responseString);
+	
+	NSData *jsonData = [responseString dataUsingEncoding:NSUTF8StringEncoding];
+	NSError *error = nil;
+	NSArray *attackData = [[CJSONDeserializer deserializer] deserializeAsArray:jsonData error:&error];
+	
+	// Iterate over array
+	NSEnumerator *e = [attackData objectEnumerator];
+	id object;
+	while (object = [e nextObject]) {
+		NSDictionary *dictionary = (NSDictionary *)object;
+		NSLog(@"Name is %@", [dictionary objectForKey:@"attacker_name"]);
+		NSLog(@"Email is %@", [dictionary objectForKey:@"attacker_email"]);
+		NSLog(@"Message is %@", [dictionary objectForKey:@"message"]);
+		
+		// Popup dialog now
+		UIImageAlertView *alert = [[UIImageAlertView alloc] initWithTitle:@"Attacked!" message:[NSString stringWithFormat:@"You were attacked by %@, who said '%@'",[dictionary objectForKey:@"attacker_name"], [dictionary objectForKey:@"message"]] delegate:self cancelButtonTitle:@"Wuss out" otherButtonTitles:@"Attack back",nil];
+		[alert show];
+		[alert release];
+	}
+}
+
+
+-(void)requestFailed:(ASIHTTPRequest *)requestCallback {
+	// Stop the spinner
+	[spinner stopAnimating];
+	[spinner removeFromSuperview];
+	
+	NSError *error = [requestCallback error];
+	NSLog(@"Error request: %@", [error localizedDescription]);
 }
 
 
@@ -145,7 +209,9 @@
 		} else {
 			NSLog(@"Device can't send mail!");
 		}
-    } 
+    } else if([title isEqualToString:@"Attack back"]) {
+		NSLog(@"Uesr wants to attack back");
+	}
 } 
 
 -(void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
@@ -275,6 +341,8 @@
 
 
 - (void)dealloc {
+	[request clearDelegatesAndCancel];
+	[request release];	
 	[attackHistory release];
 	[recentAttacksTable release];
     [super dealloc];
