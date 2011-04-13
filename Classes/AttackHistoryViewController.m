@@ -67,9 +67,9 @@
     // Return the number of rows in the section.
 	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
 	
-	if(appDelegate.dbHistory != nil) {
-		NSLog(@"DB count: %u", appDelegate.dbHistory.count);
-		return appDelegate.dbHistory.count;
+	if(appDelegate.dbAttacks != nil) {
+		NSLog(@"DB count: %u", appDelegate.dbAttacks.count);
+		return appDelegate.dbAttacks.count;
 	} else {
 		return 0;
 	}
@@ -88,7 +88,7 @@
     
     // Configure the cell...
 	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
-	History *item = [appDelegate.dbHistory objectAtIndex:indexPath.row];
+	History *item = [appDelegate.dbAttacks objectAtIndex:indexPath.row];
 	cell.textLabel.text = item.contact;
     
     return cell;

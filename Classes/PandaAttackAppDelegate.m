@@ -15,7 +15,6 @@
 @synthesize viewController;
 @synthesize attackViewController;
 @synthesize attackNavigationController;
-@synthesize dbHistory;
 @synthesize userEmail;
 @synthesize signinViewController;
 @synthesize dbAttacks;
@@ -26,9 +25,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
 	// Init the DB
-	[self createEditableCopyOfDatabase:@"attackHistory.db"];
-	[self initializeHistoryDatabase:@"attackHistory.db"];
-
 	[self createEditableCopyOfDatabase:@"recentAttacks.db"];
 	[self initializeAttacksDatabase:@"recentAttacks.db"];	
 	
@@ -124,33 +120,6 @@
 	}
 }
 
--(void)initializeHistoryDatabase:(NSString*)dbFileName {
-	dbHistory = [[NSMutableArray alloc] initWithCapacity:1];
-	
-	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-	NSString *documentsDirectory = [paths objectAtIndex:0];
-	NSString *path = [documentsDirectory stringByAppendingPathComponent:dbFileName];
-	
-	if(sqlite3_open([path UTF8String], &historyDatabase) == SQLITE_OK) {
-		const char* sql = "SELECT id FROM history";
-		sqlite3_stmt *statement;
-		
-		if(sqlite3_prepare_v2(historyDatabase, sql, -1, &statement, NULL) == SQLITE_OK) {
-			while(sqlite3_step(statement) == SQLITE_ROW) {
-				int primaryKey = sqlite3_column_int(statement, 0);
-				History *hist = [[History alloc] initWithPrimaryKey:primaryKey database:historyDatabase];
-				[dbHistory addObject:hist];
-				[hist release];
-			}
-		}
-		
-		sqlite3_finalize(statement);
-	} else {
-		sqlite3_close(historyDatabase);
-		NSAssert1(0, @"Failed to open database: %s", sqlite3_errmsg(historyDatabase));
-	}
-}
-
 -(void)initializeAttacksDatabase:(NSString*)dbFileName {
 	dbAttacks = [[NSMutableArray alloc] initWithCapacity:1];
 	
@@ -165,9 +134,9 @@
 		if(sqlite3_prepare_v2(attacksDatabase, sql, -1, &statement, NULL) == SQLITE_OK) {
 			while(sqlite3_step(statement) == SQLITE_ROW) {
 				int primaryKey = sqlite3_column_int(statement, 0);
-				//History *hist = [[History alloc] initWithPrimaryKey:primaryKey database:attacksDatabase];
-				//[dbAttacks addObject:hist];
-				//[hist release];
+				History *hist = [[History alloc] initWithPrimaryKey:primaryKey database:attacksDatabase];
+				[dbAttacks addObject:hist];
+				[hist release];
 			}
 		}
 		
@@ -180,9 +149,9 @@
 
 -(void)addAttack:(History*)historyItem {
 	NSLog(@"Adding attack!");
-	NSInteger pk = [historyItem insertNewAttack:historyDatabase];
-	History *item = [[History alloc] initWithPrimaryKey:pk database:historyDatabase];
-	[dbHistory addObject:item];
+	NSInteger pk = [historyItem insertNewAttack:attacksDatabase];
+	History *item = [[History alloc] initWithPrimaryKey:pk database:attacksDatabase];
+	[dbAttacks addObject:item];
 	
 	// Send the data to the backend
 	NSURL *url = [NSURL URLWithString:@"http://localhost:3000/user_attacks/createFromPhone"];
@@ -260,7 +229,7 @@
 	[request clearDelegatesAndCancel];
 	[request release];
 	
-	[dbHistory release];
+	[dbAttacks release];
     [viewController release];
 	[attackViewController release];
     [window release];

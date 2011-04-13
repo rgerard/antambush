@@ -21,9 +21,6 @@
 	UINavigationController *attackNavigationController;
 	NSString *userEmail;
 	
-	sqlite3 *historyDatabase;
-	NSMutableArray *dbHistory;
-	
 	sqlite3 *attacksDatabase;
 	NSMutableArray *dbAttacks;
 	
@@ -35,7 +32,6 @@
 @property (nonatomic, retain) IBOutlet SigninViewController *signinViewController;
 @property (nonatomic, retain) IBOutlet AttackViewController *attackViewController;
 @property (nonatomic, retain) IBOutlet UINavigationController *attackNavigationController;
-@property (nonatomic, retain) NSMutableArray *dbHistory;
 @property (nonatomic, retain) NSMutableArray *dbAttacks;
 @property (nonatomic, retain) NSString *userEmail;
 
@@ -43,7 +39,6 @@
 -(void)viewSwitch;
 -(void)switchFromLoginView;
 -(void)createEditableCopyOfDatabase:(NSString*)fileName;
--(void)initializeHistoryDatabase:(NSString*)fileName;
 -(void)initializeAttacksDatabase:(NSString*)fileName;
 -(void)addAttack:(History*)historyItem;
 

@@ -273,9 +273,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>11</integer>
-									<integer>9</integer>
-									<integer>8</integer>
+									<integer>23</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -318,7 +316,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>AttackViewController.m</string>
+								<string>History.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -326,23 +324,20 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>AttackViewController.m</string>
+										<string>History.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>94024129135571240075148F</string>
+										<string>9402418313557A180075148F</string>
 										<key>history</key>
 										<array>
 											<string>94E9336E1322DB060046EB0F</string>
 											<string>94C41851133329770032B2DA</string>
 											<string>94A7289A13387FE100414CF3</string>
-											<string>94A7289E13387FE100414CF3</string>
 											<string>94A728C7133883EF00414CF3</string>
 											<string>94A728ED133885BA00414CF3</string>
-											<string>94B982DF1343042600090947</string>
 											<string>94B9831A1345A3B300090947</string>
 											<string>94B9832B1345A52300090947</string>
-											<string>94B983691345ACF800090947</string>
 											<string>94B983A71345B00700090947</string>
 											<string>94023C90134857810075148F</string>
 											<string>94023D7B1348F4D50075148F</string>
@@ -354,15 +349,18 @@
 											<string>94023EEE134B00850075148F</string>
 											<string>94023F3E134C31D00075148F</string>
 											<string>94024021135568AE0075148F</string>
-											<string>9402406413556C4D0075148F</string>
-											<string>9402406513556C4D0075148F</string>
-											<string>9402406613556C4D0075148F</string>
 											<string>9402406713556C4D0075148F</string>
 											<string>940240FA1355702B0075148F</string>
-											<string>94024119135570F70075148F</string>
-											<string>9402411A135570F70075148F</string>
 											<string>9402411B135570F70075148F</string>
-											<string>9402411C135570F70075148F</string>
+											<string>94024133135578980075148F</string>
+											<string>94024134135578980075148F</string>
+											<string>94024135135578980075148F</string>
+											<string>94024136135578980075148F</string>
+											<string>94024137135578980075148F</string>
+											<string>940241641355794B0075148F</string>
+											<string>940241651355794B0075148F</string>
+											<string>94024170135579670075148F</string>
+											<string>94024171135579670075148F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -560,7 +558,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>9402412A135571240075148F</string>
+		<string>9402418413557A180075148F</string>
 		<string>94023C98134857810075148F</string>
 		<string>94023C99134857810075148F</string>
 		<string>1C78EAAD065D492600B07095</string>
@@ -591,7 +589,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>AttackViewController.m</string>
+								<string>AttackHistoryViewController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>

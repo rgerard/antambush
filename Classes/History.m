@@ -18,12 +18,12 @@ static sqlite3_stmt *insertAttack = nil;
 -(id)initWithPrimaryKey:(NSInteger)pk database:(sqlite3*)db {
 	
 	if(self = [super init]) {
-		self.primaryKey = pk;
-		self.database = db;
+		primaryKey = pk;
+		database = db;
 		
 		// Create the select statement
 		if(init_statement == nil) {
-			const char *sql = "SELECT serverID,contact,attack,message,time FROM history WHERE id=?";
+			const char *sql = "SELECT serverID,sender,attack,message,time FROM attacks WHERE id=?";
 			if(sqlite3_prepare_v2(database, sql, -1, &init_statement, NULL) != SQLITE_OK) {
 				NSAssert1(0, @"Failed to prepare statement: ", sqlite3_errmsg(database));
 			}
@@ -54,7 +54,7 @@ static sqlite3_stmt *insertAttack = nil;
 	
 	// Create the attack statement
 	if(insertAttack == nil) {
-		const char *sql = "INSERT INTO history(serverID,contact,attack,message,time) VALUES(?,?,?,?,?)";
+		const char *sql = "INSERT INTO history(serverID,sender,attack,message,time) VALUES(?,?,?,?,?)";
 		if(sqlite3_prepare_v2(db, sql, -1, &insertAttack, NULL) != SQLITE_OK) {
 			NSAssert1(0, @"Error create sql for insert attack: %s", sqlite3_errmsg(db));
 		}
