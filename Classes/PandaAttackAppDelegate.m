@@ -18,6 +18,7 @@
 @synthesize dbHistory;
 @synthesize userEmail;
 @synthesize signinViewController;
+@synthesize dbAttacks;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -38,10 +39,12 @@
     // Init the controllers
 	signinViewController = [[SigninViewController alloc] init];
 	attackViewController = [[AttackViewController alloc] init];
+	attackViewController.title = @"Panda Attack";
+	attackViewController.view.backgroundColor = [[UIColor alloc] initWithRed:0.1 green:0.2 blue:0.6 alpha:0.5];
 	attackNavigationController = [[UINavigationController alloc] initWithRootViewController:attackViewController];
 	
 	// Setup the controller properties
-	attackNavigationController.title = @"Attack!";
+	attackNavigationController.navigationBar.barStyle = UIBarStyleBlack;
 	
     // Add the view controller's view to the window and display.
     [self.window addSubview:viewController.view];

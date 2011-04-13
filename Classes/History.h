@@ -12,6 +12,7 @@
 @interface History : NSObject {
 	sqlite3 *database;
 	NSInteger primaryKey;
+	NSInteger serverID;
 	NSString *contact;
 	NSString *attack;
 	NSString *message;
@@ -19,6 +20,7 @@
 }
 
 @property (assign, nonatomic, readonly) NSInteger primaryKey;
+@property (assign, nonatomic) NSInteger serverID;
 @property (nonatomic, retain) NSString *contact;
 @property (nonatomic, retain) NSString *attack;
 @property (nonatomic, retain) NSString *message;

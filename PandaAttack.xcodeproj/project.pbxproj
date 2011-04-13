@@ -26,6 +26,8 @@
 		94023D1E1348EF620075148F /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 94023D121348EF620075148F /* CJSONSerializer.m */; };
 		94023D1F1348EF620075148F /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 94023D151348EF620075148F /* CDataScanner.m */; };
 		94023E4E134AF6FA0075148F /* UIImageAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */; };
+		940240ED13556F2E0075148F /* RecentAttacksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940240EB13556F2E0075148F /* RecentAttacksViewController.m */; };
+		940240EE13556F2E0075148F /* RecentAttacksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 940240EC13556F2E0075148F /* RecentAttacksViewController.xib */; };
 		94A725C01336CF8300414CF3 /* attackHistory.db in Resources */ = {isa = PBXBuildFile; fileRef = 94A725BF1336CF8300414CF3 /* attackHistory.db */; };
 		94A725C91336CFCA00414CF3 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A725C81336CFCA00414CF3 /* libsqlite3.0.dylib */; };
 		94A725CE1336D03C00414CF3 /* History.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A725CD1336D03C00414CF3 /* History.m */; };
@@ -105,6 +107,9 @@
 		94023D151348EF620075148F /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner.m; sourceTree = "<group>"; };
 		94023E4C134AF6FA0075148F /* UIImageAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageAlertView.h; sourceTree = "<group>"; };
 		94023E4D134AF6FA0075148F /* UIImageAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageAlertView.m; sourceTree = "<group>"; };
+		940240EA13556F2E0075148F /* RecentAttacksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentAttacksViewController.h; sourceTree = "<group>"; };
+		940240EB13556F2E0075148F /* RecentAttacksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentAttacksViewController.m; sourceTree = "<group>"; };
+		940240EC13556F2E0075148F /* RecentAttacksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RecentAttacksViewController.xib; path = Classes/RecentAttacksViewController.xib; sourceTree = "<group>"; };
 		94A725BF1336CF8300414CF3 /* attackHistory.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = attackHistory.db; sourceTree = "<group>"; };
 		94A725C81336CFCA00414CF3 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		94A725CC1336D03C00414CF3 /* History.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = History.h; sourceTree = "<group>"; };
@@ -262,6 +267,7 @@
 				94B983391345AA0F00090947 /* SigninViewController.xib */,
 				2899E5210DE3E06400AC0155 /* PandaAttackViewController.xib */,
 				94E933651322DAB70046EB0F /* AttackViewController.xib */,
+				940240EC13556F2E0075148F /* RecentAttacksViewController.xib */,
 				94A728401338774C00414CF3 /* AttackHistoryViewController.xib */,
 				94E93C9D1331CCB80046EB0F /* WeaponScrollerViewController.xib */,
 				94E93CAE1331CE0C0046EB0F /* SingleWeaponViewController.xib */,
@@ -336,13 +342,23 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
-		94E933A61322DDEA0046EB0F /* Attacks */ = {
+		9402402813556A640075148F /* AttackViewController */ = {
 			isa = PBXGroup;
 			children = (
 				94E933631322DAB70046EB0F /* AttackViewController.h */,
 				94E933641322DAB70046EB0F /* AttackViewController.m */,
+				940240EA13556F2E0075148F /* RecentAttacksViewController.h */,
+				940240EB13556F2E0075148F /* RecentAttacksViewController.m */,
 				94A7283E1338774C00414CF3 /* AttackHistoryViewController.h */,
 				94A7283F1338774C00414CF3 /* AttackHistoryViewController.m */,
+			);
+			name = AttackViewController;
+			sourceTree = "<group>";
+		};
+		94E933A61322DDEA0046EB0F /* Attacks */ = {
+			isa = PBXGroup;
+			children = (
+				9402402813556A640075148F /* AttackViewController */,
 				94E93C9B1331CCB80046EB0F /* WeaponScrollerViewController.h */,
 				94E93C9C1331CCB80046EB0F /* WeaponScrollerViewController.m */,
 				94E93CAC1331CE0C0046EB0F /* SingleWeaponViewController.h */,
@@ -470,6 +486,7 @@
 				94A728421338774C00414CF3 /* AttackHistoryViewController.xib in Resources */,
 				94A728AB1338820800414CF3 /* recentAttacks.db in Resources */,
 				94B9833B1345AA0F00090947 /* SigninViewController.xib in Resources */,
+				940240EE13556F2E0075148F /* RecentAttacksViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +528,7 @@
 				94023D1E1348EF620075148F /* CJSONSerializer.m in Sources */,
 				94023D1F1348EF620075148F /* CDataScanner.m in Sources */,
 				94023E4E134AF6FA0075148F /* UIImageAlertView.m in Sources */,
+				940240ED13556F2E0075148F /* RecentAttacksViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

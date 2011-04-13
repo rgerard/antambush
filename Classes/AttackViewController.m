@@ -16,7 +16,7 @@
 
 @implementation AttackViewController
 
-@synthesize recentAttacksTable, startAttackBtn, viewHistoryBtn, request;
+@synthesize recentAttacksViewController, startAttackBtn, viewHistoryBtn, request, currentUserToAttack;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -38,10 +38,6 @@
 	spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
 	[spinner setCenter:CGPointMake(self.view.frame.size.width/2.0, (self.view.frame.size.height-150)/2.0)]; 
 	
-	recentAttacksTable = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
-	recentAttacksTable.delegate = self;
-	recentAttacksTable.dataSource = self;
-	
 	// Create and track a local attackHistory object
 	attackHistory = [[History alloc] init];
 	
@@ -54,21 +50,32 @@
 	[startAttackBtn addTarget:self action:@selector(startBtnClick:) forControlEvents:UIControlEventTouchUpInside];
 	[viewHistoryBtn addTarget:self action:@selector(viewHistoryBtnClick:) forControlEvents:UIControlEventTouchUpInside];
 	
+	// Create the recent attacks table
+	CGRect recentAttacksViewFrame = CGRectMake(100,100,200,250);
+	self.recentAttacksViewController = [[RecentAttacksViewController alloc] init];
+	[self.recentAttacksViewController.view setFrame:recentAttacksViewFrame];
+	[self.recentAttacksViewController.recentAttacksTable reloadData];
+	[self.view addSubview:self.recentAttacksViewController.view];
 	
 	// Check to see if we know who this user is
+	self.currentUserToAttack = @"";
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 	NSString *userEmail = [prefs stringForKey:@"userEmail"];
+	NSString *lastAttackId = [prefs stringForKey:@"lastAttackId"];
+	if(lastAttackId == nil) {
+		lastAttackId = @"-1";
+	}
 	
 	if([userEmail length] > 0) {
 		// Start the spinner
 		[self.view addSubview:spinner];
 		[spinner startAnimating];
 		
-		NSString *formatUrl = [NSString stringWithFormat:@"http://localhost:3000/user_attacks/lookup?email=%@",userEmail];
+		NSString *formatUrl = [NSString stringWithFormat:@"http://localhost:3000/user_attacks/lookup?email=%@&lastid=%@",userEmail,lastAttackId];
 		NSURL *url = [NSURL URLWithString:formatUrl];
-		request = [ASIHTTPRequest requestWithURL:url];
-		[request setDelegate:self];
-		[request startAsynchronous];
+		self.request = [ASIHTTPRequest requestWithURL:url];
+		[self.request setDelegate:self];
+		[self.request startAsynchronous];
 	}
 }
 
@@ -77,6 +84,10 @@
 	// Stop the spinner
 	[spinner stopAnimating];
 	[spinner removeFromSuperview];
+	
+	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+	NSString *lastAttackIdStr = [prefs stringForKey:@"lastAttackId"];
+	int lastAttackId = [lastAttackIdStr intValue];
 	
 	// Use when fetching text data
 	NSString *responseString = [requestCallback responseString];
@@ -88,27 +99,74 @@
 	
 	// Prep the image list
 	NSString *ImageKey = @"imageKey";
+	NSString *NameKey = @"nameKey";
 	NSString *path = [[NSBundle mainBundle] pathForResource:@"iphone_contents" ofType:@"plist"];
 	NSArray *contentList = [NSArray arrayWithContentsOfFile:path];	
 	
 	// Iterate over array
 	NSEnumerator *e = [attackData objectEnumerator];
 	id object;
+	int newAttackId = lastAttackId;
 	while (object = [e nextObject]) {
 		NSDictionary *dictionary = (NSDictionary *)object;
+		NSLog(@"ID is %@", [dictionary objectForKey:@"attack_id"]);
 		NSLog(@"Name is %@", [dictionary objectForKey:@"attacker_name"]);
 		NSLog(@"Email is %@", [dictionary objectForKey:@"attacker_email"]);
+		NSLog(@"Attack image is %@", [dictionary objectForKey:@"attack_image"]);
 		NSLog(@"Message is %@", [dictionary objectForKey:@"message"]);
 		
-		// Get the image to load from a plist file inside our app bundle
-		NSDictionary *numberItem = [contentList objectAtIndex:3];
+		NSString *newAttackIdStr = [dictionary objectForKey:@"attack_id"];
+		NSString *attackerName = [dictionary objectForKey:@"attacker_name"];
+		NSString *attackerEmail = [dictionary objectForKey:@"attacker_email"];
+		NSString *attackImage = [dictionary objectForKey:@"attack_image"];
+		NSString *attackMessage = [dictionary objectForKey:@"message"];
 		
-		// Popup dialog now
-		UIImageAlertView *alert = [[UIImageAlertView alloc] initWithTitle:@"Attacked!" message:[NSString stringWithFormat:@"You were attacked by %@, who said '%@'",[dictionary objectForKey:@"attacker_name"], [dictionary objectForKey:@"message"]] delegate:self cancelButtonTitle:@"Wuss out" otherButtonTitles:@"Attack back",nil];
-		[alert setImage:[UIImage imageNamed:[numberItem valueForKey:ImageKey]]];
-		[alert show];
-		[alert release];
+		// Show the attack if it's greater than the last one recorded
+		if([newAttackIdStr intValue] > lastAttackId) {
+			
+			// Record the new largest attack ID -- checking this because multiple attacks could come out of order,
+			// so we need to keep track of last attack ID and new largest attack ID
+			if([newAttackIdStr intValue] > newAttackId) {
+				newAttackId = [newAttackIdStr intValue];
+			}
+		
+			// Get the image to load from a plist file inside our app bundle
+			NSDictionary *numberItem;
+			bool found = false;
+			for(int i=0; i < [contentList count]; i++) {
+				numberItem = [contentList objectAtIndex:i];
+				NSString *imageKey = [numberItem valueForKey:ImageKey];
+				
+				if([imageKey isEqualToString:attackImage]) {
+					found = true;
+					break;
+				}
+			}
+		
+			if(found) {
+				// Determine which name/email to use
+				NSString *nameToUse = attackerName;
+				if([nameToUse isEqualToString:@"Unknown"]) {
+					nameToUse = attackerEmail;
+				}
+				
+				// Set the current user to attack
+				self.currentUserToAttack = attackerEmail;
+				
+				// Popup dialog now
+				UIImageAlertView *alert = [[UIImageAlertView alloc] initWithTitle:@"Attacked!" message:[NSString stringWithFormat:@"You were attacked by %@, who said '%@'", nameToUse, attackMessage] delegate:self cancelButtonTitle:@"Wuss out" otherButtonTitles:@"Attack back",nil];
+				[alert setImage:[UIImage imageNamed:[numberItem valueForKey:ImageKey]]];
+				[alert show];
+				[alert release];
+			}
+		}
 	}
+	
+	// Record the new latest attack id
+	//if(newAttackId > lastAttackId) {
+	//	[prefs setObject:[NSString stringWithFormat: @"%d", newAttackId] forKey:@"lastAttackId"];
+	//	[prefs synchronize];
+	//}
 }
 
 
@@ -139,17 +197,23 @@
     [picker release];
 }
 
+
 // respond to the View History button click
 -(void)viewHistoryBtnClick:(UIView*)clickedButton {
 	AttackHistoryViewController *historyViewController = [[AttackHistoryViewController alloc] init];
 	historyViewController.title = @"History";
 	[self.navigationController pushViewController:historyViewController animated:YES];
-	[historyViewController release];			
+	[historyViewController release];	
 }
 	
 
 - (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker {
     [self dismissModalViewControllerAnimated:YES];
+	
+	// Popup dialog now asking to input email address
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Want to add?" message:@"Couldn't find the person you're looking for?  Do you want to input their email address now?" delegate:self cancelButtonTitle:@"Nope" otherButtonTitles:@"Hell yeah!",nil];
+	[alert show];
+	[alert release];
 }
 
 
@@ -174,14 +238,8 @@
     [self dismissModalViewControllerAnimated:YES];
 	
 	if(startGame) {
-		// Fill the History object
-		attackHistory.contact = (NSString *)emailAddress;
-		
-		WeaponScrollerViewController *weaponViewController = [[WeaponScrollerViewController alloc] init];
-		weaponViewController.title = @"Weapon";
-		weaponViewController.attackHistory = attackHistory;
-		[self.navigationController pushViewController:weaponViewController animated:YES];
-		[weaponViewController release];		
+		self.currentUserToAttack = (NSString *)emailAddress;
+		[self changeToWeaponView];	
 	} else {
 		// Popup dialog now
 		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Can't find" message:@"We can't find Maryam!  Want to invite?" delegate:self cancelButtonTitle:@"Nope" otherButtonTitles:@"Hell yeah!",nil];
@@ -220,14 +278,24 @@
 		}
     } else if([title isEqualToString:@"Attack back"]) {
 		NSLog(@"Uesr wants to attack back");
+		[self changeToWeaponView];
 	}
 } 
 
--(void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
-{
+-(void)changeToWeaponView {
+	// Fill the History object
+	attackHistory.contact = self.currentUserToAttack;
+	
+	WeaponScrollerViewController *weaponViewController = [[WeaponScrollerViewController alloc] init];
+	weaponViewController.title = @"Weapon";
+	weaponViewController.attackHistory = attackHistory;
+	[self.navigationController pushViewController:weaponViewController animated:YES];
+	[weaponViewController release];	
+}
+
+-(void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
 	// Notifies users about errors associated with the interface
-	switch (result)
-	{
+	switch (result) {
 		case MFMailComposeResultCancelled:
 			NSLog(@"Result: canceled");
 			break;
@@ -275,58 +343,6 @@
 }
 
 
-//
-//  UITableView Functions
-//
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
-    return 1;
-}
-
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
-	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
-	
-	if(appDelegate.dbHistory != nil) {
-		NSLog(@"DB count: %u", appDelegate.dbHistory.count);
-		return appDelegate.dbHistory.count;
-	} else {
-		return 0;
-	}
-}
-
-
-// Customize the appearance of table view cells.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-    }
-    
-    // Configure the cell...
-	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
-	History *item = [appDelegate.dbHistory objectAtIndex:indexPath.row];
-	cell.textLabel.text = item.contact;
-    
-    return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-	 <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-	 // ...
-	 // Pass the selected object to the new view controller.
-	 [self.navigationController pushViewController:detailViewController animated:YES];
-	 [detailViewController release];
-	 */
-}
-
 /*
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -350,10 +366,11 @@
 
 
 - (void)dealloc {
+	[recentAttacksViewController release];
+	[currentUserToAttack release];
 	[request clearDelegatesAndCancel];
 	[request release];	
 	[attackHistory release];
-	[recentAttacksTable release];
     [super dealloc];
 }
 
