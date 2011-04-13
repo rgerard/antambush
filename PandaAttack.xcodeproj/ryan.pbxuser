@@ -538,6 +538,8 @@
 			9402417C13557A010075148F /* PBXTextBookmark */ = 9402417C13557A010075148F /* PBXTextBookmark */;
 			9402417D13557A020075148F /* PBXTextBookmark */ = 9402417D13557A020075148F /* PBXTextBookmark */;
 			9402418313557A180075148F /* PBXTextBookmark */ = 9402418313557A180075148F /* PBXTextBookmark */;
+			9402418913557A8B0075148F /* PBXTextBookmark */ = 9402418913557A8B0075148F /* PBXTextBookmark */;
+			9402418A13557A8B0075148F /* PBXTextBookmark */ = 9402418A13557A8B0075148F /* PBXTextBookmark */;
 			94A7289A13387FE100414CF3 = 94A7289A13387FE100414CF3 /* PlistBookmark */;
 			94A7289D13387FE100414CF3 = 94A7289D13387FE100414CF3 /* PBXTextBookmark */;
 			94A7289E13387FE100414CF3 = 94A7289E13387FE100414CF3 /* PBXTextBookmark */;
@@ -2904,7 +2906,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {720, 2197}}";
 			sepNavSelRange = "{403, 14}";
-			sepNavVisRange = "{175, 535}";
+			sepNavVisRange = "{175, 593}";
 			sepNavWindowFrame = "{{61, 273}, {750, 558}}";
 		};
 	};
@@ -4537,6 +4539,26 @@
 		vrLen = 1208;
 		vrLoc = 1356;
 	};
+	9402418913557A8B0075148F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A7283F1338774C00414CF3 /* AttackHistoryViewController.m */;
+		name = "AttackHistoryViewController.m: 91";
+		rLen = 0;
+		rLoc = 2415;
+		rType = 0;
+		vrLen = 411;
+		vrLoc = 2136;
+	};
+	9402418A13557A8B0075148F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 940240161355685D0075148F /* user_attacks_controller.rb */;
+		name = "user_attacks_controller.rb: 15";
+		rLen = 14;
+		rLoc = 403;
+		rType = 0;
+		vrLen = 593;
+		vrLoc = 175;
+	};
 	94A725CC1336D03C00414CF3 /* History.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1100, 537}}";
@@ -4564,7 +4586,7 @@
 			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{4124, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{4175, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{4225, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 4926}\";\n    s = 0;\n}";
 			sepNavIntBoundsRect = "{{0, 0}, {908, 2275}}";
 			sepNavSelRange = "{2415, 0}";
-			sepNavVisRange = "{2136, 408}";
+			sepNavVisRange = "{2136, 411}";
 			sepNavWindowFrame = "{{130, 210}, {750, 558}}";
 		};
 	};

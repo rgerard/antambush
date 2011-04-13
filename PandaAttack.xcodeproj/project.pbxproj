@@ -28,7 +28,6 @@
 		94023E4E134AF6FA0075148F /* UIImageAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */; };
 		940240ED13556F2E0075148F /* RecentAttacksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940240EB13556F2E0075148F /* RecentAttacksViewController.m */; };
 		940240EE13556F2E0075148F /* RecentAttacksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 940240EC13556F2E0075148F /* RecentAttacksViewController.xib */; };
-		94A725C01336CF8300414CF3 /* attackHistory.db in Resources */ = {isa = PBXBuildFile; fileRef = 94A725BF1336CF8300414CF3 /* attackHistory.db */; };
 		94A725C91336CFCA00414CF3 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A725C81336CFCA00414CF3 /* libsqlite3.0.dylib */; };
 		94A725CE1336D03C00414CF3 /* History.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A725CD1336D03C00414CF3 /* History.m */; };
 		94A728411338774C00414CF3 /* AttackHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A7283F1338774C00414CF3 /* AttackHistoryViewController.m */; };
@@ -110,7 +109,6 @@
 		940240EA13556F2E0075148F /* RecentAttacksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentAttacksViewController.h; sourceTree = "<group>"; };
 		940240EB13556F2E0075148F /* RecentAttacksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentAttacksViewController.m; sourceTree = "<group>"; };
 		940240EC13556F2E0075148F /* RecentAttacksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RecentAttacksViewController.xib; path = Classes/RecentAttacksViewController.xib; sourceTree = "<group>"; };
-		94A725BF1336CF8300414CF3 /* attackHistory.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = attackHistory.db; sourceTree = "<group>"; };
 		94A725C81336CFCA00414CF3 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		94A725CC1336D03C00414CF3 /* History.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = History.h; sourceTree = "<group>"; };
 		94A725CD1336D03C00414CF3 /* History.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = History.m; sourceTree = "<group>"; };
@@ -261,7 +259,6 @@
 			isa = PBXGroup;
 			children = (
 				94E93D511331D49E0046EB0F /* images */,
-				94A725BF1336CF8300414CF3 /* attackHistory.db */,
 				94A728AA1338820800414CF3 /* recentAttacks.db */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				94B983391345AA0F00090947 /* SigninViewController.xib */,
@@ -482,7 +479,6 @@
 				94C417EB133321770032B2DA /* charlie_sheen.jpg in Resources */,
 				94C4182D133325F50032B2DA /* SendMessageViewController.xib in Resources */,
 				94C41849133328770032B2DA /* mel-gibson-braveheart.jpg in Resources */,
-				94A725C01336CF8300414CF3 /* attackHistory.db in Resources */,
 				94A728421338774C00414CF3 /* AttackHistoryViewController.xib in Resources */,
 				94A728AB1338820800414CF3 /* recentAttacks.db in Resources */,
 				94B9833B1345AA0F00090947 /* SigninViewController.xib in Resources */,
