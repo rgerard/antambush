@@ -42,7 +42,7 @@
 	attackHistory.message = inputMessage.text;
 	
 	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
-	[appDelegate addAttack:attackHistory];
+	[appDelegate addAttack:attackHistory sendToServer:YES];
 	
 	// Pop the stack
 	[self.navigationController popToRootViewControllerAnimated:YES];

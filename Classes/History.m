@@ -31,13 +31,13 @@ static sqlite3_stmt *insertAttack = nil;
 		
 		sqlite3_bind_int(init_statement, 1, primaryKey);
 		if(sqlite3_step(init_statement) == SQLITE_ROW) {
-			self.serverID = sqlite3_column_int(init_statement, 1);
+			self.serverID = sqlite3_column_int(init_statement, 0);
 			self.contact = [NSString stringWithUTF8String:(char*)sqlite3_column_text(init_statement, 1)];
 			self.attack = [NSString stringWithUTF8String:(char*)sqlite3_column_text(init_statement, 2)];
 			self.message = [NSString stringWithUTF8String:(char*)sqlite3_column_text(init_statement, 3)];
 			self.timeCreated = [NSDate dateWithTimeIntervalSince1970:(int)sqlite3_column_text(init_statement, 4)];
 		} else {
-			self.serverID = -1;
+			self.serverID = 0;
 			self.contact = @"Unknown";
 			self.attack = @"Unknown";
 			self.message = @"Unknown";
@@ -54,7 +54,7 @@ static sqlite3_stmt *insertAttack = nil;
 	
 	// Create the attack statement
 	if(insertAttack == nil) {
-		const char *sql = "INSERT INTO history(serverID,sender,attack,message,time) VALUES(?,?,?,?,?)";
+		const char *sql = "INSERT INTO attacks(serverID,sender,attack,message,time) VALUES(?,?,?,?,?)";
 		if(sqlite3_prepare_v2(db, sql, -1, &insertAttack, NULL) != SQLITE_OK) {
 			NSAssert1(0, @"Error create sql for insert attack: %s", sqlite3_errmsg(db));
 		}

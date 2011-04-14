@@ -10,9 +10,9 @@
 
 
 @interface RecentAttacksViewController : UITableViewController {
-	UITableView *recentAttacksTable;
+	BOOL loadAttacksFromMe;
 }
 
-@property (nonatomic, retain) IBOutlet UITableView *recentAttacksTable;
+@property (nonatomic) BOOL loadAttacksFromMe;
 
 @end

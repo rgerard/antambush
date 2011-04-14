@@ -11,11 +11,10 @@
 
 @implementation RecentAttacksViewController
 
-@synthesize recentAttacksTable;
+@synthesize loadAttacksFromMe;
 
 #pragma mark -
 #pragma mark View lifecycle
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,9 +23,6 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 	
 	// Initialization code.
-	self.recentAttacksTable = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
-	self.recentAttacksTable.delegate = self;
-	self.recentAttacksTable.dataSource = self;
 }
 
 
@@ -73,8 +69,14 @@
 	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
 	
 	if(appDelegate.dbAttacks != nil) {
-		NSLog(@"DB count: %u", appDelegate.dbAttacks.count);
-		return appDelegate.dbAttacks.count;
+		
+		if(self.loadAttacksFromMe == nil || self.loadAttacksFromMe == NO) {
+			NSLog(@"DB count: %u", appDelegate.dbAttackedBy.count);
+			return appDelegate.dbAttackedBy.count;
+		} else {
+			NSLog(@"DB count: %u", appDelegate.dbAttacks.count);
+			return appDelegate.dbAttacks.count;	
+		}
 	} else {
 		return 0;
 	}
@@ -91,10 +93,21 @@
     }
     
     // Configure the cell...
+	NSMutableArray *arrToUse;
 	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
-	History *item = [appDelegate.dbAttacks objectAtIndex:indexPath.row];
-	cell.textLabel.text = item.contact;
-    
+	if(self.loadAttacksFromMe == nil || self.loadAttacksFromMe == NO) {
+		arrToUse = appDelegate.dbAttackedBy;
+	} else {
+		arrToUse = appDelegate.dbAttacks;	
+	}
+	
+	if(arrToUse != nil) {
+		History *item = [arrToUse objectAtIndex:indexPath.row];
+		cell.textLabel.text = item.contact;
+    } else {
+		NSLog(@"Array to use is nil!");
+	}
+	
     return cell;
 }
 

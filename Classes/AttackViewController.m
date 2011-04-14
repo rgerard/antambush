@@ -16,7 +16,7 @@
 
 @implementation AttackViewController
 
-@synthesize recentAttacksViewController, startAttackBtn, viewHistoryBtn, request, currentUserToAttack;
+@synthesize recentAttacksViewController, recentlyAttackedByViewController, startAttackBtn, viewHistoryBtn, request, currentUserToAttack;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -51,11 +51,17 @@
 	[viewHistoryBtn addTarget:self action:@selector(viewHistoryBtnClick:) forControlEvents:UIControlEventTouchUpInside];
 	
 	// Create the recent attacks table
-	CGRect recentAttacksViewFrame = CGRectMake(100,100,200,250);
+	CGRect recentAttacksViewFrame = CGRectMake(100,100,200,150);
 	self.recentAttacksViewController = [[RecentAttacksViewController alloc] init];
+	self.recentAttacksViewController.loadAttacksFromMe = YES;
 	[self.recentAttacksViewController.view setFrame:recentAttacksViewFrame];
-	[self.recentAttacksViewController.recentAttacksTable reloadData];
 	[self.view addSubview:self.recentAttacksViewController.view];
+
+	CGRect recentlyAttackedByViewFrame = CGRectMake(100,250,200,150);
+	self.recentlyAttackedByViewController = [[RecentAttacksViewController alloc] init];
+	self.recentlyAttackedByViewController.loadAttacksFromMe = NO;
+	[self.recentlyAttackedByViewController.view setFrame:recentlyAttackedByViewFrame];
+	[self.view addSubview:self.recentlyAttackedByViewController.view];
 	
 	// Check to see if we know who this user is
 	self.currentUserToAttack = @"";
@@ -152,6 +158,17 @@
 				
 				// Set the current user to attack
 				self.currentUserToAttack = attackerEmail;
+				
+				// Create a new history object to record this in the DB
+				History *newAttack = [[History alloc] init];
+				newAttack.serverID = [newAttackIdStr intValue];
+				newAttack.contact = attackerEmail;
+				newAttack.attack = attackImage;
+				newAttack.message = attackMessage;
+
+				// Add the attack to the DB
+				PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
+				[appDelegate addAttack:newAttack sendToServer:NO];
 				
 				// Popup dialog now
 				UIImageAlertView *alert = [[UIImageAlertView alloc] initWithTitle:@"Attacked!" message:[NSString stringWithFormat:@"You were attacked by %@, who said '%@'", nameToUse, attackMessage] delegate:self cancelButtonTitle:@"Wuss out" otherButtonTitles:@"Attack back",nil];

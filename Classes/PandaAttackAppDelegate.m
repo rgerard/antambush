@@ -17,7 +17,7 @@
 @synthesize attackNavigationController;
 @synthesize userEmail;
 @synthesize signinViewController;
-@synthesize dbAttacks;
+@synthesize dbAttacks, dbAttackedBy;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -122,24 +122,40 @@
 
 -(void)initializeAttacksDatabase:(NSString*)dbFileName {
 	dbAttacks = [[NSMutableArray alloc] initWithCapacity:1];
+	dbAttackedBy = [[NSMutableArray alloc] initWithCapacity:1];
 	
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *documentsDirectory = [paths objectAtIndex:0];
 	NSString *path = [documentsDirectory stringByAppendingPathComponent:dbFileName];
 	
 	if(sqlite3_open([path UTF8String], &attacksDatabase) == SQLITE_OK) {
-		const char* sql = "SELECT id FROM attacks";
+		
+		// Get all attacks made by you
+		const char* sql_me = "SELECT id FROM attacks WHERE serverID=0";
+		sqlite3_stmt *statement_me;
+		
+		if(sqlite3_prepare_v2(attacksDatabase, sql_me, -1, &statement_me, NULL) == SQLITE_OK) {
+			while(sqlite3_step(statement_me) == SQLITE_ROW) {
+				int primaryKey = sqlite3_column_int(statement_me, 0);
+				History *hist = [[History alloc] initWithPrimaryKey:primaryKey database:attacksDatabase];
+				[dbAttacks addObject:hist];
+				[hist release];
+			}
+		}
+		sqlite3_finalize(statement_me);
+		
+		// Get all attacks made on you
+		const char* sql = "SELECT id FROM attacks WHERE serverID > 0";
 		sqlite3_stmt *statement;
 		
 		if(sqlite3_prepare_v2(attacksDatabase, sql, -1, &statement, NULL) == SQLITE_OK) {
 			while(sqlite3_step(statement) == SQLITE_ROW) {
 				int primaryKey = sqlite3_column_int(statement, 0);
 				History *hist = [[History alloc] initWithPrimaryKey:primaryKey database:attacksDatabase];
-				[dbAttacks addObject:hist];
+				[dbAttackedBy addObject:hist];
 				[hist release];
 			}
 		}
-		
 		sqlite3_finalize(statement);
 	} else {
 		sqlite3_close(attacksDatabase);
@@ -147,21 +163,28 @@
 	}
 }
 
--(void)addAttack:(History*)historyItem {
+-(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer {
 	NSLog(@"Adding attack!");
 	NSInteger pk = [historyItem insertNewAttack:attacksDatabase];
 	History *item = [[History alloc] initWithPrimaryKey:pk database:attacksDatabase];
-	[dbAttacks addObject:item];
 	
-	// Send the data to the backend
-	NSURL *url = [NSURL URLWithString:@"http://localhost:3000/user_attacks/createFromPhone"];
-	request = [ASIFormDataRequest requestWithURL:url];
-	[request setPostValue:userEmail forKey:@"user_attack[attacker_email]"];
-	[request setPostValue:[item contact] forKey:@"user_attack[victim_email]"];
-	[request setPostValue:[item attack] forKey:@"user_attack[attack_name]"];
-	[request setPostValue:[item message] forKey:@"user_attack[message]"];
-	[request setDelegate:self];
-	[request startAsynchronous];
+	if(item.serverID == 0) {
+		[dbAttacks addObject:item];
+	} else {
+		[dbAttackedBy addObject:item];
+	}
+	
+	if(sendToServer == YES) {
+		// Send the data to the backend
+		NSURL *url = [NSURL URLWithString:@"http://localhost:3000/user_attacks/createFromPhone"];
+		request = [ASIFormDataRequest requestWithURL:url];
+		[request setPostValue:userEmail forKey:@"user_attack[attacker_email]"];
+		[request setPostValue:[item contact] forKey:@"user_attack[victim_email]"];
+		[request setPostValue:[item attack] forKey:@"user_attack[attack_name]"];
+		[request setPostValue:[item message] forKey:@"user_attack[message]"];
+		[request setDelegate:self];
+		[request startAsynchronous];
+	}
 }
 
 -(void)requestFinished:(ASIHTTPRequest *)requestCallback {
@@ -230,6 +253,7 @@
 	[request release];
 	
 	[dbAttacks release];
+	[dbAttackedBy release];
     [viewController release];
 	[attackViewController release];
     [window release];

@@ -23,6 +23,7 @@
 	History *attackHistory;
 	ASIHTTPRequest *request;
 	RecentAttacksViewController *recentAttacksViewController;
+	RecentAttacksViewController *recentlyAttackedByViewController;
 }
 
 @property (nonatomic, retain) IBOutlet UIButton *startAttackBtn;
@@ -30,6 +31,7 @@
 @property (nonatomic, retain) NSString *currentUserToAttack;
 @property (nonatomic, retain) ASIHTTPRequest *request;
 @property (nonatomic, retain) RecentAttacksViewController *recentAttacksViewController;
+@property (nonatomic, retain) RecentAttacksViewController *recentlyAttackedByViewController;
 
 -(void)personBtnClick:(UIView*)clickedButton;
 -(void)startBtnClick:(UIView*)clickedButton;

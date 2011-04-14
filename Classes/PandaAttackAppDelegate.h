@@ -23,6 +23,7 @@
 	
 	sqlite3 *attacksDatabase;
 	NSMutableArray *dbAttacks;
+	NSMutableArray *dbAttackedBy;
 	
 	ASIFormDataRequest *request;
 }
@@ -33,6 +34,7 @@
 @property (nonatomic, retain) IBOutlet AttackViewController *attackViewController;
 @property (nonatomic, retain) IBOutlet UINavigationController *attackNavigationController;
 @property (nonatomic, retain) NSMutableArray *dbAttacks;
+@property (nonatomic, retain) NSMutableArray *dbAttackedBy;
 @property (nonatomic, retain) NSString *userEmail;
 
 -(void)startTimer;
@@ -40,7 +42,7 @@
 -(void)switchFromLoginView;
 -(void)createEditableCopyOfDatabase:(NSString*)fileName;
 -(void)initializeAttacksDatabase:(NSString*)fileName;
--(void)addAttack:(History*)historyItem;
+-(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer;
 
 @end
 

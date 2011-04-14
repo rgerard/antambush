@@ -273,13 +273,15 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>23</integer>
+									<integer>13</integer>
+									<integer>9</integer>
+									<integer>8</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {186, 627}}</string>
+							<string>{{0, 2}, {186, 627}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -298,7 +300,7 @@
 							<real>186</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>34 149 1369 686 0 0 1440 878 </string>
+						<string>26 164 1369 686 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -316,7 +318,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>History.m</string>
+								<string>RecentAttacksViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -324,11 +326,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>History.m</string>
+										<string>RecentAttacksViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>9402418313557A180075148F</string>
+										<string>940243B61356A4480075148F</string>
 										<key>history</key>
 										<array>
 											<string>94E9336E1322DB060046EB0F</string>
@@ -339,28 +341,28 @@
 											<string>94B9831A1345A3B300090947</string>
 											<string>94B9832B1345A52300090947</string>
 											<string>94B983A71345B00700090947</string>
-											<string>94023C90134857810075148F</string>
 											<string>94023D7B1348F4D50075148F</string>
-											<string>94023E57134AF7410075148F</string>
-											<string>94023E70134AF8760075148F</string>
-											<string>94023E84134AF9330075148F</string>
-											<string>94023EE5134B00430075148F</string>
 											<string>94023EED134B00850075148F</string>
 											<string>94023EEE134B00850075148F</string>
 											<string>94023F3E134C31D00075148F</string>
 											<string>94024021135568AE0075148F</string>
-											<string>9402406713556C4D0075148F</string>
-											<string>940240FA1355702B0075148F</string>
-											<string>9402411B135570F70075148F</string>
-											<string>94024133135578980075148F</string>
-											<string>94024134135578980075148F</string>
-											<string>94024135135578980075148F</string>
-											<string>94024136135578980075148F</string>
-											<string>94024137135578980075148F</string>
-											<string>940241641355794B0075148F</string>
-											<string>940241651355794B0075148F</string>
 											<string>94024170135579670075148F</string>
-											<string>94024171135579670075148F</string>
+											<string>9402428813569B100075148F</string>
+											<string>940243111356A0B10075148F</string>
+											<string>940243121356A0B10075148F</string>
+											<string>940243151356A0B10075148F</string>
+											<string>940243161356A0B10075148F</string>
+											<string>940243171356A0B10075148F</string>
+											<string>940243181356A0B10075148F</string>
+											<string>9402431A1356A0B10075148F</string>
+											<string>940243361356A1180075148F</string>
+											<string>9402436E1356A2780075148F</string>
+											<string>940243911356A3070075148F</string>
+											<string>940243921356A3070075148F</string>
+											<string>9402439E1356A3880075148F</string>
+											<string>940243B31356A4480075148F</string>
+											<string>940243B41356A4480075148F</string>
+											<string>940243B51356A4480075148F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -374,7 +376,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1161, 569}}</string>
 								<key>RubberWindowFrame</key>
-								<string>34 149 1369 686 0 0 1440 878 </string>
+								<string>26 164 1369 686 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -394,7 +396,7 @@
 								<key>Frame</key>
 								<string>{{0, 574}, {1161, 71}}</string>
 								<key>RubberWindowFrame</key>
-								<string>34 149 1369 686 0 0 1440 878 </string>
+								<string>26 164 1369 686 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -558,17 +560,17 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>9402418413557A180075148F</string>
+		<string>940243B71356A4480075148F</string>
 		<string>94023C98134857810075148F</string>
 		<string>94023C99134857810075148F</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>94E9335B1322DA870046EB0F</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/ryan/Projects/PandaAttack/PandaAttack.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>34 149 1369 686 0 0 1440 878 </string>
+	<string>26 164 1369 686 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -589,7 +591,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>AttackHistoryViewController.m</string>
+								<string>PandaAttackAppDelegate.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -941,7 +943,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
