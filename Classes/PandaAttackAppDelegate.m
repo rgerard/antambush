@@ -166,6 +166,13 @@
 -(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer {
 	NSLog(@"Adding attack!");
 	NSInteger pk = [historyItem insertNewAttack:attacksDatabase];
+	
+	// Check to make sure it inserted correctly
+	if(pk == -1) {
+		NSLog(@"Attack didn't insert correctly.  Returning.");
+		return;
+	}
+	
 	History *item = [[History alloc] initWithPrimaryKey:pk database:attacksDatabase];
 	
 	if(item.serverID == 0) {

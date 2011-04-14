@@ -273,9 +273,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>13</integer>
-									<integer>9</integer>
-									<integer>8</integer>
+									<integer>23</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -318,7 +316,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>RecentAttacksViewController.m</string>
+								<string>History.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -326,11 +324,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>RecentAttacksViewController.m</string>
+										<string>History.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>940243B61356A4480075148F</string>
+										<string>940243E01356A83E0075148F</string>
 										<key>history</key>
 										<array>
 											<string>94E9336E1322DB060046EB0F</string>
@@ -355,14 +353,14 @@
 											<string>940243171356A0B10075148F</string>
 											<string>940243181356A0B10075148F</string>
 											<string>9402431A1356A0B10075148F</string>
-											<string>940243361356A1180075148F</string>
 											<string>9402436E1356A2780075148F</string>
 											<string>940243911356A3070075148F</string>
-											<string>940243921356A3070075148F</string>
-											<string>9402439E1356A3880075148F</string>
-											<string>940243B31356A4480075148F</string>
 											<string>940243B41356A4480075148F</string>
-											<string>940243B51356A4480075148F</string>
+											<string>940243BA1356A7550075148F</string>
+											<string>940243BB1356A7550075148F</string>
+											<string>940243BC1356A7550075148F</string>
+											<string>940243DE1356A83E0075148F</string>
+											<string>940243DF1356A83E0075148F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -560,13 +558,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>940243B71356A4480075148F</string>
+		<string>940243E11356A83E0075148F</string>
 		<string>94023C98134857810075148F</string>
 		<string>94023C99134857810075148F</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>94E9335B1322DA870046EB0F</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/ryan/Projects/PandaAttack/PandaAttack.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -943,7 +941,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

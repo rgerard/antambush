@@ -9,6 +9,7 @@
 #import "History.h"
 
 static sqlite3_stmt *init_statement = nil;
+static sqlite3_stmt *checkserver_statement = nil;
 static sqlite3_stmt *insertAttack = nil;
 
 @implementation History
@@ -51,6 +52,24 @@ static sqlite3_stmt *insertAttack = nil;
 }
 
 -(NSInteger)insertNewAttack:(sqlite3*)db {
+	
+	// Check if this serverID is greater than 0, and has already been inserted to the DB
+	if(self.serverID > 0) {
+		if(checkserver_statement == nil) {
+			const char *sql = "SELECT id FROM attacks WHERE serverID=?";
+			if(sqlite3_prepare_v2(db, sql, -1, &checkserver_statement, NULL) != SQLITE_OK) {
+				NSAssert1(0, @"Failed to prepare statement: ", sqlite3_errmsg(database));
+			}
+		}
+
+		sqlite3_bind_int(checkserver_statement, 1, serverID);
+		if(sqlite3_step(checkserver_statement) == SQLITE_ROW) {
+			NSLog(@"This serverID has already been inserted to the DB.  Not inserting again.");
+			return -1;
+		}
+	
+		sqlite3_reset(checkserver_statement);
+	}
 	
 	// Create the attack statement
 	if(insertAttack == nil) {
