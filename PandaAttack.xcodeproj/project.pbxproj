@@ -28,6 +28,7 @@
 		94023E4E134AF6FA0075148F /* UIImageAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */; };
 		940240ED13556F2E0075148F /* RecentAttacksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940240EB13556F2E0075148F /* RecentAttacksViewController.m */; };
 		940240EE13556F2E0075148F /* RecentAttacksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 940240EC13556F2E0075148F /* RecentAttacksViewController.xib */; };
+		949EBE87135E28CA002EAEA6 /* ContactListPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 949EBE86135E28CA002EAEA6 /* ContactListPicker.m */; };
 		94A725C91336CFCA00414CF3 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A725C81336CFCA00414CF3 /* libsqlite3.0.dylib */; };
 		94A725CE1336D03C00414CF3 /* History.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A725CD1336D03C00414CF3 /* History.m */; };
 		94A728411338774C00414CF3 /* AttackHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A7283F1338774C00414CF3 /* AttackHistoryViewController.m */; };
@@ -109,6 +110,8 @@
 		940240EA13556F2E0075148F /* RecentAttacksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentAttacksViewController.h; sourceTree = "<group>"; };
 		940240EB13556F2E0075148F /* RecentAttacksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentAttacksViewController.m; sourceTree = "<group>"; };
 		940240EC13556F2E0075148F /* RecentAttacksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RecentAttacksViewController.xib; path = Classes/RecentAttacksViewController.xib; sourceTree = "<group>"; };
+		949EBE85135E28CA002EAEA6 /* ContactListPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListPicker.h; sourceTree = "<group>"; };
+		949EBE86135E28CA002EAEA6 /* ContactListPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactListPicker.m; sourceTree = "<group>"; };
 		94A725C81336CFCA00414CF3 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		94A725CC1336D03C00414CF3 /* History.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = History.h; sourceTree = "<group>"; };
 		94A725CD1336D03C00414CF3 /* History.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = History.m; sourceTree = "<group>"; };
@@ -344,6 +347,8 @@
 			children = (
 				94E933631322DAB70046EB0F /* AttackViewController.h */,
 				94E933641322DAB70046EB0F /* AttackViewController.m */,
+				949EBE85135E28CA002EAEA6 /* ContactListPicker.h */,
+				949EBE86135E28CA002EAEA6 /* ContactListPicker.m */,
 				940240EA13556F2E0075148F /* RecentAttacksViewController.h */,
 				940240EB13556F2E0075148F /* RecentAttacksViewController.m */,
 				94A7283E1338774C00414CF3 /* AttackHistoryViewController.h */,
@@ -525,6 +530,7 @@
 				94023D1F1348EF620075148F /* CDataScanner.m in Sources */,
 				94023E4E134AF6FA0075148F /* UIImageAlertView.m in Sources */,
 				940240ED13556F2E0075148F /* RecentAttacksViewController.m in Sources */,
+				949EBE87135E28CA002EAEA6 /* ContactListPicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

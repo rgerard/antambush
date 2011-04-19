@@ -328,7 +328,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>940243E01356A83E0075148F</string>
+										<string>949EBE7D135C0DD9002EAEA6</string>
 										<key>history</key>
 										<array>
 											<string>94E9336E1322DB060046EB0F</string>
@@ -360,7 +360,7 @@
 											<string>940243BB1356A7550075148F</string>
 											<string>940243BC1356A7550075148F</string>
 											<string>940243DE1356A83E0075148F</string>
-											<string>940243DF1356A83E0075148F</string>
+											<string>940243E01356A83E0075148F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -372,14 +372,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1161, 569}}</string>
+								<string>{{0, 0}, {1161, 567}}</string>
 								<key>RubberWindowFrame</key>
 								<string>26 164 1369 686 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>569pt</string>
+							<string>567pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -392,14 +392,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 574}, {1161, 71}}</string>
+								<string>{{0, 572}, {1161, 73}}</string>
 								<key>RubberWindowFrame</key>
 								<string>26 164 1369 686 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>71pt</string>
+							<string>73pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -418,9 +418,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>94023C72134851810075148F</string>
+				<string>949EBE7E135C0DD9002EAEA6</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>94023C73134851810075148F</string>
+				<string>949EBE7F135C0DD9002EAEA6</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -558,14 +558,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>940243E11356A83E0075148F</string>
-		<string>94023C98134857810075148F</string>
-		<string>94023C99134857810075148F</string>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>1CD10A99069EF8BA00B06720</string>
-		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>94E9335B1322DA870046EB0F</string>
-		<string>/Users/ryan/Projects/PandaAttack/PandaAttack.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>26 164 1369 686 0 0 1440 878 </string>
@@ -589,7 +582,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>PandaAttackAppDelegate.m</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -606,8 +599,6 @@
 							<string>162pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -647,7 +638,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>94E9335B1322DA870046EB0F</string>
-				<string>94023C74134851810075148F</string>
+				<string>949EBE80135C0DD9002EAEA6</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

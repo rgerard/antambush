@@ -16,7 +16,7 @@
 
 @implementation AttackViewController
 
-@synthesize recentAttacksViewController, recentlyAttackedByViewController, startAttackBtn, viewHistoryBtn, request, currentUserToAttack;
+@synthesize recentAttacksViewController, recentlyAttackedByViewController, startAttackBtn, viewHistoryBtn, request, currentUserToAttack, contactList;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -38,8 +38,12 @@
 	spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
 	[spinner setCenter:CGPointMake(self.view.frame.size.width/2.0, (self.view.frame.size.height-150)/2.0)]; 
 	
-	// Create and track a local attackHistory object
+	// Create and track a local History object
 	attackHistory = [[History alloc] init];
+	
+	// Create the contact list picker object
+	self.contactList = [[ContactListPicker alloc] init];
+	[self.contactList setDelegateCallback:@selector(personPickedCallback) delegate:self];
 	
 	// Create a logout button
 	UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(logoutUser:)];          
@@ -57,6 +61,7 @@
 	[self.recentAttacksViewController.view setFrame:recentAttacksViewFrame];
 	[self.view addSubview:self.recentAttacksViewController.view];
 
+	// Create the "recently attacked by" table
 	CGRect recentlyAttackedByViewFrame = CGRectMake(100,250,200,150);
 	self.recentlyAttackedByViewController = [[RecentAttacksViewController alloc] init];
 	self.recentlyAttackedByViewController.loadAttacksFromMe = NO;
@@ -77,6 +82,7 @@
 		[self.view addSubview:spinner];
 		[spinner startAnimating];
 		
+		// Ask server if there are any new attacks on this user
 		NSString *formatUrl = [NSString stringWithFormat:@"http://localhost:3000/user_attacks/lookup?email=%@&lastid=%@",userEmail,lastAttackId];
 		NSURL *url = [NSURL URLWithString:formatUrl];
 		self.request = [ASIHTTPRequest requestWithURL:url];
@@ -85,7 +91,7 @@
 	}
 }
 
-
+// Callback from the server request asking for new attacks
 -(void)requestFinished:(ASIHTTPRequest *)requestCallback {
 	// Stop the spinner
 	[spinner stopAnimating];
@@ -115,17 +121,18 @@
 	int newAttackId = lastAttackId;
 	while (object = [e nextObject]) {
 		NSDictionary *dictionary = (NSDictionary *)object;
-		NSLog(@"ID is %@", [dictionary objectForKey:@"attack_id"]);
-		NSLog(@"Name is %@", [dictionary objectForKey:@"attacker_name"]);
-		NSLog(@"Email is %@", [dictionary objectForKey:@"attacker_email"]);
-		NSLog(@"Attack image is %@", [dictionary objectForKey:@"attack_image"]);
-		NSLog(@"Message is %@", [dictionary objectForKey:@"message"]);
 		
 		NSString *newAttackIdStr = [dictionary objectForKey:@"attack_id"];
 		NSString *attackerName = [dictionary objectForKey:@"attacker_name"];
 		NSString *attackerEmail = [dictionary objectForKey:@"attacker_email"];
 		NSString *attackImage = [dictionary objectForKey:@"attack_image"];
 		NSString *attackMessage = [dictionary objectForKey:@"message"];
+		
+		NSLog(@"ID is %@", newAttackIdStr);
+		NSLog(@"Name is %@", attackerName);
+		NSLog(@"Email is %@", attackerEmail);
+		NSLog(@"Attack image is %@", attackImage);
+		NSLog(@"Message is %@", attackMessage);
 		
 		// Show the attack if it's greater than the last one recorded
 		if([newAttackIdStr intValue] > lastAttackId) {
@@ -197,6 +204,15 @@
 }
 
 
+-(void) personPickedCallback {
+	// Grab the person picked, and then load the weapon view
+	self.currentUserToAttack = contactList.personPicked;
+	NSLog(@"Person picked is %@", self.currentUserToAttack);
+	
+	[self changeToWeaponView];
+}
+
+
 -(void)logoutUser:(id)sender{
 	// Clear the users email address
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
@@ -207,69 +223,32 @@
 
 // respond to the Attack button click
 -(void)startBtnClick:(UIView*)clickedButton {
-	ABPeoplePickerNavigationController *picker = [[ABPeoplePickerNavigationController alloc] init];
-    picker.peoplePickerDelegate = self;
-	
-    [self presentModalViewController:picker animated:YES];
-    [picker release];
+	[contactList openContactList];
 }
 
 
-// respond to the View History button click
+// Respond to the View History button click
 -(void)viewHistoryBtnClick:(UIView*)clickedButton {
 	AttackHistoryViewController *historyViewController = [[AttackHistoryViewController alloc] init];
 	historyViewController.title = @"History";
 	[self.navigationController pushViewController:historyViewController animated:YES];
 	[historyViewController release];	
 }
-	
 
-- (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker {
-    [self dismissModalViewControllerAnimated:YES];
+
+-(void)changeToWeaponView {
+	// Fill the History object
+	attackHistory.contact = self.currentUserToAttack;
 	
-	// Popup dialog now asking to input email address
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Want to add?" message:@"Couldn't find the person you're looking for?  Do you want to input their email address now?" delegate:self cancelButtonTitle:@"Nope" otherButtonTitles:@"Hell yeah!",nil];
-	[alert show];
-	[alert release];
+	WeaponScrollerViewController *weaponViewController = [[WeaponScrollerViewController alloc] init];
+	weaponViewController.title = @"Weapon";
+	weaponViewController.attackHistory = attackHistory;
+	[self.navigationController pushViewController:weaponViewController animated:YES];
+	[weaponViewController release];	
 }
 
 
-- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person {
-	
-	bool startGame = false;
-	
-    NSString* name = (NSString *)ABRecordCopyValue(person, kABPersonFirstNameProperty);
-	NSLog(@"%s",name);
-	if([name isEqualToString:@"zahra"]) {
-		startGame = true;
-	}
-	NSLog(@"%s",name);
-	
-	ABMultiValueRef email = ABRecordCopyValue(person, kABPersonEmailProperty);
-	CFStringRef emailAddress;
-	for (CFIndex i = 0; i < ABMultiValueGetCount(email); i++) {
-		emailAddress = ABMultiValueCopyValueAtIndex(email, i);
-		NSLog(@"%s",emailAddress);
-	}
-	
-    [self dismissModalViewControllerAnimated:YES];
-	
-	if(startGame) {
-		self.currentUserToAttack = (NSString *)emailAddress;
-		[self changeToWeaponView];	
-	} else {
-		// Popup dialog now
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Can't find" message:@"We can't find Maryam!  Want to invite?" delegate:self cancelButtonTitle:@"Nope" otherButtonTitles:@"Hell yeah!",nil];
-		[alert show];
-		[alert release];
-	}
-	
-	[name release];
-	CFRelease(emailAddress);
-	
-    return NO;
-}
-
+// Responds to people saying they want to invite someone
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {  
 	NSString *title = [alertView buttonTitleAtIndex:buttonIndex];  
 	
@@ -299,16 +278,6 @@
 	}
 } 
 
--(void)changeToWeaponView {
-	// Fill the History object
-	attackHistory.contact = self.currentUserToAttack;
-	
-	WeaponScrollerViewController *weaponViewController = [[WeaponScrollerViewController alloc] init];
-	weaponViewController.title = @"Weapon";
-	weaponViewController.attackHistory = attackHistory;
-	[self.navigationController pushViewController:weaponViewController animated:YES];
-	[weaponViewController release];	
-}
 
 -(void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
 	// Notifies users about errors associated with the interface
@@ -332,7 +301,7 @@
 	[self dismissModalViewControllerAnimated:YES];
 }
 
-// respond to the ask button click
+// respond to the ask button click -- this will insert someone into your address book
 -(void)personBtnClick:(UIView*)clickedButton {
 	
 	ABAddressBookRef addressBook = ABAddressBookCreate();
@@ -353,10 +322,6 @@
 	
 	CFRelease(aRecord);
 	CFRelease(addressBook);
-}
-
-- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier{
-    return NO;
 }
 
 
@@ -383,6 +348,7 @@
 
 
 - (void)dealloc {
+	[contactList release];
 	[recentAttacksViewController release];
 	[currentUserToAttack release];
 	[request clearDelegatesAndCancel];

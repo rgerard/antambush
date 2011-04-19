@@ -7,15 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AddressBook/AddressBook.h>
-#import <AddressBookUI/AddressBookUI.h>
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
 #import "History.h"
 #import "ASIHTTPRequest.h"
 #import "RecentAttacksViewController.h"
+#import "ContactListPicker.h"
 
-@interface AttackViewController : UIViewController<ABPeoplePickerNavigationControllerDelegate,UIAlertViewDelegate,MFMailComposeViewControllerDelegate> {
+@interface AttackViewController : UIViewController<UIAlertViewDelegate,MFMailComposeViewControllerDelegate> {
 	UIButton *startAttackBtn;
 	UIButton *viewHistoryBtn;
 	UIActivityIndicatorView *spinner;
@@ -24,6 +23,7 @@
 	ASIHTTPRequest *request;
 	RecentAttacksViewController *recentAttacksViewController;
 	RecentAttacksViewController *recentlyAttackedByViewController;
+	ContactListPicker *contactList;
 }
 
 @property (nonatomic, retain) IBOutlet UIButton *startAttackBtn;
@@ -32,6 +32,7 @@
 @property (nonatomic, retain) ASIHTTPRequest *request;
 @property (nonatomic, retain) RecentAttacksViewController *recentAttacksViewController;
 @property (nonatomic, retain) RecentAttacksViewController *recentlyAttackedByViewController;
+@property (nonatomic, retain) ContactListPicker *contactList;
 
 -(void)personBtnClick:(UIView*)clickedButton;
 -(void)startBtnClick:(UIView*)clickedButton;
