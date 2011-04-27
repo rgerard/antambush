@@ -43,6 +43,7 @@
 -(void)createEditableCopyOfDatabase:(NSString*)fileName;
 -(void)initializeAttacksDatabase:(NSString*)fileName;
 -(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer;
+-(NSDictionary*)findAttackInPList:(NSString*)imageNameToFind;
 
 @end
 

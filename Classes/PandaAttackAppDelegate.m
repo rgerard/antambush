@@ -9,6 +9,9 @@
 #import "PandaAttackAppDelegate.h"
 #import "History.h"
 
+static NSString *ImageKey = @"imageKey";
+static NSString *NameKey = @"nameKey";
+
 @implementation PandaAttackAppDelegate
 
 @synthesize window;
@@ -36,7 +39,7 @@
 	signinViewController = [[SigninViewController alloc] init];
 	attackViewController = [[AttackViewController alloc] init];
 	attackViewController.title = @"Panda Attack";
-	attackViewController.view.backgroundColor = [[UIColor alloc] initWithRed:0.1 green:0.2 blue:0.6 alpha:0.5];
+	attackViewController.view.backgroundColor = [[[UIColor alloc] initWithRed:0.1 green:0.2 blue:0.6 alpha:0.5] autorelease];
 	
 	// Setup the controller properties
 	attackNavigationController = [[UINavigationController alloc] initWithRootViewController:attackViewController];
@@ -106,10 +109,10 @@
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *documentsDirectory = [paths objectAtIndex:0];
 	
-	// 
 	NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:dbFileName];
 	success = [fileManager fileExistsAtPath:writableDBPath];
 	if(success) {
+		NSLog([NSString stringWithFormat:@"DB at %@", writableDBPath]);
 		return;
 	}
 	
@@ -183,10 +186,11 @@
 	
 	if(sendToServer == YES) {
 		// Send the data to the backend
-		NSURL *url = [NSURL URLWithString:@"http://localhost:3000/user_attacks/createFromPhone"];
+		NSURL *url = [NSURL URLWithString:@"http://hollow-river-123.heroku.com/user_attacks/createFromPhone"];
 		request = [ASIFormDataRequest requestWithURL:url];
 		[request setPostValue:userEmail forKey:@"user_attack[attacker_email]"];
 		[request setPostValue:[item contact] forKey:@"user_attack[victim_email]"];
+		[request setPostValue:[item contactName] forKey:@"user_attack[victim_name]"];
 		[request setPostValue:[item attack] forKey:@"user_attack[attack_name]"];
 		[request setPostValue:[item message] forKey:@"user_attack[message]"];
 		[request setDelegate:self];
@@ -205,6 +209,33 @@
 	NSError *error = [requestCallback error];
 	
 	NSLog(@"Error request: %@", [error localizedDescription]);
+}
+
+// Given an image name, find the attack item in the local plist of attacks
+-(NSDictionary*)findAttackInPList:(NSString*)imageNameToFind {
+	
+	// Prep the image list
+	NSString *path = [[NSBundle mainBundle] pathForResource:@"iphone_contents" ofType:@"plist"];
+	NSArray *contentList = [NSArray arrayWithContentsOfFile:path];	
+	NSDictionary *plistItem;
+	
+	// Get the image to load from a plist file inside our app bundle	
+	bool found = false;
+	for(int i=0; i < [contentList count]; i++) {
+		plistItem = [contentList objectAtIndex:i];
+		NSString *imageKey = [plistItem valueForKey:ImageKey];
+		
+		if([imageKey isEqualToString:imageNameToFind]) {
+			found = true;
+			break;
+		}
+	}
+	
+	if(found) {
+		return plistItem;
+	} else {
+		return nil;
+	}
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

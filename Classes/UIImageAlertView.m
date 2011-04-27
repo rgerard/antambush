@@ -11,13 +11,13 @@
 
 @implementation UIImageAlertView
 
-@synthesize image, imageView;
+@synthesize image, imageView, attackName;
 
--(void)setImage:(UIImage*)initimage {
+-(void)setImage:(UIImage*)initimage attackNameStr:(NSString *)attackNameStr {
 	CGSize size = CGSizeMake(100, 100);
-	image = [UIImageAlertView imageWithImage:initimage scaledToSize:size];
-	
-	imageView = [[UIImageView alloc] initWithImage:image];
+	self.image = [UIImageAlertView imageWithImage:initimage scaledToSize:size];
+	self.imageView = [[UIImageView alloc] initWithImage:image];
+	self.attackName = attackNameStr;
 	
 	[self addSubview:imageView];	
 }
@@ -33,7 +33,7 @@
 
 // Tell the UIAlertView frame to have a larger height, to accomodate the picture
 - (void)setFrame:(CGRect)rect {
-	[super setFrame:CGRectMake(0, 0, rect.size.width, 260)];
+	[super setFrame:CGRectMake(0, 0, rect.size.width, 280)];
 	self.center = CGPointMake(320/2, 480/2);
 }
 

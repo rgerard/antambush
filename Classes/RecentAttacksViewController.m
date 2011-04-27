@@ -8,10 +8,13 @@
 
 #import "RecentAttacksViewController.h"
 #import "PandaAttackAppDelegate.h"
+#import "RecentAttacksTableViewCell.h"
 
 @implementation RecentAttacksViewController
 
 @synthesize loadAttacksFromMe;
+@synthesize delegate;
+@synthesize attackSelector;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -23,6 +26,11 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 	
 	// Initialization code.
+}
+
+-(void) setDelegateCallback:(SEL)appSelector delegate:(id)requestDelegate {
+	self.delegate = requestDelegate;
+	self.attackSelector = appSelector;
 }
 
 
@@ -87,9 +95,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	RecentAttacksTableViewCell *cell = (RecentAttacksTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        //cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+		cell = [[[RecentAttacksTableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
     }
     
     // Configure the cell...
@@ -103,7 +113,8 @@
 	
 	if(arrToUse != nil) {
 		History *item = [arrToUse objectAtIndex:indexPath.row];
-		cell.textLabel.text = item.contact;
+		//cell.textLabel.text = item.contact;
+		[cell setData:item];
     } else {
 		NSLog(@"Array to use is nil!");
 	}
@@ -112,58 +123,15 @@
 }
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source.
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }   
-}
-*/
-
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-
 #pragma mark -
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-    // ...
-    // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
-    */
+
+	// Call the callback to open the new attack screen
+	if([self.delegate respondsToSelector:self.attackSelector]) {
+		[self.delegate performSelector:self.attackSelector withObject:indexPath];
+	}
 }
 
 

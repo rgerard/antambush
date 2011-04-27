@@ -12,12 +12,14 @@
 @interface UIImageAlertView : UIAlertView {
 	UIImage *image;
 	UIImageView *imageView;
+	NSString *attackName;
 }
 
 @property (nonatomic, retain) UIImage *image;
 @property (nonatomic, retain) UIImageView *imageView;
+@property (nonatomic, retain) NSString *attackName;
 
--(void)setImage:(UIImage*)initimage;
+-(void)setImage:(UIImage*)initimage attackNameStr:(NSString *)attackNameStr;
 +(UIImage*)imageWithImage:(UIImage*)oldimage scaledToSize:(CGSize)newSize;
 
 @end

@@ -10,9 +10,12 @@
 #import "WeaponScrollerViewController.h"
 #import "PandaAttackAppDelegate.h"
 #import "History.h"
-#import "AttackHistoryViewController.h"
 #import "CJSONDeserializer.h"
 #import "UIImageAlertView.h"
+#import "SingleAttackViewController.h"
+
+static NSString *ImageKey = @"imageKey";
+static NSString *NameKey = @"nameKey";
 
 @implementation AttackViewController
 
@@ -52,21 +55,22 @@
 	
 	// Init the event handlers
 	[startAttackBtn addTarget:self action:@selector(startBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-	[viewHistoryBtn addTarget:self action:@selector(viewHistoryBtnClick:) forControlEvents:UIControlEventTouchUpInside];
 	
-	// Create the recent attacks table
-	CGRect recentAttacksViewFrame = CGRectMake(100,100,200,150);
-	self.recentAttacksViewController = [[RecentAttacksViewController alloc] init];
-	self.recentAttacksViewController.loadAttacksFromMe = YES;
-	[self.recentAttacksViewController.view setFrame:recentAttacksViewFrame];
-	[self.view addSubview:self.recentAttacksViewController.view];
-
 	// Create the "recently attacked by" table
-	CGRect recentlyAttackedByViewFrame = CGRectMake(100,250,200,150);
+	CGRect recentlyAttackedByViewFrame = CGRectMake(15,100,290,150);
 	self.recentlyAttackedByViewController = [[RecentAttacksViewController alloc] init];
 	self.recentlyAttackedByViewController.loadAttacksFromMe = NO;
+	[self.recentlyAttackedByViewController setDelegateCallback:@selector(attackPickedFromAttackedByTableCallback:) delegate:self];
 	[self.recentlyAttackedByViewController.view setFrame:recentlyAttackedByViewFrame];
-	[self.view addSubview:self.recentlyAttackedByViewController.view];
+	[self.view addSubview:self.recentlyAttackedByViewController.view];		
+	
+	// Create the recent attacks table
+	CGRect recentAttacksViewFrame = CGRectMake(15,250,290,150);
+	self.recentAttacksViewController = [[RecentAttacksViewController alloc] init];
+	self.recentAttacksViewController.loadAttacksFromMe = YES;
+	[self.recentAttacksViewController setDelegateCallback:@selector(attackPickedFromAttackedTableCallback:) delegate:self];
+	[self.recentAttacksViewController.view setFrame:recentAttacksViewFrame];
+	[self.view addSubview:self.recentAttacksViewController.view];
 	
 	// Check to see if we know who this user is
 	self.currentUserToAttack = @"";
@@ -83,7 +87,7 @@
 		[spinner startAnimating];
 		
 		// Ask server if there are any new attacks on this user
-		NSString *formatUrl = [NSString stringWithFormat:@"http://localhost:3000/user_attacks/lookup?email=%@&lastid=%@",userEmail,lastAttackId];
+		NSString *formatUrl = [NSString stringWithFormat:@"http://hollow-river-123.heroku.com/user_attacks/lookup?email=%@&lastid=%@",userEmail,lastAttackId];
 		NSURL *url = [NSURL URLWithString:formatUrl];
 		self.request = [ASIHTTPRequest requestWithURL:url];
 		[self.request setDelegate:self];
@@ -108,12 +112,6 @@
 	NSData *jsonData = [responseString dataUsingEncoding:NSUTF8StringEncoding];
 	NSError *error = nil;
 	NSArray *attackData = [[CJSONDeserializer deserializer] deserializeAsArray:jsonData error:&error];
-	
-	// Prep the image list
-	NSString *ImageKey = @"imageKey";
-	NSString *NameKey = @"nameKey";
-	NSString *path = [[NSBundle mainBundle] pathForResource:@"iphone_contents" ofType:@"plist"];
-	NSArray *contentList = [NSArray arrayWithContentsOfFile:path];	
 	
 	// Iterate over array
 	NSEnumerator *e = [attackData objectEnumerator];
@@ -144,19 +142,10 @@
 			}
 		
 			// Get the image to load from a plist file inside our app bundle
-			NSDictionary *numberItem;
-			bool found = false;
-			for(int i=0; i < [contentList count]; i++) {
-				numberItem = [contentList objectAtIndex:i];
-				NSString *imageKey = [numberItem valueForKey:ImageKey];
-				
-				if([imageKey isEqualToString:attackImage]) {
-					found = true;
-					break;
-				}
-			}
+			PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
+			NSDictionary *numberItem = [appDelegate findAttackInPList:attackImage];
 		
-			if(found) {
+			if(numberItem != nil) {
 				// Determine which name/email to use
 				NSString *nameToUse = attackerName;
 				if([nameToUse isEqualToString:@"Unknown"]) {
@@ -170,16 +159,16 @@
 				History *newAttack = [[History alloc] init];
 				newAttack.serverID = [newAttackIdStr intValue];
 				newAttack.contact = attackerEmail;
+				newAttack.contactName = attackerName;
 				newAttack.attack = attackImage;
 				newAttack.message = attackMessage;
 
 				// Add the attack to the DB
-				PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
 				[appDelegate addAttack:newAttack sendToServer:NO];
 				
 				// Popup dialog now
-				UIImageAlertView *alert = [[UIImageAlertView alloc] initWithTitle:@"Attacked!" message:[NSString stringWithFormat:@"You were attacked by %@, who said '%@'", nameToUse, attackMessage] delegate:self cancelButtonTitle:@"Wuss out" otherButtonTitles:@"Attack back",nil];
-				[alert setImage:[UIImage imageNamed:[numberItem valueForKey:ImageKey]]];
+				UIImageAlertView *alert = [[UIImageAlertView alloc] initWithTitle:[NSString stringWithFormat:@"Attacked by %@!", nameToUse] message:[NSString stringWithFormat:@"You were attacked with %@, who said '%@'", [numberItem valueForKey:NameKey], attackMessage] delegate:self cancelButtonTitle:@"Wuss out" otherButtonTitles:@"Attack back",nil];
+				[alert setImage:[UIImage imageNamed:[numberItem valueForKey:ImageKey]] attackNameStr:[numberItem valueForKey:NameKey]];
 				[alert show];
 				[alert release];
 			}
@@ -205,11 +194,66 @@
 
 
 -(void) personPickedCallback {
-	// Grab the person picked, and then load the weapon view
-	self.currentUserToAttack = contactList.personPicked;
+	// Grab the first email address of the person picked, and then load the weapon view
+	self.currentUserToAttack = [contactList.personPicked objectAtIndex:0];
+	attackHistory.contactName = contactList.personPickedName;
 	NSLog(@"Person picked is %@", self.currentUserToAttack);
 	
 	[self changeToWeaponView];
+}
+
+
+-(void) attackPickedFromAttackedTableCallback:(NSIndexPath *)attackRow {
+	// Open the single attack view
+	NSLog(@"Attacked Table, Row = %d", attackRow.row);
+	History *item = [self findAttackDataToUse:attackRow.row loadAttacksFromMe:YES];
+	if(item == nil) {
+		NSLog(@"Can't find attack item");
+		return;
+	}
+	
+	[self createAttackViewController:item];
+}
+
+
+-(void) attackPickedFromAttackedByTableCallback:(NSIndexPath *)attackRow {
+	// Open the single attack view
+	NSLog(@"AttackedBy Table, Row = %d", attackRow.row);
+	History *item = [self findAttackDataToUse:attackRow.row loadAttacksFromMe:NO];
+	if(item == nil) {
+		NSLog(@"Can't find attack item");
+		return;
+	}
+	
+	[self createAttackViewController:item];
+}
+
+
+-(void)createAttackViewController:(History *)item {
+	SingleAttackViewController *detailViewController = [[SingleAttackViewController alloc] init];
+	[detailViewController addAttackData:item];
+	
+	[self.navigationController pushViewController:detailViewController animated:YES];
+	[detailViewController release];	
+}
+
+
+-(History *) findAttackDataToUse:(int)row loadAttacksFromMe:(BOOL)loadAttacksFromMe {
+	NSMutableArray *arrToUse;
+	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
+	if(loadAttacksFromMe == NO) {
+		arrToUse = appDelegate.dbAttackedBy;
+	} else {
+		arrToUse = appDelegate.dbAttacks;	
+	}
+	
+	if(arrToUse != nil) {
+		History *item = [arrToUse objectAtIndex:row];
+		return item;
+    } else {
+		NSLog(@"Array to use is nil!");
+		return nil;
+	}
 }
 
 
@@ -224,15 +268,6 @@
 // respond to the Attack button click
 -(void)startBtnClick:(UIView*)clickedButton {
 	[contactList openContactList];
-}
-
-
-// Respond to the View History button click
--(void)viewHistoryBtnClick:(UIView*)clickedButton {
-	AttackHistoryViewController *historyViewController = [[AttackHistoryViewController alloc] init];
-	historyViewController.title = @"History";
-	[self.navigationController pushViewController:historyViewController animated:YES];
-	[historyViewController release];	
 }
 
 
@@ -299,29 +334,6 @@
 			break;
 	}
 	[self dismissModalViewControllerAnimated:YES];
-}
-
-// respond to the ask button click -- this will insert someone into your address book
--(void)personBtnClick:(UIView*)clickedButton {
-	
-	ABAddressBookRef addressBook = ABAddressBookCreate();
-	CFErrorRef anError;
-	
-	ABRecordRef aRecord = ABPersonCreate();
-	ABRecordSetValue(aRecord, kABPersonFirstNameProperty, CFSTR("zahra"), &anError);
-	ABRecordSetValue(aRecord, kABPersonLastNameProperty, CFSTR("ghofraniha"), &anError);
-	
-	ABMultiValueRef email = ABMultiValueCreateMutable(kABMultiStringPropertyType);
-	ABMultiValueAddValueAndLabel(email, @"zahra.ghofraniha@gmail.com", kABHomeLabel, NULL);
-	ABMultiValueAddValueAndLabel(email, @"zahrag@google.com", kABWorkLabel, NULL);
-	
-	ABRecordSetValue(aRecord, kABPersonEmailProperty, email, &anError);
-	
-	ABAddressBookAddRecord(addressBook, aRecord, &anError);
-	ABAddressBookSave(addressBook, &anError);
-	
-	CFRelease(aRecord);
-	CFRelease(addressBook);
 }
 
 

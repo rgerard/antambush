@@ -1,24 +1,20 @@
 //
-//  SingleWeaponViewController.m
+//  SingleAttackViewController.m
 //  PandaAttack
 //
-//  Created by Ryan Gerard on 3/16/11.
+//  Created by Ryan Gerard on 4/23/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "SingleWeaponViewController.h"
+#import "SingleAttackViewController.h"
+#import "PandaAttackAppDelegate.h"
 
-@implementation SingleWeaponViewController
+static NSString *ImageKey = @"imageKey";
+static NSString *NameKey = @"nameKey";
 
-@synthesize numberTitle, numberImage, imageBtn, imageName;
+@implementation SingleAttackViewController
 
-// load the view nib and initialize the pageNumber ivar
-- (id)initWithPageNumber:(int)page {
-    if (self = [super initWithNibName:@"SingleWeaponViewController" bundle:nil]) {
-        pageNumber = page;
-    }
-    return self;
-}
+@synthesize attackerLabel, attackImage, messageLabel, attackBackBtn, attackData;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -31,12 +27,27 @@
 }
 */
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
+	self.attackerLabel.text = self.attackData.contactName;
+	self.messageLabel.text = [NSString stringWithFormat:@"\"%@\"", self.attackData.message];
+	
+	// Get the image to load from a plist file inside our app bundle
+	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
+	NSDictionary *numberItem = [appDelegate findAttackInPList:self.attackData.attack];
+	
+	if(numberItem != nil) {
+		self.attackImage.image = [UIImage imageNamed:[numberItem valueForKey:ImageKey]];
+	}
 }
-*/
+
+
+-(void) addAttackData:(History *)item {
+	self.attackData = [item retain];
+}
 
 /*
 // Override to allow orientations other than the default portrait orientation.
@@ -61,8 +72,12 @@
 
 
 - (void)dealloc {
-    [numberTitle release];
-    [numberImage release];
+	[attackerLabel release];
+	[attackImage release];
+	[messageLabel release];
+	[attackBackBtn release];
+	[attackData release];
+	
     [super dealloc];
 }
 

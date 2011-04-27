@@ -11,8 +11,14 @@
 
 @interface RecentAttacksViewController : UITableViewController {
 	BOOL loadAttacksFromMe;
+	id delegate;
+	SEL attackSelector;
 }
 
 @property (nonatomic) BOOL loadAttacksFromMe;
+@property (nonatomic, retain) id delegate;
+@property (nonatomic) SEL attackSelector;
+
+-(void) setDelegateCallback:(SEL)appSelector delegate:(id)requestDelegate;
 
 @end

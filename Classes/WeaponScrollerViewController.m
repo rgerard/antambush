@@ -26,8 +26,7 @@ static NSString *ImageKey = @"imageKey";
 	// view controllers are created lazily
     // in the meantime, load the array with placeholders which will be replaced on demand
     NSMutableArray *controllers = [[NSMutableArray alloc] init];
-    for (unsigned i = 0; i < kNumberOfPages; i++)
-    {
+    for (unsigned i = 0; i < kNumberOfPages; i++) {
         [controllers addObject:[NSNull null]];
     }
     self.viewControllers = controllers;
@@ -63,16 +62,14 @@ static NSString *ImageKey = @"imageKey";
     
     // replace the placeholder if necessary
     SingleWeaponViewController *controller = [viewControllers objectAtIndex:page];
-    if ((NSNull *)controller == [NSNull null])
-    {
+    if ((NSNull *)controller == [NSNull null]) {
         controller = [[SingleWeaponViewController alloc] initWithPageNumber:page];
         [viewControllers replaceObjectAtIndex:page withObject:controller];
         [controller release];
     }
     
     // add the controller's view to the scroll view
-    if (controller.view.superview == nil)
-    {
+    if (controller.view.superview == nil) {
         CGRect frame = scrollView.frame;
         frame.origin.x = frame.size.width * page;
         frame.origin.y = 0;

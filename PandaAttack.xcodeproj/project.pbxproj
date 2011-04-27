@@ -29,12 +29,13 @@
 		940240ED13556F2E0075148F /* RecentAttacksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940240EB13556F2E0075148F /* RecentAttacksViewController.m */; };
 		940240EE13556F2E0075148F /* RecentAttacksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 940240EC13556F2E0075148F /* RecentAttacksViewController.xib */; };
 		949EBE87135E28CA002EAEA6 /* ContactListPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 949EBE86135E28CA002EAEA6 /* ContactListPicker.m */; };
+		949EBEDE13627A05002EAEA6 /* RecentAttacksTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 949EBEDD13627A05002EAEA6 /* RecentAttacksTableViewCell.m */; };
 		94A725C91336CFCA00414CF3 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A725C81336CFCA00414CF3 /* libsqlite3.0.dylib */; };
 		94A725CE1336D03C00414CF3 /* History.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A725CD1336D03C00414CF3 /* History.m */; };
-		94A728411338774C00414CF3 /* AttackHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A7283F1338774C00414CF3 /* AttackHistoryViewController.m */; };
-		94A728421338774C00414CF3 /* AttackHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94A728401338774C00414CF3 /* AttackHistoryViewController.xib */; };
 		94A728AB1338820800414CF3 /* recentAttacks.db in Resources */ = {isa = PBXBuildFile; fileRef = 94A728AA1338820800414CF3 /* recentAttacks.db */; };
 		94A728C01338827900414CF3 /* Attack.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A728BF1338827900414CF3 /* Attack.m */; };
+		94B211231363A57400DA627E /* SingleAttackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B211211363A57400DA627E /* SingleAttackViewController.m */; };
+		94B211241363A57400DA627E /* SingleAttackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94B211221363A57400DA627E /* SingleAttackViewController.xib */; };
 		94B9833A1345AA0F00090947 /* SigninViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B983381345AA0F00090947 /* SigninViewController.m */; };
 		94B9833B1345AA0F00090947 /* SigninViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94B983391345AA0F00090947 /* SigninViewController.xib */; };
 		94C417E7133321770032B2DA /* poop.gif in Resources */ = {isa = PBXBuildFile; fileRef = 94C417E2133321770032B2DA /* poop.gif */; };
@@ -112,16 +113,18 @@
 		940240EC13556F2E0075148F /* RecentAttacksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RecentAttacksViewController.xib; path = Classes/RecentAttacksViewController.xib; sourceTree = "<group>"; };
 		949EBE85135E28CA002EAEA6 /* ContactListPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListPicker.h; sourceTree = "<group>"; };
 		949EBE86135E28CA002EAEA6 /* ContactListPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactListPicker.m; sourceTree = "<group>"; };
+		949EBEDC13627A05002EAEA6 /* RecentAttacksTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentAttacksTableViewCell.h; sourceTree = "<group>"; };
+		949EBEDD13627A05002EAEA6 /* RecentAttacksTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentAttacksTableViewCell.m; sourceTree = "<group>"; };
 		94A725C81336CFCA00414CF3 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		94A725CC1336D03C00414CF3 /* History.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = History.h; sourceTree = "<group>"; };
 		94A725CD1336D03C00414CF3 /* History.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = History.m; sourceTree = "<group>"; };
-		94A7283E1338774C00414CF3 /* AttackHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttackHistoryViewController.h; sourceTree = "<group>"; };
-		94A7283F1338774C00414CF3 /* AttackHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttackHistoryViewController.m; sourceTree = "<group>"; };
-		94A728401338774C00414CF3 /* AttackHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AttackHistoryViewController.xib; path = Classes/AttackHistoryViewController.xib; sourceTree = "<group>"; };
 		94A7289013387B5400414CF3 /* database.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = database.sql; sourceTree = "<group>"; };
 		94A728AA1338820800414CF3 /* recentAttacks.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = recentAttacks.db; sourceTree = "<group>"; };
 		94A728BE1338827900414CF3 /* Attack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attack.h; sourceTree = "<group>"; };
 		94A728BF1338827900414CF3 /* Attack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Attack.m; sourceTree = "<group>"; };
+		94B211201363A57400DA627E /* SingleAttackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleAttackViewController.h; sourceTree = "<group>"; };
+		94B211211363A57400DA627E /* SingleAttackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleAttackViewController.m; sourceTree = "<group>"; };
+		94B211221363A57400DA627E /* SingleAttackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SingleAttackViewController.xib; path = Classes/SingleAttackViewController.xib; sourceTree = "<group>"; };
 		94B983371345AA0F00090947 /* SigninViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SigninViewController.h; sourceTree = "<group>"; };
 		94B983381345AA0F00090947 /* SigninViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigninViewController.m; sourceTree = "<group>"; };
 		94B983391345AA0F00090947 /* SigninViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SigninViewController.xib; path = Classes/SigninViewController.xib; sourceTree = "<group>"; };
@@ -263,12 +266,12 @@
 			children = (
 				94E93D511331D49E0046EB0F /* images */,
 				94A728AA1338820800414CF3 /* recentAttacks.db */,
+				94B211221363A57400DA627E /* SingleAttackViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				94B983391345AA0F00090947 /* SigninViewController.xib */,
 				2899E5210DE3E06400AC0155 /* PandaAttackViewController.xib */,
 				94E933651322DAB70046EB0F /* AttackViewController.xib */,
 				940240EC13556F2E0075148F /* RecentAttacksViewController.xib */,
-				94A728401338774C00414CF3 /* AttackHistoryViewController.xib */,
 				94E93C9D1331CCB80046EB0F /* WeaponScrollerViewController.xib */,
 				94E93CAE1331CE0C0046EB0F /* SingleWeaponViewController.xib */,
 				94C4182B133325F50032B2DA /* SendMessageViewController.xib */,
@@ -351,8 +354,10 @@
 				949EBE86135E28CA002EAEA6 /* ContactListPicker.m */,
 				940240EA13556F2E0075148F /* RecentAttacksViewController.h */,
 				940240EB13556F2E0075148F /* RecentAttacksViewController.m */,
-				94A7283E1338774C00414CF3 /* AttackHistoryViewController.h */,
-				94A7283F1338774C00414CF3 /* AttackHistoryViewController.m */,
+				949EBEDC13627A05002EAEA6 /* RecentAttacksTableViewCell.h */,
+				949EBEDD13627A05002EAEA6 /* RecentAttacksTableViewCell.m */,
+				94B211201363A57400DA627E /* SingleAttackViewController.h */,
+				94B211211363A57400DA627E /* SingleAttackViewController.m */,
 			);
 			name = AttackViewController;
 			sourceTree = "<group>";
@@ -484,10 +489,10 @@
 				94C417EB133321770032B2DA /* charlie_sheen.jpg in Resources */,
 				94C4182D133325F50032B2DA /* SendMessageViewController.xib in Resources */,
 				94C41849133328770032B2DA /* mel-gibson-braveheart.jpg in Resources */,
-				94A728421338774C00414CF3 /* AttackHistoryViewController.xib in Resources */,
 				94A728AB1338820800414CF3 /* recentAttacks.db in Resources */,
 				94B9833B1345AA0F00090947 /* SigninViewController.xib in Resources */,
 				940240EE13556F2E0075148F /* RecentAttacksViewController.xib in Resources */,
+				94B211241363A57400DA627E /* SingleAttackViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,7 +511,6 @@
 				94E93CAF1331CE0C0046EB0F /* SingleWeaponViewController.m in Sources */,
 				94C4182C133325F50032B2DA /* SendMessageViewController.m in Sources */,
 				94A725CE1336D03C00414CF3 /* History.m in Sources */,
-				94A728411338774C00414CF3 /* AttackHistoryViewController.m in Sources */,
 				94A728C01338827900414CF3 /* Attack.m in Sources */,
 				94FBB1AC133FC7DB007F2B4E /* ASIAuthenticationDialog.m in Sources */,
 				94FBB1AD133FC7DB007F2B4E /* ASIDataCompressor.m in Sources */,
@@ -531,6 +535,8 @@
 				94023E4E134AF6FA0075148F /* UIImageAlertView.m in Sources */,
 				940240ED13556F2E0075148F /* RecentAttacksViewController.m in Sources */,
 				949EBE87135E28CA002EAEA6 /* ContactListPicker.m in Sources */,
+				949EBEDE13627A05002EAEA6 /* RecentAttacksTableViewCell.m in Sources */,
+				94B211231363A57400DA627E /* SingleAttackViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

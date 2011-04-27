@@ -14,7 +14,7 @@ static sqlite3_stmt *insertAttack = nil;
 
 @implementation History
 
-@synthesize primaryKey, serverID, contact, attack, message, timeCreated;
+@synthesize primaryKey, serverID, contact, contactName, attack, message, timeCreated;
 
 -(id)initWithPrimaryKey:(NSInteger)pk database:(sqlite3*)db {
 	
@@ -24,7 +24,7 @@ static sqlite3_stmt *insertAttack = nil;
 		
 		// Create the select statement
 		if(init_statement == nil) {
-			const char *sql = "SELECT serverID,sender,attack,message,time FROM attacks WHERE id=?";
+			const char *sql = "SELECT serverID,sender,senderName,attack,message,time FROM attacks WHERE id=?";
 			if(sqlite3_prepare_v2(database, sql, -1, &init_statement, NULL) != SQLITE_OK) {
 				NSAssert1(0, @"Failed to prepare statement: ", sqlite3_errmsg(database));
 			}
@@ -34,12 +34,14 @@ static sqlite3_stmt *insertAttack = nil;
 		if(sqlite3_step(init_statement) == SQLITE_ROW) {
 			self.serverID = sqlite3_column_int(init_statement, 0);
 			self.contact = [NSString stringWithUTF8String:(char*)sqlite3_column_text(init_statement, 1)];
-			self.attack = [NSString stringWithUTF8String:(char*)sqlite3_column_text(init_statement, 2)];
-			self.message = [NSString stringWithUTF8String:(char*)sqlite3_column_text(init_statement, 3)];
-			self.timeCreated = [NSDate dateWithTimeIntervalSince1970:(int)sqlite3_column_text(init_statement, 4)];
+			self.contactName = [NSString stringWithUTF8String:(char*)sqlite3_column_text(init_statement, 2)];
+			self.attack = [NSString stringWithUTF8String:(char*)sqlite3_column_text(init_statement, 3)];
+			self.message = [NSString stringWithUTF8String:(char*)sqlite3_column_text(init_statement, 4)];
+			self.timeCreated = [NSDate dateWithTimeIntervalSince1970:(int)sqlite3_column_text(init_statement, 5)];
 		} else {
 			self.serverID = 0;
-			self.contact = @"Unknown";
+			self.contact = @"";
+			self.contactName = @"Unknown";
 			self.attack = @"Unknown";
 			self.message = @"Unknown";
 			self.timeCreated = [NSDate dateWithTimeIntervalSince1970:0];
@@ -73,18 +75,24 @@ static sqlite3_stmt *insertAttack = nil;
 	
 	// Create the attack statement
 	if(insertAttack == nil) {
-		const char *sql = "INSERT INTO attacks(serverID,sender,attack,message,time) VALUES(?,?,?,?,?)";
+		const char *sql = "INSERT INTO attacks(serverID,sender,senderName,attack,message,time) VALUES(?,?,?,?,?,?)";
 		if(sqlite3_prepare_v2(db, sql, -1, &insertAttack, NULL) != SQLITE_OK) {
-			NSAssert1(0, @"Error create sql for insert attack: %s", sqlite3_errmsg(db));
+			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"DatabaseNotAvailable", @"") message:[NSString stringWithUTF8String:sqlite3_errmsg(db)]
+														   delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+			[alert show];	
+			[alert release];
+			return -1;
+			//NSAssert1(0, @"Error create sql for insert attack: %s", sqlite3_errmsg(db));
 		}
 	}
 	
 	// Bind the params
 	sqlite3_bind_int(insertAttack, 1, serverID);
 	sqlite3_bind_text(insertAttack, 2, [contact UTF8String], -1, SQLITE_TRANSIENT);
-	sqlite3_bind_text(insertAttack, 3, [attack UTF8String], -1, SQLITE_TRANSIENT);
-	sqlite3_bind_text(insertAttack, 4, [message UTF8String], -1, SQLITE_TRANSIENT);
-	sqlite3_bind_int(insertAttack, 5, [[NSDate date] timeIntervalSince1970]);
+	sqlite3_bind_text(insertAttack, 3, [contactName UTF8String], -1, SQLITE_TRANSIENT);
+	sqlite3_bind_text(insertAttack, 4, [attack UTF8String], -1, SQLITE_TRANSIENT);
+	sqlite3_bind_text(insertAttack, 5, [message UTF8String], -1, SQLITE_TRANSIENT);
+	sqlite3_bind_int(insertAttack, 6, [[NSDate date] timeIntervalSince1970]);
 	
 	int success = sqlite3_step(insertAttack);
 	if(success != SQLITE_ERROR) {
@@ -93,6 +101,15 @@ static sqlite3_stmt *insertAttack = nil;
 	
 	NSAssert1(0, @"Error inserting new attack: %s", sqlite3_errmsg(db));
 	return -1;
+}
+
+- (void)dealloc {
+	[contact release];
+	[contactName release];
+	[attack release];
+	[message release];
+	[timeCreated release];
+    [super dealloc];
 }
 
 @end

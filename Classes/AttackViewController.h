@@ -16,7 +16,6 @@
 
 @interface AttackViewController : UIViewController<UIAlertViewDelegate,MFMailComposeViewControllerDelegate> {
 	UIButton *startAttackBtn;
-	UIButton *viewHistoryBtn;
 	UIActivityIndicatorView *spinner;
 	NSString *currentUserToAttack;	
 	History *attackHistory;
@@ -36,7 +35,11 @@
 
 -(void)personBtnClick:(UIView*)clickedButton;
 -(void)startBtnClick:(UIView*)clickedButton;
--(void)viewHistoryBtnClick:(UIView*)clickedButton;
 -(void)changeToWeaponView;
+-(void)personPickedCallback;
+-(void)attackPickedFromAttackedByTableCallback:(NSIndexPath *)attackRow;
+-(void)attackPickedFromAttackedTableCallback:(NSIndexPath *)attackRow;
+-(History *) findAttackDataToUse:(int)row loadAttacksFromMe:(BOOL)loadAttacksFromMe;
+-(void)createAttackViewController:(History *)item;
 
 @end
