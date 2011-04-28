@@ -31,7 +31,7 @@
 	
 	self.image.image = [UIImage imageNamed:@"mel-gibson-braveheart.jpg"];
 	
-	if(self.attackHistory.smsAttack == YES) {
+	if([self.attackHistory.contactEmail length] == 0) {
 		// Disable the email button if there is no email address
 		[self.attackEmailBtn setEnabled:NO];
 		[self.attackEmailBtn setHidden:YES];

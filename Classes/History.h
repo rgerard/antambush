@@ -13,24 +13,25 @@
 	sqlite3 *database;
 	NSInteger primaryKey;
 	NSInteger serverID;
-	NSString *contact;
+	NSString *contactEmail;
+	NSString *contactPhone;
 	NSString *contactName;
 	NSString *attack;
 	NSString *message;
 	NSDate *timeCreated;
-	BOOL smsAttack;
 }
 
 @property (assign, nonatomic, readonly) NSInteger primaryKey;
 @property (assign, nonatomic) NSInteger serverID;
-@property (nonatomic, retain) NSString *contact;
+@property (nonatomic, retain) NSString *contactEmail;
+@property (nonatomic, retain) NSString *contactPhone;
 @property (nonatomic, retain) NSString *contactName;
 @property (nonatomic, retain) NSString *attack;
 @property (nonatomic, retain) NSString *message;
 @property (nonatomic, retain) NSDate *timeCreated;
-@property (nonatomic) BOOL smsAttack;
 
 -(id)initWithPrimaryKey:(NSInteger)pk database:(sqlite3*)db;
 -(NSInteger)insertNewAttack:(sqlite3*)db;
++(void)clearData:(sqlite3*)db;
 
 @end

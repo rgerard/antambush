@@ -28,6 +28,8 @@
 		94023E4E134AF6FA0075148F /* UIImageAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */; };
 		940240ED13556F2E0075148F /* RecentAttacksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940240EB13556F2E0075148F /* RecentAttacksViewController.m */; };
 		940240EE13556F2E0075148F /* RecentAttacksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 940240EC13556F2E0075148F /* RecentAttacksViewController.xib */; };
+		946210DC1369435A0073CBDF /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 946210DA1369435A0073CBDF /* SettingsViewController.m */; };
+		946210DD1369435A0073CBDF /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 946210DB1369435A0073CBDF /* SettingsViewController.xib */; };
 		949EBE87135E28CA002EAEA6 /* ContactListPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 949EBE86135E28CA002EAEA6 /* ContactListPicker.m */; };
 		949EBEDE13627A05002EAEA6 /* RecentAttacksTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 949EBEDD13627A05002EAEA6 /* RecentAttacksTableViewCell.m */; };
 		94A725C91336CFCA00414CF3 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A725C81336CFCA00414CF3 /* libsqlite3.0.dylib */; };
@@ -111,6 +113,9 @@
 		940240EA13556F2E0075148F /* RecentAttacksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentAttacksViewController.h; sourceTree = "<group>"; };
 		940240EB13556F2E0075148F /* RecentAttacksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentAttacksViewController.m; sourceTree = "<group>"; };
 		940240EC13556F2E0075148F /* RecentAttacksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RecentAttacksViewController.xib; path = Classes/RecentAttacksViewController.xib; sourceTree = "<group>"; };
+		946210D91369435A0073CBDF /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		946210DA1369435A0073CBDF /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		946210DB1369435A0073CBDF /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = Classes/SettingsViewController.xib; sourceTree = "<group>"; };
 		949EBE85135E28CA002EAEA6 /* ContactListPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListPicker.h; sourceTree = "<group>"; };
 		949EBE86135E28CA002EAEA6 /* ContactListPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactListPicker.m; sourceTree = "<group>"; };
 		949EBEDC13627A05002EAEA6 /* RecentAttacksTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentAttacksTableViewCell.h; sourceTree = "<group>"; };
@@ -266,6 +271,7 @@
 			children = (
 				94E93D511331D49E0046EB0F /* images */,
 				94A728AA1338820800414CF3 /* recentAttacks.db */,
+				946210DB1369435A0073CBDF /* SettingsViewController.xib */,
 				94B211221363A57400DA627E /* SingleAttackViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				94B983391345AA0F00090947 /* SigninViewController.xib */,
@@ -350,6 +356,8 @@
 			children = (
 				94E933631322DAB70046EB0F /* AttackViewController.h */,
 				94E933641322DAB70046EB0F /* AttackViewController.m */,
+				946210D91369435A0073CBDF /* SettingsViewController.h */,
+				946210DA1369435A0073CBDF /* SettingsViewController.m */,
 				949EBE85135E28CA002EAEA6 /* ContactListPicker.h */,
 				949EBE86135E28CA002EAEA6 /* ContactListPicker.m */,
 				940240EA13556F2E0075148F /* RecentAttacksViewController.h */,
@@ -493,6 +501,7 @@
 				94B9833B1345AA0F00090947 /* SigninViewController.xib in Resources */,
 				940240EE13556F2E0075148F /* RecentAttacksViewController.xib in Resources */,
 				94B211241363A57400DA627E /* SingleAttackViewController.xib in Resources */,
+				946210DD1369435A0073CBDF /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +546,7 @@
 				949EBE87135E28CA002EAEA6 /* ContactListPicker.m in Sources */,
 				949EBEDE13627A05002EAEA6 /* RecentAttacksTableViewCell.m in Sources */,
 				94B211231363A57400DA627E /* SingleAttackViewController.m in Sources */,
+				946210DC1369435A0073CBDF /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

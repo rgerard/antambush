@@ -11,10 +11,11 @@
 static sqlite3_stmt *init_statement = nil;
 static sqlite3_stmt *checkserver_statement = nil;
 static sqlite3_stmt *insertAttack = nil;
+static sqlite3_stmt *delete_statement = nil;
 
 @implementation History
 
-@synthesize primaryKey, serverID, contact, contactName, attack, message, timeCreated, smsAttack;
+@synthesize primaryKey, serverID, contactEmail, contactPhone, contactName, attack, message, timeCreated;
 
 -(id)initWithPrimaryKey:(NSInteger)pk database:(sqlite3*)db {
 	
@@ -33,14 +34,15 @@ static sqlite3_stmt *insertAttack = nil;
 		sqlite3_bind_int(init_statement, 1, primaryKey);
 		if(sqlite3_step(init_statement) == SQLITE_ROW) {
 			self.serverID = sqlite3_column_int(init_statement, 0);
-			self.contact = [NSString stringWithUTF8String:(char*)sqlite3_column_text(init_statement, 1)];
+			self.contactEmail = [NSString stringWithUTF8String:(char*)sqlite3_column_text(init_statement, 1)];
 			self.contactName = [NSString stringWithUTF8String:(char*)sqlite3_column_text(init_statement, 2)];
 			self.attack = [NSString stringWithUTF8String:(char*)sqlite3_column_text(init_statement, 3)];
 			self.message = [NSString stringWithUTF8String:(char*)sqlite3_column_text(init_statement, 4)];
 			self.timeCreated = [NSDate dateWithTimeIntervalSince1970:(int)sqlite3_column_text(init_statement, 5)];
 		} else {
 			self.serverID = 0;
-			self.contact = @"";
+			self.contactEmail = @"";
+			self.contactPhone = @"";
 			self.contactName = @"Unknown";
 			self.attack = @"Unknown";
 			self.message = @"Unknown";
@@ -83,7 +85,7 @@ static sqlite3_stmt *insertAttack = nil;
 	
 	// Bind the params
 	sqlite3_bind_int(insertAttack, 1, serverID);
-	sqlite3_bind_text(insertAttack, 2, [contact UTF8String], -1, SQLITE_TRANSIENT);
+	sqlite3_bind_text(insertAttack, 2, [contactEmail UTF8String], -1, SQLITE_TRANSIENT);
 	sqlite3_bind_text(insertAttack, 3, [contactName UTF8String], -1, SQLITE_TRANSIENT);
 	sqlite3_bind_text(insertAttack, 4, [attack UTF8String], -1, SQLITE_TRANSIENT);
 	sqlite3_bind_text(insertAttack, 5, [message UTF8String], -1, SQLITE_TRANSIENT);
@@ -102,8 +104,27 @@ static sqlite3_stmt *insertAttack = nil;
 	return -1;
 }
 
++(void)clearData:(sqlite3*)db {
+	if(delete_statement == nil) {
+		const char *sql = "DELETE FROM attacks";
+		if(sqlite3_prepare_v2(db, sql, -1, &delete_statement, NULL) != SQLITE_OK)
+			NSAssert1(0, @"Error while creating delete statement. '%s'", sqlite3_errmsg(db));
+	}
+	
+	if (SQLITE_DONE != sqlite3_step(delete_statement)) {
+		NSAssert1(0, @"Error while deleting. '%s'", sqlite3_errmsg(db));
+	} else {
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Data Cleared" message:@"All data cleared! Please restart the app to see the changes." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+		[alert show];
+		[alert release];
+	}
+	
+	sqlite3_reset(delete_statement);
+}
+
 - (void)dealloc {
-	[contact release];
+	[contactEmail release];
+	[contactPhone release];
 	[contactName release];
 	[attack release];
 	[message release];

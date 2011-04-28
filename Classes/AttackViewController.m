@@ -13,6 +13,7 @@
 #import "CJSONDeserializer.h"
 #import "UIImageAlertView.h"
 #import "SingleAttackViewController.h"
+#import "SettingsViewController.h"
 
 static NSString *ImageKey = @"imageKey";
 static NSString *NameKey = @"nameKey";
@@ -48,10 +49,10 @@ static NSString *NameKey = @"nameKey";
 	self.contactList = [[ContactListPicker alloc] init];
 	[self.contactList setDelegateCallback:@selector(personPickedCallback) delegate:self];
 	
-	// Create a logout button
-	UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(logoutUser:)];          
-	self.navigationItem.rightBarButtonItem = anotherButton;
-	[anotherButton release];
+	// Create a setting button
+	UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(settingsBtnClick:)];          
+	self.navigationItem.leftBarButtonItem = settingsButton;
+	[settingsButton release];
 	
 	// Init the event handlers
 	[startAttackBtn addTarget:self action:@selector(startBtnClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -157,12 +158,12 @@ static NSString *NameKey = @"nameKey";
 				}
 				
 				// Set the current user to attack
-				attackHistory.contact = attackerEmail;
+				attackHistory.contactEmail = attackerEmail;
 				
 				// Create a new history object to record this in the DB
 				History *newAttack = [[History alloc] init];
 				newAttack.serverID = [newAttackIdStr intValue];
-				newAttack.contact = attackerEmail;
+				newAttack.contactEmail = attackerEmail;
 				newAttack.contactName = attackerName;
 				newAttack.attack = attackImage;
 				newAttack.message = attackMessage;
@@ -201,19 +202,22 @@ static NSString *NameKey = @"nameKey";
 
 
 -(void) personPickedCallback {
+	
+	attackHistory.contactName = contactList.personPickedName;
+	
 	// If emails aren't empty, grab the first email address of the person picked, and then load the weapon view
 	if([contactList.personEmails count] > 0) {
 		// Fill the History object
-		attackHistory.contact = [contactList.personEmails objectAtIndex:0];
-		attackHistory.contactName = contactList.personPickedName;
-		attackHistory.smsAttack = NO;
-		NSLog(@"Person picked is %@", attackHistory.contact);
-	} else if([contactList.personNumbers count] > 0) {
-		attackHistory.contact = [contactList.personNumbers objectAtIndex:0];
-		attackHistory.contactName = contactList.personPickedName;
-		attackHistory.smsAttack = YES;
-		NSLog(@"Person picked is %@", attackHistory.contact);
-	} else {
+		attackHistory.contactEmail = [contactList.personEmails objectAtIndex:0];
+		NSLog(@"Person picked is %@", attackHistory.contactEmail);
+	}
+	
+	if([contactList.personNumbers count] > 0) {
+		attackHistory.contactPhone = [contactList.personNumbers objectAtIndex:0];
+		NSLog(@"Person picked has number %@", attackHistory.contactPhone);
+	} 
+	
+	if([contactList.personEmails count] == 0 && [contactList.personNumbers count] == 0) {
 		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"User missing data" message:@"This user doesn't have any email addresses or phone numbers.  We can't send the attack." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
 		[alert show];
 		[alert release];
@@ -278,11 +282,12 @@ static NSString *NameKey = @"nameKey";
 }
 
 
--(void)logoutUser:(id)sender{
-	// Clear the users email address
-	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-	[prefs setObject:@"" forKey:@"userEmail"];
-	[prefs synchronize];
+-(void)settingsBtnClick:(id)sender{
+	//Open the settings page
+	SettingsViewController *settingsViewController = [[SettingsViewController alloc] initWithStyle:UITableViewStyleGrouped];
+	settingsViewController.title = @"Settings";
+	[self.navigationController pushViewController:settingsViewController animated:YES];
+	[settingsViewController release];		
 }
 
 
@@ -330,7 +335,8 @@ static NSString *NameKey = @"nameKey";
 		[self changeToWeaponView];
 	} else if([title isEqualToString:@"Wuss out"]) {
 		// Clear out the user to attack if the user says to cancel
-		attackHistory.contact = @"";
+		attackHistory.contactEmail = @"";
+		attackHistory.contactPhone = @"";
 	}
 } 
 
@@ -369,12 +375,10 @@ static NSString *NameKey = @"nameKey";
 		return;
 	}
 	
-	History *item = [[History alloc] initWithPrimaryKey:pk database:appDelegate.attacksDatabase];
-	
-	if(item.serverID == 0) {
-		[appDelegate.dbAttacks addObject:item];
+	if(historyItem.serverID == 0) {
+		[appDelegate.dbAttacks addObject:historyItem];
 	} else {
-		[appDelegate.dbAttackedBy addObject:item];
+		[appDelegate.dbAttackedBy addObject:historyItem];
 	}
 	
 	if(sendToServer == YES) {
@@ -387,18 +391,18 @@ static NSString *NameKey = @"nameKey";
 			NSURL *url = [NSURL URLWithString:@"http://hollow-river-123.heroku.com/user_attacks/createFromPhone"];
 			formRequest = [ASIFormDataRequest requestWithURL:url];
 			[formRequest setPostValue:appDelegate.userEmail forKey:@"user_attack[attacker_email]"];
-			[formRequest setPostValue:item.contact forKey:@"user_attack[victim_email]"];
-			[formRequest setPostValue:item.contactName forKey:@"user_attack[victim_name]"];
-			[formRequest setPostValue:item.attack forKey:@"user_attack[attack_name]"];
-			[formRequest setPostValue:item.message forKey:@"user_attack[message]"];
+			[formRequest setPostValue:historyItem.contactEmail forKey:@"user_attack[victim_email]"];
+			[formRequest setPostValue:historyItem.contactName forKey:@"user_attack[victim_name]"];
+			[formRequest setPostValue:historyItem.attack forKey:@"user_attack[attack_name]"];
+			[formRequest setPostValue:historyItem.message forKey:@"user_attack[message]"];
 			[formRequest setDelegate:self];
 			[formRequest startAsynchronous];
 		} else {
 			// Send an SMS instead
 			MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
 			if([MFMessageComposeViewController canSendText]) {
-				controller.body = [NSString stringWithFormat:@"You just got attacked with %@!", item.attack];
-				controller.recipients = [NSArray arrayWithObjects:item.contact, nil];
+				controller.body = [NSString stringWithFormat:@"You just got attacked with %@!", historyItem.attack];
+				controller.recipients = [NSArray arrayWithObjects:historyItem.contactPhone, nil];
 				controller.messageComposeDelegate = self;
 				[self presentModalViewController:controller animated:YES];
 			}
