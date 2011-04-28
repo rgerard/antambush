@@ -9,18 +9,21 @@
 #import <UIKit/UIKit.h>
 #import "History.h"
 
-@interface SendMessageViewController : UIViewController {
+@interface SendMessageViewController : UIViewController<UIAlertViewDelegate> {
 	UIImageView *image;
 	UITextField *inputMessage;
-	UIButton *attackBtn;
+	UIButton *attackSMSBtn;
+	UIButton *attackEmailBtn;
 	History *attackHistory;
 }
 
 @property (nonatomic, retain) IBOutlet UIImageView *image;
 @property (nonatomic, retain) IBOutlet UITextField *inputMessage;
-@property (nonatomic, retain) IBOutlet UIButton *attackBtn;
+@property (nonatomic, retain) IBOutlet UIButton *attackSMSBtn;
+@property (nonatomic, retain) IBOutlet UIButton *attackEmailBtn;
 @property (nonatomic, retain) History *attackHistory;
 
 -(IBAction) backgroundTap:(id) sender;
+-(void)callAppDelegateToAttack:(BOOL)emailAttack;
 
 @end

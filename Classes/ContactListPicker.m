@@ -11,7 +11,8 @@
 
 @implementation ContactListPicker
 
-@synthesize personPicked;
+@synthesize personEmails;
+@synthesize personNumbers;
 @synthesize personPickedName;
 @synthesize delegate;
 @synthesize personSelector;
@@ -20,7 +21,8 @@
 	self = [super init];
     if (self) {
         // Custom initialization.
-		self.personPicked = [[NSMutableArray alloc] initWithObjects:nil];
+		self.personEmails = [[NSMutableArray alloc] initWithObjects:nil];
+		self.personNumbers = [[NSMutableArray alloc] initWithObjects:nil];
     }
     return self;	
 }
@@ -50,33 +52,41 @@
 
 - (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person {
 	
-	//bool startGame = false;
-	
+	// Get the name
     NSString* name = (NSString *)ABRecordCopyValue(person, kABPersonFirstNameProperty);
 	self.personPickedName = name;
-	NSLog(@"%s",name);
-	//if([name isEqualToString:@"zahra"]) {
-	//	startGame = true;
-	//}
-	//NSLog(@"%s",name);
 	
-	[self.personPicked removeAllObjects];
+	// Get the email address
+	[self.personEmails removeAllObjects];
 	ABMultiValueRef email = ABRecordCopyValue(person, kABPersonEmailProperty);
 	
 	if (ABMultiValueGetCount(email) > 0) {
         // collect all emails in array
         for (CFIndex i = 0; i < ABMultiValueGetCount(email); i++) {
             CFStringRef emailRef = ABMultiValueCopyValueAtIndex(email, i);
-            [self.personPicked addObject:(NSString *)emailRef];
+            [self.personEmails addObject:(NSString *)emailRef];
             CFRelease(emailRef);
         }
     }
     CFRelease(email);
 	
+	// Get the phone numbers
+	[self.personNumbers removeAllObjects];
+	ABMultiValueRef numbers = ABRecordCopyValue(person, kABPersonPhoneProperty);
+	if (ABMultiValueGetCount(numbers) > 0) {
+        // collect all emails in array
+        for (CFIndex i = 0; i < ABMultiValueGetCount(numbers); i++) {
+            CFStringRef numRef = ABMultiValueCopyValueAtIndex(numbers, i);
+            [self.personNumbers addObject:(NSString *)numRef];
+            CFRelease(numRef);
+        }
+    }
+    CFRelease(numbers);
+	
 	// Dismiss the contact list picker dialog
     [self.delegate dismissModalViewControllerAnimated:YES];
 	
-	if(self.personPicked != nil && [self.personPicked count] > 0) {
+	if( (self.personEmails != nil && [self.personEmails count] > 0) || (self.personNumbers != nil && [self.personNumbers count] > 0)) {
 		
 		// Call the callback, let it know that the request is done
 		if([self.delegate respondsToSelector:self.personSelector]) {
@@ -155,7 +165,7 @@
 }
 
 - (void)dealloc {
-	[personPicked release];
+	[personEmails release];
 	[personPickedName release];
 	[super dealloc];
 }

@@ -11,7 +11,7 @@
 
 @implementation SendMessageViewController
 
-@synthesize image, inputMessage, attackBtn, attackHistory;
+@synthesize image, inputMessage, attackSMSBtn, attackEmailBtn, attackHistory;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -29,23 +29,65 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	image.image = [UIImage imageNamed:@"mel-gibson-braveheart.jpg"];
+	self.image.image = [UIImage imageNamed:@"mel-gibson-braveheart.jpg"];
 	
-	// Init the event handlers
-	[attackBtn addTarget:self action:@selector(attackBtnClick:) forControlEvents:UIControlEventTouchUpInside];	
+	if(self.attackHistory.smsAttack == YES) {
+		// Disable the email button if there is no email address
+		[self.attackEmailBtn setEnabled:NO];
+		[self.attackEmailBtn setHidden:YES];
+	} else {
+		[self.attackEmailBtn addTarget:self action:@selector(attackEmailBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+	}
+	
+	Class messageClass = (NSClassFromString(@"MFMessageComposeViewController"));
+    if (messageClass != nil) {
+		[self.attackSMSBtn addTarget:self action:@selector(attackSMSBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+	} else {
+		// Disable the SMS button if this is a non iPhone 4 user
+		[self.attackSMSBtn setEnabled:NO];
+		[self.attackSMSBtn setHidden:YES];
+	}
+	
+	// Put up an alert if both email and sms are disabled
+	if(self.attackSMSBtn.enabled == NO && self.attackEmailBtn.enabled == NO) {
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Can't contact user" message:@"Sorry, this user has no email address, and we can only send SMS messages on the iPhone 4." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+		[alert show];
+		[alert release];
+	}
 }
 
 
-// respond to the ask button click
--(void)attackBtnClick:(UIView*)clickedButton {
+// Responds to people saying they want to invite someone
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {  
+	NSString *title = [alertView buttonTitleAtIndex:buttonIndex];  
+	
+    if([title isEqualToString:@"Ok"]) {  
+		// Pop the stack
+		[self.navigationController popToRootViewControllerAnimated:YES];
+	}
+}
+
+
+// respond to the attack via email button click
+-(void)attackEmailBtnClick:(UIView*)clickedButton {
+	[self callAppDelegateToAttack:YES];
+}
+
+
+// respond to the attack via sms button click
+-(void)attackSMSBtnClick:(UIView*)clickedButton {
+	[self callAppDelegateToAttack:NO];
+}
+
+-(void)callAppDelegateToAttack:(BOOL)emailAttack {
 	// Save the message
-	attackHistory.message = inputMessage.text;
+	self.attackHistory.message = inputMessage.text;
 	
 	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
-	[appDelegate addAttack:attackHistory sendToServer:YES];
+	[appDelegate addAttack:self.attackHistory sendToServer:YES emailAttack:emailAttack];
 	
 	// Pop the stack
-	[self.navigationController popToRootViewControllerAnimated:YES];
+	[self.navigationController popToRootViewControllerAnimated:YES];	
 }
 
 -(IBAction) backgroundTap:(id) sender{
@@ -75,6 +117,7 @@
 
 
 - (void)dealloc {
+	[attackHistory release];	
     [super dealloc];
 }
 

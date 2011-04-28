@@ -21,6 +21,7 @@ static NSString *NameKey = @"nameKey";
 @synthesize userEmail;
 @synthesize signinViewController;
 @synthesize dbAttacks, dbAttackedBy;
+@synthesize attacksDatabase;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -166,49 +167,9 @@ static NSString *NameKey = @"nameKey";
 	}
 }
 
--(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer {
+-(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer emailAttack:(BOOL)emailAttack {
 	NSLog(@"Adding attack!");
-	NSInteger pk = [historyItem insertNewAttack:attacksDatabase];
-	
-	// Check to make sure it inserted correctly
-	if(pk == -1) {
-		NSLog(@"Attack didn't insert correctly.  Returning.");
-		return;
-	}
-	
-	History *item = [[History alloc] initWithPrimaryKey:pk database:attacksDatabase];
-	
-	if(item.serverID == 0) {
-		[dbAttacks addObject:item];
-	} else {
-		[dbAttackedBy addObject:item];
-	}
-	
-	if(sendToServer == YES) {
-		// Send the data to the backend
-		NSURL *url = [NSURL URLWithString:@"http://hollow-river-123.heroku.com/user_attacks/createFromPhone"];
-		request = [ASIFormDataRequest requestWithURL:url];
-		[request setPostValue:userEmail forKey:@"user_attack[attacker_email]"];
-		[request setPostValue:[item contact] forKey:@"user_attack[victim_email]"];
-		[request setPostValue:[item contactName] forKey:@"user_attack[victim_name]"];
-		[request setPostValue:[item attack] forKey:@"user_attack[attack_name]"];
-		[request setPostValue:[item message] forKey:@"user_attack[message]"];
-		[request setDelegate:self];
-		[request startAsynchronous];
-	}
-}
-
--(void)requestFinished:(ASIHTTPRequest *)requestCallback {
-	// Use when fetching text data
-	NSString *responseString = [requestCallback responseString];
-	
-	NSLog(@"%@",responseString);
-}
-
--(void)requestFailed:(ASIHTTPRequest *)requestCallback {
-	NSError *error = [requestCallback error];
-	
-	NSLog(@"Error request: %@", [error localizedDescription]);
+	[self.attackViewController addAttack:historyItem sendToServer:sendToServer emailAttack:emailAttack];
 }
 
 // Given an image name, find the attack item in the local plist of attacks
@@ -287,9 +248,6 @@ static NSString *NameKey = @"nameKey";
 
 
 - (void)dealloc {
-	[request clearDelegatesAndCancel];
-	[request release];
-	
 	[dbAttacks release];
 	[dbAttackedBy release];
     [viewController release];

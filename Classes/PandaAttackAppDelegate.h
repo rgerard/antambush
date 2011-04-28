@@ -10,7 +10,6 @@
 #import "PandaAttackViewController.h"
 #import "AttackViewController.h"
 #import <sqlite3.h>
-#import "ASIFormDataRequest.h"
 #import "SigninViewController.h"
 
 @interface PandaAttackAppDelegate : NSObject <UIApplicationDelegate> {
@@ -24,8 +23,6 @@
 	sqlite3 *attacksDatabase;
 	NSMutableArray *dbAttacks;
 	NSMutableArray *dbAttackedBy;
-	
-	ASIFormDataRequest *request;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
@@ -36,13 +33,14 @@
 @property (nonatomic, retain) NSMutableArray *dbAttacks;
 @property (nonatomic, retain) NSMutableArray *dbAttackedBy;
 @property (nonatomic, retain) NSString *userEmail;
+@property (nonatomic) sqlite3 *attacksDatabase;
 
 -(void)startTimer;
 -(void)viewSwitch;
 -(void)switchFromLoginView;
 -(void)createEditableCopyOfDatabase:(NSString*)fileName;
 -(void)initializeAttacksDatabase:(NSString*)fileName;
--(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer;
+-(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer emailAttack:(BOOL)emailAttack;
 -(NSDictionary*)findAttackInPList:(NSString*)imageNameToFind;
 
 @end

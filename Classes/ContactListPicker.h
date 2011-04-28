@@ -11,13 +11,15 @@
 #import <AddressBookUI/AddressBookUI.h>
 
 @interface ContactListPicker : NSObject<ABPeoplePickerNavigationControllerDelegate,UIAlertViewDelegate> {
-	NSMutableArray *personPicked;
+	NSMutableArray *personEmails;
+	NSMutableArray *personNumbers;
 	NSString *personPickedName;
 	id delegate;
 	SEL personSelector;
 }
 
-@property (nonatomic, retain) NSMutableArray *personPicked;
+@property (nonatomic, retain) NSMutableArray *personEmails;
+@property (nonatomic, retain) NSMutableArray *personNumbers;
 @property (nonatomic, retain) NSString *personPickedName;
 @property (nonatomic, retain) id delegate;
 @property (nonatomic) SEL personSelector;

@@ -14,7 +14,7 @@ static sqlite3_stmt *insertAttack = nil;
 
 @implementation History
 
-@synthesize primaryKey, serverID, contact, contactName, attack, message, timeCreated;
+@synthesize primaryKey, serverID, contact, contactName, attack, message, timeCreated, smsAttack;
 
 -(id)initWithPrimaryKey:(NSInteger)pk database:(sqlite3*)db {
 	
@@ -77,12 +77,7 @@ static sqlite3_stmt *insertAttack = nil;
 	if(insertAttack == nil) {
 		const char *sql = "INSERT INTO attacks(serverID,sender,senderName,attack,message,time) VALUES(?,?,?,?,?,?)";
 		if(sqlite3_prepare_v2(db, sql, -1, &insertAttack, NULL) != SQLITE_OK) {
-			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"DatabaseNotAvailable", @"") message:[NSString stringWithUTF8String:sqlite3_errmsg(db)]
-														   delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-			[alert show];	
-			[alert release];
-			return -1;
-			//NSAssert1(0, @"Error create sql for insert attack: %s", sqlite3_errmsg(db));
+			NSAssert1(0, @"Error create sql for insert attack: %s", sqlite3_errmsg(db));
 		}
 	}
 	
@@ -96,9 +91,13 @@ static sqlite3_stmt *insertAttack = nil;
 	
 	int success = sqlite3_step(insertAttack);
 	if(success != SQLITE_ERROR) {
+		sqlite3_reset(insertAttack);
+		sqlite3_clear_bindings(insertAttack);
 		return sqlite3_last_insert_rowid(db);
 	}
 	
+	sqlite3_reset(insertAttack);
+	sqlite3_clear_bindings(insertAttack);
 	NSAssert1(0, @"Error inserting new attack: %s", sqlite3_errmsg(db));
 	return -1;
 }

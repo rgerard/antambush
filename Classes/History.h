@@ -18,6 +18,7 @@
 	NSString *attack;
 	NSString *message;
 	NSDate *timeCreated;
+	BOOL smsAttack;
 }
 
 @property (assign, nonatomic, readonly) NSInteger primaryKey;
@@ -27,6 +28,7 @@
 @property (nonatomic, retain) NSString *attack;
 @property (nonatomic, retain) NSString *message;
 @property (nonatomic, retain) NSDate *timeCreated;
+@property (nonatomic) BOOL smsAttack;
 
 -(id)initWithPrimaryKey:(NSInteger)pk database:(sqlite3*)db;
 -(NSInteger)insertNewAttack:(sqlite3*)db;
