@@ -168,7 +168,7 @@ static NSString *NameKey = @"nameKey";
 }
 
 -(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer emailAttack:(BOOL)emailAttack {
-	NSLog(@"Adding attack!");
+	NSLog(@"Adding attack from AppDelegate!");
 	[self.attackViewController addAttack:historyItem sendToServer:sendToServer emailAttack:emailAttack];
 }
 

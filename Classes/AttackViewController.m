@@ -20,7 +20,7 @@ static NSString *NameKey = @"nameKey";
 
 @implementation AttackViewController
 
-@synthesize recentAttacksViewController, recentlyAttackedByViewController, startAttackBtn, viewHistoryBtn, request, formRequest, contactList;
+@synthesize recentAttacksViewController, recentlyAttackedByViewController, startAttackBtn, viewHistoryBtn, request, contactList;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -100,11 +100,6 @@ static NSString *NameKey = @"nameKey";
 	// Stop the spinner
 	[spinner stopAnimating];
 	[spinner removeFromSuperview];
-	
-	// If this is from a POST request, return
-	if(requestCallback.requestMethod == @"POST") {
-		return;
-	}
 	
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 	NSString *lastAttackIdStr = [prefs stringForKey:@"lastAttackId"];
@@ -365,7 +360,7 @@ static NSString *NameKey = @"nameKey";
 
 
 -(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer emailAttack:(BOOL)emailAttack {
-	NSLog(@"Adding attack!");
+	NSLog(@"Adding attack from ViewController!");
 	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
 	NSInteger pk = [historyItem insertNewAttack:appDelegate.attacksDatabase];
 	
@@ -382,21 +377,23 @@ static NSString *NameKey = @"nameKey";
 	}
 	
 	if(sendToServer == YES) {
+		
 		if(emailAttack == YES) {
-			// Start the spinner
-			[self.view addSubview:spinner];
-			[spinner startAnimating];
-			
-			// Send the data to the backend
-			NSURL *url = [NSURL URLWithString:@"http://hollow-river-123.heroku.com/user_attacks/createFromPhone"];
-			formRequest = [ASIFormDataRequest requestWithURL:url];
-			[formRequest setPostValue:appDelegate.userEmail forKey:@"user_attack[attacker_email]"];
-			[formRequest setPostValue:historyItem.contactEmail forKey:@"user_attack[victim_email]"];
-			[formRequest setPostValue:historyItem.contactName forKey:@"user_attack[victim_name]"];
-			[formRequest setPostValue:historyItem.attack forKey:@"user_attack[attack_name]"];
-			[formRequest setPostValue:historyItem.message forKey:@"user_attack[message]"];
-			[formRequest setDelegate:self];
-			[formRequest startAsynchronous];
+			if([MFMailComposeViewController canSendMail]) {
+				
+				MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
+				picker.mailComposeDelegate = self;
+				[picker setSubject:@"Attacked!"];
+				
+				// Set up recipients
+				NSArray *toRecipients = [NSArray arrayWithObject:historyItem.contactEmail];
+				NSString *emailBody = [NSString stringWithFormat:@"You have been attacked with %@!  The message is: %@", historyItem.attack, historyItem.message];
+				[picker setToRecipients:toRecipients];
+				[picker setMessageBody:emailBody isHTML:NO];
+				
+				[self presentModalViewController:picker animated:YES];
+				[picker release];
+			} 
 		} else {
 			// Send an SMS instead
 			MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
@@ -458,9 +455,6 @@ static NSString *NameKey = @"nameKey";
 	
 	[request clearDelegatesAndCancel];
 	[request release];	
-	
-	[formRequest clearDelegatesAndCancel];
-	[formRequest release];
 	
 	[attackHistory release];
     [super dealloc];

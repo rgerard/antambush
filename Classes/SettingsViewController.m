@@ -10,8 +10,11 @@
 #import "PandaAttackAppDelegate.h"
 #import "History.h"
 
+static NSString* kAppId = @"206499529382979";
+
 @implementation SettingsViewController
 
+@synthesize facebook;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -59,7 +62,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 2;
+    return 3;
 }
 
 
@@ -84,6 +87,8 @@
 		cell.textLabel.text = @"Logout";
 	} else if(indexPath.section == 1) {
 		cell.textLabel.text = @"Clear Data";
+	} else if(indexPath.section == 2) {
+		cell.textLabel.text = @"Connect to Facebook";
 	}
 	
     return cell;
@@ -152,9 +157,29 @@
 		// Delete all data from the local database
 		PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
 		[History clearData:appDelegate.attacksDatabase];
+	} else if(indexPath.section == 2) {
+		// Ask for permission to send the person email as well
+		NSArray* permissions =  [[NSArray arrayWithObjects:@"email", nil] retain];
+		
+		[facebook authorize:permissions delegate:self];
+		facebook = [[Facebook alloc] initWithAppId:kAppId];
+		[facebook authorize:permissions delegate:self];
 	}
 }
 
+-(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+	
+    return [facebook handleOpenURL:url]; 
+}
+
+- (void)fbDidLogin {
+}
+
+- (void)fbDidNotLogin:(BOOL)cancelled {
+}
+
+- (void)fbDidLogout {
+}
 
 #pragma mark -
 #pragma mark Memory management

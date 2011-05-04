@@ -11,7 +11,6 @@
 #import <MessageUI/MFMailComposeViewController.h>
 #import "History.h"
 #import "ASIHTTPRequest.h"
-#import "ASIFormDataRequest.h"
 #import "RecentAttacksViewController.h"
 #import "ContactListPicker.h"
 
@@ -20,7 +19,6 @@
 	UIActivityIndicatorView *spinner;
 	History *attackHistory;
 	ASIHTTPRequest *request;
-	ASIFormDataRequest *formRequest;
 	RecentAttacksViewController *recentAttacksViewController;
 	RecentAttacksViewController *recentlyAttackedByViewController;
 	ContactListPicker *contactList;
@@ -29,7 +27,6 @@
 @property (nonatomic, retain) IBOutlet UIButton *startAttackBtn;
 @property (nonatomic, retain) IBOutlet UIButton *viewHistoryBtn;
 @property (nonatomic, retain) ASIHTTPRequest *request;
-@property (nonatomic, retain) ASIFormDataRequest *formRequest;
 @property (nonatomic, retain) RecentAttacksViewController *recentAttacksViewController;
 @property (nonatomic, retain) RecentAttacksViewController *recentlyAttackedByViewController;
 @property (nonatomic, retain) ContactListPicker *contactList;

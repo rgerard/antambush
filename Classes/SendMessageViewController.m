@@ -11,7 +11,7 @@
 
 @implementation SendMessageViewController
 
-@synthesize image, inputMessage, attackSMSBtn, attackEmailBtn, attackHistory;
+@synthesize image, inputMessage, attackSMSBtn, attackEmailBtn, attackHistory, formRequest, emailAttack;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -29,10 +29,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
+	// Init the spinner
+	spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+	[spinner setCenter:CGPointMake(self.view.frame.size.width/2.0, (self.view.frame.size.height-150)/2.0)]; 
+	
 	self.image.image = [UIImage imageNamed:@"mel-gibson-braveheart.jpg"];
 	
-	if([self.attackHistory.contactEmail length] == 0) {
-		// Disable the email button if there is no email address
+	if([self.attackHistory.contactEmail length] == 0 || ![MFMailComposeViewController canSendMail]) {
+		// Disable the email button if there is no email address, or if the device can't send email
 		[self.attackEmailBtn setEnabled:NO];
 		[self.attackEmailBtn setHidden:YES];
 	} else {
@@ -50,7 +54,7 @@
 	
 	// Put up an alert if both email and sms are disabled
 	if(self.attackSMSBtn.enabled == NO && self.attackEmailBtn.enabled == NO) {
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Can't contact user" message:@"Sorry, this user has no email address, and we can only send SMS messages on the iPhone 4." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Can't contact user" message:@"Sorry, either this user has no email address, this device can't send email, or we can't send an SMS messages due to device limitations. Please try again." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
 		[alert show];
 		[alert release];
 	}
@@ -70,25 +74,62 @@
 
 // respond to the attack via email button click
 -(void)attackEmailBtnClick:(UIView*)clickedButton {
-	[self callAppDelegateToAttack:YES];
+	self.emailAttack = YES;
+	[self callAppDelegateToAttack];
 }
 
 
 // respond to the attack via sms button click
 -(void)attackSMSBtnClick:(UIView*)clickedButton {
-	[self callAppDelegateToAttack:NO];
+	self.emailAttack = NO;
+	[self callAppDelegateToAttack];
 }
 
--(void)callAppDelegateToAttack:(BOOL)emailAttack {
+-(void)callAppDelegateToAttack {
 	// Save the message
 	self.attackHistory.message = inputMessage.text;
 	
+	// Start the spinner
+	[self.view addSubview:spinner];
+	[spinner startAnimating];
+	
 	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
-	[appDelegate addAttack:self.attackHistory sendToServer:YES emailAttack:emailAttack];
+	
+	// Send the data to the backend
+	NSURL *url = [NSURL URLWithString:@"http://hollow-river-123.heroku.com/user_attacks/createFromPhone"];
+	self.formRequest = [ASIFormDataRequest requestWithURL:url];
+	[self.formRequest setPostValue:appDelegate.userEmail forKey:@"user_attack[attacker_email]"];
+	[self.formRequest setPostValue:self.attackHistory.contactEmail forKey:@"user_attack[victim_email]"];
+	[self.formRequest setPostValue:self.attackHistory.contactName forKey:@"user_attack[victim_name]"];
+	[self.formRequest setPostValue:self.attackHistory.attack forKey:@"user_attack[attack_name]"];
+	[self.formRequest setPostValue:self.attackHistory.message forKey:@"user_attack[message]"];
+	[self.formRequest setDelegate:self];
+	[self.formRequest startAsynchronous];
+}
+
+// Callback from the server request asking for new attacks
+-(void)requestFinished:(ASIHTTPRequest *)requestCallback {
+	// Stop the spinner
+	[spinner stopAnimating];
+	[spinner removeFromSuperview];
+	
+	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
+	[appDelegate addAttack:self.attackHistory sendToServer:YES emailAttack:self.emailAttack];
 	
 	// Pop the stack
-	[self.navigationController popToRootViewControllerAnimated:YES];	
+	[self.navigationController popToRootViewControllerAnimated:YES];
 }
+
+
+-(void)requestFailed:(ASIHTTPRequest *)requestCallback {
+	// Stop the spinner
+	[spinner stopAnimating];
+	[spinner removeFromSuperview];
+	
+	NSError *error = [requestCallback error];
+	NSLog(@"Error request: %@", [error localizedDescription]);
+}
+
 
 -(IBAction) backgroundTap:(id) sender{
 	[self.inputMessage resignFirstResponder];
@@ -115,9 +156,17 @@
     // e.g. self.myOutlet = nil;
 }
 
+-(void)viewWillDisappear:(BOOL)animated { 
+	[self.formRequest clearDelegatesAndCancel];
+}
 
 - (void)dealloc {
-	[attackHistory release];	
+	[self.attackHistory release];
+	
+	// Cleaning up
+	[self.formRequest clearDelegatesAndCancel];
+	[self.formRequest release];
+	
     [super dealloc];
 }
 

@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FBConnect.h"
 
-
-@interface SettingsViewController : UITableViewController {
-
+@interface SettingsViewController : UITableViewController<FBSessionDelegate> {
+	Facebook *facebook;
 }
+
+@property (nonatomic, retain) Facebook *facebook;
 
 @end
