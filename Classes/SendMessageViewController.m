@@ -96,7 +96,8 @@
 	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
 	
 	// Send the data to the backend
-	NSURL *url = [NSURL URLWithString:@"http://hollow-river-123.heroku.com/user_attacks/createFromPhone"];
+	//NSURL *url = [NSURL URLWithString:@"http://hollow-river-123.heroku.com/user_attacks/createFromPhone"];
+	NSURL *url = [NSURL URLWithString:@"http://localhost:3000/user_attacks/createFromPhone"];
 	self.formRequest = [ASIFormDataRequest requestWithURL:url];
 	[self.formRequest setPostValue:appDelegate.userEmail forKey:@"user_attack[attacker_email]"];
 	[self.formRequest setPostValue:self.attackHistory.contactEmail forKey:@"user_attack[victim_email]"];
@@ -113,8 +114,12 @@
 	[spinner stopAnimating];
 	[spinner removeFromSuperview];
 	
+	// Grab the URL returned in the response string
+	NSString *responseString = [requestCallback responseString];
+	NSLog(@"Response ID: %@", responseString);
+	
 	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
-	[appDelegate addAttack:self.attackHistory sendToServer:YES emailAttack:self.emailAttack];
+	[appDelegate addAttack:self.attackHistory sendToServer:YES emailAttack:self.emailAttack attackID:responseString];
 	
 	// Pop the stack
 	[self.navigationController popToRootViewControllerAnimated:YES];

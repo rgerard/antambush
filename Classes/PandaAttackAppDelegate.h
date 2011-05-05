@@ -40,7 +40,7 @@
 -(void)switchFromLoginView;
 -(void)createEditableCopyOfDatabase:(NSString*)fileName;
 -(void)initializeAttacksDatabase:(NSString*)fileName;
--(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer emailAttack:(BOOL)emailAttack;
+-(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer emailAttack:(BOOL)emailAttack attackID:(NSString*)attackID;
 -(NSDictionary*)findAttackInPList:(NSString*)imageNameToFind;
 
 @end

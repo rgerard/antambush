@@ -39,6 +39,6 @@
 -(void)attackPickedFromAttackedTableCallback:(NSIndexPath *)attackRow;
 -(History *) findAttackDataToUse:(int)row loadAttacksFromMe:(BOOL)loadAttacksFromMe;
 -(void)createAttackViewController:(History *)item;
--(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer emailAttack:(BOOL)emailAttack;
+-(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer emailAttack:(BOOL)emailAttack attackID:(NSString*)attackID;
 
 @end

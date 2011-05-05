@@ -17,6 +17,8 @@
 
 static NSString *ImageKey = @"imageKey";
 static NSString *NameKey = @"nameKey";
+//static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
+static NSString *rootUrl = @"http://localhost:3000";
 
 @implementation AttackViewController
 
@@ -87,7 +89,7 @@ static NSString *NameKey = @"nameKey";
 		[spinner startAnimating];
 		
 		// Ask server if there are any new attacks on this user
-		NSString *formatUrl = [NSString stringWithFormat:@"http://hollow-river-123.heroku.com/user_attacks/lookup?email=%@&lastid=%@",userEmail,lastAttackId];
+		NSString *formatUrl = [NSString stringWithFormat:@"%@/user_attacks/lookup?email=%@&lastid=%@",rootUrl,userEmail,lastAttackId];
 		NSURL *url = [NSURL URLWithString:formatUrl];
 		self.request = [ASIHTTPRequest requestWithURL:url];
 		[self.request setDelegate:self];
@@ -164,7 +166,7 @@ static NSString *NameKey = @"nameKey";
 				newAttack.message = attackMessage;
 
 				// Add the attack to the DB
-				[self addAttack:newAttack sendToServer:NO emailAttack:YES];
+				[self addAttack:newAttack sendToServer:NO emailAttack:YES attackID:newAttackIdStr];
 				
 				// Release the history object just created
 				[newAttack release];
@@ -359,7 +361,7 @@ static NSString *NameKey = @"nameKey";
 }
 
 
--(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer emailAttack:(BOOL)emailAttack {
+-(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer emailAttack:(BOOL)emailAttack attackID:(NSString*)attackID {
 	NSLog(@"Adding attack from ViewController!");
 	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
 	NSInteger pk = [historyItem insertNewAttack:appDelegate.attacksDatabase];
@@ -378,6 +380,8 @@ static NSString *NameKey = @"nameKey";
 	
 	if(sendToServer == YES) {
 		
+		NSString *urlToSend = [NSString stringWithFormat:@"%@/user_attacks/%@", rootUrl, attackID];
+		
 		if(emailAttack == YES) {
 			if([MFMailComposeViewController canSendMail]) {
 				
@@ -387,7 +391,7 @@ static NSString *NameKey = @"nameKey";
 				
 				// Set up recipients
 				NSArray *toRecipients = [NSArray arrayWithObject:historyItem.contactEmail];
-				NSString *emailBody = [NSString stringWithFormat:@"You have been attacked with %@!  The message is: %@", historyItem.attack, historyItem.message];
+				NSString *emailBody = [NSString stringWithFormat:@"You have been attacked with %@!  The message is: %@.  View this attack at: %@", historyItem.attack, historyItem.message, urlToSend];
 				[picker setToRecipients:toRecipients];
 				[picker setMessageBody:emailBody isHTML:NO];
 				
@@ -398,7 +402,7 @@ static NSString *NameKey = @"nameKey";
 			// Send an SMS instead
 			MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
 			if([MFMessageComposeViewController canSendText]) {
-				controller.body = [NSString stringWithFormat:@"You just got attacked with %@!", historyItem.attack];
+				controller.body = [NSString stringWithFormat:@"You just got attacked with %@!  View this attack at: %@", historyItem.attack, urlToSend];
 				controller.recipients = [NSArray arrayWithObjects:historyItem.contactPhone, nil];
 				controller.messageComposeDelegate = self;
 				[self presentModalViewController:controller animated:YES];
