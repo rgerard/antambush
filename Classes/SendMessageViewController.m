@@ -9,6 +9,9 @@
 #import "SendMessageViewController.h"
 #import "PandaAttackAppDelegate.h"
 
+static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
+//static NSString *rootUrl = @"http://localhost:3000";
+
 @implementation SendMessageViewController
 
 @synthesize image, inputMessage, attackSMSBtn, attackEmailBtn, attackHistory, formRequest, emailAttack;
@@ -97,7 +100,7 @@
 	
 	// Send the data to the backend
 	//NSURL *url = [NSURL URLWithString:@"http://hollow-river-123.heroku.com/user_attacks/createFromPhone"];
-	NSURL *url = [NSURL URLWithString:@"http://localhost:3000/user_attacks/createFromPhone"];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/user_attacks/createFromPhone", rootUrl]];
 	self.formRequest = [ASIFormDataRequest requestWithURL:url];
 	[self.formRequest setPostValue:appDelegate.userEmail forKey:@"user_attack[attacker_email]"];
 	[self.formRequest setPostValue:self.attackHistory.contactEmail forKey:@"user_attack[victim_email]"];

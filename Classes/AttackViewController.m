@@ -17,8 +17,8 @@
 
 static NSString *ImageKey = @"imageKey";
 static NSString *NameKey = @"nameKey";
-//static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
-static NSString *rootUrl = @"http://localhost:3000";
+static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
+//static NSString *rootUrl = @"http://localhost:3000";
 
 @implementation AttackViewController
 

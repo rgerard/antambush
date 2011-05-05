@@ -228,6 +228,11 @@
 			945EB26413723E6400D576C3 /* PBXTextBookmark */ = 945EB26413723E6400D576C3 /* PBXTextBookmark */;
 			945EB26513723E6400D576C3 /* PBXTextBookmark */ = 945EB26513723E6400D576C3 /* PBXTextBookmark */;
 			945EB26613723E6400D576C3 /* PBXTextBookmark */ = 945EB26613723E6400D576C3 /* PBXTextBookmark */;
+			945EB26E1372465800D576C3 /* PBXTextBookmark */ = 945EB26E1372465800D576C3 /* PBXTextBookmark */;
+			945EB26F1372465800D576C3 /* PBXTextBookmark */ = 945EB26F1372465800D576C3 /* PBXTextBookmark */;
+			945EB2701372465800D576C3 /* PBXTextBookmark */ = 945EB2701372465800D576C3 /* PBXTextBookmark */;
+			945EB2711372465800D576C3 /* PBXTextBookmark */ = 945EB2711372465800D576C3 /* PBXTextBookmark */;
+			945EB2721372465800D576C3 /* PBXTextBookmark */ = 945EB2721372465800D576C3 /* PBXTextBookmark */;
 			94620DF91367B7C90073CBDF = 94620DF91367B7C90073CBDF /* PBXTextBookmark */;
 			94620E651367CEA90073CBDF = 94620E651367CEA90073CBDF /* PBXTextBookmark */;
 			94620EA41367D5B00073CBDF = 94620EA41367D5B00073CBDF /* PBXTextBookmark */;
@@ -552,7 +557,7 @@
 		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
 		name = "SendMessageViewController.m: 165";
 		rLen = 0;
-		rLoc = 6202;
+		rLoc = 6342;
 		rType = 0;
 		vrLen = 1712;
 		vrLoc = 3300;
@@ -829,7 +834,7 @@
 		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
 		name = "SendMessageViewController.m: 165";
 		rLen = 0;
-		rLoc = 6202;
+		rLoc = 6342;
 		rType = 0;
 		vrLen = 1652;
 		vrLoc = 3360;
@@ -849,7 +854,7 @@
 		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
 		name = "SendMessageViewController.m: 167";
 		rLen = 0;
-		rLoc = 6179;
+		rLoc = 6319;
 		rType = 0;
 		vrLen = 1070;
 		vrLoc = 4821;
@@ -859,7 +864,7 @@
 		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
 		name = "SendMessageViewController.m: 107";
 		rLen = 0;
-		rLoc = 4293;
+		rLoc = 4433;
 		rType = 0;
 		vrLen = 977;
 		vrLoc = 4966;
@@ -869,7 +874,7 @@
 		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
 		name = "SendMessageViewController.m: 166";
 		rLen = 0;
-		rLoc = 6126;
+		rLoc = 6266;
 		rType = 0;
 		vrLen = 1330;
 		vrLoc = 4155;
@@ -919,7 +924,7 @@
 		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
 		name = "SendMessageViewController.m: 100";
 		rLen = 0;
-		rLoc = 3671;
+		rLoc = 3801;
 		rType = 0;
 		vrLen = 1872;
 		vrLoc = 3333;
@@ -929,7 +934,7 @@
 		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
 		name = "SendMessageViewController.m: 110";
 		rLen = 0;
-		rLoc = 4327;
+		rLoc = 4467;
 		rType = 0;
 		vrLen = 1810;
 		vrLoc = 3333;
@@ -1016,7 +1021,7 @@
 		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
 		name = "SendMessageViewController.m: 122";
 		rLen = 9;
-		rLoc = 4808;
+		rLoc = 4948;
 		rType = 0;
 		vrLen = 770;
 		vrLoc = 0;
@@ -1066,7 +1071,7 @@
 		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
 		name = "SendMessageViewController.m: 122";
 		rLen = 9;
-		rLoc = 4808;
+		rLoc = 4948;
 		rType = 0;
 		vrLen = 1940;
 		vrLoc = 3300;
@@ -1100,6 +1105,56 @@
 		rType = 0;
 		vrLen = 1635;
 		vrLoc = 13640;
+	};
+	945EB26E1372465800D576C3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933631322DAB70046EB0F /* AttackViewController.h */;
+		name = "AttackViewController.h: 15";
+		rLen = 0;
+		rLoc = 357;
+		rType = 0;
+		vrLen = 1785;
+		vrLoc = 3;
+	};
+	945EB26F1372465800D576C3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 20";
+		rLen = 0;
+		rLoc = 493;
+		rType = 0;
+		vrLen = 1459;
+		vrLoc = 3;
+	};
+	945EB2701372465800D576C3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94C41829133325F50032B2DA /* SendMessageViewController.h */;
+		name = "SendMessageViewController.h: 20";
+		rLen = 11;
+		rLoc = 493;
+		rType = 0;
+		vrLen = 1016;
+		vrLoc = 0;
+	};
+	945EB2711372465800D576C3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
+		name = "SendMessageViewController.m: 103";
+		rLen = 0;
+		rLoc = 3841;
+		rType = 0;
+		vrLen = 1592;
+		vrLoc = 0;
+	};
+	945EB2721372465800D576C3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
+		name = "SendMessageViewController.m: 13";
+		rLen = 0;
+		rLoc = 298;
+		rType = 0;
+		vrLen = 1592;
+		vrLoc = 0;
 	};
 	94620DF91367B7C90073CBDF /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -1196,7 +1251,7 @@
 		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
 		name = "SendMessageViewController.m: 34";
 		rLen = 0;
-		rLoc = 1333;
+		rLoc = 1455;
 		rType = 0;
 		vrLen = 1571;
 		vrLoc = 514;
@@ -1481,9 +1536,9 @@
 	};
 	94C4182A133325F50032B2DA /* SendMessageViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {2196, 2236}}";
-			sepNavSelRange = "{4808, 9}";
-			sepNavVisRange = "{3300, 1940}";
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 2327}}";
+			sepNavSelRange = "{298, 0}";
+			sepNavVisRange = "{0, 1592}";
 		};
 	};
 	94C41851133329770032B2DA /* PBXBookmark */ = {
@@ -1546,9 +1601,9 @@
 	};
 	94E933641322DAB70046EB0F /* AttackViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1405, 6136}}";
-			sepNavSelRange = "{15040, 0}";
-			sepNavVisRange = "{13640, 1635}";
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 6175}}";
+			sepNavSelRange = "{493, 0}";
+			sepNavVisRange = "{3, 1459}";
 			sepNavWindowFrame = "{{15, 315}, {750, 558}}";
 		};
 	};
