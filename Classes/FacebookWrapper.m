@@ -173,6 +173,7 @@ static NSString* kAppId = @"206499529382979";
 -(void) fbDidLogout {
 	NSLog(@"Logged out of Facebook");
 	
+	self.isLoggedInToFB = NO;
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 	[prefs setBool:NO forKey:@"fbLoggedIn"];
 	[prefs synchronize];
@@ -223,13 +224,6 @@ static NSString* kAppId = @"206499529382979";
 			self.friends = [result objectForKey:@"data"];
 		} else {
 			NSLog(@"There was a problem getting the friends list");
-		}
-		
-		// Iterate through list of friends
-		for(int i=0; i < [friends count]; i++) {
-			id temp = [friends objectAtIndex:i];
-			NSLog(@"%@", [temp objectForKey:@"name"]);
-			NSLog(@"%@", [temp objectForKey:@"id"]);
 		}
 	}
 	

@@ -48,6 +48,7 @@ static NSString *NameKey = @"nameKey";
 	
 	// Setup the controller properties
 	[signinViewController setFbWrapper:fbWrapper];
+	[attackViewController setFbWrapper:fbWrapper];
 	attackNavigationController = [[UINavigationController alloc] initWithRootViewController:attackViewController];
 	attackNavigationController.navigationBar.barStyle = UIBarStyleBlack;
 	

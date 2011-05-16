@@ -44,6 +44,8 @@
 		949EBE87135E28CA002EAEA6 /* ContactListPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 949EBE86135E28CA002EAEA6 /* ContactListPicker.m */; };
 		949EBEDE13627A05002EAEA6 /* RecentAttacksTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 949EBEDD13627A05002EAEA6 /* RecentAttacksTableViewCell.m */; };
 		94A4886B1380AD0900DAB3AC /* FacebookWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */; };
+		94A489DB13810F2100DAB3AC /* FBTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */; };
+		94A489DC13810F2100DAB3AC /* FBTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94A489DA13810F2100DAB3AC /* FBTableViewController.xib */; };
 		94A725C91336CFCA00414CF3 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A725C81336CFCA00414CF3 /* libsqlite3.0.dylib */; };
 		94A725CE1336D03C00414CF3 /* History.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A725CD1336D03C00414CF3 /* History.m */; };
 		94A728AB1338820800414CF3 /* recentAttacks.db in Resources */ = {isa = PBXBuildFile; fileRef = 94A728AA1338820800414CF3 /* recentAttacks.db */; };
@@ -169,6 +171,9 @@
 		949EBEDD13627A05002EAEA6 /* RecentAttacksTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentAttacksTableViewCell.m; sourceTree = "<group>"; };
 		94A488691380AD0900DAB3AC /* FacebookWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookWrapper.h; sourceTree = "<group>"; };
 		94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookWrapper.m; sourceTree = "<group>"; };
+		94A489D813810F2100DAB3AC /* FBTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTableViewController.h; sourceTree = "<group>"; };
+		94A489D913810F2100DAB3AC /* FBTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTableViewController.m; sourceTree = "<group>"; };
+		94A489DA13810F2100DAB3AC /* FBTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FBTableViewController.xib; path = Classes/FBTableViewController.xib; sourceTree = "<group>"; };
 		94A725C81336CFCA00414CF3 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		94A725CC1336D03C00414CF3 /* History.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = History.h; sourceTree = "<group>"; };
 		94A725CD1336D03C00414CF3 /* History.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = History.m; sourceTree = "<group>"; };
@@ -260,6 +265,8 @@
 			children = (
 				94A488691380AD0900DAB3AC /* FacebookWrapper.h */,
 				94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */,
+				94A489D813810F2100DAB3AC /* FBTableViewController.h */,
+				94A489D913810F2100DAB3AC /* FBTableViewController.m */,
 				1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */,
 				1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* PandaAttackViewController.h */,
@@ -323,6 +330,7 @@
 			children = (
 				94E93D511331D49E0046EB0F /* images */,
 				94A728AA1338820800414CF3 /* recentAttacks.db */,
+				94A489DA13810F2100DAB3AC /* FBTableViewController.xib */,
 				94B983391345AA0F00090947 /* SigninViewController.xib */,
 				946210DB1369435A0073CBDF /* SettingsViewController.xib */,
 				94B211221363A57400DA627E /* SingleAttackViewController.xib */,
@@ -620,6 +628,7 @@
 				94B211241363A57400DA627E /* SingleAttackViewController.xib in Resources */,
 				946210DD1369435A0073CBDF /* SettingsViewController.xib in Resources */,
 				9462115F13694C1F0073CBDF /* FBDialog.bundle in Resources */,
+				94A489DC13810F2100DAB3AC /* FBTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,6 +685,7 @@
 				9462116713694C1F0073CBDF /* SBJsonParser.m in Sources */,
 				9462116813694C1F0073CBDF /* SBJsonWriter.m in Sources */,
 				94A4886B1380AD0900DAB3AC /* FacebookWrapper.m in Sources */,
+				94A489DB13810F2100DAB3AC /* FBTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

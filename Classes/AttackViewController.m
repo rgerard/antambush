@@ -14,6 +14,7 @@
 #import "UIImageAlertView.h"
 #import "SingleAttackViewController.h"
 #import "SettingsViewController.h"
+#import "FBTableViewController.h"
 
 static NSString *ImageKey = @"imageKey";
 static NSString *NameKey = @"nameKey";
@@ -22,7 +23,7 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 
 @implementation AttackViewController
 
-@synthesize recentAttacksViewController, recentlyAttackedByViewController, startAttackBtn, viewHistoryBtn, request, contactList;
+@synthesize recentAttacksViewController, recentlyAttackedByViewController, startAttackBtn, viewHistoryBtn, request, contactList, fbWrapper;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -291,7 +292,12 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 
 // respond to the Attack button click
 -(void)startBtnClick:(UIView*)clickedButton {
-	[contactList openContactList];
+	FBTableViewController *table = [[FBTableViewController alloc] initWithStyle:UITableViewStylePlain];
+	[table setFbWrapper:fbWrapper];
+	[self.navigationController pushViewController:table animated:YES];
+	[table release];
+	
+	//[contactList openContactList];
 }
 
 
@@ -432,8 +438,8 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 }
 
 
--(void)setFacebookWrapper:(FacebookWrapper*)wrapper {
-	self.fbWrapper = [wrapper retain];
+-(void) setFbWrapper:(FacebookWrapper*)wrapper {
+	fbWrapper = [wrapper retain];
 }
 
 

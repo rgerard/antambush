@@ -1,34 +1,33 @@
 //
-//  SettingsViewController.m
+//  FBTableViewController.m
 //  PandaAttack
 //
-//  Created by Ryan Gerard on 4/27/11.
+//  Created by Ryan Gerard on 5/16/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "SettingsViewController.h"
-#import "PandaAttackAppDelegate.h"
-#import "History.h"
+#import "FBTableViewController.h"
 
-@implementation SettingsViewController
+
+@implementation FBTableViewController
 
 @synthesize fbWrapper;
 
 #pragma mark -
 #pragma mark View lifecycle
 
+-(void) setFbWrapper:(FacebookWrapper*)wrapper {
+	fbWrapper = [wrapper retain];
+}
 
--(void) viewDidLoad {
+/*
+- (void)viewDidLoad {
     [super viewDidLoad];
 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-
-
--(void) setFbWrapper:(FacebookWrapper*)wrapper {
-	fbWrapper = [wrapper retain];
-}
+*/
 
 /*
 - (void)viewWillAppear:(BOOL)animated {
@@ -64,13 +63,17 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 2;
+    return 1;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 1;
+	if(self.fbWrapper.isLoggedInToFB) {
+		return self.fbWrapper.friends.count;
+	} else {
+		return 0;
+	}
 }
 
 
@@ -85,16 +88,8 @@
     }
     
     // Configure the cell...
-    if(indexPath.section == 0) {
-		if(self.fbWrapper.isLoggedInToFB) {
-			cell.textLabel.text = @"Logout";
-		} else {
-			cell.textLabel.text = @"Logged out";
-		}
-	} else if(indexPath.section == 1) {
-		cell.textLabel.text = @"Clear Data";
-	}
-	
+	NSDictionary *dict = [self.fbWrapper.friends objectAtIndex:indexPath.row];
+    cell.textLabel.text = [dict objectForKey:@"name"];
     return cell;
 }
 
@@ -142,39 +137,15 @@
 #pragma mark -
 #pragma mark Table view delegate
 
--(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
-	
-	// Logout User from App
-	if(indexPath.section == 0) {
-		NSLog(@"Clearing out known user data for logout");
-		NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-		[prefs setObject:@"" forKey:@"userEmail"];
-		[prefs setObject:@"" forKey:@"fbID"];
-		[prefs setObject:@"" forKey:@"fbFullname"];
-		[prefs setObject:@"" forKey:@"fbFirstname"];
-		[prefs setObject:@"" forKey:@"fbUsername"];
-		[prefs setObject:@"" forKey:@"fbLoggedIn"];
-		[prefs synchronize];
-		
-		// Logout of FB if logged in
-		if(self.fbWrapper.isLoggedInToFB) {
-			NSLog(@"Logging out of Facebook");
-			[self.fbWrapper facebookLogout:@selector(facebookLogoutCallback) delegate:self];
-		} else {
-			[self.tableView reloadData];
-		}
-	} else if(indexPath.section == 1) {
-		// Delete all data from the local database
-		PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
-		[History clearData:appDelegate.attacksDatabase];
-	}
-}
-
-
--(void) facebookLogoutCallback {
-	NSLog(@"Logged out of Facebook");
-	[self.tableView reloadData];
+    /*
+    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+    // ...
+    // Pass the selected object to the new view controller.
+    [self.navigationController pushViewController:detailViewController animated:YES];
+    [detailViewController release];
+    */
 }
 
 
@@ -195,7 +166,6 @@
 
 
 - (void)dealloc {
-	[fbWrapper release];
     [super dealloc];
 }
 

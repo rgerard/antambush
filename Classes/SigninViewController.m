@@ -37,8 +37,8 @@
 }
 
 
--(void)setFacebookWrapper:(FacebookWrapper*)wrapper {
-	self.fbWrapper = [wrapper retain];
+-(void) setFbWrapper:(FacebookWrapper*)wrapper {
+	fbWrapper = [wrapper retain];
 }
 
 

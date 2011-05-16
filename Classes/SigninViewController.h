@@ -23,7 +23,7 @@
 
 -(IBAction) backgroundTap:(id) sender;
 -(void) startBtnClick:(UIView*)clickedButton;
--(void) setFacebookWrapper:(FacebookWrapper*)wrapper;
+-(void) setFbWrapper:(FacebookWrapper*)wrapper;
 -(void) facebookLoginCallback;
 -(void) facebookMeCallback;
 -(void) facebookFriendsCallback;
