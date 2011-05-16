@@ -11,6 +11,7 @@
 #import "AttackViewController.h"
 #import <sqlite3.h>
 #import "SigninViewController.h"
+#import	"FacebookWrapper.h"
 
 @interface PandaAttackAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
@@ -19,6 +20,7 @@
 	AttackViewController *attackViewController;
 	UINavigationController *attackNavigationController;
 	NSString *userEmail;
+	FacebookWrapper *fbWrapper;
 	
 	sqlite3 *attacksDatabase;
 	NSMutableArray *dbAttacks;
@@ -33,6 +35,7 @@
 @property (nonatomic, retain) NSMutableArray *dbAttacks;
 @property (nonatomic, retain) NSMutableArray *dbAttackedBy;
 @property (nonatomic, retain) NSString *userEmail;
+@property (nonatomic, retain) FacebookWrapper *fbWrapper;
 @property (nonatomic) sqlite3 *attacksDatabase;
 
 -(void)startTimer;

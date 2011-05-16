@@ -283,6 +283,7 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 	//Open the settings page
 	SettingsViewController *settingsViewController = [[SettingsViewController alloc] initWithStyle:UITableViewStyleGrouped];
 	settingsViewController.title = @"Settings";
+	[settingsViewController setFbWrapper:fbWrapper];
 	[self.navigationController pushViewController:settingsViewController animated:YES];
 	[settingsViewController release];		
 }
@@ -431,6 +432,11 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 }
 
 
+-(void)setFacebookWrapper:(FacebookWrapper*)wrapper {
+	self.fbWrapper = [wrapper retain];
+}
+
+
 /*
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -454,6 +460,7 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 
 
 - (void)dealloc {
+	[fbWrapper release];
 	[contactList release];
 	[recentAttacksViewController release];
 	

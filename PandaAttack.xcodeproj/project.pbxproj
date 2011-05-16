@@ -43,6 +43,7 @@
 		9462116813694C1F0073CBDF /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9462115D13694C1F0073CBDF /* SBJsonWriter.m */; };
 		949EBE87135E28CA002EAEA6 /* ContactListPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 949EBE86135E28CA002EAEA6 /* ContactListPicker.m */; };
 		949EBEDE13627A05002EAEA6 /* RecentAttacksTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 949EBEDD13627A05002EAEA6 /* RecentAttacksTableViewCell.m */; };
+		94A4886B1380AD0900DAB3AC /* FacebookWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */; };
 		94A725C91336CFCA00414CF3 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A725C81336CFCA00414CF3 /* libsqlite3.0.dylib */; };
 		94A725CE1336D03C00414CF3 /* History.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A725CD1336D03C00414CF3 /* History.m */; };
 		94A728AB1338820800414CF3 /* recentAttacks.db in Resources */ = {isa = PBXBuildFile; fileRef = 94A728AA1338820800414CF3 /* recentAttacks.db */; };
@@ -166,6 +167,8 @@
 		949EBE86135E28CA002EAEA6 /* ContactListPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactListPicker.m; sourceTree = "<group>"; };
 		949EBEDC13627A05002EAEA6 /* RecentAttacksTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentAttacksTableViewCell.h; sourceTree = "<group>"; };
 		949EBEDD13627A05002EAEA6 /* RecentAttacksTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentAttacksTableViewCell.m; sourceTree = "<group>"; };
+		94A488691380AD0900DAB3AC /* FacebookWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookWrapper.h; sourceTree = "<group>"; };
+		94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookWrapper.m; sourceTree = "<group>"; };
 		94A725C81336CFCA00414CF3 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		94A725CC1336D03C00414CF3 /* History.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = History.h; sourceTree = "<group>"; };
 		94A725CD1336D03C00414CF3 /* History.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = History.m; sourceTree = "<group>"; };
@@ -255,6 +258,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				94A488691380AD0900DAB3AC /* FacebookWrapper.h */,
+				94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */,
 				1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */,
 				1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* PandaAttackViewController.h */,
@@ -318,10 +323,10 @@
 			children = (
 				94E93D511331D49E0046EB0F /* images */,
 				94A728AA1338820800414CF3 /* recentAttacks.db */,
+				94B983391345AA0F00090947 /* SigninViewController.xib */,
 				946210DB1369435A0073CBDF /* SettingsViewController.xib */,
 				94B211221363A57400DA627E /* SingleAttackViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
-				94B983391345AA0F00090947 /* SigninViewController.xib */,
 				2899E5210DE3E06400AC0155 /* PandaAttackViewController.xib */,
 				94E933651322DAB70046EB0F /* AttackViewController.xib */,
 				940240EC13556F2E0075148F /* RecentAttacksViewController.xib */,
@@ -670,6 +675,7 @@
 				9462116613694C1F0073CBDF /* SBJsonBase.m in Sources */,
 				9462116713694C1F0073CBDF /* SBJsonParser.m in Sources */,
 				9462116813694C1F0073CBDF /* SBJsonWriter.m in Sources */,
+				94A4886B1380AD0900DAB3AC /* FacebookWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,15 +709,44 @@
 			};
 			name = Release;
 		};
+		945EB2A6137256FB00D576C3 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+			};
+			name = "Ad Hoc";
+		};
+		945EB2A7137256FB00D576C3 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PandaAttack_Prefix.pch;
+				INFOPLIST_FILE = "PandaAttack-Info.plist";
+				PRODUCT_NAME = PandaAttack;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Ad Hoc";
+		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -720,12 +755,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
 			name = Release;
@@ -738,6 +774,7 @@
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
+				945EB2A7137256FB00D576C3 /* Ad Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -747,6 +784,7 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
+				945EB2A6137256FB00D576C3 /* Ad Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

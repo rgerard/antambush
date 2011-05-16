@@ -10,23 +10,25 @@
 #import "PandaAttackAppDelegate.h"
 #import "History.h"
 
-static NSString* kAppId = @"206499529382979";
-
 @implementation SettingsViewController
 
-@synthesize facebook;
+@synthesize fbWrapper;
 
 #pragma mark -
 #pragma mark View lifecycle
 
-/*
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-*/
+
+
+-(void)setFacebookWrapper:(FacebookWrapper*)wrapper {
+	self.fbWrapper = [wrapper retain];
+}
 
 /*
 - (void)viewWillAppear:(BOOL)animated {
@@ -62,7 +64,7 @@ static NSString* kAppId = @"206499529382979";
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 3;
+    return 2;
 }
 
 
@@ -87,8 +89,6 @@ static NSString* kAppId = @"206499529382979";
 		cell.textLabel.text = @"Logout";
 	} else if(indexPath.section == 1) {
 		cell.textLabel.text = @"Clear Data";
-	} else if(indexPath.section == 2) {
-		cell.textLabel.text = @"Connect to Facebook";
 	}
 	
     return cell;
@@ -138,48 +138,38 @@ static NSString* kAppId = @"206499529382979";
 #pragma mark -
 #pragma mark Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-    // ...
-    // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
-    */
 	
-	// Logout User
+	// Logout User from App
 	if(indexPath.section == 0) {
+		NSLog(@"Clearing out known user data for logout");
 		NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 		[prefs setObject:@"" forKey:@"userEmail"];
+		[prefs setObject:@"" forKey:@"fbID"];
+		[prefs setObject:@"" forKey:@"fbFullname"];
+		[prefs setObject:@"" forKey:@"fbFirstname"];
+		[prefs setObject:@"" forKey:@"fbUsername"];
+		[prefs setObject:@"" forKey:@"fbLoggedIn"];
 		[prefs synchronize];
+		
+		// Logout of FB if logged in
+		if(self.fbWrapper.isLoggedInToFB) {
+			NSLog(@"Logging out of Facebook");
+			[fbWrapper facebookLogout:@selector(facebookLogoutCallback) delegate:self];
+		}
 	} else if(indexPath.section == 1) {
 		// Delete all data from the local database
 		PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
 		[History clearData:appDelegate.attacksDatabase];
-	} else if(indexPath.section == 2) {
-		// Ask for permission to send the person email as well
-		NSArray* permissions =  [[NSArray arrayWithObjects:@"email", nil] retain];
-		
-		[facebook authorize:permissions delegate:self];
-		facebook = [[Facebook alloc] initWithAppId:kAppId];
-		[facebook authorize:permissions delegate:self];
 	}
 }
 
--(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
-	
-    return [facebook handleOpenURL:url]; 
+
+-(void) facebookLogoutCallback {
+	NSLog(@"Logged out of Facebook");
 }
 
-- (void)fbDidLogin {
-}
-
-- (void)fbDidNotLogin:(BOOL)cancelled {
-}
-
-- (void)fbDidLogout {
-}
 
 #pragma mark -
 #pragma mark Memory management
@@ -198,6 +188,7 @@ static NSString* kAppId = @"206499529382979";
 
 
 - (void)dealloc {
+	[fbWrapper release];
     [super dealloc];
 }
 

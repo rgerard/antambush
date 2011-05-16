@@ -13,6 +13,7 @@
 
 @synthesize startBtn;
 @synthesize inputEmail;
+@synthesize facebookBtn, fbWrapper;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -31,9 +32,45 @@
     [super viewDidLoad];
 	
 	// Init the event handlers
+	[facebookBtn addTarget:self action:@selector(facebookBtnClick:) forControlEvents:UIControlEventTouchUpInside];	
 	[startBtn addTarget:self action:@selector(startBtnClick:) forControlEvents:UIControlEventTouchUpInside];	
 }
 
+
+-(void)setFacebookWrapper:(FacebookWrapper*)wrapper {
+	self.fbWrapper = [wrapper retain];
+}
+
+
+// respond to the start button click
+-(void)facebookBtnClick:(UIView*)clickedButton {
+	NSLog(@"Asking FB for permission");
+	
+	// Ask for permission to send the person email as well
+	[fbWrapper facebookLogin:@selector(facebookLoginCallback) delegate:self];
+}
+
+// Verify that you're logged in, and then ask for the 'me' info
+-(void) facebookLoginCallback {
+	if([fbWrapper isLoggedInToFB]) {
+		NSLog(@"Asking for me info");
+		[fbWrapper getMeInfo:@selector(facebookMeCallback) delegate:self];
+	}
+}
+
+// Verify that you're logged in, and then ask for the 'friends' info
+-(void) facebookMeCallback {
+	if([fbWrapper isLoggedInToFB]) {
+		NSLog(@"Asking for friends info");
+		[fbWrapper getFriendInfo:@selector(facebookFriendsCallback) delegate:self];
+	}
+}
+
+-(void) facebookFriendsCallback {
+	// Close this view
+	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
+	[appDelegate switchFromLoginView];
+}
 
 // respond to the start button click
 -(void)startBtnClick:(UIView*)clickedButton {
@@ -75,6 +112,7 @@
 
 
 - (void)dealloc {
+	[fbWrapper release];
     [super dealloc];
 }
 

@@ -13,6 +13,7 @@
 #import "ASIHTTPRequest.h"
 #import "RecentAttacksViewController.h"
 #import "ContactListPicker.h"
+#import "FacebookWrapper.h"
 
 @interface AttackViewController : UIViewController<UIAlertViewDelegate,MFMailComposeViewControllerDelegate,MFMessageComposeViewControllerDelegate> {
 	UIButton *startAttackBtn;
@@ -22,6 +23,7 @@
 	RecentAttacksViewController *recentAttacksViewController;
 	RecentAttacksViewController *recentlyAttackedByViewController;
 	ContactListPicker *contactList;
+	FacebookWrapper *fbWrapper;
 }
 
 @property (nonatomic, retain) IBOutlet UIButton *startAttackBtn;
@@ -30,6 +32,7 @@
 @property (nonatomic, retain) RecentAttacksViewController *recentAttacksViewController;
 @property (nonatomic, retain) RecentAttacksViewController *recentlyAttackedByViewController;
 @property (nonatomic, retain) ContactListPicker *contactList;
+@property (nonatomic, retain) FacebookWrapper *fbWrapper;
 
 -(void)personBtnClick:(UIView*)clickedButton;
 -(void)startBtnClick:(UIView*)clickedButton;
@@ -40,5 +43,6 @@
 -(History *) findAttackDataToUse:(int)row loadAttacksFromMe:(BOOL)loadAttacksFromMe;
 -(void)createAttackViewController:(History *)item;
 -(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer emailAttack:(BOOL)emailAttack attackID:(NSString*)attackID;
+-(void) setFacebookWrapper:(FacebookWrapper*)wrapper;
 
 @end

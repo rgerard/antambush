@@ -34,10 +34,37 @@ static sqlite3_stmt *delete_statement = nil;
 		sqlite3_bind_int(init_statement, 1, primaryKey);
 		if(sqlite3_step(init_statement) == SQLITE_ROW) {
 			self.serverID = sqlite3_column_int(init_statement, 0);
-			self.contactEmail = [NSString stringWithUTF8String:(char*)sqlite3_column_text(init_statement, 1)];
-			self.contactName = [NSString stringWithUTF8String:(char*)sqlite3_column_text(init_statement, 2)];
-			self.attack = [NSString stringWithUTF8String:(char*)sqlite3_column_text(init_statement, 3)];
-			self.message = [NSString stringWithUTF8String:(char*)sqlite3_column_text(init_statement, 4)];
+			
+			// Protect against crashes from possible null pointers returned from sqlite
+			char* tmpContactEmail = (char*)sqlite3_column_text(init_statement, 1);
+			char* tmpContactName = (char*)sqlite3_column_text(init_statement, 2);
+			char* tmpAttack = (char*)sqlite3_column_text(init_statement, 3);
+			char* tmpMessage = (char*)sqlite3_column_text(init_statement, 4);
+			
+			if(tmpContactEmail != NULL) {
+				self.contactEmail = [NSString stringWithUTF8String:tmpContactEmail];
+			} else {
+				self.contactEmail = @"";
+			}
+			
+			if(tmpContactName != NULL) {
+				self.contactName = [NSString stringWithUTF8String:tmpContactName];
+			} else {
+				self.contactName = @"Unknown";
+			}
+			
+			if(tmpAttack != NULL) {
+				self.attack = [NSString stringWithUTF8String:tmpAttack];
+			} else {
+				self.attack = @"Unknown";
+			}
+			
+			if(tmpMessage != NULL) {
+				self.message = [NSString stringWithUTF8String:tmpMessage];
+			} else {
+				self.message = @"";
+			}
+			
 			self.timeCreated = [NSDate dateWithTimeIntervalSince1970:(int)sqlite3_column_text(init_statement, 5)];
 		} else {
 			self.serverID = 0;
@@ -45,7 +72,7 @@ static sqlite3_stmt *delete_statement = nil;
 			self.contactPhone = @"";
 			self.contactName = @"Unknown";
 			self.attack = @"Unknown";
-			self.message = @"Unknown";
+			self.message = @"";
 			self.timeCreated = [NSDate dateWithTimeIntervalSince1970:0];
 		}
 		

@@ -22,6 +22,7 @@ static NSString *NameKey = @"nameKey";
 @synthesize signinViewController;
 @synthesize dbAttacks, dbAttackedBy;
 @synthesize attacksDatabase;
+@synthesize fbWrapper;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -36,6 +37,9 @@ static NSString *NameKey = @"nameKey";
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 	self.userEmail = [prefs stringForKey:@"userEmail"];
 	
+	// Init the Facebook Wrapper
+	fbWrapper = [[FacebookWrapper alloc] init];
+	
     // Init the controllers
 	signinViewController = [[SigninViewController alloc] init];
 	attackViewController = [[AttackViewController alloc] init];
@@ -43,6 +47,7 @@ static NSString *NameKey = @"nameKey";
 	attackViewController.view.backgroundColor = [[[UIColor alloc] initWithRed:0.1 green:0.2 blue:0.6 alpha:0.5] autorelease];
 	
 	// Setup the controller properties
+	[signinViewController setFbWrapper:fbWrapper];
 	attackNavigationController = [[UINavigationController alloc] initWithRootViewController:attackViewController];
 	attackNavigationController.navigationBar.barStyle = UIBarStyleBlack;
 	
@@ -70,13 +75,14 @@ static NSString *NameKey = @"nameKey";
 	// Remove the opening view controller
 	[viewController.view removeFromSuperview];
 	
-	// Check for a user email -- prompt for signin view if not present
-	if([userEmail length] == 0) {
+	// Check for a user email or FB ID -- prompt for signin view if not present
+	if([self.userEmail length] == 0 && ![self.fbWrapper isLoggedInToFB]) {
 		[window addSubview:signinViewController.view];
 	} else {
 		// Add the tab bar view to the window
 		[window addSubview:attackNavigationController.view];
 	}
+	
 	// Subscribe to orientation changes
 	//[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
 	//[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(detectOrientation) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
@@ -113,7 +119,7 @@ static NSString *NameKey = @"nameKey";
 	NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:dbFileName];
 	success = [fileManager fileExistsAtPath:writableDBPath];
 	if(success) {
-		NSLog([NSString stringWithFormat:@"DB at %@", writableDBPath]);
+		NSLog(@"DB at %@", writableDBPath);
 		return;
 	}
 	
@@ -199,6 +205,11 @@ static NSString *NameKey = @"nameKey";
 	}
 }
 
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+	return [self.fbWrapper handleOpenURL:url];
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application {
     /*
      Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -248,6 +259,7 @@ static NSString *NameKey = @"nameKey";
 
 
 - (void)dealloc {
+	[fbWrapper release];
 	[dbAttacks release];
 	[dbAttackedBy release];
     [viewController release];

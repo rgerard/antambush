@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "FBConnect.h"
+#import "FacebookWrapper.h"
 
-@interface SettingsViewController : UITableViewController<FBSessionDelegate> {
-	Facebook *facebook;
+@interface SettingsViewController : UITableViewController {
+	FacebookWrapper *fbWrapper;
 }
 
-@property (nonatomic, retain) Facebook *facebook;
+@property (nonatomic, retain) FacebookWrapper *fbWrapper;
+
+-(void) setFacebookWrapper:(FacebookWrapper*)wrapper;
+-(void) facebookLogoutCallback;
 
 @end
