@@ -7,13 +7,14 @@
 //
 
 #import "FacebookWrapper.h"
+#import "FacebookUser.h"
 
 static NSString* kAppId = @"206499529382979";
 
 @implementation FacebookWrapper
 
 @synthesize facebook, isLoggedInToFB, friends;
-@synthesize delegate, callback;
+@synthesize delegate, callback, friendData, friendDataSortedKeys;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 -(id)init {
@@ -24,6 +25,15 @@ static NSString* kAppId = @"206499529382979";
 		
 		NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 		self.isLoggedInToFB = [prefs boolForKey:@"fbLoggedIn"];
+		
+		facebook.accessToken    = [[NSUserDefaults standardUserDefaults] stringForKey:@"fbAccessToken"];
+		facebook.expirationDate = (NSDate *) [[NSUserDefaults standardUserDefaults] objectForKey:@"fbExpiration"];
+		
+		// If the facebook session isn't valid anymore, force the user to authorize again
+		if ([facebook isSessionValid] == NO) {
+			self.isLoggedInToFB = NO;
+		}
+
 	}
 	return self;
 }
@@ -37,9 +47,7 @@ static NSString* kAppId = @"206499529382979";
 	[self setDelegateCallback:appSelector delegate:requestDelegate];
 	
 	if(!self.isLoggedInToFB) {
-		// Ask for permission to send the person email as well
-		NSArray* permissions =  [[NSArray arrayWithObjects:@"email", nil] retain];
-		[facebook authorize:permissions delegate:self];	
+		[self facebookAuthorize:appSelector delegate:requestDelegate];
 	} else {
 		NSLog(@"Already logged in to Facebook");
 		
@@ -48,6 +56,14 @@ static NSString* kAppId = @"206499529382979";
 			[self.delegate performSelector:self.callback];
 		}
 	}
+}
+
+-(void) facebookAuthorize:(SEL)appSelector delegate:(id)requestDelegate {
+	[self setDelegateCallback:appSelector delegate:requestDelegate];
+	
+	// Ask for permission to send the person email as well
+	NSArray* permissions =  [[NSArray arrayWithObjects:@"email", nil] retain];
+	[facebook authorize:permissions delegate:self];		
 }
 
 -(void) facebookLogout:(SEL)appSelector delegate:(id)requestDelegate {
@@ -149,6 +165,8 @@ static NSString* kAppId = @"206499529382979";
 	self.isLoggedInToFB = YES;
 	
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+	[prefs setObject:[facebook accessToken] forKey:@"fbAccessToken"];
+	[prefs setObject:[facebook expirationDate] forKey:@"fbExpiration"];
 	[prefs setBool:YES forKey:@"fbLoggedIn"];
 	[prefs synchronize];
 	
@@ -222,6 +240,7 @@ static NSString* kAppId = @"206499529382979";
 		
 		if ([[result objectForKey:@"data"] isKindOfClass:[NSArray class]]) {
 			self.friends = [result objectForKey:@"data"];
+			[self sortFriends];
 		} else {
 			NSLog(@"There was a problem getting the friends list");
 		}
@@ -239,7 +258,7 @@ static NSString* kAppId = @"206499529382979";
  * successfully.
  */
 -(void) request:(FBRequest *)request didFailWithError:(NSError *)error {
-	NSLog(@"Error making FB request: %@", [error localizedDescription]);
+	NSLog(@"Error making FB request: %@", error);
 	
 	// Call the callback, let it know that the request is done
 	if([self.delegate respondsToSelector:self.callback]) {
@@ -251,6 +270,60 @@ static NSString* kAppId = @"206499529382979";
 -(BOOL) handleOpenURL:(NSURL *)url {
 	NSLog(@"FB opening URL!");
     return [facebook handleOpenURL:url];
+}
+
+
+// Organize the friend list into a dictionary that maps a letter to an array of FB User object.  For instance, 'A' -> NSArray of FB Users
+-(void) sortFriends {
+	NSLog(@"Sorting friends");
+	self.friendData = [[NSMutableDictionary alloc] init];
+	
+	for(int i=0; i < [self.friends count]; i++) {
+		NSDictionary *dict = [self.friends objectAtIndex:i];
+		NSString *name = [dict objectForKey:@"name"];
+		NSString *fbID = [dict objectForKey:@"id"];
+		unichar letter = [name characterAtIndex:0];
+		NSString *firstLetter = [NSString stringWithCharacters:&letter length:1];
+		
+		// If the dictionary has not seen this letter yet, create a new array for the dictionary to track
+		if ([self.friendData objectForKey:firstLetter] == nil) {
+			NSMutableArray *nameArr = [[NSMutableArray alloc] init];
+			[self.friendData setObject:nameArr forKey:firstLetter];
+		}
+		
+		// Create a FB User object
+		FacebookUser *user = [[FacebookUser alloc] init];
+		user.fbName = name;
+		user.fbID = fbID;
+						  
+		// Take out the array, add the user object, and put the array back into the dictionary
+		NSMutableArray *nameArr = [self.friendData objectForKey:firstLetter];
+		[nameArr addObject:user];
+		[self.friendData setObject:nameArr forKey:firstLetter];
+	}
+	
+	// Clear out the old friend list
+	[friends removeAllObjects];
+	
+	NSSortDescriptor *sortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"fbName" ascending:YES] autorelease];
+	NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+	
+	// Put the friends back in, sorted
+	NSArray* keys = [self.friendData allKeys];
+	self.friendDataSortedKeys = [keys sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+	
+	for (int i = 0; i < [self.friendDataSortedKeys count]; i++) {
+		NSString* key = [self.friendDataSortedKeys objectAtIndex:i];
+		NSMutableArray* nameArr = [self.friendData objectForKey:key];
+		
+		// Sort the array
+		NSArray *sortedNames = [nameArr sortedArrayUsingDescriptors:sortDescriptors];
+
+		// Add each name back to the array
+		for(int j=0; j < [sortedNames count]; j++) {
+			[friends addObject:[sortedNames objectAtIndex:j]];
+		}
+	}
 }
 
 

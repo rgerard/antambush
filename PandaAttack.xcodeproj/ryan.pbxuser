@@ -9,9 +9,9 @@
 	};
 	1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1228, 3653}}";
-			sepNavSelRange = "{1500, 0}";
-			sepNavVisRange = "{1095, 879}";
+			sepNavIntBoundsRect = "{{0, 0}, {1100, 3666}}";
+			sepNavSelRange = "{1141, 0}";
+			sepNavVisRange = "{901, 1567}";
 			sepNavWindowFrame = "{{84, 252}, {750, 558}}";
 		};
 	};
@@ -490,6 +490,180 @@
 			94A489F1138110C900DAB3AC /* PBXTextBookmark */ = 94A489F1138110C900DAB3AC /* PBXTextBookmark */;
 			94A489F2138110C900DAB3AC /* PBXTextBookmark */ = 94A489F2138110C900DAB3AC /* PBXTextBookmark */;
 			94A489F3138110C900DAB3AC /* PBXTextBookmark */ = 94A489F3138110C900DAB3AC /* PBXTextBookmark */;
+			94A48A0513897C9300DAB3AC /* PBXTextBookmark */ = 94A48A0513897C9300DAB3AC /* PBXTextBookmark */;
+			94A48A0613897C9300DAB3AC /* PBXTextBookmark */ = 94A48A0613897C9300DAB3AC /* PBXTextBookmark */;
+			94A48A0713897C9300DAB3AC /* PBXTextBookmark */ = 94A48A0713897C9300DAB3AC /* PBXTextBookmark */;
+			94A48A0813897C9300DAB3AC /* PBXTextBookmark */ = 94A48A0813897C9300DAB3AC /* PBXTextBookmark */;
+			94A48A0913897C9300DAB3AC /* PBXTextBookmark */ = 94A48A0913897C9300DAB3AC /* PBXTextBookmark */;
+			94A48A0A13897C9300DAB3AC /* PBXTextBookmark */ = 94A48A0A13897C9300DAB3AC /* PBXTextBookmark */;
+			94A48A0B13897C9300DAB3AC /* PBXTextBookmark */ = 94A48A0B13897C9300DAB3AC /* PBXTextBookmark */;
+			94A48A0C13897C9300DAB3AC /* PBXTextBookmark */ = 94A48A0C13897C9300DAB3AC /* PBXTextBookmark */;
+			94A48A0D13897C9300DAB3AC /* PBXTextBookmark */ = 94A48A0D13897C9300DAB3AC /* PBXTextBookmark */;
+			94A48A0E13897C9300DAB3AC /* PBXTextBookmark */ = 94A48A0E13897C9300DAB3AC /* PBXTextBookmark */;
+			94A48A1213897C9B00DAB3AC /* PBXTextBookmark */ = 94A48A1213897C9B00DAB3AC /* PBXTextBookmark */;
+			94A48A1313897C9B00DAB3AC /* PBXTextBookmark */ = 94A48A1313897C9B00DAB3AC /* PBXTextBookmark */;
+			94A48A1A13897CAA00DAB3AC /* PBXTextBookmark */ = 94A48A1A13897CAA00DAB3AC /* PBXTextBookmark */;
+			94A48A1B13897CAA00DAB3AC /* PBXTextBookmark */ = 94A48A1B13897CAA00DAB3AC /* PBXTextBookmark */;
+			94A48A2513897CD800DAB3AC /* PBXTextBookmark */ = 94A48A2513897CD800DAB3AC /* PBXTextBookmark */;
+			94A48A2613897CD800DAB3AC /* PBXTextBookmark */ = 94A48A2613897CD800DAB3AC /* PBXTextBookmark */;
+			94A48A2813897CE300DAB3AC /* PBXTextBookmark */ = 94A48A2813897CE300DAB3AC /* PBXTextBookmark */;
+			94A48A2913897CE300DAB3AC /* PBXTextBookmark */ = 94A48A2913897CE300DAB3AC /* PBXTextBookmark */;
+			94A48A2C13897CE800DAB3AC /* PBXTextBookmark */ = 94A48A2C13897CE800DAB3AC /* PBXTextBookmark */;
+			94A48A3513897DF800DAB3AC /* PBXTextBookmark */ = 94A48A3513897DF800DAB3AC /* PBXTextBookmark */;
+			94A48A3613897DF800DAB3AC /* PBXTextBookmark */ = 94A48A3613897DF800DAB3AC /* PBXTextBookmark */;
+			94A48A3713897DF800DAB3AC /* PBXTextBookmark */ = 94A48A3713897DF800DAB3AC /* PBXTextBookmark */;
+			94A48A3813897DF800DAB3AC /* PBXTextBookmark */ = 94A48A3813897DF800DAB3AC /* PBXTextBookmark */;
+			94A48A3913897DF800DAB3AC /* PBXTextBookmark */ = 94A48A3913897DF800DAB3AC /* PBXTextBookmark */;
+			94A48A3A13897DF800DAB3AC /* PBXTextBookmark */ = 94A48A3A13897DF800DAB3AC /* PBXTextBookmark */;
+			94A48A4213897E0900DAB3AC /* PBXTextBookmark */ = 94A48A4213897E0900DAB3AC /* PBXTextBookmark */;
+			94A48A4313897E0900DAB3AC /* PBXTextBookmark */ = 94A48A4313897E0900DAB3AC /* PBXTextBookmark */;
+			94A48A4513897E1D00DAB3AC /* PBXTextBookmark */ = 94A48A4513897E1D00DAB3AC /* PBXTextBookmark */;
+			94A48A4613897E1D00DAB3AC /* PBXTextBookmark */ = 94A48A4613897E1D00DAB3AC /* PBXTextBookmark */;
+			94A48A4713897E1F00DAB3AC /* PBXTextBookmark */ = 94A48A4713897E1F00DAB3AC /* PBXTextBookmark */;
+			94A48A4C13897E3E00DAB3AC /* PBXTextBookmark */ = 94A48A4C13897E3E00DAB3AC /* PBXTextBookmark */;
+			94A48A4D13897E3E00DAB3AC /* PBXTextBookmark */ = 94A48A4D13897E3E00DAB3AC /* PBXTextBookmark */;
+			94A48A4E13897E3E00DAB3AC /* PBXTextBookmark */ = 94A48A4E13897E3E00DAB3AC /* PBXTextBookmark */;
+			94A48A5213897E5D00DAB3AC /* PBXTextBookmark */ = 94A48A5213897E5D00DAB3AC /* PBXTextBookmark */;
+			94A48A5913897F8000DAB3AC /* PBXTextBookmark */ = 94A48A5913897F8000DAB3AC /* PBXTextBookmark */;
+			94A48A5A13897F8000DAB3AC /* PBXTextBookmark */ = 94A48A5A13897F8000DAB3AC /* PBXTextBookmark */;
+			94A48A5B13897F8000DAB3AC /* PBXTextBookmark */ = 94A48A5B13897F8000DAB3AC /* PBXTextBookmark */;
+			94A48A5C13897F8000DAB3AC /* PBXTextBookmark */ = 94A48A5C13897F8000DAB3AC /* PBXTextBookmark */;
+			94A48A5D13897F8000DAB3AC /* PBXTextBookmark */ = 94A48A5D13897F8000DAB3AC /* PBXTextBookmark */;
+			94A48A5E13897F8000DAB3AC /* PBXTextBookmark */ = 94A48A5E13897F8000DAB3AC /* PBXTextBookmark */;
+			94A48A5F13897F8000DAB3AC /* PBXTextBookmark */ = 94A48A5F13897F8000DAB3AC /* PBXTextBookmark */;
+			94A48A6113897F9D00DAB3AC /* PBXTextBookmark */ = 94A48A6113897F9D00DAB3AC /* PBXTextBookmark */;
+			94A48A6213897F9D00DAB3AC /* PBXTextBookmark */ = 94A48A6213897F9D00DAB3AC /* PBXTextBookmark */;
+			94A48A6F1389C01100DAB3AC /* PBXTextBookmark */ = 94A48A6F1389C01100DAB3AC /* PBXTextBookmark */;
+			94A48A701389C01100DAB3AC /* PBXTextBookmark */ = 94A48A701389C01100DAB3AC /* PBXTextBookmark */;
+			94A48A711389C01100DAB3AC /* PBXTextBookmark */ = 94A48A711389C01100DAB3AC /* PBXTextBookmark */;
+			94A48A721389C01100DAB3AC /* PBXTextBookmark */ = 94A48A721389C01100DAB3AC /* PBXTextBookmark */;
+			94A48A731389C01100DAB3AC /* PBXTextBookmark */ = 94A48A731389C01100DAB3AC /* PBXTextBookmark */;
+			94A48A741389C01100DAB3AC /* PBXTextBookmark */ = 94A48A741389C01100DAB3AC /* PBXTextBookmark */;
+			94A48A801389C09200DAB3AC /* PBXTextBookmark */ = 94A48A801389C09200DAB3AC /* PBXTextBookmark */;
+			94A48A811389C09200DAB3AC /* PBXTextBookmark */ = 94A48A811389C09200DAB3AC /* PBXTextBookmark */;
+			94A48A851389C1AA00DAB3AC /* PBXTextBookmark */ = 94A48A851389C1AA00DAB3AC /* PBXTextBookmark */;
+			94A48A861389C1AA00DAB3AC /* PBXTextBookmark */ = 94A48A861389C1AA00DAB3AC /* PBXTextBookmark */;
+			94A48A871389C1B900DAB3AC /* PBXTextBookmark */ = 94A48A871389C1B900DAB3AC /* PBXTextBookmark */;
+			94A48A8C1389C2E600DAB3AC /* PBXTextBookmark */ = 94A48A8C1389C2E600DAB3AC /* PBXTextBookmark */;
+			94A48A8D1389C2E600DAB3AC /* PBXTextBookmark */ = 94A48A8D1389C2E600DAB3AC /* PBXTextBookmark */;
+			94A48A8E1389C2E600DAB3AC /* PBXTextBookmark */ = 94A48A8E1389C2E600DAB3AC /* PBXTextBookmark */;
+			94A48A8F1389C2E600DAB3AC /* PBXTextBookmark */ = 94A48A8F1389C2E600DAB3AC /* PBXTextBookmark */;
+			94A48A901389C2E600DAB3AC /* PBXTextBookmark */ = 94A48A901389C2E600DAB3AC /* PBXTextBookmark */;
+			94A48A911389C2E600DAB3AC /* PBXTextBookmark */ = 94A48A911389C2E600DAB3AC /* PBXTextBookmark */;
+			94A48A931389C31D00DAB3AC /* PBXTextBookmark */ = 94A48A931389C31D00DAB3AC /* PBXTextBookmark */;
+			94A48A941389C31D00DAB3AC /* PBXTextBookmark */ = 94A48A941389C31D00DAB3AC /* PBXTextBookmark */;
+			94A48A951389C31D00DAB3AC /* PBXTextBookmark */ = 94A48A951389C31D00DAB3AC /* PBXTextBookmark */;
+			94A48A961389C31D00DAB3AC /* PBXTextBookmark */ = 94A48A961389C31D00DAB3AC /* PBXTextBookmark */;
+			94A48A971389C31D00DAB3AC /* PBXTextBookmark */ = 94A48A971389C31D00DAB3AC /* PBXTextBookmark */;
+			94A48A981389C31D00DAB3AC /* PBXTextBookmark */ = 94A48A981389C31D00DAB3AC /* PBXTextBookmark */;
+			94A48A9A1389C31D00DAB3AC /* PBXTextBookmark */ = 94A48A9A1389C31D00DAB3AC /* PBXTextBookmark */;
+			94A48A9B1389C32D00DAB3AC /* PBXTextBookmark */ = 94A48A9B1389C32D00DAB3AC /* PBXTextBookmark */;
+			94A48A9C1389C32D00DAB3AC /* PBXTextBookmark */ = 94A48A9C1389C32D00DAB3AC /* PBXTextBookmark */;
+			94A48A9D1389C32D00DAB3AC /* PBXTextBookmark */ = 94A48A9D1389C32D00DAB3AC /* PBXTextBookmark */;
+			94A48A9E1389C32D00DAB3AC /* PBXTextBookmark */ = 94A48A9E1389C32D00DAB3AC /* PBXTextBookmark */;
+			94A48A9F1389C32D00DAB3AC /* PBXTextBookmark */ = 94A48A9F1389C32D00DAB3AC /* PBXTextBookmark */;
+			94A48AA01389C50000DAB3AC /* PBXTextBookmark */ = 94A48AA01389C50000DAB3AC /* PBXTextBookmark */;
+			94A48AA11389C50000DAB3AC /* PBXTextBookmark */ = 94A48AA11389C50000DAB3AC /* PBXTextBookmark */;
+			94A48AA21389C50000DAB3AC /* PBXTextBookmark */ = 94A48AA21389C50000DAB3AC /* PBXTextBookmark */;
+			94A48AA31389C51800DAB3AC /* PBXTextBookmark */ = 94A48AA31389C51800DAB3AC /* PBXTextBookmark */;
+			94A48AA41389C56700DAB3AC /* PBXTextBookmark */ = 94A48AA41389C56700DAB3AC /* PBXTextBookmark */;
+			94A48AA51389C5C500DAB3AC /* PBXTextBookmark */ = 94A48AA51389C5C500DAB3AC /* PBXTextBookmark */;
+			94A48AA61389C5C500DAB3AC /* PBXTextBookmark */ = 94A48AA61389C5C500DAB3AC /* PBXTextBookmark */;
+			94A48AA71389C5C500DAB3AC /* PBXTextBookmark */ = 94A48AA71389C5C500DAB3AC /* PBXTextBookmark */;
+			94A48AAC1389C5FA00DAB3AC /* PBXTextBookmark */ = 94A48AAC1389C5FA00DAB3AC /* PBXTextBookmark */;
+			94A48AB41389C66B00DAB3AC /* PBXTextBookmark */ = 94A48AB41389C66B00DAB3AC /* PBXTextBookmark */;
+			94A48AB51389C66B00DAB3AC /* PBXTextBookmark */ = 94A48AB51389C66B00DAB3AC /* PBXTextBookmark */;
+			94A48AB61389C66B00DAB3AC /* PBXTextBookmark */ = 94A48AB61389C66B00DAB3AC /* PBXTextBookmark */;
+			94A48AC61389F5AB00DAB3AC /* PBXTextBookmark */ = 94A48AC61389F5AB00DAB3AC /* PBXTextBookmark */;
+			94A48AC71389F5AB00DAB3AC /* PBXTextBookmark */ = 94A48AC71389F5AB00DAB3AC /* PBXTextBookmark */;
+			94A48AC81389F5AB00DAB3AC /* PBXTextBookmark */ = 94A48AC81389F5AB00DAB3AC /* PBXTextBookmark */;
+			94A48AC91389F5AB00DAB3AC /* PBXTextBookmark */ = 94A48AC91389F5AB00DAB3AC /* PBXTextBookmark */;
+			94A48ACA1389F67F00DAB3AC /* PBXTextBookmark */ = 94A48ACA1389F67F00DAB3AC /* PBXTextBookmark */;
+			94A48ACB1389F6A800DAB3AC /* PBXTextBookmark */ = 94A48ACB1389F6A800DAB3AC /* PBXTextBookmark */;
+			94A48AD01389F9C700DAB3AC /* PBXTextBookmark */ = 94A48AD01389F9C700DAB3AC /* PBXTextBookmark */;
+			94A48AD71389FA7200DAB3AC /* PBXTextBookmark */ = 94A48AD71389FA7200DAB3AC /* PBXTextBookmark */;
+			94A48AD81389FA7200DAB3AC /* PBXTextBookmark */ = 94A48AD81389FA7200DAB3AC /* PBXTextBookmark */;
+			94A48AD91389FA7200DAB3AC /* PBXTextBookmark */ = 94A48AD91389FA7200DAB3AC /* PBXTextBookmark */;
+			94A48ADF1389FAA000DAB3AC /* PBXTextBookmark */ = 94A48ADF1389FAA000DAB3AC /* PBXTextBookmark */;
+			94A48AE01389FAA000DAB3AC /* PBXTextBookmark */ = 94A48AE01389FAA000DAB3AC /* PBXTextBookmark */;
+			94A48AE11389FAA100DAB3AC /* PBXTextBookmark */ = 94A48AE11389FAA100DAB3AC /* PBXTextBookmark */;
+			94A48AE21389FAA800DAB3AC /* PBXTextBookmark */ = 94A48AE21389FAA800DAB3AC /* PBXTextBookmark */;
+			94A48AE31389FAA800DAB3AC /* PBXTextBookmark */ = 94A48AE31389FAA800DAB3AC /* PBXTextBookmark */;
+			94A48AE41389FAB100DAB3AC /* PBXTextBookmark */ = 94A48AE41389FAB100DAB3AC /* PBXTextBookmark */;
+			94A48AE91389FB1400DAB3AC /* PBXTextBookmark */ = 94A48AE91389FB1400DAB3AC /* PBXTextBookmark */;
+			94A48AED1389FB1700DAB3AC /* PBXTextBookmark */ = 94A48AED1389FB1700DAB3AC /* PBXTextBookmark */;
+			94A48AEE1389FB1700DAB3AC /* PBXTextBookmark */ = 94A48AEE1389FB1700DAB3AC /* PBXTextBookmark */;
+			94A48AF21389FB3100DAB3AC /* PBXTextBookmark */ = 94A48AF21389FB3100DAB3AC /* PBXTextBookmark */;
+			94A48AF31389FB3100DAB3AC /* PBXTextBookmark */ = 94A48AF31389FB3100DAB3AC /* PBXTextBookmark */;
+			94A48AF41389FB3C00DAB3AC /* PBXTextBookmark */ = 94A48AF41389FB3C00DAB3AC /* PBXTextBookmark */;
+			94A48AF71389FB8400DAB3AC /* PBXTextBookmark */ = 94A48AF71389FB8400DAB3AC /* PBXTextBookmark */;
+			94A48AFE1389FB9E00DAB3AC /* PBXTextBookmark */ = 94A48AFE1389FB9E00DAB3AC /* PBXTextBookmark */;
+			94A48AFF1389FB9E00DAB3AC /* PBXTextBookmark */ = 94A48AFF1389FB9E00DAB3AC /* PBXTextBookmark */;
+			94A48B031389FBB100DAB3AC /* PBXTextBookmark */ = 94A48B031389FBB100DAB3AC /* PBXTextBookmark */;
+			94A48B041389FBB100DAB3AC /* PBXTextBookmark */ = 94A48B041389FBB100DAB3AC /* PBXTextBookmark */;
+			94A48B051389FBB300DAB3AC /* PBXTextBookmark */ = 94A48B051389FBB300DAB3AC /* PBXTextBookmark */;
+			94A48B0A1389FBC900DAB3AC /* PBXTextBookmark */ = 94A48B0A1389FBC900DAB3AC /* PBXTextBookmark */;
+			94A48B0B1389FBC900DAB3AC /* PBXTextBookmark */ = 94A48B0B1389FBC900DAB3AC /* PBXTextBookmark */;
+			94A48B151389FBE500DAB3AC /* PBXTextBookmark */ = 94A48B151389FBE500DAB3AC /* PBXTextBookmark */;
+			94A48B161389FBE500DAB3AC /* PBXTextBookmark */ = 94A48B161389FBE500DAB3AC /* PBXTextBookmark */;
+			94A48B261389FC1300DAB3AC /* PBXTextBookmark */ = 94A48B261389FC1300DAB3AC /* PBXTextBookmark */;
+			94A48B271389FC1300DAB3AC /* PBXTextBookmark */ = 94A48B271389FC1300DAB3AC /* PBXTextBookmark */;
+			94A48B291389FC4200DAB3AC /* PBXTextBookmark */ = 94A48B291389FC4200DAB3AC /* PBXTextBookmark */;
+			94A48B2A1389FC4500DAB3AC /* PBXTextBookmark */ = 94A48B2A1389FC4500DAB3AC /* PBXTextBookmark */;
+			94A48B2B1389FC4500DAB3AC /* PBXTextBookmark */ = 94A48B2B1389FC4500DAB3AC /* PBXTextBookmark */;
+			94A48B2E1389FCE200DAB3AC /* PBXTextBookmark */ = 94A48B2E1389FCE200DAB3AC /* PBXTextBookmark */;
+			94A48B2F1389FCE200DAB3AC /* PBXTextBookmark */ = 94A48B2F1389FCE200DAB3AC /* PBXTextBookmark */;
+			94A48B301389FCE200DAB3AC /* PBXTextBookmark */ = 94A48B301389FCE200DAB3AC /* PBXTextBookmark */;
+			94A48B311389FD3600DAB3AC /* PBXTextBookmark */ = 94A48B311389FD3600DAB3AC /* PBXTextBookmark */;
+			94A48B321389FDAC00DAB3AC /* PBXTextBookmark */ = 94A48B321389FDAC00DAB3AC /* PBXTextBookmark */;
+			94A48B351389FE3800DAB3AC /* PBXTextBookmark */ = 94A48B351389FE3800DAB3AC /* PBXTextBookmark */;
+			94A48B381389FE5B00DAB3AC /* PBXTextBookmark */ = 94A48B381389FE5B00DAB3AC /* PBXTextBookmark */;
+			94A48B471389FF7700DAB3AC /* PBXTextBookmark */ = 94A48B471389FF7700DAB3AC /* PBXTextBookmark */;
+			94A48B4C1389FF8C00DAB3AC /* PBXTextBookmark */ = 94A48B4C1389FF8C00DAB3AC /* PBXTextBookmark */;
+			94A48B4D1389FF8C00DAB3AC /* PBXTextBookmark */ = 94A48B4D1389FF8C00DAB3AC /* PBXTextBookmark */;
+			94A48B4E1389FF8E00DAB3AC /* PBXTextBookmark */ = 94A48B4E1389FF8E00DAB3AC /* PBXTextBookmark */;
+			94A48B531389FFB600DAB3AC /* PBXTextBookmark */ = 94A48B531389FFB600DAB3AC /* PBXTextBookmark */;
+			94A48B541389FFB600DAB3AC /* PBXTextBookmark */ = 94A48B541389FFB600DAB3AC /* PBXTextBookmark */;
+			94A48B551389FFB600DAB3AC /* PBXTextBookmark */ = 94A48B551389FFB600DAB3AC /* PBXTextBookmark */;
+			94A48B561389FFB600DAB3AC /* PBXTextBookmark */ = 94A48B561389FFB600DAB3AC /* PBXTextBookmark */;
+			94A48B581389FFF700DAB3AC /* PBXTextBookmark */ = 94A48B581389FFF700DAB3AC /* PBXTextBookmark */;
+			94A48B591389FFF700DAB3AC /* PBXTextBookmark */ = 94A48B591389FFF700DAB3AC /* PBXTextBookmark */;
+			94A48B5A1389FFF700DAB3AC /* PBXTextBookmark */ = 94A48B5A1389FFF700DAB3AC /* PBXTextBookmark */;
+			94A48B5B138A012200DAB3AC /* PBXTextBookmark */ = 94A48B5B138A012200DAB3AC /* PBXTextBookmark */;
+			94A48B5C138A012200DAB3AC /* PBXTextBookmark */ = 94A48B5C138A012200DAB3AC /* PBXTextBookmark */;
+			94A48B5D138A01B800DAB3AC /* PBXTextBookmark */ = 94A48B5D138A01B800DAB3AC /* PBXTextBookmark */;
+			94A48B62138A01D800DAB3AC /* PBXTextBookmark */ = 94A48B62138A01D800DAB3AC /* PBXTextBookmark */;
+			94A48B67138A01E700DAB3AC /* PBXTextBookmark */ = 94A48B67138A01E700DAB3AC /* PBXTextBookmark */;
+			94A48B68138A01E700DAB3AC /* PBXTextBookmark */ = 94A48B68138A01E700DAB3AC /* PBXTextBookmark */;
+			94A48B69138A01E900DAB3AC /* PBXTextBookmark */ = 94A48B69138A01E900DAB3AC /* PBXTextBookmark */;
+			94A48B70138A021200DAB3AC /* PBXTextBookmark */ = 94A48B70138A021200DAB3AC /* PBXTextBookmark */;
+			94A48B78138A02AD00DAB3AC /* PBXTextBookmark */ = 94A48B78138A02AD00DAB3AC /* PBXTextBookmark */;
+			94A48B79138A02AD00DAB3AC /* PBXTextBookmark */ = 94A48B79138A02AD00DAB3AC /* PBXTextBookmark */;
+			94A48B7A138A02AD00DAB3AC /* PBXTextBookmark */ = 94A48B7A138A02AD00DAB3AC /* PBXTextBookmark */;
+			94A48B7B138A02AD00DAB3AC /* PBXTextBookmark */ = 94A48B7B138A02AD00DAB3AC /* PBXTextBookmark */;
+			94A48B83138A031900DAB3AC /* PBXTextBookmark */ = 94A48B83138A031900DAB3AC /* PBXTextBookmark */;
+			94A48B84138A031900DAB3AC /* PBXTextBookmark */ = 94A48B84138A031900DAB3AC /* PBXTextBookmark */;
+			94A48B85138A031900DAB3AC /* PBXTextBookmark */ = 94A48B85138A031900DAB3AC /* PBXTextBookmark */;
+			94A48B8B138A039600DAB3AC /* PBXTextBookmark */ = 94A48B8B138A039600DAB3AC /* PBXTextBookmark */;
+			94A48B93138A03DF00DAB3AC /* PBXTextBookmark */ = 94A48B93138A03DF00DAB3AC /* PBXTextBookmark */;
+			94A48B99138A047F00DAB3AC /* PBXTextBookmark */ = 94A48B99138A047F00DAB3AC /* PBXTextBookmark */;
+			94A48B9A138A047F00DAB3AC /* PBXTextBookmark */ = 94A48B9A138A047F00DAB3AC /* PBXTextBookmark */;
+			94A48B9B138A047F00DAB3AC /* PBXTextBookmark */ = 94A48B9B138A047F00DAB3AC /* PBXTextBookmark */;
+			94A48B9C138A047F00DAB3AC /* PBXTextBookmark */ = 94A48B9C138A047F00DAB3AC /* PBXTextBookmark */;
+			94A48BA2138A049A00DAB3AC /* PBXTextBookmark */ = 94A48BA2138A049A00DAB3AC /* PBXTextBookmark */;
+			94A48BA8138A051800DAB3AC /* PBXTextBookmark */ = 94A48BA8138A051800DAB3AC /* PBXTextBookmark */;
+			94A48BAE138A054500DAB3AC /* PBXTextBookmark */ = 94A48BAE138A054500DAB3AC /* PBXTextBookmark */;
+			94A48BBD138A2F0700DAB3AC /* PBXTextBookmark */ = 94A48BBD138A2F0700DAB3AC /* PBXTextBookmark */;
+			94A48BBE138A2F0700DAB3AC /* PBXTextBookmark */ = 94A48BBE138A2F0700DAB3AC /* PBXTextBookmark */;
+			94A48BBF138A2F0700DAB3AC /* PBXTextBookmark */ = 94A48BBF138A2F0700DAB3AC /* PBXTextBookmark */;
+			94A48BC0138A2F0700DAB3AC /* PBXTextBookmark */ = 94A48BC0138A2F0700DAB3AC /* PBXTextBookmark */;
+			94A48BC1138A2F0700DAB3AC /* PBXTextBookmark */ = 94A48BC1138A2F0700DAB3AC /* PBXTextBookmark */;
+			94A48BC2138A2F0700DAB3AC /* PBXTextBookmark */ = 94A48BC2138A2F0700DAB3AC /* PBXTextBookmark */;
+			94A48BC3138A2F2700DAB3AC /* PBXTextBookmark */ = 94A48BC3138A2F2700DAB3AC /* PBXTextBookmark */;
+			94A48BCC138A305100DAB3AC /* PBXTextBookmark */ = 94A48BCC138A305100DAB3AC /* PBXTextBookmark */;
+			94A48BCD138A305100DAB3AC /* PBXTextBookmark */ = 94A48BCD138A305100DAB3AC /* PBXTextBookmark */;
+			94A48BCE138A305100DAB3AC /* PBXTextBookmark */ = 94A48BCE138A305100DAB3AC /* PBXTextBookmark */;
+			94A48BCF138A305100DAB3AC /* PBXTextBookmark */ = 94A48BCF138A305100DAB3AC /* PBXTextBookmark */;
 			94A728C7133883EF00414CF3 = 94A728C7133883EF00414CF3 /* PBXTextBookmark */;
 			94B210A9136374A600DA627E = 94B210A9136374A600DA627E /* PBXTextBookmark */;
 			94C41851133329770032B2DA = 94C41851133329770032B2DA /* PBXBookmark */;
@@ -682,7 +856,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 79";
 		rLen = 120;
-		rLoc = 3405;
+		rLoc = 3732;
 		rType = 0;
 		vrLen = 1952;
 		vrLoc = 2132;
@@ -712,7 +886,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 172";
 		rLen = 0;
-		rLoc = 6433;
+		rLoc = 6379;
 		rType = 0;
 		vrLen = 1386;
 		vrLoc = 7471;
@@ -722,7 +896,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 62";
 		rLen = 0;
-		rLoc = 2142;
+		rLoc = 2088;
 		rType = 0;
 		vrLen = 1513;
 		vrLoc = 1192;
@@ -752,7 +926,7 @@
 		fRef = 94B983371345AA0F00090947 /* SigninViewController.h */;
 		name = "SigninViewController.h: 20";
 		rLen = 0;
-		rLoc = 642;
+		rLoc = 691;
 		rType = 0;
 		vrLen = 494;
 		vrLoc = 0;
@@ -798,7 +972,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1100, 2665}}";
 			sepNavSelRange = "{361, 0}";
-			sepNavVisRange = "{4547, 976}";
+			sepNavVisRange = "{752, 1101}";
 		};
 	};
 	9462114513694C1F0073CBDF /* Facebook.h */ = {
@@ -919,7 +1093,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 62";
 		rLen = 0;
-		rLoc = 2142;
+		rLoc = 2088;
 		rType = 0;
 		vrLen = 1576;
 		vrLoc = 1131;
@@ -935,7 +1109,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		location = libobjc.A.dylib;
-		modificationTime = 327225023.186979;
+		modificationTime = 327812423.765928;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 		symbolName = objc_exception_throw;
@@ -972,7 +1146,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 170";
 		rLen = 129;
-		rLoc = 6140;
+		rLoc = 6086;
 		rType = 0;
 		vrLen = 1577;
 		vrLoc = 5283;
@@ -982,7 +1156,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 365";
 		rLen = 0;
-		rLoc = 13710;
+		rLoc = 14907;
 		rType = 0;
 		vrLen = 1608;
 		vrLoc = 13804;
@@ -992,7 +1166,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 383";
 		rLen = 0;
-		rLoc = 14228;
+		rLoc = 15425;
 		rType = 0;
 		vrLen = 1533;
 		vrLoc = 13745;
@@ -1002,7 +1176,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 400";
 		rLen = 0;
-		rLoc = 15034;
+		rLoc = 16231;
 		rType = 0;
 		vrLen = 1608;
 		vrLoc = 13804;
@@ -1022,7 +1196,7 @@
 		fRef = 94B983371345AA0F00090947 /* SigninViewController.h */;
 		name = "SigninViewController.h: 23";
 		rLen = 0;
-		rLoc = 603;
+		rLoc = 652;
 		rType = 0;
 		vrLen = 670;
 		vrLoc = 0;
@@ -1032,7 +1206,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 400";
 		rLen = 0;
-		rLoc = 15034;
+		rLoc = 16231;
 		rType = 0;
 		vrLen = 1665;
 		vrLoc = 13804;
@@ -1042,7 +1216,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 36";
 		rLen = 0;
-		rLoc = 882;
+		rLoc = 1208;
 		rType = 0;
 		vrLen = 1281;
 		vrLoc = 150;
@@ -1092,7 +1266,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 54";
 		rLen = 0;
-		rLoc = 1474;
+		rLoc = 1800;
 		rType = 0;
 		vrLen = 1492;
 		vrLoc = 565;
@@ -1102,7 +1276,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 67";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1209;
 		vrLoc = 1377;
@@ -1112,7 +1286,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 69";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1283;
 		vrLoc = 1377;
@@ -1122,7 +1296,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 84";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1342;
 		vrLoc = 2056;
@@ -1182,7 +1356,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 71";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1260;
 		vrLoc = 1873;
@@ -1192,7 +1366,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 48";
 		rLen = 0;
-		rLoc = 1338;
+		rLoc = 1664;
 		rType = 0;
 		vrLen = 1224;
 		vrLoc = 1125;
@@ -1212,7 +1386,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 52";
 		rLen = 0;
-		rLoc = 1401;
+		rLoc = 1727;
 		rType = 0;
 		vrLen = 1191;
 		vrLoc = 1789;
@@ -1222,7 +1396,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 60";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1140;
 		vrLoc = 1790;
@@ -1232,7 +1406,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 89";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1157;
 		vrLoc = 1868;
@@ -1242,7 +1416,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 56";
 		rLen = 0;
-		rLoc = 1401;
+		rLoc = 1727;
 		rType = 0;
 		vrLen = 1238;
 		vrLoc = 945;
@@ -1252,7 +1426,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 56";
 		rLen = 0;
-		rLoc = 1401;
+		rLoc = 1727;
 		rType = 0;
 		vrLen = 1277;
 		vrLoc = 945;
@@ -1262,7 +1436,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 56";
 		rLen = 0;
-		rLoc = 1401;
+		rLoc = 1727;
 		rType = 0;
 		vrLen = 1021;
 		vrLoc = 1266;
@@ -1282,7 +1456,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 56";
 		rLen = 0;
-		rLoc = 1401;
+		rLoc = 1727;
 		rType = 0;
 		vrLen = 1021;
 		vrLoc = 1266;
@@ -1329,7 +1503,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 60";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1200;
 		vrLoc = 3375;
@@ -1339,7 +1513,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 60";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1123;
 		vrLoc = 3452;
@@ -1349,7 +1523,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 60";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1123;
 		vrLoc = 3452;
@@ -1369,7 +1543,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 60";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1149;
 		vrLoc = 1502;
@@ -1379,7 +1553,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 174";
 		rLen = 0;
-		rLoc = 3345;
+		rLoc = 3671;
 		rType = 0;
 		vrLen = 968;
 		vrLoc = 4285;
@@ -1389,7 +1563,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 60";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1189;
 		vrLoc = 1740;
@@ -1446,7 +1620,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 69";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1383;
 		vrLoc = 49;
@@ -1596,7 +1770,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 204";
 		rLen = 0;
-		rLoc = 7272;
+		rLoc = 7218;
 		rType = 0;
 		vrLen = 1658;
 		vrLoc = 6891;
@@ -1606,7 +1780,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 204";
 		rLen = 0;
-		rLoc = 7301;
+		rLoc = 7247;
 		rType = 0;
 		vrLen = 1655;
 		vrLoc = 6894;
@@ -1626,7 +1800,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 204";
 		rLen = 0;
-		rLoc = 7301;
+		rLoc = 7247;
 		rType = 0;
 		vrLen = 1655;
 		vrLoc = 6894;
@@ -1656,7 +1830,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 69";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1301;
 		vrLoc = 3297;
@@ -1666,7 +1840,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 69";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1250;
 		vrLoc = 3348;
@@ -1686,7 +1860,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 69";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1250;
 		vrLoc = 3348;
@@ -1696,7 +1870,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 137";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1274;
 		vrLoc = 3067;
@@ -1706,7 +1880,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 138";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1289;
 		vrLoc = 3067;
@@ -1716,7 +1890,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 137";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1393;
 		vrLoc = 3462;
@@ -1726,7 +1900,7 @@
 		fRef = 94B983371345AA0F00090947 /* SigninViewController.h */;
 		name = "SigninViewController.h: 28";
 		rLen = 0;
-		rLoc = 829;
+		rLoc = 878;
 		rType = 0;
 		vrLen = 817;
 		vrLoc = 0;
@@ -1736,7 +1910,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 144";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1136;
 		vrLoc = 1555;
@@ -1746,7 +1920,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 77";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1113;
 		vrLoc = 1978;
@@ -1784,7 +1958,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 0;
-		rLoc = 83;
+		rLoc = 92;
 		rType = 1;
 	};
 	94A487B7138070E000DAB3AC /* PBXTextBookmark */ = {
@@ -1792,7 +1966,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 169";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 295;
 		vrLoc = 4591;
@@ -1822,7 +1996,7 @@
 		fRef = 94B983371345AA0F00090947 /* SigninViewController.h */;
 		name = "SigninViewController.h: 28";
 		rLen = 0;
-		rLoc = 829;
+		rLoc = 878;
 		rType = 0;
 		vrLen = 818;
 		vrLoc = 0;
@@ -1832,7 +2006,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 169";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1223;
 		vrLoc = 4166;
@@ -1842,7 +2016,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 169";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1139;
 		vrLoc = 4254;
@@ -1852,7 +2026,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 169";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 256;
 		vrLoc = 4591;
@@ -1872,7 +2046,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 169";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1139;
 		vrLoc = 4254;
@@ -1882,7 +2056,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 169";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 256;
 		vrLoc = 4591;
@@ -1902,7 +2076,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 164";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1109;
 		vrLoc = 4286;
@@ -1912,7 +2086,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 167";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 997;
 		vrLoc = 2151;
@@ -1922,7 +2096,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 167";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 919;
 		vrLoc = 2229;
@@ -1932,7 +2106,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 169";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 256;
 		vrLoc = 4591;
@@ -1952,7 +2126,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 167";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 919;
 		vrLoc = 2229;
@@ -1962,7 +2136,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 169";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 295;
 		vrLoc = 4591;
@@ -1982,7 +2156,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 86";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 899;
 		vrLoc = 2257;
@@ -2012,7 +2186,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 95";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 931;
 		vrLoc = 2300;
@@ -2032,7 +2206,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 146";
 		rLen = 0;
-		rLoc = 5252;
+		rLoc = 5198;
 		rType = 0;
 		vrLen = 1596;
 		vrLoc = 4305;
@@ -2042,7 +2216,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 146";
 		rLen = 0;
-		rLoc = 5252;
+		rLoc = 5198;
 		rType = 0;
 		vrLen = 1600;
 		vrLoc = 4305;
@@ -2052,7 +2226,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 89";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 931;
 		vrLoc = 2300;
@@ -2112,7 +2286,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 146";
 		rLen = 0;
-		rLoc = 5252;
+		rLoc = 5198;
 		rType = 0;
 		vrLen = 1740;
 		vrLoc = 4101;
@@ -2122,7 +2296,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 136";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 835;
 		vrLoc = 3126;
@@ -2142,7 +2316,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 40";
 		rLen = 0;
-		rLoc = 882;
+		rLoc = 1208;
 		rType = 0;
 		vrLen = 1507;
 		vrLoc = 351;
@@ -2192,7 +2366,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 146";
 		rLen = 0;
-		rLoc = 5252;
+		rLoc = 5198;
 		rType = 0;
 		vrLen = 1785;
 		vrLoc = 4091;
@@ -2212,7 +2386,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 40";
 		rLen = 0;
-		rLoc = 882;
+		rLoc = 1208;
 		rType = 0;
 		vrLen = 1507;
 		vrLoc = 351;
@@ -2222,7 +2396,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 184";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1321;
 		vrLoc = 0;
@@ -2232,7 +2406,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 172";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 308;
 		vrLoc = 4536;
@@ -2281,7 +2455,7 @@
 		isa = PBXTextBookmark;
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		rLen = 4;
-		rLoc = 4646;
+		rLoc = 5308;
 		rType = 0;
 	};
 	94A4882E138079C200DAB3AC /* PBXTextBookmark */ = {
@@ -2289,7 +2463,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 4646;
+		rLoc = 5308;
 		rType = 0;
 		vrLen = 929;
 		vrLoc = 4463;
@@ -2299,7 +2473,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 252";
 		rLen = 0;
-		rLoc = 9794;
+		rLoc = 10991;
 		rType = 0;
 		vrLen = 1278;
 		vrLoc = 9470;
@@ -2349,7 +2523,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 184";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1385;
 		vrLoc = 46;
@@ -2359,7 +2533,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 172";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1341;
 		vrLoc = 4187;
@@ -2379,7 +2553,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 180";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1367;
 		vrLoc = 4234;
@@ -2389,7 +2563,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 179";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1297;
 		vrLoc = 4234;
@@ -2399,7 +2573,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 179";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1297;
 		vrLoc = 4234;
@@ -2409,7 +2583,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 179";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1297;
 		vrLoc = 4234;
@@ -2419,7 +2593,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 171";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1297;
 		vrLoc = 4234;
@@ -2429,7 +2603,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 173";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 276;
 		vrLoc = 4565;
@@ -2439,7 +2613,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 4646;
+		rLoc = 5308;
 		rType = 0;
 		vrLen = 929;
 		vrLoc = 4463;
@@ -2449,7 +2623,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 168";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1407;
 		vrLoc = 4234;
@@ -2459,7 +2633,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 183";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1276;
 		vrLoc = 4234;
@@ -2469,7 +2643,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 184";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1236;
 		vrLoc = 4234;
@@ -2479,7 +2653,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 181";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1280;
 		vrLoc = 4234;
@@ -2489,7 +2663,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 182";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 1279;
 		vrLoc = 4234;
@@ -2497,15 +2671,15 @@
 	94A488691380AD0900DAB3AC /* FacebookWrapper.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1100, 548}}";
-			sepNavSelRange = "{1000, 0}";
-			sepNavVisRange = "{0, 1034}";
+			sepNavSelRange = "{543, 54}";
+			sepNavVisRange = "{0, 1332}";
 		};
 	};
 	94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {904, 3393}}";
-			sepNavSelRange = "{1690, 0}";
-			sepNavVisRange = "{1499, 335}";
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 4264}}";
+			sepNavSelRange = "{9495, 0}";
+			sepNavVisRange = "{8679, 1327}";
 		};
 	};
 	94A488821380B80800DAB3AC /* PBXTextBookmark */ = {
@@ -2553,7 +2727,7 @@
 		fRef = 94E933631322DAB70046EB0F /* AttackViewController.h */;
 		name = "AttackViewController.h: 46";
 		rLen = 48;
-		rLoc = 1897;
+		rLoc = 1946;
 		rType = 0;
 		vrLen = 1811;
 		vrLoc = 146;
@@ -2563,7 +2737,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 463";
 		rLen = 0;
-		rLoc = 16773;
+		rLoc = 17970;
 		rType = 0;
 		vrLen = 958;
 		vrLoc = 15738;
@@ -2573,7 +2747,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 210";
 		rLen = 0;
-		rLoc = 7281;
+		rLoc = 7227;
 		rType = 0;
 		vrLen = 1574;
 		vrLoc = 349;
@@ -2583,7 +2757,7 @@
 		fRef = 94A488691380AD0900DAB3AC /* FacebookWrapper.h */;
 		name = "FacebookWrapper.h: 28";
 		rLen = 69;
-		rLoc = 667;
+		rLoc = 871;
 		rType = 0;
 		vrLen = 998;
 		vrLoc = 0;
@@ -2593,7 +2767,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 106";
 		rLen = 0;
-		rLoc = 3242;
+		rLoc = 3882;
 		rType = 0;
 		vrLen = 1382;
 		vrLoc = 83;
@@ -2603,7 +2777,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 50";
 		rLen = 48;
-		rLoc = 1426;
+		rLoc = 1752;
 		rType = 0;
 		vrLen = 1418;
 		vrLoc = 304;
@@ -2613,7 +2787,7 @@
 		fRef = 94B983371345AA0F00090947 /* SigninViewController.h */;
 		name = "SigninViewController.h: 27";
 		rLen = 30;
-		rLoc = 737;
+		rLoc = 786;
 		rType = 0;
 		vrLen = 841;
 		vrLoc = 0;
@@ -2653,7 +2827,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 84";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2904;
 		rType = 0;
 		vrLen = 348;
 		vrLoc = 2757;
@@ -2664,7 +2838,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 57;
+		rLoc = 73;
 		rType = 1;
 	};
 	94A488981380B8F500DAB3AC /* PBXTextBookmark */ = {
@@ -2672,7 +2846,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 57";
 		rLen = 0;
-		rLoc = 1690;
+		rLoc = 2330;
 		rType = 0;
 		vrLen = 416;
 		vrLoc = 1468;
@@ -2682,7 +2856,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 4646;
+		rLoc = 5308;
 		rType = 0;
 		vrLen = 805;
 		vrLoc = 4200;
@@ -2692,7 +2866,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 46";
 		rLen = 0;
-		rLoc = 1304;
+		rLoc = 1630;
 		rType = 0;
 		vrLen = 1418;
 		vrLoc = 304;
@@ -2702,7 +2876,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 95";
 		rLen = 27;
-		rLoc = 3007;
+		rLoc = 2953;
 		rType = 0;
 		vrLen = 1634;
 		vrLoc = 2279;
@@ -2722,7 +2896,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 57";
 		rLen = 0;
-		rLoc = 1690;
+		rLoc = 2330;
 		rType = 0;
 		vrLen = 1397;
 		vrLoc = 953;
@@ -2732,7 +2906,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 57";
 		rLen = 0;
-		rLoc = 1715;
+		rLoc = 2355;
 		rType = 0;
 		vrLen = 1273;
 		vrLoc = 953;
@@ -2742,7 +2916,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 57";
 		rLen = 0;
-		rLoc = 1715;
+		rLoc = 2355;
 		rType = 0;
 		vrLen = 1273;
 		vrLoc = 953;
@@ -2762,7 +2936,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 89";
 		rLen = 0;
-		rLoc = 2954;
+		rLoc = 2900;
 		rType = 0;
 		vrLen = 1634;
 		vrLoc = 2279;
@@ -2792,7 +2966,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 57";
 		rLen = 0;
-		rLoc = 1690;
+		rLoc = 2330;
 		rType = 0;
 		vrLen = 334;
 		vrLoc = 1468;
@@ -2802,7 +2976,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 4646;
+		rLoc = 5308;
 		rType = 0;
 		vrLen = 934;
 		vrLoc = 4282;
@@ -2822,7 +2996,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 57";
 		rLen = 0;
-		rLoc = 1690;
+		rLoc = 2330;
 		rType = 0;
 		vrLen = 334;
 		vrLoc = 1468;
@@ -2832,7 +3006,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 4646;
+		rLoc = 5308;
 		rType = 0;
 		vrLen = 934;
 		vrLoc = 4282;
@@ -2842,7 +3016,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 89";
 		rLen = 0;
-		rLoc = 2954;
+		rLoc = 2900;
 		rType = 0;
 		vrLen = 1471;
 		vrLoc = 769;
@@ -2852,7 +3026,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 25";
 		rLen = 10;
-		rLoc = 738;
+		rLoc = 797;
 		rType = 0;
 		vrLen = 1037;
 		vrLoc = 4047;
@@ -2891,7 +3065,7 @@
 		isa = PBXTextBookmark;
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		rLen = 0;
-		rLoc = 22;
+		rLoc = 23;
 		rType = 1;
 	};
 	94A488C91380B9C800DAB3AC /* PBXTextBookmark */ = {
@@ -2899,7 +3073,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 22";
 		rLen = 0;
-		rLoc = 572;
+		rLoc = 631;
 		rType = 0;
 		vrLen = 1241;
 		vrLoc = 3;
@@ -2909,7 +3083,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 57";
 		rLen = 0;
-		rLoc = 1690;
+		rLoc = 2330;
 		rType = 0;
 		vrLen = 263;
 		vrLoc = 1539;
@@ -2919,7 +3093,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 4646;
+		rLoc = 5308;
 		rType = 0;
 		vrLen = 790;
 		vrLoc = 4282;
@@ -2929,7 +3103,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 22";
 		rLen = 0;
-		rLoc = 572;
+		rLoc = 631;
 		rType = 0;
 		vrLen = 1241;
 		vrLoc = 3;
@@ -2959,7 +3133,7 @@
 		fRef = 94A488691380AD0900DAB3AC /* FacebookWrapper.h */;
 		name = "FacebookWrapper.h: 28";
 		rLen = 69;
-		rLoc = 667;
+		rLoc = 871;
 		rType = 0;
 		vrLen = 998;
 		vrLoc = 0;
@@ -2969,7 +3143,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 22";
 		rLen = 0;
-		rLoc = 572;
+		rLoc = 631;
 		rType = 0;
 		vrLen = 1287;
 		vrLoc = 3;
@@ -2979,7 +3153,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 16";
 		rLen = 0;
-		rLoc = 333;
+		rLoc = 392;
 		rType = 0;
 		vrLen = 1263;
 		vrLoc = 3;
@@ -2989,7 +3163,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 58";
 		rLen = 0;
-		rLoc = 1690;
+		rLoc = 2330;
 		rType = 0;
 		vrLen = 271;
 		vrLoc = 1499;
@@ -2999,7 +3173,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 4646;
+		rLoc = 5308;
 		rType = 0;
 		vrLen = 790;
 		vrLoc = 4282;
@@ -3009,7 +3183,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 16";
 		rLen = 0;
-		rLoc = 333;
+		rLoc = 392;
 		rType = 0;
 		vrLen = 1263;
 		vrLoc = 3;
@@ -3019,7 +3193,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 257";
 		rLen = 34;
-		rLoc = 6945;
+		rLoc = 7721;
 		rType = 0;
 		vrLen = 1032;
 		vrLoc = 6323;
@@ -3029,7 +3203,7 @@
 		fRef = 94A488691380AD0900DAB3AC /* FacebookWrapper.h */;
 		name = "FacebookWrapper.h: 28";
 		rLen = 69;
-		rLoc = 667;
+		rLoc = 871;
 		rType = 0;
 		vrLen = 998;
 		vrLoc = 0;
@@ -3039,7 +3213,7 @@
 		fRef = 94A488691380AD0900DAB3AC /* FacebookWrapper.h */;
 		name = "FacebookWrapper.h: 33";
 		rLen = 0;
-		rLoc = 1027;
+		rLoc = 1304;
 		rType = 0;
 		vrLen = 1075;
 		vrLoc = 0;
@@ -3049,7 +3223,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 58";
 		rLen = 0;
-		rLoc = 1690;
+		rLoc = 2330;
 		rType = 0;
 		vrLen = 271;
 		vrLoc = 1499;
@@ -3059,7 +3233,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 4646;
+		rLoc = 5308;
 		rType = 0;
 		vrLen = 790;
 		vrLoc = 4282;
@@ -3069,7 +3243,7 @@
 		fRef = 94A488691380AD0900DAB3AC /* FacebookWrapper.h */;
 		name = "FacebookWrapper.h: 33";
 		rLen = 0;
-		rLoc = 1027;
+		rLoc = 1304;
 		rType = 0;
 		vrLen = 1075;
 		vrLoc = 0;
@@ -3089,7 +3263,7 @@
 		fRef = 94A488691380AD0900DAB3AC /* FacebookWrapper.h */;
 		name = "FacebookWrapper.h: 33";
 		rLen = 0;
-		rLoc = 1000;
+		rLoc = 1277;
 		rType = 0;
 		vrLen = 1034;
 		vrLoc = 0;
@@ -3099,7 +3273,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 210";
 		rLen = 0;
-		rLoc = 7281;
+		rLoc = 7227;
 		rType = 0;
 		vrLen = 1647;
 		vrLoc = 7059;
@@ -3109,7 +3283,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 257";
 		rLen = 0;
-		rLoc = 6953;
+		rLoc = 7729;
 		rType = 0;
 		vrLen = 993;
 		vrLoc = 6319;
@@ -3119,7 +3293,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 257";
 		rLen = 0;
-		rLoc = 6953;
+		rLoc = 7729;
 		rType = 0;
 		vrLen = 987;
 		vrLoc = 6319;
@@ -3129,7 +3303,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 226";
 		rLen = 0;
-		rLoc = 6349;
+		rLoc = 7148;
 		rType = 0;
 		vrLen = 1112;
 		vrLoc = 5914;
@@ -3139,7 +3313,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 226";
 		rLen = 0;
-		rLoc = 6349;
+		rLoc = 7148;
 		rType = 0;
 		vrLen = 1114;
 		vrLoc = 5914;
@@ -3159,7 +3333,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 99";
 		rLen = 0;
-		rLoc = 3187;
+		rLoc = 3133;
 		rType = 0;
 		vrLen = 1671;
 		vrLoc = 2240;
@@ -3219,7 +3393,7 @@
 		fRef = 94A488691380AD0900DAB3AC /* FacebookWrapper.h */;
 		name = "FacebookWrapper.h: 33";
 		rLen = 0;
-		rLoc = 1000;
+		rLoc = 1277;
 		rType = 0;
 		vrLen = 1034;
 		vrLoc = 0;
@@ -3229,7 +3403,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 177";
 		rLen = 10;
-		rLoc = 4933;
+		rLoc = 5709;
 		rType = 0;
 		vrLen = 1276;
 		vrLoc = 0;
@@ -3239,7 +3413,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 51";
 		rLen = 0;
-		rLoc = 1595;
+		rLoc = 1541;
 		rType = 0;
 		vrLen = 1512;
 		vrLoc = 1010;
@@ -3259,7 +3433,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 279";
 		rLen = 0;
-		rLoc = 10606;
+		rLoc = 11803;
 		rType = 0;
 		vrLen = 1303;
 		vrLoc = 9750;
@@ -3269,7 +3443,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 58";
 		rLen = 0;
-		rLoc = 1690;
+		rLoc = 2330;
 		rType = 0;
 		vrLen = 271;
 		vrLoc = 1499;
@@ -3279,7 +3453,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 4646;
+		rLoc = 5308;
 		rType = 0;
 		vrLen = 790;
 		vrLoc = 4282;
@@ -3289,7 +3463,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 279";
 		rLen = 0;
-		rLoc = 10606;
+		rLoc = 11803;
 		rType = 0;
 		vrLen = 1303;
 		vrLoc = 9750;
@@ -3299,7 +3473,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 51";
 		rLen = 0;
-		rLoc = 1583;
+		rLoc = 1541;
 		rType = 0;
 		vrLen = 1512;
 		vrLoc = 1010;
@@ -3309,7 +3483,7 @@
 		fRef = 94E933631322DAB70046EB0F /* AttackViewController.h */;
 		name = "AttackViewController.h: 46";
 		rLen = 0;
-		rLoc = 1917;
+		rLoc = 1966;
 		rType = 0;
 		vrLen = 1864;
 		vrLoc = 87;
@@ -3319,7 +3493,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 435";
 		rLen = 46;
-		rLoc = 16009;
+		rLoc = 17206;
 		rType = 0;
 		vrLen = 1213;
 		vrLoc = 14952;
@@ -3339,7 +3513,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 58";
 		rLen = 0;
-		rLoc = 1690;
+		rLoc = 2330;
 		rType = 0;
 		vrLen = 271;
 		vrLoc = 1499;
@@ -3349,7 +3523,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 4646;
+		rLoc = 5308;
 		rType = 0;
 		vrLen = 797;
 		vrLoc = 4203;
@@ -3359,7 +3533,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 286";
 		rLen = 12;
-		rLoc = 10863;
+		rLoc = 12060;
 		rType = 0;
 		vrLen = 1289;
 		vrLoc = 10496;
@@ -3409,7 +3583,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 286";
 		rLen = 12;
-		rLoc = 10863;
+		rLoc = 12060;
 		rType = 0;
 		vrLen = 1289;
 		vrLoc = 10496;
@@ -3419,7 +3593,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 51";
 		rLen = 0;
-		rLoc = 1583;
+		rLoc = 1541;
 		rType = 0;
 		vrLen = 1363;
 		vrLoc = 1010;
@@ -3429,7 +3603,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 51";
 		rLen = 0;
-		rLoc = 1583;
+		rLoc = 1541;
 		rType = 0;
 		vrLen = 1363;
 		vrLoc = 1010;
@@ -3439,7 +3613,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 58";
 		rLen = 0;
-		rLoc = 1690;
+		rLoc = 2330;
 		rType = 0;
 		vrLen = 271;
 		vrLoc = 1499;
@@ -3449,7 +3623,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 4646;
+		rLoc = 5308;
 		rType = 0;
 		vrLen = 797;
 		vrLoc = 4203;
@@ -3459,7 +3633,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 51";
 		rLen = 0;
-		rLoc = 1583;
+		rLoc = 1541;
 		rType = 0;
 		vrLen = 1363;
 		vrLoc = 1010;
@@ -3469,7 +3643,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 51";
 		rLen = 0;
-		rLoc = 1583;
+		rLoc = 1541;
 		rType = 0;
 		vrLen = 1512;
 		vrLoc = 1010;
@@ -3479,7 +3653,7 @@
 		fRef = 94E933631322DAB70046EB0F /* AttackViewController.h */;
 		name = "AttackViewController.h: 46";
 		rLen = 0;
-		rLoc = 1917;
+		rLoc = 1966;
 		rType = 0;
 		vrLen = 1864;
 		vrLoc = 87;
@@ -3499,7 +3673,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 58";
 		rLen = 0;
-		rLoc = 1690;
+		rLoc = 2330;
 		rType = 0;
 		vrLen = 335;
 		vrLoc = 1499;
@@ -3509,7 +3683,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 4646;
+		rLoc = 5308;
 		rType = 0;
 		vrLen = 856;
 		vrLoc = 4155;
@@ -3519,7 +3693,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 50";
 		rLen = 0;
-		rLoc = 1500;
+		rLoc = 1541;
 		rType = 0;
 		vrLen = 1512;
 		vrLoc = 1010;
@@ -3529,7 +3703,7 @@
 		fRef = 94E933631322DAB70046EB0F /* AttackViewController.h */;
 		name = "AttackViewController.h: 46";
 		rLen = 0;
-		rLoc = 1917;
+		rLoc = 1966;
 		rType = 0;
 		vrLen = 1864;
 		vrLoc = 87;
@@ -3549,7 +3723,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 16072;
+		rLoc = 17269;
 		rType = 0;
 		vrLen = 995;
 		vrLoc = 15473;
@@ -3559,7 +3733,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 58";
 		rLen = 0;
-		rLoc = 1690;
+		rLoc = 2330;
 		rType = 0;
 		vrLen = 271;
 		vrLoc = 1499;
@@ -3569,7 +3743,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 4646;
+		rLoc = 5308;
 		rType = 0;
 		vrLen = 744;
 		vrLoc = 4214;
@@ -3579,7 +3753,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 50";
 		rLen = 0;
-		rLoc = 1500;
+		rLoc = 1541;
 		rType = 0;
 		vrLen = 1499;
 		vrLoc = 474;
@@ -3589,7 +3763,7 @@
 		fRef = 94E933631322DAB70046EB0F /* AttackViewController.h */;
 		name = "AttackViewController.h: 46";
 		rLen = 0;
-		rLoc = 1917;
+		rLoc = 1966;
 		rType = 0;
 		vrLen = 1802;
 		vrLoc = 149;
@@ -3599,7 +3773,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 16072;
+		rLoc = 17269;
 		rType = 0;
 		vrLen = 1333;
 		vrLoc = 3;
@@ -3609,7 +3783,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 16072;
+		rLoc = 17269;
 		rType = 0;
 		vrLen = 1333;
 		vrLoc = 3;
@@ -3619,7 +3793,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 58";
 		rLen = 0;
-		rLoc = 1690;
+		rLoc = 2330;
 		rType = 0;
 		vrLen = 271;
 		vrLoc = 1499;
@@ -3629,7 +3803,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 4646;
+		rLoc = 5308;
 		rType = 0;
 		vrLen = 744;
 		vrLoc = 4214;
@@ -3639,7 +3813,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 16072;
+		rLoc = 17269;
 		rType = 0;
 		vrLen = 1333;
 		vrLoc = 3;
@@ -3648,7 +3822,7 @@
 		isa = PBXTextBookmark;
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		rLen = 0;
-		rLoc = 49;
+		rLoc = 48;
 		rType = 1;
 	};
 	94A4898913810D4200DAB3AC /* PBXTextBookmark */ = {
@@ -3656,7 +3830,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 50";
 		rLen = 0;
-		rLoc = 1500;
+		rLoc = 1541;
 		rType = 0;
 		vrLen = 1499;
 		vrLoc = 474;
@@ -3676,7 +3850,7 @@
 		fRef = 94E933631322DAB70046EB0F /* AttackViewController.h */;
 		name = "AttackViewController.h: 46";
 		rLen = 0;
-		rLoc = 1917;
+		rLoc = 1966;
 		rType = 0;
 		vrLen = 1864;
 		vrLoc = 87;
@@ -3686,7 +3860,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 16072;
+		rLoc = 17269;
 		rType = 0;
 		vrLen = 1357;
 		vrLoc = 0;
@@ -3695,8 +3869,8 @@
 		isa = PBXTextBookmark;
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 50";
-		rLen = 12;
-		rLoc = 1523;
+		rLen = 0;
+		rLoc = 1541;
 		rType = 0;
 		vrLen = 1521;
 		vrLoc = 474;
@@ -3706,7 +3880,7 @@
 		fRef = 94B983371345AA0F00090947 /* SigninViewController.h */;
 		name = "SigninViewController.h: 26";
 		rLen = 0;
-		rLoc = 709;
+		rLoc = 758;
 		rType = 0;
 		vrLen = 835;
 		vrLoc = 0;
@@ -3716,7 +3890,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 46";
 		rLen = 0;
-		rLoc = 1304;
+		rLoc = 1630;
 		rType = 0;
 		vrLen = 1418;
 		vrLoc = 304;
@@ -3726,7 +3900,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 30";
 		rLen = 0;
-		rLoc = 756;
+		rLoc = 1082;
 		rType = 0;
 		vrLen = 1401;
 		vrLoc = 304;
@@ -3736,7 +3910,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 58";
 		rLen = 0;
-		rLoc = 1690;
+		rLoc = 2330;
 		rType = 0;
 		vrLen = 335;
 		vrLoc = 1499;
@@ -3746,7 +3920,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 4646;
+		rLoc = 5308;
 		rType = 0;
 		vrLen = 800;
 		vrLoc = 4214;
@@ -3756,7 +3930,7 @@
 		fRef = 94B983371345AA0F00090947 /* SigninViewController.h */;
 		name = "SigninViewController.h: 26";
 		rLen = 0;
-		rLoc = 709;
+		rLoc = 758;
 		rType = 0;
 		vrLen = 835;
 		vrLoc = 0;
@@ -3766,7 +3940,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 41";
 		rLen = 0;
-		rLoc = 1213;
+		rLoc = 1539;
 		rType = 0;
 		vrLen = 1408;
 		vrLoc = 304;
@@ -3776,7 +3950,7 @@
 		fRef = 94E933631322DAB70046EB0F /* AttackViewController.h */;
 		name = "AttackViewController.h: 46";
 		rLen = 0;
-		rLoc = 1917;
+		rLoc = 1966;
 		rType = 0;
 		vrLen = 1864;
 		vrLoc = 87;
@@ -3786,7 +3960,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 16087;
+		rLoc = 17284;
 		rType = 0;
 		vrLen = 1094;
 		vrLoc = 15236;
@@ -3796,7 +3970,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 16087;
+		rLoc = 17284;
 		rType = 0;
 		vrLen = 987;
 		vrLoc = 15236;
@@ -3806,7 +3980,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 16087;
+		rLoc = 17284;
 		rType = 0;
 		vrLen = 987;
 		vrLoc = 15236;
@@ -3816,7 +3990,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 29";
 		rLen = 141;
-		rLoc = 739;
+		rLoc = 1065;
 		rType = 0;
 		vrLen = 1218;
 		vrLoc = 0;
@@ -3866,7 +4040,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 58";
 		rLen = 0;
-		rLoc = 1690;
+		rLoc = 2330;
 		rType = 0;
 		vrLen = 335;
 		vrLoc = 1499;
@@ -3876,7 +4050,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 4646;
+		rLoc = 5308;
 		rType = 0;
 		vrLen = 800;
 		vrLoc = 4214;
@@ -3896,7 +4070,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 177";
 		rLen = 10;
-		rLoc = 4933;
+		rLoc = 5709;
 		rType = 0;
 		vrLen = 1276;
 		vrLoc = 0;
@@ -3906,7 +4080,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 176";
 		rLen = 0;
-		rLoc = 4840;
+		rLoc = 5616;
 		rType = 0;
 		vrLen = 1016;
 		vrLoc = 4151;
@@ -3916,7 +4090,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 176";
 		rLen = 0;
-		rLoc = 4840;
+		rLoc = 5616;
 		rType = 0;
 		vrLen = 1016;
 		vrLoc = 4151;
@@ -3947,10 +4121,10 @@
 	};
 	94A489D913810F2100DAB3AC /* FBTableViewController.m */ = {
 		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{3902, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{3953, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{4003, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 4704}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1100, 2418}}";
-			sepNavSelRange = "{2247, 0}";
-			sepNavVisRange = "{1275, 1301}";
+			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{4474, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{4525, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{4575, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 5276}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1100, 2483}}";
+			sepNavSelRange = "{2870, 0}";
+			sepNavVisRange = "{1632, 1510}";
 		};
 	};
 	94A489E11381108800DAB3AC /* PBXTextBookmark */ = {
@@ -3958,7 +4132,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 58";
 		rLen = 0;
-		rLoc = 1690;
+		rLoc = 2330;
 		rType = 0;
 		vrLen = 335;
 		vrLoc = 1499;
@@ -3968,7 +4142,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 115";
 		rLen = 4;
-		rLoc = 4646;
+		rLoc = 5308;
 		rType = 0;
 		vrLen = 848;
 		vrLoc = 4269;
@@ -3978,7 +4152,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 58";
 		rLen = 0;
-		rLoc = 1690;
+		rLoc = 2330;
 		rType = 0;
 		vrLen = 335;
 		vrLoc = 1499;
@@ -3988,7 +4162,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 115";
 		rLen = 4;
-		rLoc = 4646;
+		rLoc = 5308;
 		rType = 0;
 		vrLen = 848;
 		vrLoc = 4269;
@@ -4008,7 +4182,7 @@
 		fRef = 94B983371345AA0F00090947 /* SigninViewController.h */;
 		name = "SigninViewController.h: 26";
 		rLen = 47;
-		rLoc = 689;
+		rLoc = 738;
 		rType = 0;
 		vrLen = 835;
 		vrLoc = 0;
@@ -4028,7 +4202,7 @@
 		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
 		name = "SigninViewController.m: 40";
 		rLen = 81;
-		rLoc = 1135;
+		rLoc = 1461;
 		rType = 0;
 		vrLen = 1326;
 		vrLoc = 151;
@@ -4038,7 +4212,7 @@
 		fRef = 94A488691380AD0900DAB3AC /* FacebookWrapper.h */;
 		name = "FacebookWrapper.h: 33";
 		rLen = 0;
-		rLoc = 1000;
+		rLoc = 1277;
 		rType = 0;
 		vrLen = 1034;
 		vrLoc = 0;
@@ -4048,7 +4222,7 @@
 		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
 		name = "FacebookWrapper.m: 212";
 		rLen = 34;
-		rLoc = 5903;
+		rLoc = 6679;
 		rType = 0;
 		vrLen = 1247;
 		vrLoc = 5696;
@@ -4058,7 +4232,7 @@
 		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
 		name = "FBTableViewController.m: 91";
 		rLen = 0;
-		rLoc = 2247;
+		rLoc = 2772;
 		rType = 0;
 		vrLen = 1301;
 		vrLoc = 1275;
@@ -4068,7 +4242,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 16087;
+		rLoc = 17284;
 		rType = 0;
 		vrLen = 1070;
 		vrLoc = 15190;
@@ -4078,10 +4252,1770 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 298";
 		rLen = 0;
-		rLoc = 11307;
+		rLoc = 12504;
 		rType = 0;
 		vrLen = 1246;
 		vrLoc = 10333;
+	};
+	94A48A0513897C9300DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* PandaAttackViewController.m */;
+		name = "PandaAttackViewController.m: 16";
+		rLen = 0;
+		rLoc = 443;
+		rType = 0;
+		vrLen = 1128;
+		vrLoc = 0;
+	};
+	94A48A0613897C9300DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
+		name = "SigninViewController.m: 49";
+		rLen = 825;
+		rLoc = 1670;
+		rType = 0;
+		vrLen = 1276;
+		vrLoc = 1131;
+	};
+	94A48A0713897C9300DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933631322DAB70046EB0F /* AttackViewController.h */;
+		name = "AttackViewController.h: 46";
+		rLen = 0;
+		rLoc = 1966;
+		rType = 0;
+		vrLen = 1864;
+		vrLoc = 87;
+	};
+	94A48A0813897C9300DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */;
+		name = "PandaAttackAppDelegate.h: 38";
+		rLen = 0;
+		rLoc = 1375;
+		rType = 0;
+		vrLen = 1570;
+		vrLoc = 32;
+	};
+	94A48A0913897C9300DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
+		name = "PandaAttackAppDelegate.m: 41";
+		rLen = 0;
+		rLoc = 1102;
+		rType = 0;
+		vrLen = 1472;
+		vrLoc = 901;
+	};
+	94A48A0A13897C9300DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A488691380AD0900DAB3AC /* FacebookWrapper.h */;
+		name = "FacebookWrapper.h: 29";
+		rLen = 0;
+		rLoc = 1013;
+		rType = 0;
+		vrLen = 1107;
+		vrLoc = 0;
+	};
+	94A48A0B13897C9300DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D813810F2100DAB3AC /* FBTableViewController.h */;
+		name = "FBTableViewController.h: 19";
+		rLen = 0;
+		rLoc = 403;
+		rType = 0;
+		vrLen = 409;
+		vrLoc = 0;
+	};
+	94A48A0C13897C9300DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 40";
+		rLen = 0;
+		rLoc = 1575;
+		rType = 0;
+		vrLen = 1352;
+		vrLoc = 626;
+	};
+	94A48A0D13897C9300DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 191";
+		rLen = 0;
+		rLoc = 8625;
+		rType = 0;
+		vrLen = 1278;
+		vrLoc = 7615;
+	};
+	94A48A0E13897C9300DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 229";
+		rLen = 0;
+		rLoc = 9260;
+		rType = 0;
+		vrLen = 1065;
+		vrLoc = 7840;
+	};
+	94A48A1213897C9B00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 229";
+		rLen = 0;
+		rLoc = 9260;
+		rType = 0;
+		vrLen = 1065;
+		vrLoc = 7840;
+	};
+	94A48A1313897C9B00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 229";
+		rLen = 0;
+		rLoc = 9260;
+		rType = 0;
+		vrLen = 1065;
+		vrLoc = 7840;
+	};
+	94A48A1A13897CAA00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 229";
+		rLen = 0;
+		rLoc = 9260;
+		rType = 0;
+		vrLen = 1124;
+		vrLoc = 7840;
+	};
+	94A48A1B13897CAA00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 229";
+		rLen = 0;
+		rLoc = 9260;
+		rType = 0;
+		vrLen = 1065;
+		vrLoc = 7840;
+	};
+	94A48A2513897CD800DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 164";
+		rLen = 0;
+		rLoc = 7377;
+		rType = 0;
+		vrLen = 1815;
+		vrLoc = 2899;
+	};
+	94A48A2613897CD800DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 164";
+		rLen = 0;
+		rLoc = 7377;
+		rType = 0;
+		vrLen = 1736;
+		vrLoc = 2899;
+	};
+	94A48A2813897CE300DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 64";
+		rLen = 0;
+		rLoc = 2330;
+		rType = 0;
+		vrLen = 296;
+		vrLoc = 1081;
+	};
+	94A48A2913897CE300DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 115";
+		rLen = 4;
+		rLoc = 5308;
+		rType = 0;
+		vrLen = 1264;
+		vrLoc = 2093;
+	};
+	94A48A2C13897CE800DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 164";
+		rLen = 0;
+		rLoc = 7377;
+		rType = 0;
+		vrLen = 1736;
+		vrLoc = 2899;
+	};
+	94A48A3513897DF800DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933631322DAB70046EB0F /* AttackViewController.h */;
+		name = "AttackViewController.h: 46";
+		rLen = 0;
+		rLoc = 1966;
+		rType = 0;
+		vrLen = 1864;
+		vrLoc = 87;
+	};
+	94A48A3613897DF800DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
+		name = "PandaAttackAppDelegate.m: 54";
+		rLen = 0;
+		rLoc = 1725;
+		rType = 0;
+		vrLen = 1472;
+		vrLoc = 901;
+	};
+	94A48A3713897DF800DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A488691380AD0900DAB3AC /* FacebookWrapper.h */;
+		name = "FacebookWrapper.h: 29";
+		rLen = 0;
+		rLoc = 1013;
+		rType = 0;
+		vrLen = 1107;
+		vrLoc = 0;
+	};
+	94A48A3813897DF800DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 136";
+		rLen = 6;
+		rLoc = 4497;
+		rType = 0;
+		vrLen = 938;
+		vrLoc = 3451;
+	};
+	94A48A3913897DF800DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 87";
+		rLen = 0;
+		rLoc = 3990;
+		rType = 0;
+		vrLen = 1625;
+		vrLoc = 3294;
+	};
+	94A48A3A13897DF800DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 94";
+		rLen = 0;
+		rLoc = 4300;
+		rType = 0;
+		vrLen = 1501;
+		vrLoc = 3294;
+	};
+	94A48A4213897E0900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 94";
+		rLen = 0;
+		rLoc = 4300;
+		rType = 0;
+		vrLen = 1551;
+		vrLoc = 3294;
+	};
+	94A48A4313897E0900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 94";
+		rLen = 0;
+		rLoc = 4300;
+		rType = 0;
+		vrLen = 1501;
+		vrLoc = 3294;
+	};
+	94A48A4513897E1D00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 64";
+		rLen = 0;
+		rLoc = 2330;
+		rType = 0;
+		vrLen = 296;
+		vrLoc = 1081;
+	};
+	94A48A4613897E1D00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 124";
+		rLen = 4;
+		rLoc = 5308;
+		rType = 0;
+		vrLen = 1442;
+		vrLoc = 1915;
+	};
+	94A48A4713897E1F00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 94";
+		rLen = 0;
+		rLoc = 4300;
+		rType = 0;
+		vrLen = 1501;
+		vrLoc = 3294;
+	};
+	94A48A4C13897E3E00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
+		name = "PandaAttackAppDelegate.m: 45";
+		rLen = 0;
+		rLoc = 1276;
+		rType = 0;
+		vrLen = 1472;
+		vrLoc = 901;
+	};
+	94A48A4D13897E3E00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 94";
+		rLen = 0;
+		rLoc = 4300;
+		rType = 0;
+		vrLen = 988;
+		vrLoc = 17030;
+	};
+	94A48A4E13897E3E00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 94";
+		rLen = 0;
+		rLoc = 4300;
+		rType = 0;
+		vrLen = 952;
+		vrLoc = 17030;
+	};
+	94A48A5213897E5D00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 86";
+		rLen = 0;
+		rLoc = 3972;
+		rType = 0;
+		vrLen = 1629;
+		vrLoc = 3099;
+	};
+	94A48A5913897F8000DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 18";
+		rLen = 808;
+		rLoc = 394;
+		rType = 0;
+		vrLen = 1295;
+		vrLoc = 25;
+	};
+	94A48A5A13897F8000DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933631322DAB70046EB0F /* AttackViewController.h */;
+		name = "AttackViewController.h: 37";
+		rLen = 0;
+		rLoc = 1387;
+		rType = 0;
+		vrLen = 1908;
+		vrLoc = 87;
+	};
+	94A48A5B13897F8000DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94B983371345AA0F00090947 /* SigninViewController.h */;
+		name = "SigninViewController.h: 24";
+		rLen = 0;
+		rLoc = 652;
+		rType = 0;
+		vrLen = 884;
+		vrLoc = 0;
+	};
+	94A48A5C13897F8000DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 39";
+		rLen = 325;
+		rLoc = 1226;
+		rType = 0;
+		vrLen = 1499;
+		vrLoc = 149;
+	};
+	94A48A5D13897F8000DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
+		name = "SigninViewController.m: 37";
+		rLen = 0;
+		rLoc = 1064;
+		rType = 0;
+		vrLen = 1237;
+		vrLoc = 0;
+	};
+	94A48A5E13897F8000DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
+		name = "PandaAttackAppDelegate.m: 45";
+		rLen = 0;
+		rLoc = 1331;
+		rType = 0;
+		vrLen = 1493;
+		vrLoc = 901;
+	};
+	94A48A5F13897F8000DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
+		name = "PandaAttackAppDelegate.m: 49";
+		rLen = 0;
+		rLoc = 1541;
+		rType = 0;
+		vrLen = 1418;
+		vrLoc = 901;
+	};
+	94A48A6113897F9D00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 64";
+		rLen = 0;
+		rLoc = 2330;
+		rType = 0;
+		vrLen = 299;
+		vrLoc = 1081;
+	};
+	94A48A6213897F9D00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 134";
+		rLen = 4;
+		rLoc = 5308;
+		rType = 0;
+		vrLen = 1148;
+		vrLoc = 1695;
+	};
+	94A48A6F1389C01100DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
+		name = "PandaAttackAppDelegate.m: 49";
+		rLen = 0;
+		rLoc = 1541;
+		rType = 0;
+		vrLen = 1567;
+		vrLoc = 901;
+	};
+	94A48A701389C01100DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 231";
+		rLen = 0;
+		rLoc = 9124;
+		rType = 0;
+		vrLen = 1038;
+		vrLoc = 8318;
+	};
+	94A48A711389C01100DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D813810F2100DAB3AC /* FBTableViewController.h */;
+		name = "FBTableViewController.h: 19";
+		rLen = 0;
+		rLoc = 403;
+		rType = 0;
+		vrLen = 409;
+		vrLoc = 0;
+	};
+	94A48A721389C01100DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 91";
+		rLen = 0;
+		rLoc = 2772;
+		rType = 0;
+		vrLen = 1264;
+		vrLoc = 1311;
+	};
+	94A48A731389C01100DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 94";
+		rLen = 0;
+		rLoc = 3232;
+		rType = 0;
+		vrLen = 1116;
+		vrLoc = 5715;
+	};
+	94A48A741389C01100DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 94";
+		rLen = 0;
+		rLoc = 3232;
+		rType = 0;
+		vrLen = 1116;
+		vrLoc = 5715;
+	};
+	94A48A801389C09200DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 94";
+		rLen = 0;
+		rLoc = 3232;
+		rType = 0;
+		vrLen = 1114;
+		vrLoc = 6149;
+	};
+	94A48A811389C09200DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 94";
+		rLen = 0;
+		rLoc = 3232;
+		rType = 0;
+		vrLen = 1115;
+		vrLoc = 6146;
+	};
+	94A48A851389C1AA00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 64";
+		rLen = 0;
+		rLoc = 2330;
+		rType = 0;
+		vrLen = 299;
+		vrLoc = 1081;
+	};
+	94A48A861389C1AA00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 134";
+		rLen = 4;
+		rLoc = 5308;
+		rType = 0;
+		vrLen = 1148;
+		vrLoc = 1695;
+	};
+	94A48A871389C1B900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 248";
+		rLen = 0;
+		rLoc = 7545;
+		rType = 0;
+		vrLen = 1117;
+		vrLoc = 6146;
+	};
+	94A48A8C1389C2E600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
+		name = "PandaAttackAppDelegate.m: 49";
+		rLen = 0;
+		rLoc = 1541;
+		rType = 0;
+		vrLen = 1567;
+		vrLoc = 901;
+	};
+	94A48A8D1389C2E600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
+		name = "SigninViewController.m: 37";
+		rLen = 0;
+		rLoc = 1064;
+		rType = 0;
+		vrLen = 1025;
+		vrLoc = 2677;
+	};
+	94A48A8E1389C2E600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 946210DA1369435A0073CBDF /* SettingsViewController.m */;
+		name = "SettingsViewController.m: 21";
+		rLen = 0;
+		rLoc = 361;
+		rType = 0;
+		vrLen = 1101;
+		vrLoc = 752;
+	};
+	94A48A8F1389C2E600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D813810F2100DAB3AC /* FBTableViewController.h */;
+		name = "FBTableViewController.h: 19";
+		rLen = 0;
+		rLoc = 403;
+		rType = 0;
+		vrLen = 409;
+		vrLoc = 0;
+	};
+	94A48A901389C2E600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 248";
+		rLen = 0;
+		rLoc = 7545;
+		rType = 0;
+		vrLen = 1117;
+		vrLoc = 6146;
+	};
+	94A48A911389C2E600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 248";
+		rLen = 0;
+		rLoc = 7538;
+		rType = 0;
+		vrLen = 1032;
+		vrLoc = 6246;
+	};
+	94A48A931389C31D00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 64";
+		rLen = 0;
+		rLoc = 2330;
+		rType = 0;
+		vrLen = 299;
+		vrLoc = 1081;
+	};
+	94A48A941389C31D00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 134";
+		rLen = 4;
+		rLoc = 5308;
+		rType = 0;
+		vrLen = 1148;
+		vrLoc = 1695;
+	};
+	94A48A951389C31D00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94B983371345AA0F00090947 /* SigninViewController.h */;
+		name = "SigninViewController.h: 28";
+		rLen = 13;
+		rLoc = 794;
+		rType = 0;
+		vrLen = 709;
+		vrLoc = 175;
+	};
+	94A48A961389C31D00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
+		name = "SigninViewController.m: 59";
+		rLen = 13;
+		rLoc = 1762;
+		rType = 0;
+		vrLen = 650;
+		vrLoc = 1460;
+	};
+	94A48A971389C31D00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A488691380AD0900DAB3AC /* FacebookWrapper.h */;
+		name = "FacebookWrapper.h: 27";
+		rLen = 13;
+		rLoc = 810;
+		rType = 0;
+		vrLen = 806;
+		vrLoc = 301;
+	};
+	94A48A981389C31D00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		rLen = 13;
+		rLoc = 1355;
+		rType = 0;
+	};
+	94A48A991389C31D00DAB3AC /* FacebookWrapper.m */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
+		name = FacebookWrapper.m;
+		path = /Users/ryan/Projects/PandaAttack/Classes/FacebookWrapper.m;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 4004}}";
+			sepNavSelRange = "{1296, 13}";
+			sepNavVisRange = "{572, 786}";
+		};
+	};
+	94A48A9A1389C31D00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 36";
+		rLen = 13;
+		rLoc = 1355;
+		rType = 0;
+		vrLen = 744;
+		vrLoc = 626;
+	};
+	94A48A9B1389C32D00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A488691380AD0900DAB3AC /* FacebookWrapper.h */;
+		name = "FacebookWrapper.h: 29";
+		rLen = 0;
+		rLoc = 1013;
+		rType = 0;
+		vrLen = 1107;
+		vrLoc = 0;
+	};
+	94A48A9C1389C32D00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94B983371345AA0F00090947 /* SigninViewController.h */;
+		name = "SigninViewController.h: 28";
+		rLen = 13;
+		rLoc = 794;
+		rType = 0;
+		vrLen = 884;
+		vrLoc = 0;
+	};
+	94A48A9D1389C32D00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D813810F2100DAB3AC /* FBTableViewController.h */;
+		name = "FBTableViewController.h: 19";
+		rLen = 0;
+		rLoc = 403;
+		rType = 0;
+		vrLen = 409;
+		vrLoc = 0;
+	};
+	94A48A9E1389C32D00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 36";
+		rLen = 13;
+		rLoc = 1355;
+		rType = 0;
+		vrLen = 1362;
+		vrLoc = 572;
+	};
+	94A48A9F1389C32D00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 46";
+		rLen = 0;
+		rLoc = 1801;
+		rType = 0;
+		vrLen = 1362;
+		vrLoc = 572;
+	};
+	94A48AA01389C50000DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A488691380AD0900DAB3AC /* FacebookWrapper.h */;
+		name = "FacebookWrapper.h: 29";
+		rLen = 0;
+		rLoc = 1013;
+		rType = 0;
+		vrLen = 1107;
+		vrLoc = 0;
+	};
+	94A48AA11389C50000DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 157";
+		rLen = 0;
+		rLoc = 4818;
+		rType = 0;
+		vrLen = 1125;
+		vrLoc = 4256;
+	};
+	94A48AA21389C50000DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 163";
+		rLen = 0;
+		rLoc = 4818;
+		rType = 0;
+		vrLen = 1101;
+		vrLoc = 4256;
+	};
+	94A48AA31389C51800DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 163";
+		rLen = 0;
+		rLoc = 4818;
+		rType = 0;
+		vrLen = 1101;
+		vrLoc = 4256;
+	};
+	94A48AA41389C56700DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 155";
+		rLen = 0;
+		rLoc = 4818;
+		rType = 0;
+		vrLen = 1035;
+		vrLoc = 4256;
+	};
+	94A48AA51389C5C500DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
+		name = "PandaAttackAppDelegate.m: 42";
+		rLen = 0;
+		rLoc = 1141;
+		rType = 0;
+		vrLen = 1567;
+		vrLoc = 901;
+	};
+	94A48AA61389C5C500DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 156";
+		rLen = 0;
+		rLoc = 4820;
+		rType = 0;
+		vrLen = 1035;
+		vrLoc = 4256;
+	};
+	94A48AA71389C5C500DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 29";
+		rLen = 0;
+		rLoc = 1018;
+		rType = 0;
+		vrLen = 1263;
+		vrLoc = 0;
+	};
+	94A48AAC1389C5FA00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 31";
+		rLen = 0;
+		rLoc = 1108;
+		rType = 0;
+		vrLen = 1351;
+		vrLoc = 221;
+	};
+	94A48AB41389C66B00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 27";
+		rLen = 0;
+		rLoc = 813;
+		rType = 0;
+		vrLen = 1391;
+		vrLoc = 302;
+	};
+	94A48AB51389C66B00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		rLen = 0;
+		rLoc = 70;
+		rType = 1;
+	};
+	94A48AB61389C66B00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 72";
+		rLen = 0;
+		rLoc = 1631;
+		rType = 0;
+		vrLen = 1195;
+		vrLoc = 1380;
+	};
+	94A48AC61389F5AB00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A488691380AD0900DAB3AC /* FacebookWrapper.h */;
+		name = "FacebookWrapper.h: 23";
+		rLen = 0;
+		rLoc = 575;
+		rType = 0;
+		vrLen = 1121;
+		vrLoc = 0;
+	};
+	94A48AC71389F5AB00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 91";
+		rLen = 90;
+		rLoc = 2772;
+		rType = 0;
+		vrLen = 1076;
+		vrLoc = 1253;
+	};
+	94A48AC81389F5AB00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 277";
+		rLen = 0;
+		rLoc = 9060;
+		rType = 0;
+		vrLen = 1036;
+		vrLoc = 6870;
+	};
+	94A48AC91389F5AB00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 281";
+		rLen = 0;
+		rLoc = 8519;
+		rType = 0;
+		vrLen = 946;
+		vrLoc = 7188;
+	};
+	94A48ACA1389F67F00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 283";
+		rLen = 0;
+		rLoc = 8674;
+		rType = 0;
+		vrLen = 1024;
+		vrLoc = 7188;
+	};
+	94A48ACB1389F6A800DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 283";
+		rLen = 0;
+		rLoc = 8674;
+		rType = 0;
+		vrLen = 1024;
+		vrLoc = 7188;
+	};
+	94A48AD01389F9C700DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 283";
+		rLen = 0;
+		rLoc = 8673;
+		rType = 0;
+		vrLen = 1095;
+		vrLoc = 7188;
+	};
+	94A48AD71389FA7200DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 231";
+		rLen = 0;
+		rLoc = 9124;
+		rType = 0;
+		vrLen = 1036;
+		vrLoc = 8318;
+	};
+	94A48AD81389FA7200DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 242";
+		rLen = 0;
+		rLoc = 7074;
+		rType = 0;
+		vrLen = 1084;
+		vrLoc = 7272;
+	};
+	94A48AD91389FA7200DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 242";
+		rLen = 0;
+		rLoc = 7074;
+		rType = 0;
+		vrLen = 1010;
+		vrLoc = 7346;
+	};
+	94A48ADF1389FAA000DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 73";
+		rLen = 0;
+		rLoc = 2330;
+		rType = 0;
+		vrLen = 478;
+		vrLoc = 572;
+	};
+	94A48AE01389FAA000DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 45";
+		rLen = 13;
+		rLoc = 1355;
+		rType = 0;
+		vrLen = 715;
+		vrLoc = 572;
+	};
+	94A48AE11389FAA100DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 242";
+		rLen = 0;
+		rLoc = 7074;
+		rType = 0;
+		vrLen = 1010;
+		vrLoc = 7346;
+	};
+	94A48AE21389FAA800DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 73";
+		rLen = 0;
+		rLoc = 2330;
+		rType = 0;
+		vrLen = 548;
+		vrLoc = 572;
+	};
+	94A48AE31389FAA800DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 45";
+		rLen = 13;
+		rLoc = 1355;
+		rType = 0;
+		vrLen = 743;
+		vrLoc = 572;
+	};
+	94A48AE41389FAB100DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 242";
+		rLen = 0;
+		rLoc = 7074;
+		rType = 0;
+		vrLen = 1084;
+		vrLoc = 7272;
+	};
+	94A48AE91389FB1400DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 284";
+		rLen = 0;
+		rLoc = 8672;
+		rType = 0;
+		vrLen = 1056;
+		vrLoc = 7363;
+	};
+	94A48AED1389FB1700DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 284";
+		rLen = 0;
+		rLoc = 8672;
+		rType = 0;
+		vrLen = 1056;
+		vrLoc = 7363;
+	};
+	94A48AEE1389FB1700DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 284";
+		rLen = 0;
+		rLoc = 8672;
+		rType = 0;
+		vrLen = 1073;
+		vrLoc = 7346;
+	};
+	94A48AF21389FB3100DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 73";
+		rLen = 0;
+		rLoc = 2330;
+		rType = 0;
+		vrLen = 522;
+		vrLoc = 629;
+	};
+	94A48AF31389FB3100DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48A991389C31D00DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 45";
+		rLen = 13;
+		rLoc = 1355;
+		rType = 0;
+		vrLen = 786;
+		vrLoc = 572;
+	};
+	94A48AF41389FB3C00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 284";
+		rLen = 0;
+		rLoc = 8672;
+		rType = 0;
+		vrLen = 1147;
+		vrLoc = 7272;
+	};
+	94A48AF71389FB8400DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 281";
+		rLen = 0;
+		rLoc = 8375;
+		rType = 0;
+		vrLen = 1147;
+		vrLoc = 7272;
+	};
+	94A48AFE1389FB9E00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 282";
+		rLen = 0;
+		rLoc = 8382;
+		rType = 0;
+		vrLen = 1175;
+		vrLoc = 7272;
+	};
+	94A48AFF1389FB9E00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 282";
+		rLen = 0;
+		rLoc = 8382;
+		rType = 0;
+		vrLen = 1084;
+		vrLoc = 7363;
+	};
+	94A48B031389FBB100DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 73";
+		rLen = 0;
+		rLoc = 2330;
+		rType = 0;
+		vrLen = 373;
+		vrLoc = 752;
+	};
+	94A48B041389FBB100DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 45";
+		rLen = 13;
+		rLoc = 1355;
+		rType = 0;
+		vrLen = 715;
+		vrLoc = 572;
+	};
+	94A48B051389FBB300DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 282";
+		rLen = 0;
+		rLoc = 8382;
+		rType = 0;
+		vrLen = 1084;
+		vrLoc = 7363;
+	};
+	94A48B0A1389FBC900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 282";
+		rLen = 0;
+		rLoc = 8382;
+		rType = 0;
+		vrLen = 1080;
+		vrLoc = 7367;
+	};
+	94A48B0B1389FBC900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 282";
+		rLen = 0;
+		rLoc = 8382;
+		rType = 0;
+		vrLen = 1084;
+		vrLoc = 7363;
+	};
+	94A48B151389FBE500DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 277";
+		rLen = 0;
+		rLoc = 8015;
+		rType = 0;
+		vrLen = 1129;
+		vrLoc = 7346;
+	};
+	94A48B161389FBE500DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 277";
+		rLen = 0;
+		rLoc = 8015;
+		rType = 0;
+		vrLen = 1108;
+		vrLoc = 7367;
+	};
+	94A48B261389FC1300DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 277";
+		rLen = 0;
+		rLoc = 8015;
+		rType = 0;
+		vrLen = 1112;
+		vrLoc = 7363;
+	};
+	94A48B271389FC1300DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 277";
+		rLen = 0;
+		rLoc = 8015;
+		rType = 0;
+		vrLen = 1108;
+		vrLoc = 7367;
+	};
+	94A48B291389FC4200DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 277";
+		rLen = 0;
+		rLoc = 8015;
+		rType = 0;
+		vrLen = 1108;
+		vrLoc = 7367;
+	};
+	94A48B2A1389FC4500DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 73";
+		rLen = 0;
+		rLoc = 2330;
+		rType = 0;
+		vrLen = 389;
+		vrLoc = 755;
+	};
+	94A48B2B1389FC4500DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 45";
+		rLen = 13;
+		rLoc = 1355;
+		rType = 0;
+		vrLen = 786;
+		vrLoc = 572;
+	};
+	94A48B2E1389FCE200DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A488691380AD0900DAB3AC /* FacebookWrapper.h */;
+		name = "FacebookWrapper.h: 23";
+		rLen = 0;
+		rLoc = 575;
+		rType = 0;
+		vrLen = 1121;
+		vrLoc = 0;
+	};
+	94A48B2F1389FCE200DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 295";
+		rLen = 0;
+		rLoc = 9934;
+		rType = 0;
+		vrLen = 1409;
+		vrLoc = 7363;
+	};
+	94A48B301389FCE200DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 295";
+		rLen = 0;
+		rLoc = 9934;
+		rType = 0;
+		vrLen = 1426;
+		vrLoc = 7346;
+	};
+	94A48B311389FD3600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 301";
+		rLen = 0;
+		rLoc = 9934;
+		rType = 0;
+		vrLen = 1256;
+		vrLoc = 7660;
+	};
+	94A48B321389FDAC00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 307";
+		rLen = 0;
+		rLoc = 9927;
+		rType = 0;
+		vrLen = 1250;
+		vrLoc = 7899;
+	};
+	94A48B351389FE3800DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 301";
+		rLen = 0;
+		rLoc = 9363;
+		rType = 0;
+		vrLen = 1267;
+		vrLoc = 7899;
+	};
+	94A48B381389FE5B00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 304";
+		rLen = 0;
+		rLoc = 9683;
+		rType = 0;
+		vrLen = 1282;
+		vrLoc = 7899;
+	};
+	94A48B471389FF7700DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 308";
+		rLen = 0;
+		rLoc = 9926;
+		rType = 0;
+		vrLen = 1304;
+		vrLoc = 7921;
+	};
+	94A48B4C1389FF8C00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 73";
+		rLen = 0;
+		rLoc = 2330;
+		rType = 0;
+		vrLen = 465;
+		vrLoc = 626;
+	};
+	94A48B4D1389FF8C00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 45";
+		rLen = 13;
+		rLoc = 1355;
+		rType = 0;
+		vrLen = 715;
+		vrLoc = 572;
+	};
+	94A48B4E1389FF8E00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 308";
+		rLen = 0;
+		rLoc = 9926;
+		rType = 0;
+		vrLen = 1304;
+		vrLoc = 7921;
+	};
+	94A48B531389FFB600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A488691380AD0900DAB3AC /* FacebookWrapper.h */;
+		name = "FacebookWrapper.h: 23";
+		rLen = 0;
+		rLoc = 575;
+		rType = 0;
+		vrLen = 1121;
+		vrLoc = 0;
+	};
+	94A48B541389FFB600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 308";
+		rLen = 0;
+		rLoc = 9926;
+		rType = 0;
+		vrLen = 1306;
+		vrLoc = 7921;
+	};
+	94A48B551389FFB600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 92";
+		rLen = 19;
+		rLoc = 2840;
+		rType = 0;
+		vrLen = 1076;
+		vrLoc = 1253;
+	};
+	94A48B561389FFB600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 93";
+		rLen = 0;
+		rLoc = 2881;
+		rType = 0;
+		vrLen = 1098;
+		vrLoc = 1258;
+	};
+	94A48B581389FFF700DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 93";
+		rLen = 0;
+		rLoc = 2881;
+		rType = 0;
+		vrLen = 1252;
+		vrLoc = 1258;
+	};
+	94A48B591389FFF700DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 308";
+		rLen = 0;
+		rLoc = 9926;
+		rType = 0;
+		vrLen = 1306;
+		vrLoc = 7921;
+	};
+	94A48B5A1389FFF700DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 306";
+		rLen = 0;
+		rLoc = 9814;
+		rType = 0;
+		vrLen = 1454;
+		vrLoc = 7727;
+	};
+	94A48B5B138A012200DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 306";
+		rLen = 0;
+		rLoc = 9814;
+		rType = 0;
+		vrLen = 1454;
+		vrLoc = 7727;
+	};
+	94A48B5C138A012200DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 302";
+		rLen = 0;
+		rLoc = 9495;
+		rType = 0;
+		vrLen = 1594;
+		vrLoc = 7727;
+	};
+	94A48B5D138A01B800DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 302";
+		rLen = 0;
+		rLoc = 9493;
+		rType = 0;
+		vrLen = 1117;
+		vrLoc = 8542;
+	};
+	94A48B62138A01D800DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 306";
+		rLen = 0;
+		rLoc = 9603;
+		rType = 0;
+		vrLen = 1059;
+		vrLoc = 8495;
+	};
+	94A48B67138A01E700DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 73";
+		rLen = 0;
+		rLoc = 2330;
+		rType = 0;
+		vrLen = 345;
+		vrLoc = 509;
+	};
+	94A48B68138A01E700DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 45";
+		rLen = 13;
+		rLoc = 1355;
+		rType = 0;
+		vrLen = 715;
+		vrLoc = 572;
+	};
+	94A48B69138A01E900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 297";
+		rLen = 0;
+		rLoc = 9085;
+		rType = 0;
+		vrLen = 1059;
+		vrLoc = 8495;
+	};
+	94A48B70138A021200DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 304";
+		rLen = 0;
+		rLoc = 9495;
+		rType = 0;
+		vrLen = 1167;
+		vrLoc = 8495;
+	};
+	94A48B78138A02AD00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A488691380AD0900DAB3AC /* FacebookWrapper.h */;
+		name = "FacebookWrapper.h: 25";
+		rLen = 0;
+		rLoc = 647;
+		rType = 0;
+		vrLen = 1218;
+		vrLoc = 0;
+	};
+	94A48B79138A02AD00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 307";
+		rLen = 0;
+		rLoc = 9666;
+		rType = 0;
+		vrLen = 1555;
+		vrLoc = 7933;
+	};
+	94A48B7A138A02AD00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 93";
+		rLen = 0;
+		rLoc = 2881;
+		rType = 0;
+		vrLen = 1252;
+		vrLoc = 1258;
+	};
+	94A48B7B138A02AD00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 66";
+		rLen = 0;
+		rLoc = 1485;
+		rType = 0;
+		vrLen = 1277;
+		vrLoc = 1260;
+	};
+	94A48B83138A031900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 302";
+		rLen = 331;
+		rLoc = 9354;
+		rType = 0;
+		vrLen = 1264;
+		vrLoc = 8293;
+	};
+	94A48B84138A031900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 66";
+		rLen = 0;
+		rLoc = 1485;
+		rType = 0;
+		vrLen = 1364;
+		vrLoc = 1260;
+	};
+	94A48B85138A031900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 76";
+		rLen = 0;
+		rLoc = 1752;
+		rType = 0;
+		vrLen = 1451;
+		vrLoc = 1275;
+	};
+	94A48B8B138A039600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 88";
+		rLen = 0;
+		rLoc = 1998;
+		rType = 0;
+		vrLen = 1286;
+		vrLoc = 918;
+	};
+	94A48B93138A03DF00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 105";
+		rLen = 0;
+		rLoc = 2699;
+		rType = 0;
+		vrLen = 1462;
+		vrLoc = 1897;
+	};
+	94A48B99138A047F00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 276";
+		rLen = 19;
+		rLoc = 7969;
+		rType = 0;
+		vrLen = 1703;
+		vrLoc = 7733;
+	};
+	94A48B9A138A047F00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A488691380AD0900DAB3AC /* FacebookWrapper.h */;
+		name = "FacebookWrapper.h: 40";
+		rLen = 0;
+		rLoc = 1326;
+		rType = 0;
+		vrLen = 1332;
+		vrLoc = 0;
+	};
+	94A48B9B138A047F00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 80";
+		rLen = 0;
+		rLoc = 1961;
+		rType = 0;
+		vrLen = 1471;
+		vrLoc = 1255;
+	};
+	94A48B9C138A047F00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 80";
+		rLen = 0;
+		rLoc = 1961;
+		rType = 0;
+		vrLen = 1320;
+		vrLoc = 1746;
+	};
+	94A48BA2138A049A00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 94";
+		rLen = 0;
+		rLoc = 2613;
+		rType = 0;
+		vrLen = 1399;
+		vrLoc = 1746;
+	};
+	94A48BA8138A051800DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 85";
+		rLen = 0;
+		rLoc = 2117;
+		rType = 0;
+		vrLen = 1309;
+		vrLoc = 1746;
+	};
+	94A48BAE138A054500DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 73";
+		rLen = 0;
+		rLoc = 1743;
+		rType = 0;
+		vrLen = 1375;
+		vrLoc = 876;
+	};
+	94A48BB4138A2DE100DAB3AC /* FacebookUser.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1100, 548}}";
+			sepNavSelRange = "{298, 0}";
+			sepNavVisRange = "{0, 355}";
+		};
+	};
+	94A48BB5138A2DE100DAB3AC /* FacebookUser.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 548}}";
+			sepNavSelRange = "{215, 0}";
+			sepNavVisRange = "{0, 491}";
+		};
+	};
+	94A48BBD138A2F0700DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 59";
+		rLen = 0;
+		rLoc = 1282;
+		rType = 0;
+		vrLen = 1427;
+		vrLoc = 876;
+	};
+	94A48BBE138A2F0700DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A488691380AD0900DAB3AC /* FacebookWrapper.h */;
+		name = "FacebookWrapper.h: 25";
+		rLen = 54;
+		rLoc = 543;
+		rType = 0;
+		vrLen = 1332;
+		vrLoc = 0;
+	};
+	94A48BBF138A2F0700DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48BB4138A2DE100DAB3AC /* FacebookUser.h */;
+		name = "FacebookUser.h: 17";
+		rLen = 0;
+		rLoc = 298;
+		rType = 0;
+		vrLen = 355;
+		vrLoc = 0;
+	};
+	94A48BC0138A2F0700DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48BB5138A2DE100DAB3AC /* FacebookUser.m */;
+		name = "FacebookUser.m: 14";
+		rLen = 0;
+		rLoc = 215;
+		rType = 0;
+		vrLen = 491;
+		vrLoc = 0;
+	};
+	94A48BC1138A2F0700DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 296";
+		rLen = 0;
+		rLoc = 8765;
+		rType = 0;
+		vrLen = 1676;
+		vrLoc = 7786;
+	};
+	94A48BC2138A2F0700DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 328";
+		rLen = 0;
+		rLoc = 9957;
+		rType = 0;
+		vrLen = 1489;
+		vrLoc = 8307;
+	};
+	94A48BC3138A2F2700DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 308";
+		rLen = 0;
+		rLoc = 9214;
+		rType = 0;
+		vrLen = 1613;
+		vrLoc = 8261;
+	};
+	94A48BCC138A305100DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A488691380AD0900DAB3AC /* FacebookWrapper.h */;
+		name = "FacebookWrapper.h: 25";
+		rLen = 54;
+		rLoc = 543;
+		rType = 0;
+		vrLen = 1332;
+		vrLoc = 0;
+	};
+	94A48BCD138A305100DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 314";
+		rLen = 0;
+		rLoc = 9495;
+		rType = 0;
+		vrLen = 1327;
+		vrLoc = 8679;
+	};
+	94A48BCE138A305100DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 10";
+		rLen = 0;
+		rLoc = 210;
+		rType = 0;
+		vrLen = 1439;
+		vrLoc = 983;
+	};
+	94A48BCF138A305100DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 102";
+		rLen = 0;
+		rLoc = 2870;
+		rType = 0;
+		vrLen = 1510;
+		vrLoc = 1632;
 	};
 	94A725CC1336D03C00414CF3 /* History.h */ = {
 		uiCtxt = {
@@ -4156,15 +6090,15 @@
 	94B983371345AA0F00090947 /* SigninViewController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1100, 548}}";
-			sepNavSelRange = "{689, 47}";
-			sepNavVisRange = "{0, 835}";
+			sepNavSelRange = "{794, 13}";
+			sepNavVisRange = "{0, 884}";
 		};
 	};
 	94B983381345AA0F00090947 /* SigninViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1139, 1560}}";
-			sepNavSelRange = "{1135, 81}";
-			sepNavVisRange = "{151, 1326}";
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 1690}}";
+			sepNavSelRange = "{1762, 13}";
+			sepNavVisRange = "{1460, 650}";
 		};
 	};
 	94C41829133325F50032B2DA /* SendMessageViewController.h */ = {
@@ -4234,17 +6168,17 @@
 	};
 	94E933631322DAB70046EB0F /* AttackViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1100, 637}}";
-			sepNavSelRange = "{1917, 0}";
-			sepNavVisRange = "{87, 1864}";
+			sepNavIntBoundsRect = "{{0, 0}, {1100, 650}}";
+			sepNavSelRange = "{1387, 0}";
+			sepNavVisRange = "{87, 1908}";
 			sepNavWindowFrame = "{{15, 315}, {750, 558}}";
 		};
 	};
 	94E933641322DAB70046EB0F /* AttackViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1727, 6396}}";
-			sepNavSelRange = "{11307, 0}";
-			sepNavVisRange = "{10333, 1246}";
+			sepNavIntBoundsRect = "{{0, 0}, {2469, 6435}}";
+			sepNavSelRange = "{9124, 0}";
+			sepNavVisRange = "{8318, 1036}";
 			sepNavWindowFrame = "{{15, 315}, {750, 558}}";
 		};
 	};

@@ -7,7 +7,7 @@
 //
 
 #import "FBTableViewController.h"
-
+#import "FacebookUser.h"
 
 @implementation FBTableViewController
 
@@ -63,19 +63,27 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 1;
+    return [self.fbWrapper.friendData count];
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-	if(self.fbWrapper.isLoggedInToFB) {
-		return self.fbWrapper.friends.count;
-	} else {
-		return 0;
-	}
+	NSString* key = [self.fbWrapper.friendDataSortedKeys objectAtIndex:section];
+	NSMutableArray* nameArr = [self.fbWrapper.friendData objectForKey:key];
+	
+	return [nameArr count];
 }
 
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	NSString* key = [self.fbWrapper.friendDataSortedKeys objectAtIndex:section];
+	return key;
+}
+
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+	return self.fbWrapper.friendDataSortedKeys;
+}
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -88,8 +96,11 @@
     }
     
     // Configure the cell...
-	NSDictionary *dict = [self.fbWrapper.friends objectAtIndex:indexPath.row];
-    cell.textLabel.text = [dict objectForKey:@"name"];
+	NSString* key = [self.fbWrapper.friendDataSortedKeys objectAtIndex:indexPath.section];
+	NSMutableArray* nameArr = [self.fbWrapper.friendData objectForKey:key];
+	FacebookUser* user = [nameArr objectAtIndex:indexPath.row];
+    cell.textLabel.text = user.fbName;
+	
     return cell;
 }
 

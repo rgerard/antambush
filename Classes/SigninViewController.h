@@ -21,6 +21,7 @@
 @property (nonatomic, retain) IBOutlet UITextField *inputEmail;
 @property (nonatomic, retain) FacebookWrapper *fbWrapper;
 
+-(id)initWithWrapper:(FacebookWrapper *)wrapper;
 -(IBAction) backgroundTap:(id) sender;
 -(void) startBtnClick:(UIView*)clickedButton;
 -(void) setFbWrapper:(FacebookWrapper*)wrapper;

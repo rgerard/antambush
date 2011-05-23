@@ -34,6 +34,7 @@
 @property (nonatomic, retain) ContactListPicker *contactList;
 @property (nonatomic, retain) FacebookWrapper *fbWrapper;
 
+-(id)initWithWrapper:(FacebookWrapper *)wrapper;
 -(void)personBtnClick:(UIView*)clickedButton;
 -(void)startBtnClick:(UIView*)clickedButton;
 -(void)changeToWeaponView;

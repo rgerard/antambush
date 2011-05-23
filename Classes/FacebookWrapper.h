@@ -12,7 +12,9 @@
 @interface FacebookWrapper : NSObject<FBSessionDelegate,FBRequestDelegate> {
 	Facebook *facebook;
 	bool isLoggedInToFB;
-	NSArray *friends;
+	NSMutableArray *friends;
+	NSMutableDictionary *friendData;
+	NSArray *friendDataSortedKeys;
 	
 	id delegate;
 	SEL callback;	
@@ -20,16 +22,20 @@
 
 @property (nonatomic, retain) Facebook *facebook;
 @property (nonatomic) bool isLoggedInToFB;
-@property (nonatomic, retain) NSArray *friends;
+@property (nonatomic, retain) NSMutableArray *friends;
+@property (nonatomic, retain) NSMutableDictionary *friendData;
+@property (nonatomic, retain) NSArray *friendDataSortedKeys;
 @property (nonatomic, retain) id delegate;
 @property (nonatomic) SEL callback;
 
 -(void) facebookLogin:(SEL)appSelector delegate:(id)requestDelegate;
 -(void) facebookLogout:(SEL)appSelector delegate:(id)requestDelegate;
+-(void) facebookAuthorize:(SEL)appSelector delegate:(id)requestDelegate;
 -(void) getMeInfo:(SEL)appSelector delegate:(id)requestDelegate;
 -(void) getFriendInfo:(SEL)appSelector delegate:(id)requestDelegate;
 -(void) recordFBUserInfo:(NSDictionary*)info;
 -(void) setDelegateCallback:(SEL)appSelector delegate:(id)requestDelegate;
 -(BOOL) handleOpenURL:(NSURL *)url;
+-(void) sortFriends;
 
 @end

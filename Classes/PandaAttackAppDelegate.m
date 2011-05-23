@@ -41,14 +41,12 @@ static NSString *NameKey = @"nameKey";
 	fbWrapper = [[FacebookWrapper alloc] init];
 	
     // Init the controllers
-	signinViewController = [[SigninViewController alloc] init];
-	attackViewController = [[AttackViewController alloc] init];
+	signinViewController = [[SigninViewController alloc] initWithWrapper:fbWrapper];
+	attackViewController = [[AttackViewController alloc] initWithWrapper:fbWrapper];
 	attackViewController.title = @"Panda Attack";
 	attackViewController.view.backgroundColor = [[[UIColor alloc] initWithRed:0.1 green:0.2 blue:0.6 alpha:0.5] autorelease];
 	
 	// Setup the controller properties
-	[signinViewController setFbWrapper:fbWrapper];
-	[attackViewController setFbWrapper:fbWrapper];
 	attackNavigationController = [[UINavigationController alloc] initWithRootViewController:attackViewController];
 	attackNavigationController.navigationBar.barStyle = UIBarStyleBlack;
 	

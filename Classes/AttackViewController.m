@@ -36,6 +36,16 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 }
 */
 
+// The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
+-(id)initWithWrapper:(FacebookWrapper *)wrapper {
+	self = [super init];
+	if (self) {
+		// Custom initialization.
+		fbWrapper = [wrapper retain];
+	}
+	return self;
+}
+
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
@@ -84,13 +94,22 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 		lastAttackId = @"-1";
 	}
 	
-	if([userEmail length] > 0) {
+	NSString *fbUserID = [prefs stringForKey:@"fbID"];
+	
+	if(fbWrapper != nil && ([fbUserID length] > 0 || [userEmail length] > 0)) {
 		// Start the spinner
 		[self.view addSubview:spinner];
 		[spinner startAnimating];
 		
-		// Ask server if there are any new attacks on this user
-		NSString *formatUrl = [NSString stringWithFormat:@"%@/user_attacks/lookup?email=%@&lastid=%@",rootUrl,userEmail,lastAttackId];
+		// Ask server if there are any new attacks on this user -- use the FB ID if available, otherwise use email
+		NSString *formatUrl;
+		
+		if([fbUserID length] > 0) {
+			formatUrl = [NSString stringWithFormat:@"%@/user_attacks/lookup?fbid=%@&lastid=%@",rootUrl,fbUserID,lastAttackId];
+		} else {
+			formatUrl = [NSString stringWithFormat:@"%@/user_attacks/lookup?email=%@&lastid=%@",rootUrl,userEmail,lastAttackId];
+		}
+		
 		NSURL *url = [NSURL URLWithString:formatUrl];
 		self.request = [ASIHTTPRequest requestWithURL:url];
 		[self.request setDelegate:self];
@@ -186,6 +205,13 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 	//	[prefs setObject:[NSString stringWithFormat: @"%d", newAttackId] forKey:@"lastAttackId"];
 	//	[prefs synchronize];
 	//}
+	
+	// Start the spinner
+	[self.view addSubview:spinner];
+	[spinner startAnimating];
+	
+	// Ask for your list of FB friends
+	[fbWrapper getFriendInfo:@selector(facebookFriendsCallback) delegate:self];
 }
 
 
@@ -196,6 +222,20 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 	
 	NSError *error = [requestCallback error];
 	NSLog(@"Error request: %@", [error localizedDescription]);
+	
+	// Start the spinner
+	[self.view addSubview:spinner];
+	[spinner startAnimating];
+	
+	// Ask for permission to send the person email as well
+	[fbWrapper getFriendInfo:@selector(facebookFriendsCallback) delegate:self];
+}
+
+
+-(void) facebookFriendsCallback {
+	// Stop the spinner
+	[spinner stopAnimating];
+	[spinner removeFromSuperview];
 }
 
 
