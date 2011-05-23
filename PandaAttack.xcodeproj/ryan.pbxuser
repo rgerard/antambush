@@ -2,16 +2,16 @@
 {
 	1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1100, 637}}";
-			sepNavSelRange = "{1375, 0}";
-			sepNavVisRange = "{32, 1570}";
+			sepNavIntBoundsRect = "{{0, 0}, {1100, 663}}";
+			sepNavSelRange = "{1673, 0}";
+			sepNavVisRange = "{152, 1619}";
 		};
 	};
 	1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1100, 3666}}";
-			sepNavSelRange = "{1141, 0}";
-			sepNavVisRange = "{901, 1567}";
+			sepNavIntBoundsRect = "{{0, 0}, {1965, 3406}}";
+			sepNavSelRange = "{6157, 0}";
+			sepNavVisRange = "{5924, 1226}";
 			sepNavWindowFrame = "{{84, 252}, {750, 558}}";
 		};
 	};
@@ -664,6 +664,65 @@
 			94A48BCD138A305100DAB3AC /* PBXTextBookmark */ = 94A48BCD138A305100DAB3AC /* PBXTextBookmark */;
 			94A48BCE138A305100DAB3AC /* PBXTextBookmark */ = 94A48BCE138A305100DAB3AC /* PBXTextBookmark */;
 			94A48BCF138A305100DAB3AC /* PBXTextBookmark */ = 94A48BCF138A305100DAB3AC /* PBXTextBookmark */;
+			94A48BE1138A33E600DAB3AC /* PBXTextBookmark */ = 94A48BE1138A33E600DAB3AC /* PBXTextBookmark */;
+			94A48BE2138A33E600DAB3AC /* PBXTextBookmark */ = 94A48BE2138A33E600DAB3AC /* PBXTextBookmark */;
+			94A48BE3138A33E600DAB3AC /* PBXTextBookmark */ = 94A48BE3138A33E600DAB3AC /* PBXTextBookmark */;
+			94A48BE4138A33E600DAB3AC /* PBXTextBookmark */ = 94A48BE4138A33E600DAB3AC /* PBXTextBookmark */;
+			94A48BE5138A33E600DAB3AC /* PBXTextBookmark */ = 94A48BE5138A33E600DAB3AC /* PBXTextBookmark */;
+			94A48BE6138A33E600DAB3AC /* PBXTextBookmark */ = 94A48BE6138A33E600DAB3AC /* PBXTextBookmark */;
+			94A48BE7138A33E600DAB3AC /* PBXTextBookmark */ = 94A48BE7138A33E600DAB3AC /* PBXTextBookmark */;
+			94A48BE8138A33E600DAB3AC /* PBXTextBookmark */ = 94A48BE8138A33E600DAB3AC /* PBXTextBookmark */;
+			94A48BE9138A33E600DAB3AC /* PBXTextBookmark */ = 94A48BE9138A33E600DAB3AC /* PBXTextBookmark */;
+			94A48BEA138A33E600DAB3AC /* PBXTextBookmark */ = 94A48BEA138A33E600DAB3AC /* PBXTextBookmark */;
+			94A48BEB138A33E600DAB3AC /* PBXTextBookmark */ = 94A48BEB138A33E600DAB3AC /* PBXTextBookmark */;
+			94A48BEC138A33E600DAB3AC /* PBXTextBookmark */ = 94A48BEC138A33E600DAB3AC /* PBXTextBookmark */;
+			94A48BED138A33E600DAB3AC /* PBXTextBookmark */ = 94A48BED138A33E600DAB3AC /* PBXTextBookmark */;
+			94A48BEE138A33E600DAB3AC /* PBXTextBookmark */ = 94A48BEE138A33E600DAB3AC /* PBXTextBookmark */;
+			94A48BF5138A341300DAB3AC /* PBXTextBookmark */ = 94A48BF5138A341300DAB3AC /* PBXTextBookmark */;
+			94A48BF6138A341300DAB3AC /* PBXTextBookmark */ = 94A48BF6138A341300DAB3AC /* PBXTextBookmark */;
+			94A48BF7138A341300DAB3AC /* PBXTextBookmark */ = 94A48BF7138A341300DAB3AC /* PBXTextBookmark */;
+			94A48BFB138A350F00DAB3AC /* PBXTextBookmark */ = 94A48BFB138A350F00DAB3AC /* PBXTextBookmark */;
+			94A48BFC138A350F00DAB3AC /* XCBuildMessageTextBookmark */ = 94A48BFC138A350F00DAB3AC /* XCBuildMessageTextBookmark */;
+			94A48BFD138A350F00DAB3AC /* PBXTextBookmark */ = 94A48BFD138A350F00DAB3AC /* PBXTextBookmark */;
+			94A48BFE138A350F00DAB3AC /* PBXTextBookmark */ = 94A48BFE138A350F00DAB3AC /* PBXTextBookmark */;
+			94A48C05138A360D00DAB3AC /* XCBuildMessageTextBookmark */ = 94A48C05138A360D00DAB3AC /* XCBuildMessageTextBookmark */;
+			94A48C06138A360D00DAB3AC /* PBXTextBookmark */ = 94A48C06138A360D00DAB3AC /* PBXTextBookmark */;
+			94A48C07138A360D00DAB3AC /* PBXTextBookmark */ = 94A48C07138A360D00DAB3AC /* PBXTextBookmark */;
+			94A48C0F138A37A600DAB3AC /* PBXTextBookmark */ = 94A48C0F138A37A600DAB3AC /* PBXTextBookmark */;
+			94A48C10138A37A600DAB3AC /* XCBuildMessageTextBookmark */ = 94A48C10138A37A600DAB3AC /* XCBuildMessageTextBookmark */;
+			94A48C11138A37A600DAB3AC /* PBXTextBookmark */ = 94A48C11138A37A600DAB3AC /* PBXTextBookmark */;
+			94A48C12138A37A600DAB3AC /* PBXTextBookmark */ = 94A48C12138A37A600DAB3AC /* PBXTextBookmark */;
+			94A48C17138A37A900DAB3AC /* PBXTextBookmark */ = 94A48C17138A37A900DAB3AC /* PBXTextBookmark */;
+			94A48C18138A37A900DAB3AC /* PBXTextBookmark */ = 94A48C18138A37A900DAB3AC /* PBXTextBookmark */;
+			94A48C19138A37A900DAB3AC /* PBXTextBookmark */ = 94A48C19138A37A900DAB3AC /* PBXTextBookmark */;
+			94A48C1A138A37A900DAB3AC /* PBXTextBookmark */ = 94A48C1A138A37A900DAB3AC /* PBXTextBookmark */;
+			94A48C1B138A37A900DAB3AC /* PBXTextBookmark */ = 94A48C1B138A37A900DAB3AC /* PBXTextBookmark */;
+			94A48C1C138A37A900DAB3AC /* PBXTextBookmark */ = 94A48C1C138A37A900DAB3AC /* PBXTextBookmark */;
+			94A48C1D138A37A900DAB3AC /* PBXTextBookmark */ = 94A48C1D138A37A900DAB3AC /* PBXTextBookmark */;
+			94A48C1E138A37A900DAB3AC /* PBXTextBookmark */ = 94A48C1E138A37A900DAB3AC /* PBXTextBookmark */;
+			94A48C1F138A37A900DAB3AC /* PBXTextBookmark */ = 94A48C1F138A37A900DAB3AC /* PBXTextBookmark */;
+			94A48C20138A37A900DAB3AC /* PBXTextBookmark */ = 94A48C20138A37A900DAB3AC /* PBXTextBookmark */;
+			94A48C21138A37A900DAB3AC /* PBXTextBookmark */ = 94A48C21138A37A900DAB3AC /* PBXTextBookmark */;
+			94A48C22138A37A900DAB3AC /* PBXTextBookmark */ = 94A48C22138A37A900DAB3AC /* PBXTextBookmark */;
+			94A48C23138A37A900DAB3AC /* PBXTextBookmark */ = 94A48C23138A37A900DAB3AC /* PBXTextBookmark */;
+			94A48C24138A37A900DAB3AC /* PBXTextBookmark */ = 94A48C24138A37A900DAB3AC /* PBXTextBookmark */;
+			94A48C25138A37A900DAB3AC /* PBXTextBookmark */ = 94A48C25138A37A900DAB3AC /* PBXTextBookmark */;
+			94A48C26138A37A900DAB3AC /* PBXTextBookmark */ = 94A48C26138A37A900DAB3AC /* PBXTextBookmark */;
+			94A48C27138A37A900DAB3AC /* PBXTextBookmark */ = 94A48C27138A37A900DAB3AC /* PBXTextBookmark */;
+			94A48C28138A37A900DAB3AC /* PBXTextBookmark */ = 94A48C28138A37A900DAB3AC /* PBXTextBookmark */;
+			94A48C29138A37A900DAB3AC /* PBXTextBookmark */ = 94A48C29138A37A900DAB3AC /* PBXTextBookmark */;
+			94A48C2A138A37A900DAB3AC /* XCBuildMessageTextBookmark */ = 94A48C2A138A37A900DAB3AC /* XCBuildMessageTextBookmark */;
+			94A48C2B138A37A900DAB3AC /* PBXTextBookmark */ = 94A48C2B138A37A900DAB3AC /* PBXTextBookmark */;
+			94A48C31138A37CF00DAB3AC /* PBXTextBookmark */ = 94A48C31138A37CF00DAB3AC /* PBXTextBookmark */;
+			94A48C32138A37CF00DAB3AC /* PBXTextBookmark */ = 94A48C32138A37CF00DAB3AC /* PBXTextBookmark */;
+			94A48C33138A37D000DAB3AC /* PBXTextBookmark */ = 94A48C33138A37D000DAB3AC /* PBXTextBookmark */;
+			94A48C3C138A383400DAB3AC /* PBXTextBookmark */ = 94A48C3C138A383400DAB3AC /* PBXTextBookmark */;
+			94A48C3D138A383400DAB3AC /* PBXTextBookmark */ = 94A48C3D138A383400DAB3AC /* PBXTextBookmark */;
+			94A48C3E138A383400DAB3AC /* PBXTextBookmark */ = 94A48C3E138A383400DAB3AC /* PBXTextBookmark */;
+			94A48C3F138A383400DAB3AC /* PBXTextBookmark */ = 94A48C3F138A383400DAB3AC /* PBXTextBookmark */;
+			94A48C41138A38A500DAB3AC /* PBXTextBookmark */ = 94A48C41138A38A500DAB3AC /* PBXTextBookmark */;
+			94A48C42138A38A500DAB3AC /* PBXTextBookmark */ = 94A48C42138A38A500DAB3AC /* PBXTextBookmark */;
+			94A48C43138A38A500DAB3AC /* PBXTextBookmark */ = 94A48C43138A38A500DAB3AC /* PBXTextBookmark */;
 			94A728C7133883EF00414CF3 = 94A728C7133883EF00414CF3 /* PBXTextBookmark */;
 			94B210A9136374A600DA627E = 94B210A9136374A600DA627E /* PBXTextBookmark */;
 			94C41851133329770032B2DA = 94C41851133329770032B2DA /* PBXBookmark */;
@@ -747,10 +806,15 @@
 		name = WeaponScrollerViewController.m;
 		path = /Users/ryan/Projects/PandaAttack/Classes/WeaponScrollerViewController.m;
 		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1228, 2652}}";
+			sepNavSelRange = "{3614, 0}";
+			sepNavVisRange = "{3198, 1013}";
+		};
 	};
 	940240EA13556F2E0075148F /* RecentAttacksViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1100, 535}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1100, 523}}";
 			sepNavSelRange = "{307, 0}";
 			sepNavVisRange = "{0, 525}";
 			sepNavWindowFrame = "{{176, 168}, {750, 558}}";
@@ -758,9 +822,9 @@
 	};
 	940240EB13556F2E0075148F /* RecentAttacksViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1003, 2119}}";
-			sepNavSelRange = "{2157, 8}";
-			sepNavVisRange = "{1673, 808}";
+			sepNavIntBoundsRect = "{{0, 0}, {1100, 1989}}";
+			sepNavSelRange = "{2045, 8}";
+			sepNavVisRange = "{1490, 1482}";
 			sepNavWindowFrame = "{{153, 189}, {750, 558}}";
 		};
 	};
@@ -796,7 +860,7 @@
 		fRef = 94A725CC1336D03C00414CF3 /* History.h */;
 		name = "History.h: 36";
 		rLen = 0;
-		rLoc = 983;
+		rLoc = 902;
 		rType = 0;
 		vrLen = 989;
 		vrLoc = 0;
@@ -806,7 +870,7 @@
 		fRef = 94C41829133325F50032B2DA /* SendMessageViewController.h */;
 		name = "SendMessageViewController.h: 20";
 		rLen = 11;
-		rLoc = 493;
+		rLoc = 463;
 		rType = 0;
 		vrLen = 1016;
 		vrLoc = 0;
@@ -836,7 +900,7 @@
 		fRef = 1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */;
 		name = "PandaAttackAppDelegate.h: 43";
 		rLen = 28;
-		rLoc = 1703;
+		rLoc = 1673;
 		rType = 0;
 		vrLen = 1638;
 		vrLoc = 48;
@@ -856,7 +920,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 79";
 		rLen = 120;
-		rLoc = 3732;
+		rLoc = 3534;
 		rType = 0;
 		vrLen = 1952;
 		vrLoc = 2132;
@@ -886,7 +950,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 172";
 		rLen = 0;
-		rLoc = 6379;
+		rLoc = 6325;
 		rType = 0;
 		vrLen = 1386;
 		vrLoc = 7471;
@@ -963,16 +1027,16 @@
 	};
 	946210D91369435A0073CBDF /* SettingsViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1100, 548}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1100, 523}}";
 			sepNavSelRange = "{399, 0}";
 			sepNavVisRange = "{0, 465}";
 		};
 	};
 	946210DA1369435A0073CBDF /* SettingsViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1100, 2665}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1100, 2821}}";
 			sepNavSelRange = "{361, 0}";
-			sepNavVisRange = "{752, 1101}";
+			sepNavVisRange = "{752, 1049}";
 		};
 	};
 	9462114513694C1F0073CBDF /* Facebook.h */ = {
@@ -1015,7 +1079,7 @@
 		fRef = 94A725CD1336D03C00414CF3 /* History.m */;
 		name = "History.m: 117";
 		rLen = 0;
-		rLoc = 4740;
+		rLoc = 4690;
 		rType = 0;
 		vrLen = 1572;
 		vrLoc = 3002;
@@ -1076,16 +1140,16 @@
 	};
 	949EBEDC13627A05002EAEA6 /* RecentAttacksTableViewCell.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1100, 541}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1100, 523}}";
 			sepNavSelRange = "{331, 0}";
 			sepNavVisRange = "{0, 754}";
 		};
 	};
 	949EBEDD13627A05002EAEA6 /* RecentAttacksTableViewCell.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1944, 1963}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1944, 1976}}";
 			sepNavSelRange = "{3255, 0}";
-			sepNavVisRange = "{2788, 1015}";
+			sepNavVisRange = "{2788, 985}";
 		};
 	};
 	94A486C213790F0F00DAB3AC /* PBXTextBookmark */ = {
@@ -1109,7 +1173,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		location = libobjc.A.dylib;
-		modificationTime = 327812423.765928;
+		modificationTime = 327825462.824471;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 		symbolName = objc_exception_throw;
@@ -1118,7 +1182,7 @@
 		isa = PBXTextBookmark;
 		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
 		rLen = 15;
-		rLoc = 3815;
+		rLoc = 2445;
 		rType = 0;
 	};
 	94A486E01379195700DAB3AC /* PBXTextBookmark */ = {
@@ -1126,7 +1190,7 @@
 		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
 		name = "SendMessageViewController.m: 103";
 		rLen = 15;
-		rLoc = 3815;
+		rLoc = 2445;
 		rType = 0;
 		vrLen = 1186;
 		vrLoc = 3400;
@@ -1136,7 +1200,7 @@
 		fRef = 94A725CD1336D03C00414CF3 /* History.m */;
 		name = "History.m: 49";
 		rLen = 0;
-		rLoc = 1624;
+		rLoc = 1604;
 		rType = 0;
 		vrLen = 996;
 		vrLoc = 1469;
@@ -1145,7 +1209,7 @@
 		isa = PBXTextBookmark;
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 170";
-		rLen = 129;
+		rLen = 99;
 		rLoc = 6086;
 		rType = 0;
 		vrLen = 1577;
@@ -1156,7 +1220,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 365";
 		rLen = 0;
-		rLoc = 14907;
+		rLoc = 13490;
 		rType = 0;
 		vrLen = 1608;
 		vrLoc = 13804;
@@ -1166,7 +1230,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 383";
 		rLen = 0;
-		rLoc = 15425;
+		rLoc = 14008;
 		rType = 0;
 		vrLen = 1533;
 		vrLoc = 13745;
@@ -1176,7 +1240,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 400";
 		rLen = 0;
-		rLoc = 16231;
+		rLoc = 14773;
 		rType = 0;
 		vrLen = 1608;
 		vrLoc = 13804;
@@ -1206,7 +1270,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 400";
 		rLen = 0;
-		rLoc = 16231;
+		rLoc = 14773;
 		rType = 0;
 		vrLen = 1665;
 		vrLoc = 13804;
@@ -1446,7 +1510,7 @@
 		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
 		name = "SendMessageViewController.m: 103";
 		rLen = 15;
-		rLoc = 3815;
+		rLoc = 2445;
 		rType = 0;
 		vrLen = 1186;
 		vrLoc = 3400;
@@ -1533,7 +1597,7 @@
 		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
 		name = "SendMessageViewController.m: 103";
 		rLen = 15;
-		rLoc = 3815;
+		rLoc = 2445;
 		rType = 0;
 		vrLen = 1186;
 		vrLoc = 3400;
@@ -1603,7 +1667,7 @@
 		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
 		name = "SendMessageViewController.m: 103";
 		rLen = 15;
-		rLoc = 3815;
+		rLoc = 2445;
 		rType = 0;
 		vrLen = 1233;
 		vrLoc = 3400;
@@ -1700,7 +1764,7 @@
 		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
 		name = "SendMessageViewController.m: 103";
 		rLen = 15;
-		rLoc = 3815;
+		rLoc = 2445;
 		rType = 0;
 		vrLen = 1186;
 		vrLoc = 3400;
@@ -1710,7 +1774,7 @@
 		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
 		name = "SendMessageViewController.m: 103";
 		rLen = 15;
-		rLoc = 3815;
+		rLoc = 2445;
 		rType = 0;
 		vrLen = 1186;
 		vrLoc = 3400;
@@ -1750,7 +1814,7 @@
 		fRef = 1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */;
 		name = "PandaAttackAppDelegate.h: 43";
 		rLen = 28;
-		rLoc = 1703;
+		rLoc = 1673;
 		rType = 0;
 		vrLen = 1597;
 		vrLoc = 89;
@@ -1770,7 +1834,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 204";
 		rLen = 0;
-		rLoc = 7218;
+		rLoc = 7164;
 		rType = 0;
 		vrLen = 1658;
 		vrLoc = 6891;
@@ -1780,7 +1844,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 204";
 		rLen = 0;
-		rLoc = 7247;
+		rLoc = 7193;
 		rType = 0;
 		vrLen = 1655;
 		vrLoc = 6894;
@@ -1790,7 +1854,7 @@
 		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
 		name = "SendMessageViewController.m: 103";
 		rLen = 15;
-		rLoc = 3815;
+		rLoc = 2445;
 		rType = 0;
 		vrLen = 1186;
 		vrLoc = 3400;
@@ -1800,7 +1864,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 204";
 		rLen = 0;
-		rLoc = 7247;
+		rLoc = 7193;
 		rType = 0;
 		vrLen = 1655;
 		vrLoc = 6894;
@@ -1850,7 +1914,7 @@
 		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
 		name = "SendMessageViewController.m: 103";
 		rLen = 15;
-		rLoc = 3815;
+		rLoc = 2445;
 		rType = 0;
 		vrLen = 1186;
 		vrLoc = 3400;
@@ -1930,7 +1994,7 @@
 		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
 		name = "SendMessageViewController.m: 103";
 		rLen = 15;
-		rLoc = 3815;
+		rLoc = 2445;
 		rType = 0;
 		vrLen = 1233;
 		vrLoc = 3400;
@@ -2455,7 +2519,7 @@
 		isa = PBXTextBookmark;
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		rLen = 4;
-		rLoc = 5308;
+		rLoc = 5110;
 		rType = 0;
 	};
 	94A4882E138079C200DAB3AC /* PBXTextBookmark */ = {
@@ -2463,7 +2527,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 5308;
+		rLoc = 5110;
 		rType = 0;
 		vrLen = 929;
 		vrLoc = 4463;
@@ -2473,7 +2537,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 252";
 		rLen = 0;
-		rLoc = 10991;
+		rLoc = 9600;
 		rType = 0;
 		vrLen = 1278;
 		vrLoc = 9470;
@@ -2613,7 +2677,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 5308;
+		rLoc = 5110;
 		rType = 0;
 		vrLen = 929;
 		vrLoc = 4463;
@@ -2677,9 +2741,9 @@
 	};
 	94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1139, 4264}}";
-			sepNavSelRange = "{9495, 0}";
-			sepNavVisRange = "{8679, 1327}";
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 4758}}";
+			sepNavSelRange = "{1355, 13}";
+			sepNavVisRange = "{394, 809}";
 		};
 	};
 	94A488821380B80800DAB3AC /* PBXTextBookmark */ = {
@@ -2727,7 +2791,7 @@
 		fRef = 94E933631322DAB70046EB0F /* AttackViewController.h */;
 		name = "AttackViewController.h: 46";
 		rLen = 48;
-		rLoc = 1946;
+		rLoc = 1753;
 		rType = 0;
 		vrLen = 1811;
 		vrLoc = 146;
@@ -2737,7 +2801,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 463";
 		rLen = 0;
-		rLoc = 17970;
+		rLoc = 15545;
 		rType = 0;
 		vrLen = 958;
 		vrLoc = 15738;
@@ -2747,7 +2811,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 210";
 		rLen = 0;
-		rLoc = 7227;
+		rLoc = 7173;
 		rType = 0;
 		vrLen = 1574;
 		vrLoc = 349;
@@ -2856,7 +2920,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 5308;
+		rLoc = 5110;
 		rType = 0;
 		vrLen = 805;
 		vrLoc = 4200;
@@ -2976,7 +3040,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 5308;
+		rLoc = 5110;
 		rType = 0;
 		vrLen = 934;
 		vrLoc = 4282;
@@ -3006,7 +3070,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 5308;
+		rLoc = 5110;
 		rType = 0;
 		vrLen = 934;
 		vrLoc = 4282;
@@ -3093,7 +3157,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 5308;
+		rLoc = 5110;
 		rType = 0;
 		vrLen = 790;
 		vrLoc = 4282;
@@ -3173,7 +3237,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 5308;
+		rLoc = 5110;
 		rType = 0;
 		vrLen = 790;
 		vrLoc = 4282;
@@ -3233,7 +3297,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 5308;
+		rLoc = 5110;
 		rType = 0;
 		vrLen = 790;
 		vrLoc = 4282;
@@ -3273,7 +3337,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 210";
 		rLen = 0;
-		rLoc = 7227;
+		rLoc = 7173;
 		rType = 0;
 		vrLen = 1647;
 		vrLoc = 7059;
@@ -3433,7 +3497,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 279";
 		rLen = 0;
-		rLoc = 11803;
+		rLoc = 10412;
 		rType = 0;
 		vrLen = 1303;
 		vrLoc = 9750;
@@ -3453,7 +3517,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 5308;
+		rLoc = 5110;
 		rType = 0;
 		vrLen = 790;
 		vrLoc = 4282;
@@ -3463,7 +3527,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 279";
 		rLen = 0;
-		rLoc = 11803;
+		rLoc = 10412;
 		rType = 0;
 		vrLen = 1303;
 		vrLoc = 9750;
@@ -3483,7 +3547,7 @@
 		fRef = 94E933631322DAB70046EB0F /* AttackViewController.h */;
 		name = "AttackViewController.h: 46";
 		rLen = 0;
-		rLoc = 1966;
+		rLoc = 1773;
 		rType = 0;
 		vrLen = 1864;
 		vrLoc = 87;
@@ -3493,7 +3557,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 435";
 		rLen = 46;
-		rLoc = 17206;
+		rLoc = 14781;
 		rType = 0;
 		vrLen = 1213;
 		vrLoc = 14952;
@@ -3523,7 +3587,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 5308;
+		rLoc = 5110;
 		rType = 0;
 		vrLen = 797;
 		vrLoc = 4203;
@@ -3533,7 +3597,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 286";
 		rLen = 12;
-		rLoc = 12060;
+		rLoc = 10669;
 		rType = 0;
 		vrLen = 1289;
 		vrLoc = 10496;
@@ -3583,7 +3647,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 286";
 		rLen = 12;
-		rLoc = 12060;
+		rLoc = 10669;
 		rType = 0;
 		vrLen = 1289;
 		vrLoc = 10496;
@@ -3623,7 +3687,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 5308;
+		rLoc = 5110;
 		rType = 0;
 		vrLen = 797;
 		vrLoc = 4203;
@@ -3653,7 +3717,7 @@
 		fRef = 94E933631322DAB70046EB0F /* AttackViewController.h */;
 		name = "AttackViewController.h: 46";
 		rLen = 0;
-		rLoc = 1966;
+		rLoc = 1773;
 		rType = 0;
 		vrLen = 1864;
 		vrLoc = 87;
@@ -3663,7 +3727,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 25";
 		rLen = 0;
-		rLoc = 825;
+		rLoc = 812;
 		rType = 0;
 		vrLen = 1334;
 		vrLoc = 0;
@@ -3683,7 +3747,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 5308;
+		rLoc = 5110;
 		rType = 0;
 		vrLen = 856;
 		vrLoc = 4155;
@@ -3703,7 +3767,7 @@
 		fRef = 94E933631322DAB70046EB0F /* AttackViewController.h */;
 		name = "AttackViewController.h: 46";
 		rLen = 0;
-		rLoc = 1966;
+		rLoc = 1773;
 		rType = 0;
 		vrLen = 1864;
 		vrLoc = 87;
@@ -3713,7 +3777,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 25";
 		rLen = 0;
-		rLoc = 825;
+		rLoc = 812;
 		rType = 0;
 		vrLen = 1334;
 		vrLoc = 0;
@@ -3723,7 +3787,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 17269;
+		rLoc = 14844;
 		rType = 0;
 		vrLen = 995;
 		vrLoc = 15473;
@@ -3743,7 +3807,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 5308;
+		rLoc = 5110;
 		rType = 0;
 		vrLen = 744;
 		vrLoc = 4214;
@@ -3763,7 +3827,7 @@
 		fRef = 94E933631322DAB70046EB0F /* AttackViewController.h */;
 		name = "AttackViewController.h: 46";
 		rLen = 0;
-		rLoc = 1966;
+		rLoc = 1773;
 		rType = 0;
 		vrLen = 1802;
 		vrLoc = 149;
@@ -3773,7 +3837,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 17269;
+		rLoc = 14844;
 		rType = 0;
 		vrLen = 1333;
 		vrLoc = 3;
@@ -3783,7 +3847,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 17269;
+		rLoc = 14844;
 		rType = 0;
 		vrLen = 1333;
 		vrLoc = 3;
@@ -3803,7 +3867,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 5308;
+		rLoc = 5110;
 		rType = 0;
 		vrLen = 744;
 		vrLoc = 4214;
@@ -3813,7 +3877,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 17269;
+		rLoc = 14844;
 		rType = 0;
 		vrLen = 1333;
 		vrLoc = 3;
@@ -3850,7 +3914,7 @@
 		fRef = 94E933631322DAB70046EB0F /* AttackViewController.h */;
 		name = "AttackViewController.h: 46";
 		rLen = 0;
-		rLoc = 1966;
+		rLoc = 1773;
 		rType = 0;
 		vrLen = 1864;
 		vrLoc = 87;
@@ -3860,7 +3924,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 17269;
+		rLoc = 14844;
 		rType = 0;
 		vrLen = 1357;
 		vrLoc = 0;
@@ -3920,7 +3984,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 5308;
+		rLoc = 5110;
 		rType = 0;
 		vrLen = 800;
 		vrLoc = 4214;
@@ -3950,7 +4014,7 @@
 		fRef = 94E933631322DAB70046EB0F /* AttackViewController.h */;
 		name = "AttackViewController.h: 46";
 		rLen = 0;
-		rLoc = 1966;
+		rLoc = 1773;
 		rType = 0;
 		vrLen = 1864;
 		vrLoc = 87;
@@ -3960,7 +4024,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 17284;
+		rLoc = 14859;
 		rType = 0;
 		vrLen = 1094;
 		vrLoc = 15236;
@@ -3970,7 +4034,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 17284;
+		rLoc = 14859;
 		rType = 0;
 		vrLen = 987;
 		vrLoc = 15236;
@@ -3980,7 +4044,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 17284;
+		rLoc = 14859;
 		rType = 0;
 		vrLen = 987;
 		vrLoc = 15236;
@@ -4050,7 +4114,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 114";
 		rLen = 4;
-		rLoc = 5308;
+		rLoc = 5110;
 		rType = 0;
 		vrLen = 800;
 		vrLoc = 4214;
@@ -4114,17 +4178,16 @@
 	};
 	94A489D813810F2100DAB3AC /* FBTableViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1100, 548}}";
-			sepNavSelRange = "{403, 0}";
-			sepNavVisRange = "{0, 409}";
+			sepNavIntBoundsRect = "{{0, 0}, {1100, 523}}";
+			sepNavSelRange = "{453, 0}";
+			sepNavVisRange = "{0, 508}";
 		};
 	};
 	94A489D913810F2100DAB3AC /* FBTableViewController.m */ = {
 		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{4474, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{4525, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{4575, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 5276}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1100, 2483}}";
-			sepNavSelRange = "{2870, 0}";
-			sepNavVisRange = "{1632, 1510}";
+			sepNavIntBoundsRect = "{{0, 0}, {1100, 2405}}";
+			sepNavSelRange = "{4720, 0}";
+			sepNavVisRange = "{4275, 1409}";
 		};
 	};
 	94A489E11381108800DAB3AC /* PBXTextBookmark */ = {
@@ -4142,7 +4205,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 115";
 		rLen = 4;
-		rLoc = 5308;
+		rLoc = 5110;
 		rType = 0;
 		vrLen = 848;
 		vrLoc = 4269;
@@ -4162,7 +4225,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 115";
 		rLen = 4;
-		rLoc = 5308;
+		rLoc = 5110;
 		rType = 0;
 		vrLen = 848;
 		vrLoc = 4269;
@@ -4192,7 +4255,7 @@
 		fRef = 94A489D813810F2100DAB3AC /* FBTableViewController.h */;
 		name = "FBTableViewController.h: 19";
 		rLen = 0;
-		rLoc = 403;
+		rLoc = 502;
 		rType = 0;
 		vrLen = 409;
 		vrLoc = 0;
@@ -4232,7 +4295,7 @@
 		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
 		name = "FBTableViewController.m: 91";
 		rLen = 0;
-		rLoc = 2772;
+		rLoc = 2828;
 		rType = 0;
 		vrLen = 1301;
 		vrLoc = 1275;
@@ -4242,7 +4305,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 17284;
+		rLoc = 14859;
 		rType = 0;
 		vrLen = 1070;
 		vrLoc = 15190;
@@ -4252,7 +4315,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 298";
 		rLen = 0;
-		rLoc = 12504;
+		rLoc = 11151;
 		rType = 0;
 		vrLen = 1246;
 		vrLoc = 10333;
@@ -4282,7 +4345,7 @@
 		fRef = 94E933631322DAB70046EB0F /* AttackViewController.h */;
 		name = "AttackViewController.h: 46";
 		rLen = 0;
-		rLoc = 1966;
+		rLoc = 1773;
 		rType = 0;
 		vrLen = 1864;
 		vrLoc = 87;
@@ -4322,7 +4385,7 @@
 		fRef = 94A489D813810F2100DAB3AC /* FBTableViewController.h */;
 		name = "FBTableViewController.h: 19";
 		rLen = 0;
-		rLoc = 403;
+		rLoc = 502;
 		rType = 0;
 		vrLen = 409;
 		vrLoc = 0;
@@ -4342,7 +4405,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 191";
 		rLen = 0;
-		rLoc = 8625;
+		rLoc = 8256;
 		rType = 0;
 		vrLen = 1278;
 		vrLoc = 7615;
@@ -4352,7 +4415,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 229";
 		rLen = 0;
-		rLoc = 9260;
+		rLoc = 8890;
 		rType = 0;
 		vrLen = 1065;
 		vrLoc = 7840;
@@ -4362,7 +4425,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 229";
 		rLen = 0;
-		rLoc = 9260;
+		rLoc = 8890;
 		rType = 0;
 		vrLen = 1065;
 		vrLoc = 7840;
@@ -4372,7 +4435,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 229";
 		rLen = 0;
-		rLoc = 9260;
+		rLoc = 8890;
 		rType = 0;
 		vrLen = 1065;
 		vrLoc = 7840;
@@ -4382,7 +4445,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 229";
 		rLen = 0;
-		rLoc = 9260;
+		rLoc = 8890;
 		rType = 0;
 		vrLen = 1124;
 		vrLoc = 7840;
@@ -4392,7 +4455,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 229";
 		rLen = 0;
-		rLoc = 9260;
+		rLoc = 8890;
 		rType = 0;
 		vrLen = 1065;
 		vrLoc = 7840;
@@ -4402,7 +4465,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 164";
 		rLen = 0;
-		rLoc = 7377;
+		rLoc = 7007;
 		rType = 0;
 		vrLen = 1815;
 		vrLoc = 2899;
@@ -4412,7 +4475,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 164";
 		rLen = 0;
-		rLoc = 7377;
+		rLoc = 7007;
 		rType = 0;
 		vrLen = 1736;
 		vrLoc = 2899;
@@ -4432,7 +4495,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 115";
 		rLen = 4;
-		rLoc = 5308;
+		rLoc = 5110;
 		rType = 0;
 		vrLen = 1264;
 		vrLoc = 2093;
@@ -4442,7 +4505,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 164";
 		rLen = 0;
-		rLoc = 7377;
+		rLoc = 7007;
 		rType = 0;
 		vrLen = 1736;
 		vrLoc = 2899;
@@ -4452,7 +4515,7 @@
 		fRef = 94E933631322DAB70046EB0F /* AttackViewController.h */;
 		name = "AttackViewController.h: 46";
 		rLen = 0;
-		rLoc = 1966;
+		rLoc = 1773;
 		rType = 0;
 		vrLen = 1864;
 		vrLoc = 87;
@@ -4492,7 +4555,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 87";
 		rLen = 0;
-		rLoc = 3990;
+		rLoc = 3792;
 		rType = 0;
 		vrLen = 1625;
 		vrLoc = 3294;
@@ -4502,7 +4565,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 94";
 		rLen = 0;
-		rLoc = 4300;
+		rLoc = 4102;
 		rType = 0;
 		vrLen = 1501;
 		vrLoc = 3294;
@@ -4512,7 +4575,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 94";
 		rLen = 0;
-		rLoc = 4300;
+		rLoc = 4102;
 		rType = 0;
 		vrLen = 1551;
 		vrLoc = 3294;
@@ -4522,7 +4585,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 94";
 		rLen = 0;
-		rLoc = 4300;
+		rLoc = 4102;
 		rType = 0;
 		vrLen = 1501;
 		vrLoc = 3294;
@@ -4542,7 +4605,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 124";
 		rLen = 4;
-		rLoc = 5308;
+		rLoc = 5110;
 		rType = 0;
 		vrLen = 1442;
 		vrLoc = 1915;
@@ -4552,7 +4615,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 94";
 		rLen = 0;
-		rLoc = 4300;
+		rLoc = 4102;
 		rType = 0;
 		vrLen = 1501;
 		vrLoc = 3294;
@@ -4572,7 +4635,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 94";
 		rLen = 0;
-		rLoc = 4300;
+		rLoc = 4102;
 		rType = 0;
 		vrLen = 988;
 		vrLoc = 17030;
@@ -4582,7 +4645,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 94";
 		rLen = 0;
-		rLoc = 4300;
+		rLoc = 4102;
 		rType = 0;
 		vrLen = 952;
 		vrLoc = 17030;
@@ -4592,7 +4655,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 86";
 		rLen = 0;
-		rLoc = 3972;
+		rLoc = 3774;
 		rType = 0;
 		vrLen = 1629;
 		vrLoc = 3099;
@@ -4612,7 +4675,7 @@
 		fRef = 94E933631322DAB70046EB0F /* AttackViewController.h */;
 		name = "AttackViewController.h: 37";
 		rLen = 0;
-		rLoc = 1387;
+		rLoc = 1253;
 		rType = 0;
 		vrLen = 1908;
 		vrLoc = 87;
@@ -4632,7 +4695,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 39";
 		rLen = 325;
-		rLoc = 1226;
+		rLoc = 1213;
 		rType = 0;
 		vrLen = 1499;
 		vrLoc = 149;
@@ -4682,7 +4745,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 134";
 		rLen = 4;
-		rLoc = 5308;
+		rLoc = 5110;
 		rType = 0;
 		vrLen = 1148;
 		vrLoc = 1695;
@@ -4702,7 +4765,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 231";
 		rLen = 0;
-		rLoc = 9124;
+		rLoc = 8755;
 		rType = 0;
 		vrLen = 1038;
 		vrLoc = 8318;
@@ -4712,7 +4775,7 @@
 		fRef = 94A489D813810F2100DAB3AC /* FBTableViewController.h */;
 		name = "FBTableViewController.h: 19";
 		rLen = 0;
-		rLoc = 403;
+		rLoc = 502;
 		rType = 0;
 		vrLen = 409;
 		vrLoc = 0;
@@ -4722,7 +4785,7 @@
 		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
 		name = "FBTableViewController.m: 91";
 		rLen = 0;
-		rLoc = 2772;
+		rLoc = 2828;
 		rType = 0;
 		vrLen = 1264;
 		vrLoc = 1311;
@@ -4782,7 +4845,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 134";
 		rLen = 4;
-		rLoc = 5308;
+		rLoc = 5110;
 		rType = 0;
 		vrLen = 1148;
 		vrLoc = 1695;
@@ -4832,7 +4895,7 @@
 		fRef = 94A489D813810F2100DAB3AC /* FBTableViewController.h */;
 		name = "FBTableViewController.h: 19";
 		rLen = 0;
-		rLoc = 403;
+		rLoc = 502;
 		rType = 0;
 		vrLen = 409;
 		vrLoc = 0;
@@ -4872,7 +4935,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 134";
 		rLen = 4;
-		rLoc = 5308;
+		rLoc = 5110;
 		rType = 0;
 		vrLen = 1148;
 		vrLoc = 1695;
@@ -4961,7 +5024,7 @@
 		fRef = 94A489D813810F2100DAB3AC /* FBTableViewController.h */;
 		name = "FBTableViewController.h: 19";
 		rLen = 0;
-		rLoc = 403;
+		rLoc = 502;
 		rType = 0;
 		vrLen = 409;
 		vrLoc = 0;
@@ -5090,7 +5153,7 @@
 		isa = PBXTextBookmark;
 		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
 		rLen = 0;
-		rLoc = 70;
+		rLoc = 71;
 		rType = 1;
 	};
 	94A48AB61389C66B00DAB3AC /* PBXTextBookmark */ = {
@@ -5098,7 +5161,7 @@
 		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
 		name = "FBTableViewController.m: 72";
 		rLen = 0;
-		rLoc = 1631;
+		rLoc = 1687;
 		rType = 0;
 		vrLen = 1195;
 		vrLoc = 1380;
@@ -5118,7 +5181,7 @@
 		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
 		name = "FBTableViewController.m: 91";
 		rLen = 90;
-		rLoc = 2772;
+		rLoc = 2828;
 		rType = 0;
 		vrLen = 1076;
 		vrLoc = 1253;
@@ -5178,7 +5241,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 231";
 		rLen = 0;
-		rLoc = 9124;
+		rLoc = 8755;
 		rType = 0;
 		vrLen = 1036;
 		vrLoc = 8318;
@@ -5608,7 +5671,7 @@
 		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
 		name = "FBTableViewController.m: 92";
 		rLen = 19;
-		rLoc = 2840;
+		rLoc = 2896;
 		rType = 0;
 		vrLen = 1076;
 		vrLoc = 1253;
@@ -5618,7 +5681,7 @@
 		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
 		name = "FBTableViewController.m: 93";
 		rLen = 0;
-		rLoc = 2881;
+		rLoc = 2937;
 		rType = 0;
 		vrLen = 1098;
 		vrLoc = 1258;
@@ -5628,7 +5691,7 @@
 		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
 		name = "FBTableViewController.m: 93";
 		rLen = 0;
-		rLoc = 2881;
+		rLoc = 2937;
 		rType = 0;
 		vrLen = 1252;
 		vrLoc = 1258;
@@ -5758,7 +5821,7 @@
 		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
 		name = "FBTableViewController.m: 93";
 		rLen = 0;
-		rLoc = 2881;
+		rLoc = 2937;
 		rType = 0;
 		vrLen = 1252;
 		vrLoc = 1258;
@@ -5768,7 +5831,7 @@
 		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
 		name = "FBTableViewController.m: 66";
 		rLen = 0;
-		rLoc = 1485;
+		rLoc = 1541;
 		rType = 0;
 		vrLen = 1277;
 		vrLoc = 1260;
@@ -5788,7 +5851,7 @@
 		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
 		name = "FBTableViewController.m: 66";
 		rLen = 0;
-		rLoc = 1485;
+		rLoc = 1541;
 		rType = 0;
 		vrLen = 1364;
 		vrLoc = 1260;
@@ -5798,7 +5861,7 @@
 		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
 		name = "FBTableViewController.m: 76";
 		rLen = 0;
-		rLoc = 1752;
+		rLoc = 1808;
 		rType = 0;
 		vrLen = 1451;
 		vrLoc = 1275;
@@ -5808,7 +5871,7 @@
 		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
 		name = "FBTableViewController.m: 88";
 		rLen = 0;
-		rLoc = 1998;
+		rLoc = 2054;
 		rType = 0;
 		vrLen = 1286;
 		vrLoc = 918;
@@ -5818,7 +5881,7 @@
 		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
 		name = "FBTableViewController.m: 105";
 		rLen = 0;
-		rLoc = 2699;
+		rLoc = 2755;
 		rType = 0;
 		vrLen = 1462;
 		vrLoc = 1897;
@@ -5848,7 +5911,7 @@
 		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
 		name = "FBTableViewController.m: 80";
 		rLen = 0;
-		rLoc = 1961;
+		rLoc = 2017;
 		rType = 0;
 		vrLen = 1471;
 		vrLoc = 1255;
@@ -5858,7 +5921,7 @@
 		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
 		name = "FBTableViewController.m: 80";
 		rLen = 0;
-		rLoc = 1961;
+		rLoc = 2017;
 		rType = 0;
 		vrLen = 1320;
 		vrLoc = 1746;
@@ -5868,7 +5931,7 @@
 		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
 		name = "FBTableViewController.m: 94";
 		rLen = 0;
-		rLoc = 2613;
+		rLoc = 2669;
 		rType = 0;
 		vrLen = 1399;
 		vrLoc = 1746;
@@ -5878,7 +5941,7 @@
 		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
 		name = "FBTableViewController.m: 85";
 		rLen = 0;
-		rLoc = 2117;
+		rLoc = 2173;
 		rType = 0;
 		vrLen = 1309;
 		vrLoc = 1746;
@@ -5888,7 +5951,7 @@
 		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
 		name = "FBTableViewController.m: 73";
 		rLen = 0;
-		rLoc = 1743;
+		rLoc = 1799;
 		rType = 0;
 		vrLen = 1375;
 		vrLoc = 876;
@@ -5912,7 +5975,7 @@
 		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
 		name = "FBTableViewController.m: 59";
 		rLen = 0;
-		rLoc = 1282;
+		rLoc = 1338;
 		rType = 0;
 		vrLen = 1427;
 		vrLoc = 876;
@@ -6002,7 +6065,7 @@
 		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
 		name = "FBTableViewController.m: 10";
 		rLen = 0;
-		rLoc = 210;
+		rLoc = 251;
 		rType = 0;
 		vrLen = 1439;
 		vrLoc = 983;
@@ -6012,23 +6075,609 @@
 		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
 		name = "FBTableViewController.m: 102";
 		rLen = 0;
-		rLoc = 2870;
+		rLoc = 2926;
 		rType = 0;
 		vrLen = 1510;
 		vrLoc = 1632;
 	};
+	94A48BE1138A33E600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48BB4138A2DE100DAB3AC /* FacebookUser.h */;
+		name = "FacebookUser.h: 17";
+		rLen = 0;
+		rLoc = 298;
+		rType = 0;
+		vrLen = 355;
+		vrLoc = 0;
+	};
+	94A48BE2138A33E600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48BB5138A2DE100DAB3AC /* FacebookUser.m */;
+		name = "FacebookUser.m: 14";
+		rLen = 0;
+		rLoc = 215;
+		rType = 0;
+		vrLen = 491;
+		vrLoc = 0;
+	};
+	94A48BE3138A33E600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */;
+		name = "PandaAttackAppDelegate.h: 38";
+		rLen = 0;
+		rLoc = 1375;
+		rType = 0;
+		vrLen = 1650;
+		vrLoc = 152;
+	};
+	94A48BE4138A33E600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
+		name = "PandaAttackAppDelegate.m: 42";
+		rLen = 0;
+		rLoc = 1141;
+		rType = 0;
+		vrLen = 1567;
+		vrLoc = 901;
+	};
+	94A48BE5138A33E600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A488691380AD0900DAB3AC /* FacebookWrapper.h */;
+		name = "FacebookWrapper.h: 25";
+		rLen = 54;
+		rLoc = 543;
+		rType = 0;
+		vrLen = 1332;
+		vrLoc = 0;
+	};
+	94A48BE6138A33E600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 46";
+		rLen = 0;
+		rLoc = 1356;
+		rType = 0;
+		vrLen = 1260;
+		vrLoc = 1150;
+	};
+	94A48BE7138A33E600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D813810F2100DAB3AC /* FBTableViewController.h */;
+		name = "FBTableViewController.h: 20";
+		rLen = 0;
+		rLoc = 453;
+		rType = 0;
+		vrLen = 508;
+		vrLoc = 0;
+	};
+	94A48BE8138A33E600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E93C9B1331CCB80046EB0F /* WeaponScrollerViewController.h */;
+		name = "WeaponScrollerViewController.h: 27";
+		rLen = 53;
+		rLoc = 776;
+		rType = 0;
+		vrLen = 959;
+		vrLoc = 0;
+	};
+	94A48BE9138A33E600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A725CD1336D03C00414CF3 /* History.m */;
+		name = "History.m: 49";
+		rLen = 0;
+		rLoc = 1604;
+		rType = 0;
+		vrLen = 1113;
+		vrLoc = 1396;
+	};
+	94A48BEA138A33E600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A725CC1336D03C00414CF3 /* History.h */;
+		name = "History.h: 36";
+		rLen = 0;
+		rLoc = 902;
+		rType = 0;
+		vrLen = 989;
+		vrLoc = 0;
+	};
+	94A48BEB138A33E600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 161";
+		rLen = 0;
+		rLoc = 4911;
+		rType = 0;
+		vrLen = 1482;
+		vrLoc = 4033;
+	};
+	94A48BEC138A33E600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933631322DAB70046EB0F /* AttackViewController.h */;
+		name = "AttackViewController.h: 37";
+		rLen = 0;
+		rLoc = 1371;
+		rType = 0;
+		vrLen = 1819;
+		vrLoc = 30;
+	};
+	94A48BED138A33E600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 235";
+		rLen = 0;
+		rLoc = 8890;
+		rType = 0;
+		vrLen = 1158;
+		vrLoc = 8821;
+	};
+	94A48BEE138A33E600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 467";
+		rLen = 0;
+		rLoc = 15545;
+		rType = 0;
+		vrLen = 924;
+		vrLoc = 15603;
+	};
+	94A48BF5138A341300DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 304";
+		rLen = 0;
+		rLoc = 11033;
+		rType = 0;
+		vrLen = 1420;
+		vrLoc = 10946;
+	};
+	94A48BF6138A341300DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D813810F2100DAB3AC /* FBTableViewController.h */;
+		name = "FBTableViewController.h: 20";
+		rLen = 0;
+		rLoc = 453;
+		rType = 0;
+		vrLen = 508;
+		vrLoc = 0;
+	};
+	94A48BF7138A341300DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 15";
+		rLen = 0;
+		rLoc = 328;
+		rType = 0;
+		vrLen = 856;
+		vrLoc = 3;
+	};
+	94A48BFB138A350F00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 74";
+		rLen = 0;
+		rLoc = 2330;
+		rType = 0;
+		vrLen = 420;
+		vrLoc = 394;
+	};
+	94A48BFC138A350F00DAB3AC /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Request for member 'contactEmail' in something not a structure or union";
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 168;
+		rType = 1;
+	};
+	94A48BFD138A350F00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 173";
+		rLen = 0;
+		rLoc = 6795;
+		rType = 0;
+		vrLen = 545;
+		vrLoc = 6141;
+	};
+	94A48BFE138A350F00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 46";
+		rLen = 13;
+		rLoc = 1355;
+		rType = 0;
+		vrLen = 886;
+		vrLoc = 394;
+	};
+	94A48C05138A360D00DAB3AC /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'attackerEmail' undeclared (first use in this function)";
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 0;
+		rLoc = 165;
+		rType = 1;
+	};
+	94A48C06138A360D00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 170";
+		rLen = 0;
+		rLoc = 6751;
+		rType = 0;
+		vrLen = 362;
+		vrLoc = 6647;
+	};
+	94A48C07138A360D00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 46";
+		rLen = 13;
+		rLoc = 1355;
+		rType = 0;
+		vrLen = 886;
+		vrLoc = 394;
+	};
+	94A48C0F138A37A600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 166";
+		rLen = 0;
+		rLoc = 6751;
+		rType = 0;
+		vrLen = 402;
+		vrLoc = 6647;
+	};
+	94A48C10138A37A600DAB3AC /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Request for member 'contactEmail' in something not a structure or union";
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 160;
+		rType = 1;
+	};
+	94A48C11138A37A600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 161";
+		rLen = 0;
+		rLoc = 4909;
+		rType = 0;
+		vrLen = 491;
+		vrLoc = 4774;
+	};
+	94A48C12138A37A600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 46";
+		rLen = 13;
+		rLoc = 1355;
+		rType = 0;
+		vrLen = 886;
+		vrLoc = 394;
+	};
+	94A48C17138A37A900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D813810F2100DAB3AC /* FBTableViewController.h */;
+		name = "FBTableViewController.h: 20";
+		rLen = 0;
+		rLoc = 453;
+		rType = 0;
+		vrLen = 508;
+		vrLoc = 0;
+	};
+	94A48C18138A37A900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A725CC1336D03C00414CF3 /* History.h */;
+		name = "History.h: 16";
+		rLen = 11;
+		rLoc = 300;
+		rType = 0;
+		vrLen = 908;
+		vrLoc = 0;
+	};
+	94A48C19138A37A900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A725CD1336D03C00414CF3 /* History.m */;
+		name = "History.m: 152";
+		rLen = 0;
+		rLoc = 4992;
+		rType = 0;
+		vrLen = 1380;
+		vrLoc = 0;
+	};
+	94A48C1A138A37A900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 946210D91369435A0073CBDF /* SettingsViewController.h */;
+		name = "SettingsViewController.h: 19";
+		rLen = 0;
+		rLoc = 399;
+		rType = 0;
+		vrLen = 465;
+		vrLoc = 0;
+	};
+	94A48C1B138A37A900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 946210DA1369435A0073CBDF /* SettingsViewController.m */;
+		name = "SettingsViewController.m: 21";
+		rLen = 0;
+		rLoc = 361;
+		rType = 0;
+		vrLen = 1049;
+		vrLoc = 752;
+	};
+	94A48C1C138A37A900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 940240EA13556F2E0075148F /* RecentAttacksViewController.h */;
+		name = "RecentAttacksViewController.h: 15";
+		rLen = 0;
+		rLoc = 307;
+		rType = 0;
+		vrLen = 525;
+		vrLoc = 0;
+	};
+	94A48C1D138A37A900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 940240EB13556F2E0075148F /* RecentAttacksViewController.m */;
+		name = "RecentAttacksViewController.m: 82";
+		rLen = 8;
+		rLoc = 2045;
+		rType = 0;
+		vrLen = 1482;
+		vrLoc = 1490;
+	};
+	94A48C1E138A37A900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 949EBEDC13627A05002EAEA6 /* RecentAttacksTableViewCell.h */;
+		name = "RecentAttacksTableViewCell.h: 16";
+		rLen = 0;
+		rLoc = 331;
+		rType = 0;
+		vrLen = 754;
+		vrLoc = 0;
+	};
+	94A48C1F138A37A900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 949EBEDD13627A05002EAEA6 /* RecentAttacksTableViewCell.m */;
+		name = "RecentAttacksTableViewCell.m: 94";
+		rLen = 0;
+		rLoc = 3255;
+		rType = 0;
+		vrLen = 985;
+		vrLoc = 2788;
+	};
+	94A48C20138A37A900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94B211201363A57400DA627E /* SingleAttackViewController.h */;
+		name = "SingleAttackViewController.h: 26";
+		rLen = 9;
+		rLoc = 702;
+		rType = 0;
+		vrLen = 739;
+		vrLoc = 0;
+	};
+	94A48C21138A37A900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94B211211363A57400DA627E /* SingleAttackViewController.m */;
+		name = "SingleAttackViewController.m: 35";
+		rLen = 0;
+		rLoc = 1035;
+		rType = 0;
+		vrLen = 1291;
+		vrLoc = 932;
+	};
+	94A48C22138A37A900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E93CAC1331CE0C0046EB0F /* SingleWeaponViewController.h */;
+		name = "SingleWeaponViewController.h: 24";
+		rLen = 0;
+		rLoc = 603;
+		rType = 0;
+		vrLen = 648;
+		vrLoc = 0;
+	};
+	94A48C23138A37A900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E93CAD1331CE0C0046EB0F /* SingleWeaponViewController.m */;
+		name = "SingleWeaponViewController.m: 22";
+		rLen = 0;
+		rLoc = 529;
+		rType = 0;
+		vrLen = 1081;
+		vrLoc = 0;
+	};
+	94A48C24138A37A900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94C41829133325F50032B2DA /* SendMessageViewController.h */;
+		name = "SendMessageViewController.h: 19";
+		rLen = 0;
+		rLoc = 475;
+		rType = 0;
+		vrLen = 859;
+		vrLoc = 0;
+	};
+	94A48C25138A37A900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
+		name = "SendMessageViewController.m: 95";
+		rLen = 0;
+		rLoc = 3623;
+		rType = 0;
+		vrLen = 1443;
+		vrLoc = 2629;
+	};
+	94A48C26138A37A900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */;
+		name = "PandaAttackAppDelegate.h: 46";
+		rLen = 0;
+		rLoc = 1673;
+		rType = 0;
+		vrLen = 1619;
+		vrLoc = 152;
+	};
+	94A48C27138A37A900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
+		name = "PandaAttackAppDelegate.m: 177";
+		rLen = 0;
+		rLoc = 6308;
+		rType = 0;
+		vrLen = 1182;
+		vrLoc = 5920;
+	};
+	94A48C28138A37A900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933631322DAB70046EB0F /* AttackViewController.h */;
+		name = "AttackViewController.h: 43";
+		rLen = 0;
+		rLoc = 1724;
+		rType = 0;
+		vrLen = 1661;
+		vrLoc = 146;
+	};
+	94A48C29138A37A900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 409";
+		rLen = 0;
+		rLoc = 14771;
+		rType = 0;
+		vrLen = 1190;
+		vrLoc = 13676;
+	};
+	94A48C2A138A37A900DAB3AC /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Request for member 'contactEmail' in something not a structure or union";
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 160;
+		rType = 1;
+	};
+	94A48C2B138A37A900DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 158";
+		rLen = 0;
+		rLoc = 4720;
+		rType = 0;
+		vrLen = 1409;
+		vrLoc = 4118;
+	};
+	94A48C31138A37CF00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 161";
+		rLen = 0;
+		rLoc = 4909;
+		rType = 0;
+		vrLen = 489;
+		vrLoc = 4774;
+	};
+	94A48C32138A37CF00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 46";
+		rLen = 13;
+		rLoc = 1355;
+		rType = 0;
+		vrLen = 809;
+		vrLoc = 394;
+	};
+	94A48C33138A37D000DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 158";
+		rLen = 0;
+		rLoc = 4720;
+		rType = 0;
+		vrLen = 1409;
+		vrLoc = 4118;
+	};
+	94A48C3C138A383400DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 158";
+		rLen = 0;
+		rLoc = 4720;
+		rType = 0;
+		vrLen = 1409;
+		vrLoc = 4275;
+	};
+	94A48C3D138A383400DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
+		name = "SendMessageViewController.m: 95";
+		rLen = 0;
+		rLoc = 3623;
+		rType = 0;
+		vrLen = 1443;
+		vrLoc = 2629;
+	};
+	94A48C3E138A383400DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */;
+		name = "PandaAttackAppDelegate.h: 46";
+		rLen = 0;
+		rLoc = 1673;
+		rType = 0;
+		vrLen = 1619;
+		vrLoc = 152;
+	};
+	94A48C3F138A383400DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
+		name = "PandaAttackAppDelegate.m: 175";
+		rLen = 0;
+		rLoc = 6157;
+		rType = 0;
+		vrLen = 1148;
+		vrLoc = 5924;
+	};
+	94A48C41138A38A500DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
+		name = "PandaAttackAppDelegate.m: 175";
+		rLen = 0;
+		rLoc = 6157;
+		rType = 0;
+		vrLen = 1226;
+		vrLoc = 5924;
+	};
+	94A48C42138A38A500DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 409";
+		rLen = 0;
+		rLoc = 14771;
+		rType = 0;
+		vrLen = 1265;
+		vrLoc = 13601;
+	};
+	94A48C43138A38A500DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 400";
+		rLen = 0;
+		rLoc = 14305;
+		rType = 0;
+		vrLen = 1263;
+		vrLoc = 13601;
+	};
 	94A725CC1336D03C00414CF3 /* History.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1100, 550}}";
-			sepNavSelRange = "{983, 0}";
-			sepNavVisRange = "{0, 989}";
+			sepNavIntBoundsRect = "{{0, 0}, {1100, 523}}";
+			sepNavSelRange = "{300, 11}";
+			sepNavVisRange = "{0, 908}";
 		};
 	};
 	94A725CD1336D03C00414CF3 /* History.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1100, 2145}}";
-			sepNavSelRange = "{1624, 0}";
-			sepNavVisRange = "{1469, 996}";
+			sepNavIntBoundsRect = "{{0, 0}, {1503, 2093}}";
+			sepNavSelRange = "{4992, 0}";
+			sepNavVisRange = "{0, 1380}";
 			sepNavWindowFrame = "{{107, 231}, {750, 558}}";
 		};
 	};
@@ -6075,7 +6724,7 @@
 	};
 	94B211201363A57400DA627E /* SingleAttackViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1100, 550}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1100, 523}}";
 			sepNavSelRange = "{702, 9}";
 			sepNavVisRange = "{0, 739}";
 		};
@@ -6084,7 +6733,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1139, 1053}}";
 			sepNavSelRange = "{1035, 0}";
-			sepNavVisRange = "{954, 1268}";
+			sepNavVisRange = "{932, 1291}";
 		};
 	};
 	94B983371345AA0F00090947 /* SigninViewController.h */ = {
@@ -6103,16 +6752,16 @@
 	};
 	94C41829133325F50032B2DA /* SendMessageViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1100, 550}}";
-			sepNavSelRange = "{493, 11}";
-			sepNavVisRange = "{0, 1016}";
+			sepNavIntBoundsRect = "{{0, 0}, {1100, 523}}";
+			sepNavSelRange = "{475, 0}";
+			sepNavVisRange = "{0, 859}";
 		};
 	};
 	94C4182A133325F50032B2DA /* SendMessageViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {2196, 2457}}";
-			sepNavSelRange = "{3815, 15}";
-			sepNavVisRange = "{3400, 1233}";
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 1846}}";
+			sepNavSelRange = "{3623, 0}";
+			sepNavVisRange = "{2629, 1443}";
 			sepNavWindowFrame = "{{15, 315}, {750, 558}}";
 		};
 	};
@@ -6168,17 +6817,17 @@
 	};
 	94E933631322DAB70046EB0F /* AttackViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1100, 650}}";
-			sepNavSelRange = "{1387, 0}";
-			sepNavVisRange = "{87, 1908}";
+			sepNavIntBoundsRect = "{{0, 0}, {1100, 611}}";
+			sepNavSelRange = "{1724, 0}";
+			sepNavVisRange = "{146, 1661}";
 			sepNavWindowFrame = "{{15, 315}, {750, 558}}";
 		};
 	};
 	94E933641322DAB70046EB0F /* AttackViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {2469, 6435}}";
-			sepNavSelRange = "{9124, 0}";
-			sepNavVisRange = "{8318, 1036}";
+			sepNavIntBoundsRect = "{{0, 0}, {1377, 5941}}";
+			sepNavSelRange = "{14305, 0}";
+			sepNavVisRange = "{13601, 1263}";
 			sepNavWindowFrame = "{{15, 315}, {750, 558}}";
 		};
 	};
@@ -6194,8 +6843,8 @@
 	};
 	94E93C9B1331CCB80046EB0F /* WeaponScrollerViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1100, 535}}";
-			sepNavSelRange = "{452, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1100, 548}}";
+			sepNavSelRange = "{776, 53}";
 			sepNavVisRange = "{0, 959}";
 		};
 	};
@@ -6208,16 +6857,16 @@
 	};
 	94E93CAC1331CE0C0046EB0F /* SingleWeaponViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1100, 541}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1100, 523}}";
 			sepNavSelRange = "{603, 0}";
 			sepNavVisRange = "{0, 648}";
 		};
 	};
 	94E93CAD1331CE0C0046EB0F /* SingleWeaponViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1139, 923}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 858}}";
 			sepNavSelRange = "{529, 0}";
-			sepNavVisRange = "{0, 1160}";
+			sepNavVisRange = "{0, 1081}";
 		};
 	};
 	94E93CD01331CF9B0046EB0F /* iphone_contents.plist */ = {

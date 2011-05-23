@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "FacebookWrapper.h"
+#import "History.h"
 
 @interface FBTableViewController : UITableViewController {
 	FacebookWrapper *fbWrapper;
+	History *attackHistory;
 }
 
 @property (nonatomic, retain) FacebookWrapper *fbWrapper;
+@property (nonatomic, retain) History *attackHistory;
 
 -(void) setFbWrapper:(FacebookWrapper*)wrapper;
 

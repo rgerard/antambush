@@ -15,14 +15,13 @@
 #import "ContactListPicker.h"
 #import "FacebookWrapper.h"
 
-@interface AttackViewController : UIViewController<UIAlertViewDelegate,MFMailComposeViewControllerDelegate,MFMessageComposeViewControllerDelegate> {
+@interface AttackViewController : UIViewController<UIAlertViewDelegate,MFMailComposeViewControllerDelegate> {
 	UIButton *startAttackBtn;
 	UIActivityIndicatorView *spinner;
 	History *attackHistory;
 	ASIHTTPRequest *request;
 	RecentAttacksViewController *recentAttacksViewController;
 	RecentAttacksViewController *recentlyAttackedByViewController;
-	ContactListPicker *contactList;
 	FacebookWrapper *fbWrapper;
 }
 
@@ -31,19 +30,17 @@
 @property (nonatomic, retain) ASIHTTPRequest *request;
 @property (nonatomic, retain) RecentAttacksViewController *recentAttacksViewController;
 @property (nonatomic, retain) RecentAttacksViewController *recentlyAttackedByViewController;
-@property (nonatomic, retain) ContactListPicker *contactList;
 @property (nonatomic, retain) FacebookWrapper *fbWrapper;
 
 -(id)initWithWrapper:(FacebookWrapper *)wrapper;
 -(void)personBtnClick:(UIView*)clickedButton;
 -(void)startBtnClick:(UIView*)clickedButton;
 -(void)changeToWeaponView;
--(void)personPickedCallback;
 -(void)attackPickedFromAttackedByTableCallback:(NSIndexPath *)attackRow;
 -(void)attackPickedFromAttackedTableCallback:(NSIndexPath *)attackRow;
 -(History *) findAttackDataToUse:(int)row loadAttacksFromMe:(BOOL)loadAttacksFromMe;
 -(void)createAttackViewController:(History *)item;
--(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer emailAttack:(BOOL)emailAttack attackID:(NSString*)attackID;
+-(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer attackID:(NSString*)attackID;
 -(void) setFbWrapper:(FacebookWrapper*)wrapper;
 
 @end

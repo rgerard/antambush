@@ -15,7 +15,7 @@ static sqlite3_stmt *delete_statement = nil;
 
 @implementation History
 
-@synthesize primaryKey, serverID, contactEmail, contactPhone, contactName, attack, message, timeCreated;
+@synthesize primaryKey, serverID, contactFbID, contactName, attack, message, timeCreated;
 
 -(id)initWithPrimaryKey:(NSInteger)pk database:(sqlite3*)db {
 	
@@ -36,15 +36,15 @@ static sqlite3_stmt *delete_statement = nil;
 			self.serverID = sqlite3_column_int(init_statement, 0);
 			
 			// Protect against crashes from possible null pointers returned from sqlite
-			char* tmpContactEmail = (char*)sqlite3_column_text(init_statement, 1);
+			char* tmpContactFbID = (char*)sqlite3_column_text(init_statement, 1);
 			char* tmpContactName = (char*)sqlite3_column_text(init_statement, 2);
 			char* tmpAttack = (char*)sqlite3_column_text(init_statement, 3);
 			char* tmpMessage = (char*)sqlite3_column_text(init_statement, 4);
 			
-			if(tmpContactEmail != NULL) {
-				self.contactEmail = [NSString stringWithUTF8String:tmpContactEmail];
+			if(tmpContactFbID != NULL) {
+				self.contactFbID = [NSString stringWithUTF8String:tmpContactFbID];
 			} else {
-				self.contactEmail = @"";
+				self.contactFbID = @"";
 			}
 			
 			if(tmpContactName != NULL) {
@@ -68,8 +68,7 @@ static sqlite3_stmt *delete_statement = nil;
 			self.timeCreated = [NSDate dateWithTimeIntervalSince1970:(int)sqlite3_column_text(init_statement, 5)];
 		} else {
 			self.serverID = 0;
-			self.contactEmail = @"";
-			self.contactPhone = @"";
+			self.contactFbID = @"";
 			self.contactName = @"Unknown";
 			self.attack = @"Unknown";
 			self.message = @"";
@@ -112,7 +111,7 @@ static sqlite3_stmt *delete_statement = nil;
 	
 	// Bind the params
 	sqlite3_bind_int(insertAttack, 1, serverID);
-	sqlite3_bind_text(insertAttack, 2, [contactEmail UTF8String], -1, SQLITE_TRANSIENT);
+	sqlite3_bind_text(insertAttack, 2, [contactFbID UTF8String], -1, SQLITE_TRANSIENT);
 	sqlite3_bind_text(insertAttack, 3, [contactName UTF8String], -1, SQLITE_TRANSIENT);
 	sqlite3_bind_text(insertAttack, 4, [attack UTF8String], -1, SQLITE_TRANSIENT);
 	sqlite3_bind_text(insertAttack, 5, [message UTF8String], -1, SQLITE_TRANSIENT);
@@ -150,8 +149,7 @@ static sqlite3_stmt *delete_statement = nil;
 }
 
 - (void)dealloc {
-	[contactEmail release];
-	[contactPhone release];
+	[contactFbID release];
 	[contactName release];
 	[attack release];
 	[message release];

@@ -13,8 +13,7 @@
 	sqlite3 *database;
 	NSInteger primaryKey;
 	NSInteger serverID;
-	NSString *contactEmail;
-	NSString *contactPhone;
+	NSString *contactFbID;
 	NSString *contactName;
 	NSString *attack;
 	NSString *message;
@@ -23,8 +22,7 @@
 
 @property (assign, nonatomic, readonly) NSInteger primaryKey;
 @property (assign, nonatomic) NSInteger serverID;
-@property (nonatomic, retain) NSString *contactEmail;
-@property (nonatomic, retain) NSString *contactPhone;
+@property (nonatomic, retain) NSString *contactFbID;
 @property (nonatomic, retain) NSString *contactName;
 @property (nonatomic, retain) NSString *attack;
 @property (nonatomic, retain) NSString *message;

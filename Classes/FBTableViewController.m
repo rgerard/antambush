@@ -8,10 +8,11 @@
 
 #import "FBTableViewController.h"
 #import "FacebookUser.h"
+#import "WeaponScrollerViewController.h"
 
 @implementation FBTableViewController
 
-@synthesize fbWrapper;
+@synthesize fbWrapper, attackHistory;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -149,14 +150,22 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-    // ...
-    // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
-    */
+	// Get data on the user picked
+	NSString* key = [self.fbWrapper.friendDataSortedKeys objectAtIndex:indexPath.section];
+	NSMutableArray* nameArr = [self.fbWrapper.friendData objectForKey:key];
+	FacebookUser* user = [nameArr objectAtIndex:indexPath.row];
+	
+	// Set data on the History object
+	attackHistory.contactName = user.fbName;
+	attackHistory.contactFbID = user.fbID;
+	NSLog(@"Person picked is %@, with ID %@", attackHistory.contactName, attackHistory.contactFbID);
+	
+	// Load up the weapon view controller
+	WeaponScrollerViewController *weaponViewController = [[WeaponScrollerViewController alloc] init];
+	weaponViewController.title = @"Weapon";
+	weaponViewController.attackHistory = attackHistory;
+	[self.navigationController pushViewController:weaponViewController animated:YES];
+	[weaponViewController release];	
 }
 
 

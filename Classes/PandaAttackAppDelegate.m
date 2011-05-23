@@ -172,9 +172,9 @@ static NSString *NameKey = @"nameKey";
 	}
 }
 
--(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer emailAttack:(BOOL)emailAttack attackID:(NSString*)attackID {
+-(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer attackID:(NSString*)attackID {
 	NSLog(@"Adding attack from AppDelegate!");
-	[self.attackViewController addAttack:historyItem sendToServer:sendToServer emailAttack:emailAttack attackID:attackID];
+	[self.attackViewController addAttack:historyItem sendToServer:sendToServer attackID:attackID];
 }
 
 // Given an image name, find the attack item in the local plist of attacks

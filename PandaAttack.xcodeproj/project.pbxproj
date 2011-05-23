@@ -266,12 +266,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				94A488691380AD0900DAB3AC /* FacebookWrapper.h */,
-				94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */,
-				94A48BB4138A2DE100DAB3AC /* FacebookUser.h */,
-				94A48BB5138A2DE100DAB3AC /* FacebookUser.m */,
-				94A489D813810F2100DAB3AC /* FBTableViewController.h */,
-				94A489D913810F2100DAB3AC /* FBTableViewController.m */,
+				94A48BD8138A30F200DAB3AC /* Facebook */,
 				1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */,
 				1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* PandaAttackViewController.h */,
@@ -484,10 +479,23 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
+		94A48BD8138A30F200DAB3AC /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				94A488691380AD0900DAB3AC /* FacebookWrapper.h */,
+				94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */,
+				94A48BB4138A2DE100DAB3AC /* FacebookUser.h */,
+				94A48BB5138A2DE100DAB3AC /* FacebookUser.m */,
+			);
+			name = Facebook;
+			sourceTree = "<group>";
+		};
 		94E933A61322DDEA0046EB0F /* Attacks */ = {
 			isa = PBXGroup;
 			children = (
 				9402402813556A640075148F /* AttackViewController */,
+				94A489D813810F2100DAB3AC /* FBTableViewController.h */,
+				94A489D913810F2100DAB3AC /* FBTableViewController.m */,
 				94E93C9B1331CCB80046EB0F /* WeaponScrollerViewController.h */,
 				94E93C9C1331CCB80046EB0F /* WeaponScrollerViewController.m */,
 				94E93CAC1331CE0C0046EB0F /* SingleWeaponViewController.h */,

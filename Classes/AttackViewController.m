@@ -7,7 +7,6 @@
 //
 
 #import "AttackViewController.h"
-#import "WeaponScrollerViewController.h"
 #import "PandaAttackAppDelegate.h"
 #import "History.h"
 #import "CJSONDeserializer.h"
@@ -15,6 +14,7 @@
 #import "SingleAttackViewController.h"
 #import "SettingsViewController.h"
 #import "FBTableViewController.h"
+#import "WeaponScrollerViewController.h"
 
 static NSString *ImageKey = @"imageKey";
 static NSString *NameKey = @"nameKey";
@@ -23,7 +23,7 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 
 @implementation AttackViewController
 
-@synthesize recentAttacksViewController, recentlyAttackedByViewController, startAttackBtn, viewHistoryBtn, request, contactList, fbWrapper;
+@synthesize recentAttacksViewController, recentlyAttackedByViewController, startAttackBtn, viewHistoryBtn, request, fbWrapper;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -57,10 +57,6 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 	
 	// Create and track a local History object
 	attackHistory = [[History alloc] init];
-	
-	// Create the contact list picker object
-	self.contactList = [[ContactListPicker alloc] init];
-	[self.contactList setDelegateCallback:@selector(personPickedCallback) delegate:self];
 	
 	// Create a setting button
 	UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(settingsBtnClick:)];          
@@ -144,13 +140,13 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 		
 		NSString *newAttackIdStr = [dictionary objectForKey:@"attack_id"];
 		NSString *attackerName = [dictionary objectForKey:@"attacker_name"];
-		NSString *attackerEmail = [dictionary objectForKey:@"attacker_email"];
+		NSString *attackerFbID = [dictionary objectForKey:@"attacker_email"];
 		NSString *attackImage = [dictionary objectForKey:@"attack_image"];
 		NSString *attackMessage = [dictionary objectForKey:@"message"];
 		
 		NSLog(@"ID is %@", newAttackIdStr);
 		NSLog(@"Name is %@", attackerName);
-		NSLog(@"Email is %@", attackerEmail);
+		NSLog(@"Email is %@", attackerFbID);
 		NSLog(@"Attack image is %@", attackImage);
 		NSLog(@"Message is %@", attackMessage);
 		
@@ -168,19 +164,14 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 			NSDictionary *numberItem = [appDelegate findAttackInPList:attackImage];
 		
 			if(numberItem != nil) {
-				// Determine which name/email to use
-				NSString *nameToUse = attackerName;
-				if([nameToUse isEqualToString:@"Unknown"]) {
-					nameToUse = attackerEmail;
-				}
 				
 				// Set the current user to attack
-				attackHistory.contactEmail = attackerEmail;
+				attackHistory.contactFbID = attackerFbID;
 				
 				// Create a new history object to record this in the DB
 				History *newAttack = [[History alloc] init];
 				newAttack.serverID = [newAttackIdStr intValue];
-				newAttack.contactEmail = attackerEmail;
+				newAttack.contactFbID = attackerFbID;
 				newAttack.contactName = attackerName;
 				newAttack.attack = attackImage;
 				newAttack.message = attackMessage;
@@ -192,7 +183,7 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 				[newAttack release];
 				
 				// Popup dialog now
-				UIImageAlertView *alert = [[UIImageAlertView alloc] initWithTitle:[NSString stringWithFormat:@"Attacked by %@!", nameToUse] message:[NSString stringWithFormat:@"You were attacked with %@, who said '%@'", [numberItem valueForKey:NameKey], attackMessage] delegate:self cancelButtonTitle:@"Wuss out" otherButtonTitles:@"Attack back",nil];
+				UIImageAlertView *alert = [[UIImageAlertView alloc] initWithTitle:[NSString stringWithFormat:@"Attacked by %@!", attackerName] message:[NSString stringWithFormat:@"You were attacked with %@, who said '%@'", [numberItem valueForKey:NameKey], attackMessage] delegate:self cancelButtonTitle:@"Wuss out" otherButtonTitles:@"Attack back",nil];
 				[alert setImage:[UIImage imageNamed:[numberItem valueForKey:ImageKey]] attackNameStr:[numberItem valueForKey:NameKey]];
 				[alert show];
 				[alert release];
@@ -236,33 +227,6 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 	// Stop the spinner
 	[spinner stopAnimating];
 	[spinner removeFromSuperview];
-}
-
-
--(void) personPickedCallback {
-	
-	attackHistory.contactName = contactList.personPickedName;
-	
-	// If emails aren't empty, grab the first email address of the person picked, and then load the weapon view
-	if([contactList.personEmails count] > 0) {
-		// Fill the History object
-		attackHistory.contactEmail = [contactList.personEmails objectAtIndex:0];
-		NSLog(@"Person picked is %@", attackHistory.contactEmail);
-	}
-	
-	if([contactList.personNumbers count] > 0) {
-		attackHistory.contactPhone = [contactList.personNumbers objectAtIndex:0];
-		NSLog(@"Person picked has number %@", attackHistory.contactPhone);
-	} 
-	
-	if([contactList.personEmails count] == 0 && [contactList.personNumbers count] == 0) {
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"User missing data" message:@"This user doesn't have any email addresses or phone numbers.  We can't send the attack." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-		[alert show];
-		[alert release];
-		return;
-	}
-	
-	[self changeToWeaponView];
 }
 
 
@@ -334,19 +298,9 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 -(void)startBtnClick:(UIView*)clickedButton {
 	FBTableViewController *table = [[FBTableViewController alloc] initWithStyle:UITableViewStylePlain];
 	[table setFbWrapper:fbWrapper];
+	table.attackHistory = attackHistory;
 	[self.navigationController pushViewController:table animated:YES];
 	[table release];
-	
-	//[contactList openContactList];
-}
-
-
--(void)changeToWeaponView {
-	WeaponScrollerViewController *weaponViewController = [[WeaponScrollerViewController alloc] init];
-	weaponViewController.title = @"Weapon";
-	weaponViewController.attackHistory = attackHistory;
-	[self.navigationController pushViewController:weaponViewController animated:YES];
-	[weaponViewController release];	
 }
 
 
@@ -379,10 +333,19 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 		[self changeToWeaponView];
 	} else if([title isEqualToString:@"Wuss out"]) {
 		// Clear out the user to attack if the user says to cancel
-		attackHistory.contactEmail = @"";
-		attackHistory.contactPhone = @"";
+		attackHistory.contactFbID = @"";
 	}
 } 
+
+
+-(void)changeToWeaponView {
+	// Load up the weapon view controller
+	WeaponScrollerViewController *weaponViewController = [[WeaponScrollerViewController alloc] init];
+	weaponViewController.title = @"Weapon";
+	weaponViewController.attackHistory = attackHistory;
+	[self.navigationController pushViewController:weaponViewController animated:YES];
+	[weaponViewController release];	
+}
 
 
 -(void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
@@ -408,7 +371,7 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 }
 
 
--(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer emailAttack:(BOOL)emailAttack attackID:(NSString*)attackID {
+-(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer attackID:(NSString*)attackID {
 	NSLog(@"Adding attack from ViewController!");
 	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
 	NSInteger pk = [historyItem insertNewAttack:appDelegate.attacksDatabase];
@@ -429,52 +392,22 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 		
 		NSString *urlToSend = [NSString stringWithFormat:@"%@/user_attacks/%@", rootUrl, attackID];
 		
-		if(emailAttack == YES) {
-			if([MFMailComposeViewController canSendMail]) {
+		if([MFMailComposeViewController canSendMail]) {
 				
-				MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
-				picker.mailComposeDelegate = self;
-				[picker setSubject:@"Attacked!"];
+			MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
+			picker.mailComposeDelegate = self;
+			[picker setSubject:@"Attacked!"];
+			
+			// Set up recipients
+			NSArray *toRecipients = [NSArray arrayWithObject:historyItem.contactFbID];
+			NSString *emailBody = [NSString stringWithFormat:@"You have been attacked with %@!  The message is: %@.  View this attack at: %@", historyItem.attack, historyItem.message, urlToSend];
+			[picker setToRecipients:toRecipients];
+			[picker setMessageBody:emailBody isHTML:NO];
 				
-				// Set up recipients
-				NSArray *toRecipients = [NSArray arrayWithObject:historyItem.contactEmail];
-				NSString *emailBody = [NSString stringWithFormat:@"You have been attacked with %@!  The message is: %@.  View this attack at: %@", historyItem.attack, historyItem.message, urlToSend];
-				[picker setToRecipients:toRecipients];
-				[picker setMessageBody:emailBody isHTML:NO];
-				
-				[self presentModalViewController:picker animated:YES];
-				[picker release];
-			} 
-		} else {
-			// Send an SMS instead
-			MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
-			if([MFMessageComposeViewController canSendText]) {
-				controller.body = [NSString stringWithFormat:@"You just got attacked with %@!  View this attack at: %@", historyItem.attack, urlToSend];
-				controller.recipients = [NSArray arrayWithObjects:historyItem.contactPhone, nil];
-				controller.messageComposeDelegate = self;
-				[self presentModalViewController:controller animated:YES];
-			}
-			[controller release];
-		}
+			[self presentModalViewController:picker animated:YES];
+			[picker release];
+		} 
 	}
-}
-
-
-- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result {
-	switch (result) {
-		case MessageComposeResultCancelled:
-			NSLog(@"Cancelled");
-			break;
-		case MessageComposeResultFailed:
-			NSLog(@"Failed");
-			break;
-		case MessageComposeResultSent:
-			break;
-		default:
-			break;
-	}
-	
-	[self dismissModalViewControllerAnimated:YES];
 }
 
 
@@ -507,7 +440,6 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 
 - (void)dealloc {
 	[fbWrapper release];
-	[contactList release];
 	[recentAttacksViewController release];
 	
 	[request clearDelegatesAndCancel];
