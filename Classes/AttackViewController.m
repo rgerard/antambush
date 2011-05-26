@@ -388,6 +388,7 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 		[appDelegate.dbAttackedBy addObject:historyItem];
 	}
 	
+	/*
 	if(sendToServer == YES) {
 		
 		NSString *urlToSend = [NSString stringWithFormat:@"%@/user_attacks/%@", rootUrl, attackID];
@@ -407,7 +408,7 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 			[self presentModalViewController:picker animated:YES];
 			[picker release];
 		} 
-	}
+	}*/
 }
 
 

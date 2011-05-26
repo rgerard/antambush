@@ -19,7 +19,7 @@
 	SigninViewController *signinViewController;
 	AttackViewController *attackViewController;
 	UINavigationController *attackNavigationController;
-	NSString *userEmail;
+	NSString *userFbID;
 	FacebookWrapper *fbWrapper;
 	
 	sqlite3 *attacksDatabase;
@@ -34,7 +34,7 @@
 @property (nonatomic, retain) IBOutlet UINavigationController *attackNavigationController;
 @property (nonatomic, retain) NSMutableArray *dbAttacks;
 @property (nonatomic, retain) NSMutableArray *dbAttackedBy;
-@property (nonatomic, retain) NSString *userEmail;
+@property (nonatomic, retain) NSString *userFbID;
 @property (nonatomic, retain) FacebookWrapper *fbWrapper;
 @property (nonatomic) sqlite3 *attacksDatabase;
 

@@ -3,15 +3,15 @@
 	1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1100, 663}}";
-			sepNavSelRange = "{1673, 0}";
-			sepNavVisRange = "{152, 1619}";
+			sepNavSelRange = "{487, 0}";
+			sepNavVisRange = "{152, 1617}";
 		};
 	};
 	1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1965, 3406}}";
-			sepNavSelRange = "{6157, 0}";
-			sepNavVisRange = "{5924, 1226}";
+			sepNavIntBoundsRect = "{{0, 0}, {1136, 3575}}";
+			sepNavSelRange = "{2398, 0}";
+			sepNavVisRange = "{2148, 402}";
 			sepNavWindowFrame = "{{84, 252}, {750, 558}}";
 		};
 	};
@@ -30,15 +30,15 @@
 	};
 	28D7ACF70DDB3853001CB0EB /* PandaAttackViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1100, 793}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1100, 780}}";
 			sepNavSelRange = "{443, 0}";
-			sepNavVisRange = "{0, 1128}";
+			sepNavVisRange = "{0, 1057}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = "Ad Hoc";
 		activeExecutable = 94E933441322DA6A0046EB0F /* PandaAttack */;
-		activeSDKPreference = iphonesimulator4.2;
+		activeSDKPreference = iphoneos4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* PandaAttack */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* PandaAttack */,
@@ -723,6 +723,48 @@
 			94A48C41138A38A500DAB3AC /* PBXTextBookmark */ = 94A48C41138A38A500DAB3AC /* PBXTextBookmark */;
 			94A48C42138A38A500DAB3AC /* PBXTextBookmark */ = 94A48C42138A38A500DAB3AC /* PBXTextBookmark */;
 			94A48C43138A38A500DAB3AC /* PBXTextBookmark */ = 94A48C43138A38A500DAB3AC /* PBXTextBookmark */;
+			94A48C44138B8C0000DAB3AC /* PBXTextBookmark */ = 94A48C44138B8C0000DAB3AC /* PBXTextBookmark */;
+			94A48C45138B8C0000DAB3AC /* PBXTextBookmark */ = 94A48C45138B8C0000DAB3AC /* PBXTextBookmark */;
+			94A48C46138B8C0000DAB3AC /* PBXTextBookmark */ = 94A48C46138B8C0000DAB3AC /* PBXTextBookmark */;
+			94A48C48138B8C0000DAB3AC /* PBXTextBookmark */ = 94A48C48138B8C0000DAB3AC /* PBXTextBookmark */;
+			94A48C4A138B8C0000DAB3AC /* PBXTextBookmark */ = 94A48C4A138B8C0000DAB3AC /* PBXTextBookmark */;
+			94A48C4B138B8C1400DAB3AC /* PBXTextBookmark */ = 94A48C4B138B8C1400DAB3AC /* PBXTextBookmark */;
+			94A48C4C138B8C1400DAB3AC /* PBXTextBookmark */ = 94A48C4C138B8C1400DAB3AC /* PBXTextBookmark */;
+			94A48C4D138B8C1400DAB3AC /* PBXTextBookmark */ = 94A48C4D138B8C1400DAB3AC /* PBXTextBookmark */;
+			94A48C50138E2CBD00DAB3AC /* PBXTextBookmark */ = 94A48C50138E2CBD00DAB3AC /* PBXTextBookmark */;
+			94A48C51138E2CBD00DAB3AC /* XCBuildMessageTextBookmark */ = 94A48C51138E2CBD00DAB3AC /* XCBuildMessageTextBookmark */;
+			94A48C52138E2CBD00DAB3AC /* PBXTextBookmark */ = 94A48C52138E2CBD00DAB3AC /* PBXTextBookmark */;
+			94A48C53138E2CBD00DAB3AC /* PBXTextBookmark */ = 94A48C53138E2CBD00DAB3AC /* PBXTextBookmark */;
+			94A48C56138E2D9700DAB3AC /* PBXTextBookmark */ = 94A48C56138E2D9700DAB3AC /* PBXTextBookmark */;
+			94A48C57138E2D9700DAB3AC /* PBXTextBookmark */ = 94A48C57138E2D9700DAB3AC /* PBXTextBookmark */;
+			94A48C58138E2D9700DAB3AC /* PBXTextBookmark */ = 94A48C58138E2D9700DAB3AC /* PBXTextBookmark */;
+			94A48C59138E2D9700DAB3AC /* PBXTextBookmark */ = 94A48C59138E2D9700DAB3AC /* PBXTextBookmark */;
+			94A48C5A138E2D9700DAB3AC /* PBXTextBookmark */ = 94A48C5A138E2D9700DAB3AC /* PBXTextBookmark */;
+			94A48C5B138E2D9700DAB3AC /* PBXTextBookmark */ = 94A48C5B138E2D9700DAB3AC /* PBXTextBookmark */;
+			94A48C5C138E2D9700DAB3AC /* PBXTextBookmark */ = 94A48C5C138E2D9700DAB3AC /* PBXTextBookmark */;
+			94A48C5D138E2D9700DAB3AC /* PBXTextBookmark */ = 94A48C5D138E2D9700DAB3AC /* PBXTextBookmark */;
+			94A48C5E138E2D9700DAB3AC /* PBXTextBookmark */ = 94A48C5E138E2D9700DAB3AC /* PBXTextBookmark */;
+			94A48C61138E2DB600DAB3AC /* PBXTextBookmark */ = 94A48C61138E2DB600DAB3AC /* PBXTextBookmark */;
+			94A48C62138E2DB600DAB3AC /* PBXTextBookmark */ = 94A48C62138E2DB600DAB3AC /* PBXTextBookmark */;
+			94A48C63138E2DB600DAB3AC /* PBXTextBookmark */ = 94A48C63138E2DB600DAB3AC /* PBXTextBookmark */;
+			94A48C68138E2E1000DAB3AC /* PBXTextBookmark */ = 94A48C68138E2E1000DAB3AC /* PBXTextBookmark */;
+			94A48C6C138E2F2800DAB3AC /* PBXTextBookmark */ = 94A48C6C138E2F2800DAB3AC /* PBXTextBookmark */;
+			94A48C70138E2F5500DAB3AC /* PBXTextBookmark */ = 94A48C70138E2F5500DAB3AC /* PBXTextBookmark */;
+			94A48C78138E31D500DAB3AC /* PBXTextBookmark */ = 94A48C78138E31D500DAB3AC /* PBXTextBookmark */;
+			94A48C7B138E325E00DAB3AC /* PBXTextBookmark */ = 94A48C7B138E325E00DAB3AC /* PBXTextBookmark */;
+			94A48C7E138E32A000DAB3AC /* PBXTextBookmark */ = 94A48C7E138E32A000DAB3AC /* PBXTextBookmark */;
+			94A48C7F138E32A000DAB3AC /* PBXTextBookmark */ = 94A48C7F138E32A000DAB3AC /* PBXTextBookmark */;
+			94A48C80138E32A000DAB3AC /* PBXTextBookmark */ = 94A48C80138E32A000DAB3AC /* PBXTextBookmark */;
+			94A48C81138E32A000DAB3AC /* PBXTextBookmark */ = 94A48C81138E32A000DAB3AC /* PBXTextBookmark */;
+			94A48C8A138E348A00DAB3AC /* PBXTextBookmark */ = 94A48C8A138E348A00DAB3AC /* PBXTextBookmark */;
+			94A48C8B138E348A00DAB3AC /* PBXTextBookmark */ = 94A48C8B138E348A00DAB3AC /* PBXTextBookmark */;
+			94A48C8C138E348A00DAB3AC /* PBXTextBookmark */ = 94A48C8C138E348A00DAB3AC /* PBXTextBookmark */;
+			94A48C8E138E34F800DAB3AC /* PBXTextBookmark */ = 94A48C8E138E34F800DAB3AC /* PBXTextBookmark */;
+			94A48C95138E35DE00DAB3AC /* PBXTextBookmark */ = 94A48C95138E35DE00DAB3AC /* PBXTextBookmark */;
+			94A48C96138E35DE00DAB3AC /* PBXTextBookmark */ = 94A48C96138E35DE00DAB3AC /* PBXTextBookmark */;
+			94A48C9D138E365F00DAB3AC /* PBXTextBookmark */ = 94A48C9D138E365F00DAB3AC /* PBXTextBookmark */;
+			94A48C9E138E365F00DAB3AC /* PBXTextBookmark */ = 94A48C9E138E365F00DAB3AC /* PBXTextBookmark */;
+			94A48C9F138E365F00DAB3AC /* PBXTextBookmark */ = 94A48C9F138E365F00DAB3AC /* PBXTextBookmark */;
 			94A728C7133883EF00414CF3 = 94A728C7133883EF00414CF3 /* PBXTextBookmark */;
 			94B210A9136374A600DA627E = 94B210A9136374A600DA627E /* PBXTextBookmark */;
 			94C41851133329770032B2DA = 94C41851133329770032B2DA /* PBXBookmark */;
@@ -900,7 +942,7 @@
 		fRef = 1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */;
 		name = "PandaAttackAppDelegate.h: 43";
 		rLen = 28;
-		rLoc = 1673;
+		rLoc = 1671;
 		rType = 0;
 		vrLen = 1638;
 		vrLoc = 48;
@@ -950,7 +992,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 172";
 		rLen = 0;
-		rLoc = 6325;
+		rLoc = 6302;
 		rType = 0;
 		vrLen = 1386;
 		vrLoc = 7471;
@@ -960,7 +1002,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 62";
 		rLen = 0;
-		rLoc = 2088;
+		rLoc = 2081;
 		rType = 0;
 		vrLen = 1513;
 		vrLoc = 1192;
@@ -1157,7 +1199,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 62";
 		rLen = 0;
-		rLoc = 2088;
+		rLoc = 2081;
 		rType = 0;
 		vrLen = 1576;
 		vrLoc = 1131;
@@ -1173,7 +1215,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		location = libobjc.A.dylib;
-		modificationTime = 327825462.824471;
+		modificationTime = 328086905.817862;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 		symbolName = objc_exception_throw;
@@ -1210,7 +1252,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 170";
 		rLen = 99;
-		rLoc = 6086;
+		rLoc = 6063;
 		rType = 0;
 		vrLen = 1577;
 		vrLoc = 5283;
@@ -1230,7 +1272,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 383";
 		rLen = 0;
-		rLoc = 14008;
+		rLoc = 14012;
 		rType = 0;
 		vrLen = 1533;
 		vrLoc = 13745;
@@ -1240,7 +1282,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 400";
 		rLen = 0;
-		rLoc = 14773;
+		rLoc = 14777;
 		rType = 0;
 		vrLen = 1608;
 		vrLoc = 13804;
@@ -1270,7 +1312,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 400";
 		rLen = 0;
-		rLoc = 14773;
+		rLoc = 14777;
 		rType = 0;
 		vrLen = 1665;
 		vrLoc = 13804;
@@ -1814,7 +1856,7 @@
 		fRef = 1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */;
 		name = "PandaAttackAppDelegate.h: 43";
 		rLen = 28;
-		rLoc = 1673;
+		rLoc = 1671;
 		rType = 0;
 		vrLen = 1597;
 		vrLoc = 89;
@@ -1834,7 +1876,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 204";
 		rLen = 0;
-		rLoc = 7164;
+		rLoc = 7141;
 		rType = 0;
 		vrLen = 1658;
 		vrLoc = 6891;
@@ -1844,7 +1886,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 204";
 		rLen = 0;
-		rLoc = 7193;
+		rLoc = 7170;
 		rType = 0;
 		vrLen = 1655;
 		vrLoc = 6894;
@@ -1864,7 +1906,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 204";
 		rLen = 0;
-		rLoc = 7193;
+		rLoc = 7170;
 		rType = 0;
 		vrLen = 1655;
 		vrLoc = 6894;
@@ -2230,7 +2272,7 @@
 		fRef = 1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */;
 		name = "PandaAttackAppDelegate.h: 37";
 		rLen = 0;
-		rLoc = 1348;
+		rLoc = 1346;
 		rType = 0;
 		vrLen = 1654;
 		vrLoc = 89;
@@ -2260,7 +2302,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 39";
 		rLen = 0;
-		rLoc = 1139;
+		rLoc = 1132;
 		rType = 0;
 		vrLen = 1499;
 		vrLoc = 288;
@@ -2270,7 +2312,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 146";
 		rLen = 0;
-		rLoc = 5198;
+		rLoc = 5175;
 		rType = 0;
 		vrLen = 1596;
 		vrLoc = 4305;
@@ -2280,7 +2322,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 146";
 		rLen = 0;
-		rLoc = 5198;
+		rLoc = 5175;
 		rType = 0;
 		vrLen = 1600;
 		vrLoc = 4305;
@@ -2350,7 +2392,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 146";
 		rLen = 0;
-		rLoc = 5198;
+		rLoc = 5175;
 		rType = 0;
 		vrLen = 1740;
 		vrLoc = 4101;
@@ -2430,7 +2472,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 146";
 		rLen = 0;
-		rLoc = 5198;
+		rLoc = 5175;
 		rType = 0;
 		vrLen = 1785;
 		vrLoc = 4091;
@@ -2557,7 +2599,7 @@
 		fRef = 1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */;
 		name = "PandaAttackAppDelegate.h: 39";
 		rLen = 0;
-		rLoc = 1348;
+		rLoc = 1346;
 		rType = 0;
 		vrLen = 1714;
 		vrLoc = 48;
@@ -2567,7 +2609,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 26";
 		rLen = 0;
-		rLoc = 596;
+		rLoc = 595;
 		rType = 0;
 		vrLen = 1215;
 		vrLoc = 0;
@@ -2607,7 +2649,7 @@
 		fRef = 1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */;
 		name = "PandaAttackAppDelegate.h: 23";
 		rLen = 0;
-		rLoc = 635;
+		rLoc = 634;
 		rType = 0;
 		vrLen = 1583;
 		vrLoc = 48;
@@ -2734,16 +2776,16 @@
 	};
 	94A488691380AD0900DAB3AC /* FacebookWrapper.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1100, 548}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1100, 546}}";
 			sepNavSelRange = "{543, 54}";
 			sepNavVisRange = "{0, 1332}";
 		};
 	};
 	94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1139, 4758}}";
-			sepNavSelRange = "{1355, 13}";
-			sepNavVisRange = "{394, 809}";
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 4407}}";
+			sepNavSelRange = "{1356, 0}";
+			sepNavVisRange = "{3886, 933}";
 		};
 	};
 	94A488821380B80800DAB3AC /* PBXTextBookmark */ = {
@@ -2771,7 +2813,7 @@
 		fRef = 1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */;
 		name = "PandaAttackAppDelegate.h: 38";
 		rLen = 0;
-		rLoc = 1375;
+		rLoc = 1373;
 		rType = 0;
 		vrLen = 1500;
 		vrLoc = 48;
@@ -2801,7 +2843,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 463";
 		rLen = 0;
-		rLoc = 15545;
+		rLoc = 15551;
 		rType = 0;
 		vrLen = 958;
 		vrLoc = 15738;
@@ -2811,7 +2853,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 210";
 		rLen = 0;
-		rLoc = 7173;
+		rLoc = 7150;
 		rType = 0;
 		vrLen = 1574;
 		vrLoc = 349;
@@ -2940,7 +2982,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 95";
 		rLen = 27;
-		rLoc = 2953;
+		rLoc = 2936;
 		rType = 0;
 		vrLen = 1634;
 		vrLoc = 2279;
@@ -3000,7 +3042,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 89";
 		rLen = 0;
-		rLoc = 2900;
+		rLoc = 2883;
 		rType = 0;
 		vrLen = 1634;
 		vrLoc = 2279;
@@ -3080,7 +3122,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 89";
 		rLen = 0;
-		rLoc = 2900;
+		rLoc = 2883;
 		rType = 0;
 		vrLen = 1471;
 		vrLoc = 769;
@@ -3317,7 +3359,7 @@
 		fRef = 1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */;
 		name = "PandaAttackAppDelegate.h: 38";
 		rLen = 0;
-		rLoc = 1375;
+		rLoc = 1373;
 		rType = 0;
 		vrLen = 1570;
 		vrLoc = 32;
@@ -3337,7 +3379,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 210";
 		rLen = 0;
-		rLoc = 7173;
+		rLoc = 7150;
 		rType = 0;
 		vrLen = 1647;
 		vrLoc = 7059;
@@ -3397,7 +3439,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 99";
 		rLen = 0;
-		rLoc = 3133;
+		rLoc = 3110;
 		rType = 0;
 		vrLen = 1671;
 		vrLoc = 2240;
@@ -3477,7 +3519,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 51";
 		rLen = 0;
-		rLoc = 1541;
+		rLoc = 1534;
 		rType = 0;
 		vrLen = 1512;
 		vrLoc = 1010;
@@ -3537,7 +3579,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 51";
 		rLen = 0;
-		rLoc = 1541;
+		rLoc = 1534;
 		rType = 0;
 		vrLen = 1512;
 		vrLoc = 1010;
@@ -3557,7 +3599,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 435";
 		rLen = 46;
-		rLoc = 14781;
+		rLoc = 14787;
 		rType = 0;
 		vrLen = 1213;
 		vrLoc = 14952;
@@ -3657,7 +3699,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 51";
 		rLen = 0;
-		rLoc = 1541;
+		rLoc = 1534;
 		rType = 0;
 		vrLen = 1363;
 		vrLoc = 1010;
@@ -3667,7 +3709,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 51";
 		rLen = 0;
-		rLoc = 1541;
+		rLoc = 1534;
 		rType = 0;
 		vrLen = 1363;
 		vrLoc = 1010;
@@ -3697,7 +3739,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 51";
 		rLen = 0;
-		rLoc = 1541;
+		rLoc = 1534;
 		rType = 0;
 		vrLen = 1363;
 		vrLoc = 1010;
@@ -3707,7 +3749,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 51";
 		rLen = 0;
-		rLoc = 1541;
+		rLoc = 1534;
 		rType = 0;
 		vrLen = 1512;
 		vrLoc = 1010;
@@ -3757,7 +3799,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 50";
 		rLen = 0;
-		rLoc = 1541;
+		rLoc = 1534;
 		rType = 0;
 		vrLen = 1512;
 		vrLoc = 1010;
@@ -3787,7 +3829,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 14844;
+		rLoc = 14850;
 		rType = 0;
 		vrLen = 995;
 		vrLoc = 15473;
@@ -3817,7 +3859,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 50";
 		rLen = 0;
-		rLoc = 1541;
+		rLoc = 1534;
 		rType = 0;
 		vrLen = 1499;
 		vrLoc = 474;
@@ -3837,7 +3879,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 14844;
+		rLoc = 14850;
 		rType = 0;
 		vrLen = 1333;
 		vrLoc = 3;
@@ -3847,7 +3889,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 14844;
+		rLoc = 14850;
 		rType = 0;
 		vrLen = 1333;
 		vrLoc = 3;
@@ -3877,7 +3919,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 14844;
+		rLoc = 14850;
 		rType = 0;
 		vrLen = 1333;
 		vrLoc = 3;
@@ -3894,7 +3936,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 50";
 		rLen = 0;
-		rLoc = 1541;
+		rLoc = 1534;
 		rType = 0;
 		vrLen = 1499;
 		vrLoc = 474;
@@ -3924,7 +3966,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 14844;
+		rLoc = 14850;
 		rType = 0;
 		vrLen = 1357;
 		vrLoc = 0;
@@ -3934,7 +3976,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 50";
 		rLen = 0;
-		rLoc = 1541;
+		rLoc = 1534;
 		rType = 0;
 		vrLen = 1521;
 		vrLoc = 474;
@@ -4024,7 +4066,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 14859;
+		rLoc = 14865;
 		rType = 0;
 		vrLen = 1094;
 		vrLoc = 15236;
@@ -4034,7 +4076,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 14859;
+		rLoc = 14865;
 		rType = 0;
 		vrLen = 987;
 		vrLoc = 15236;
@@ -4044,7 +4086,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 14859;
+		rLoc = 14865;
 		rType = 0;
 		vrLen = 987;
 		vrLoc = 15236;
@@ -4185,9 +4227,9 @@
 	};
 	94A489D913810F2100DAB3AC /* FBTableViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1100, 2405}}";
-			sepNavSelRange = "{4720, 0}";
-			sepNavVisRange = "{4275, 1409}";
+			sepNavIntBoundsRect = "{{0, 0}, {904, 2483}}";
+			sepNavSelRange = "{4909, 0}";
+			sepNavVisRange = "{4774, 491}";
 		};
 	};
 	94A489E11381108800DAB3AC /* PBXTextBookmark */ = {
@@ -4305,7 +4347,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 436";
 		rLen = 0;
-		rLoc = 14859;
+		rLoc = 14865;
 		rType = 0;
 		vrLen = 1070;
 		vrLoc = 15190;
@@ -4355,7 +4397,7 @@
 		fRef = 1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */;
 		name = "PandaAttackAppDelegate.h: 38";
 		rLen = 0;
-		rLoc = 1375;
+		rLoc = 1373;
 		rType = 0;
 		vrLen = 1570;
 		vrLoc = 32;
@@ -4365,7 +4407,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 41";
 		rLen = 0;
-		rLoc = 1102;
+		rLoc = 1095;
 		rType = 0;
 		vrLen = 1472;
 		vrLoc = 901;
@@ -4525,7 +4567,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 54";
 		rLen = 0;
-		rLoc = 1725;
+		rLoc = 1718;
 		rType = 0;
 		vrLen = 1472;
 		vrLoc = 901;
@@ -4625,7 +4667,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 45";
 		rLen = 0;
-		rLoc = 1276;
+		rLoc = 1269;
 		rType = 0;
 		vrLen = 1472;
 		vrLoc = 901;
@@ -4715,7 +4757,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 45";
 		rLen = 0;
-		rLoc = 1331;
+		rLoc = 1324;
 		rType = 0;
 		vrLen = 1493;
 		vrLoc = 901;
@@ -4725,7 +4767,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 49";
 		rLen = 0;
-		rLoc = 1541;
+		rLoc = 1534;
 		rType = 0;
 		vrLen = 1418;
 		vrLoc = 901;
@@ -4755,7 +4797,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 49";
 		rLen = 0;
-		rLoc = 1541;
+		rLoc = 1534;
 		rType = 0;
 		vrLen = 1567;
 		vrLoc = 901;
@@ -4865,7 +4907,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 49";
 		rLen = 0;
-		rLoc = 1541;
+		rLoc = 1534;
 		rType = 0;
 		vrLen = 1567;
 		vrLoc = 901;
@@ -5104,7 +5146,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 42";
 		rLen = 0;
-		rLoc = 1141;
+		rLoc = 1134;
 		rType = 0;
 		vrLen = 1567;
 		vrLoc = 901;
@@ -6105,7 +6147,7 @@
 		fRef = 1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */;
 		name = "PandaAttackAppDelegate.h: 38";
 		rLen = 0;
-		rLoc = 1375;
+		rLoc = 1373;
 		rType = 0;
 		vrLen = 1650;
 		vrLoc = 152;
@@ -6115,7 +6157,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 42";
 		rLen = 0;
-		rLoc = 1141;
+		rLoc = 1134;
 		rType = 0;
 		vrLen = 1567;
 		vrLoc = 901;
@@ -6215,7 +6257,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 467";
 		rLen = 0;
-		rLoc = 15545;
+		rLoc = 15551;
 		rType = 0;
 		vrLen = 924;
 		vrLoc = 15603;
@@ -6502,7 +6544,7 @@
 		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
 		name = "SendMessageViewController.m: 95";
 		rLen = 0;
-		rLoc = 3623;
+		rLoc = 3620;
 		rType = 0;
 		vrLen = 1443;
 		vrLoc = 2629;
@@ -6512,7 +6554,7 @@
 		fRef = 1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */;
 		name = "PandaAttackAppDelegate.h: 46";
 		rLen = 0;
-		rLoc = 1673;
+		rLoc = 1671;
 		rType = 0;
 		vrLen = 1619;
 		vrLoc = 152;
@@ -6522,7 +6564,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 177";
 		rLen = 0;
-		rLoc = 6308;
+		rLoc = 6285;
 		rType = 0;
 		vrLen = 1182;
 		vrLoc = 5920;
@@ -6542,7 +6584,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 409";
 		rLen = 0;
-		rLoc = 14771;
+		rLoc = 14775;
 		rType = 0;
 		vrLen = 1190;
 		vrLoc = 13676;
@@ -6611,7 +6653,7 @@
 		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
 		name = "SendMessageViewController.m: 95";
 		rLen = 0;
-		rLoc = 3623;
+		rLoc = 3620;
 		rType = 0;
 		vrLen = 1443;
 		vrLoc = 2629;
@@ -6621,7 +6663,7 @@
 		fRef = 1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */;
 		name = "PandaAttackAppDelegate.h: 46";
 		rLen = 0;
-		rLoc = 1673;
+		rLoc = 1671;
 		rType = 0;
 		vrLen = 1619;
 		vrLoc = 152;
@@ -6631,7 +6673,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 175";
 		rLen = 0;
-		rLoc = 6157;
+		rLoc = 6134;
 		rType = 0;
 		vrLen = 1148;
 		vrLoc = 5924;
@@ -6641,7 +6683,7 @@
 		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
 		name = "PandaAttackAppDelegate.m: 175";
 		rLen = 0;
-		rLoc = 6157;
+		rLoc = 6134;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 5924;
@@ -6651,7 +6693,7 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 409";
 		rLen = 0;
-		rLoc = 14771;
+		rLoc = 14775;
 		rType = 0;
 		vrLen = 1265;
 		vrLoc = 13601;
@@ -6661,10 +6703,450 @@
 		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
 		name = "AttackViewController.m: 400";
 		rLen = 0;
-		rLoc = 14305;
+		rLoc = 14309;
 		rType = 0;
 		vrLen = 1263;
 		vrLoc = 13601;
+	};
+	94A48C44138B8C0000DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 161";
+		rLen = 0;
+		rLoc = 4909;
+		rType = 0;
+		vrLen = 491;
+		vrLoc = 4774;
+	};
+	94A48C45138B8C0000DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 46";
+		rLen = 13;
+		rLoc = 1355;
+		rType = 0;
+		vrLen = 886;
+		vrLoc = 394;
+	};
+	94A48C46138B8C0000DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48C47138B8C0000DAB3AC /* user_attacks_controller.rb */;
+		name = "user_attacks_controller.rb: 3";
+		rLen = 11;
+		rLoc = 83;
+		rType = 0;
+		vrLen = 771;
+		vrLoc = 0;
+	};
+	94A48C47138B8C0000DAB3AC /* user_attacks_controller.rb */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.script.ruby;
+		name = user_attacks_controller.rb;
+		path = /Users/ryan/Projects/AttackServer/app/controllers/user_attacks_controller.rb;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1100, 2301}}";
+			sepNavSelRange = "{61, 11}";
+			sepNavVisRange = "{0, 1361}";
+		};
+	};
+	94A48C48138B8C0000DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48C49138B8C0000DAB3AC /* AttackViewController.m */;
+		rLen = 11;
+		rLoc = 14050;
+		rType = 0;
+	};
+	94A48C49138B8C0000DAB3AC /* AttackViewController.m */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
+		name = AttackViewController.m;
+		path = /Users/ryan/Projects/PandaAttack/Classes/AttackViewController.m;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1377, 5954}}";
+			sepNavSelRange = "{14023, 0}";
+			sepNavVisRange = "{13811, 1353}";
+		};
+	};
+	94A48C4A138B8C0000DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 393";
+		rLen = 11;
+		rLoc = 14050;
+		rType = 0;
+		vrLen = 700;
+		vrLoc = 13290;
+	};
+	94A48C4B138B8C1400DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94E933641322DAB70046EB0F /* AttackViewController.m */;
+		name = "AttackViewController.m: 400";
+		rLen = 0;
+		rLoc = 14309;
+		rType = 0;
+		vrLen = 1224;
+		vrLoc = 13723;
+	};
+	94A48C4C138B8C1400DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48C47138B8C0000DAB3AC /* user_attacks_controller.rb */;
+		name = "user_attacks_controller.rb: 2";
+		rLen = 11;
+		rLoc = 61;
+		rType = 0;
+		vrLen = 1361;
+		vrLoc = 0;
+	};
+	94A48C4D138B8C1400DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
+		name = "SendMessageViewController.m: 95";
+		rLen = 0;
+		rLoc = 3620;
+		rType = 0;
+		vrLen = 1781;
+		vrLoc = 1888;
+	};
+	94A48C50138E2CBD00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A489D913810F2100DAB3AC /* FBTableViewController.m */;
+		name = "FBTableViewController.m: 161";
+		rLen = 0;
+		rLoc = 4909;
+		rType = 0;
+		vrLen = 491;
+		vrLoc = 4774;
+	};
+	94A48C51138E2CBD00DAB3AC /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Request for member 'userEmail' in something not a structure or union";
+		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 77;
+		rType = 1;
+	};
+	94A48C52138E2CBD00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
+		name = "PandaAttackAppDelegate.m: 78";
+		rLen = 0;
+		rLoc = 2398;
+		rType = 0;
+		vrLen = 402;
+		vrLoc = 2148;
+	};
+	94A48C53138E2CBD00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48C49138B8C0000DAB3AC /* AttackViewController.m */;
+		name = "AttackViewController.m: 393";
+		rLen = 11;
+		rLoc = 14050;
+		rType = 0;
+		vrLen = 700;
+		vrLoc = 13290;
+	};
+	94A48C56138E2D9700DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A488691380AD0900DAB3AC /* FacebookWrapper.h */;
+		name = "FacebookWrapper.h: 25";
+		rLen = 54;
+		rLoc = 543;
+		rType = 0;
+		vrLen = 1332;
+		vrLoc = 0;
+	};
+	94A48C57138E2D9700DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */;
+		name = "FacebookWrapper.m: 46";
+		rLen = 0;
+		rLoc = 1356;
+		rType = 0;
+		vrLen = 933;
+		vrLoc = 3886;
+	};
+	94A48C58138E2D9700DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* PandaAttackViewController.m */;
+		name = "PandaAttackViewController.m: 16";
+		rLen = 0;
+		rLoc = 443;
+		rType = 0;
+		vrLen = 1057;
+		vrLoc = 0;
+	};
+	94A48C59138E2D9700DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94B983381345AA0F00090947 /* SigninViewController.m */;
+		name = "SigninViewController.m: 37";
+		rLen = 0;
+		rLoc = 1064;
+		rType = 0;
+		vrLen = 1020;
+		vrLoc = 2677;
+	};
+	94A48C5A138E2D9700DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */;
+		name = "PandaAttackAppDelegate.h: 19";
+		rLen = 0;
+		rLoc = 487;
+		rType = 0;
+		vrLen = 1617;
+		vrLoc = 152;
+	};
+	94A48C5B138E2D9700DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
+		name = "SendMessageViewController.m: 76";
+		rLen = 0;
+		rLoc = 2722;
+		rType = 0;
+		vrLen = 1844;
+		vrLoc = 2030;
+	};
+	94A48C5C138E2D9700DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
+		name = "PandaAttackAppDelegate.m: 38";
+		rLen = 0;
+		rLoc = 1052;
+		rType = 0;
+		vrLen = 937;
+		vrLoc = 8339;
+	};
+	94A48C5D138E2D9700DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48C49138B8C0000DAB3AC /* AttackViewController.m */;
+		name = "AttackViewController.m: 400";
+		rLen = 0;
+		rLoc = 14309;
+		rType = 0;
+		vrLen = 1224;
+		vrLoc = 13723;
+	};
+	94A48C5E138E2D9700DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48C49138B8C0000DAB3AC /* AttackViewController.m */;
+		name = "AttackViewController.m: 95";
+		rLen = 0;
+		rLoc = 3830;
+		rType = 0;
+		vrLen = 1674;
+		vrLoc = 2920;
+	};
+	94A48C61138E2DB600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48C49138B8C0000DAB3AC /* AttackViewController.m */;
+		name = "AttackViewController.m: 21";
+		rLen = 0;
+		rLoc = 527;
+		rType = 0;
+		vrLen = 1447;
+		vrLoc = 0;
+	};
+	94A48C62138E2DB600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94C41829133325F50032B2DA /* SendMessageViewController.h */;
+		name = "SendMessageViewController.h: 19";
+		rLen = 0;
+		rLoc = 475;
+		rType = 0;
+		vrLen = 859;
+		vrLoc = 0;
+	};
+	94A48C63138E2DB600DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
+		name = "SendMessageViewController.m: 12";
+		rLen = 0;
+		rLoc = 230;
+		rType = 0;
+		vrLen = 1441;
+		vrLoc = 0;
+	};
+	94A48C68138E2E1000DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
+		name = "SendMessageViewController.m: 12";
+		rLen = 0;
+		rLoc = 230;
+		rType = 0;
+		vrLen = 1391;
+		vrLoc = 51;
+	};
+	94A48C6C138E2F2800DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
+		name = "SendMessageViewController.m: 12";
+		rLen = 0;
+		rLoc = 230;
+		rType = 0;
+		vrLen = 1407;
+		vrLoc = 93;
+	};
+	94A48C70138E2F5500DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
+		name = "SendMessageViewController.m: 12";
+		rLen = 0;
+		rLoc = 230;
+		rType = 0;
+		vrLen = 1501;
+		vrLoc = 155;
+	};
+	94A48C78138E31D500DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
+		name = "SendMessageViewController.m: 13";
+		rLen = 21;
+		rLoc = 327;
+		rType = 0;
+		vrLen = 1494;
+		vrLoc = 298;
+	};
+	94A48C7B138E325E00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
+		name = "SendMessageViewController.m: 13";
+		rLen = 21;
+		rLoc = 327;
+		rType = 0;
+		vrLen = 1489;
+		vrLoc = 352;
+	};
+	94A48C7E138E32A000DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
+		name = "PandaAttackAppDelegate.m: 38";
+		rLen = 0;
+		rLoc = 1052;
+		rType = 0;
+		vrLen = 1133;
+		vrLoc = 0;
+	};
+	94A48C7F138E32A000DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48C49138B8C0000DAB3AC /* AttackViewController.m */;
+		name = "AttackViewController.m: 22";
+		rLen = 0;
+		rLoc = 595;
+		rType = 0;
+		vrLen = 1447;
+		vrLoc = 0;
+	};
+	94A48C80138E32A000DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
+		name = "SendMessageViewController.m: 13";
+		rLen = 21;
+		rLoc = 327;
+		rType = 0;
+		vrLen = 1489;
+		vrLoc = 352;
+	};
+	94A48C81138E32A000DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
+		name = "SendMessageViewController.m: 13";
+		rLen = 0;
+		rLoc = 298;
+		rType = 0;
+		vrLen = 1441;
+		vrLoc = 0;
+	};
+	94A48C8A138E348A00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94C4182A133325F50032B2DA /* SendMessageViewController.m */;
+		name = "SendMessageViewController.m: 13";
+		rLen = 0;
+		rLoc = 298;
+		rType = 0;
+		vrLen = 1659;
+		vrLoc = 1791;
+	};
+	94A48C8B138E348A00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
+		name = "PandaAttackAppDelegate.m: 38";
+		rLen = 0;
+		rLoc = 1052;
+		rType = 0;
+		vrLen = 1133;
+		vrLoc = 0;
+	};
+	94A48C8C138E348A00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48C49138B8C0000DAB3AC /* AttackViewController.m */;
+		name = "AttackViewController.m: 411";
+		rLen = 0;
+		rLoc = 14782;
+		rType = 0;
+		vrLen = 1238;
+		vrLoc = 13809;
+	};
+	94A48C8E138E34F800DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48C49138B8C0000DAB3AC /* AttackViewController.m */;
+		name = "AttackViewController.m: 411";
+		rLen = 0;
+		rLoc = 14782;
+		rType = 0;
+		vrLen = 1353;
+		vrLoc = 13809;
+	};
+	94A48C95138E35DE00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
+		name = "PandaAttackAppDelegate.m: 78";
+		rLen = 0;
+		rLoc = 2398;
+		rType = 0;
+		vrLen = 362;
+		vrLoc = 2148;
+	};
+	94A48C96138E35DE00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48C49138B8C0000DAB3AC /* AttackViewController.m */;
+		name = "AttackViewController.m: 394";
+		rLen = 11;
+		rLoc = 14050;
+		rType = 0;
+		vrLen = 555;
+		vrLoc = 13676;
+	};
+	94A48C9D138E365F00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */;
+		name = "PandaAttackAppDelegate.m: 78";
+		rLen = 0;
+		rLoc = 2398;
+		rType = 0;
+		vrLen = 402;
+		vrLoc = 2148;
+	};
+	94A48C9E138E365F00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48C49138B8C0000DAB3AC /* AttackViewController.m */;
+		name = "AttackViewController.m: 394";
+		rLen = 11;
+		rLoc = 14050;
+		rType = 0;
+		vrLen = 630;
+		vrLoc = 13676;
+	};
+	94A48C9F138E365F00DAB3AC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A48C49138B8C0000DAB3AC /* AttackViewController.m */;
+		name = "AttackViewController.m: 394";
+		rLen = 0;
+		rLoc = 14023;
+		rType = 0;
+		vrLen = 1353;
+		vrLoc = 13811;
 	};
 	94A725CC1336D03C00414CF3 /* History.h */ = {
 		uiCtxt = {
@@ -6746,8 +7228,8 @@
 	94B983381345AA0F00090947 /* SigninViewController.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1139, 1690}}";
-			sepNavSelRange = "{1762, 13}";
-			sepNavVisRange = "{1460, 650}";
+			sepNavSelRange = "{1064, 0}";
+			sepNavVisRange = "{2677, 1020}";
 		};
 	};
 	94C41829133325F50032B2DA /* SendMessageViewController.h */ = {
@@ -6759,9 +7241,9 @@
 	};
 	94C4182A133325F50032B2DA /* SendMessageViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1139, 1846}}";
-			sepNavSelRange = "{3623, 0}";
-			sepNavVisRange = "{2629, 1443}";
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 1989}}";
+			sepNavSelRange = "{298, 0}";
+			sepNavVisRange = "{1791, 1659}";
 			sepNavWindowFrame = "{{15, 315}, {750, 558}}";
 		};
 	};
@@ -6825,9 +7307,9 @@
 	};
 	94E933641322DAB70046EB0F /* AttackViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1377, 5941}}";
-			sepNavSelRange = "{14305, 0}";
-			sepNavVisRange = "{13601, 1263}";
+			sepNavIntBoundsRect = "{{0, 0}, {1377, 6006}}";
+			sepNavSelRange = "{14046, 11}";
+			sepNavVisRange = "{13290, 700}";
 			sepNavWindowFrame = "{{15, 315}, {750, 558}}";
 		};
 	};

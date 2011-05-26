@@ -18,7 +18,7 @@ static NSString *NameKey = @"nameKey";
 @synthesize viewController;
 @synthesize attackViewController;
 @synthesize attackNavigationController;
-@synthesize userEmail;
+@synthesize userFbID;
 @synthesize signinViewController;
 @synthesize dbAttacks, dbAttackedBy;
 @synthesize attacksDatabase;
@@ -35,7 +35,7 @@ static NSString *NameKey = @"nameKey";
 	
 	// Check to see if we know who this user is
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-	self.userEmail = [prefs stringForKey:@"userEmail"];
+	self.userFbID = [prefs stringForKey:@"fbID"];
 	
 	// Init the Facebook Wrapper
 	fbWrapper = [[FacebookWrapper alloc] init];
@@ -74,8 +74,8 @@ static NSString *NameKey = @"nameKey";
 	// Remove the opening view controller
 	[viewController.view removeFromSuperview];
 	
-	// Check for a user email or FB ID -- prompt for signin view if not present
-	if([self.userEmail length] == 0 && ![self.fbWrapper isLoggedInToFB]) {
+	// Check for a user FB ID -- prompt for signin view if not present
+	if([self.userFbID length] == 0 && ![self.fbWrapper isLoggedInToFB]) {
 		[window addSubview:signinViewController.view];
 	} else {
 		// Add the tab bar view to the window
@@ -94,7 +94,7 @@ static NSString *NameKey = @"nameKey";
 - (void)switchFromLoginView {
 	// Get the users email address
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-	self.userEmail = [prefs stringForKey:@"userEmail"];
+	self.userFbID = [prefs stringForKey:@"fbID"];
 	
 	// Remove the signin view controller
 	[signinViewController.view removeFromSuperview];
