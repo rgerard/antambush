@@ -75,7 +75,7 @@ static NSString *NameKey = @"nameKey";
 	[viewController.view removeFromSuperview];
 	
 	// Check for a user FB ID -- prompt for signin view if not present
-	if([self.userFbID length] == 0 && ![self.fbWrapper isLoggedInToFB]) {
+	if(![self.fbWrapper isLoggedInToFB]) {
 		[window addSubview:signinViewController.view];
 	} else {
 		// Add the tab bar view to the window
@@ -236,6 +236,10 @@ static NSString *NameKey = @"nameKey";
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
+	
+	// See if the server has any new attacks
+	NSLog(@"applicationDidBecomeActive: Ask server for attacks");
+	[self.attackViewController serverRequestForAttacks];
 }
 
 

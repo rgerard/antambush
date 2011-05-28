@@ -62,7 +62,7 @@ static NSString* kAppId = @"206499529382979";
 	[self setDelegateCallback:appSelector delegate:requestDelegate];
 	
 	// Ask for permission to send the person email as well
-	NSArray* permissions =  [[NSArray arrayWithObjects:@"email", nil] retain];
+	NSArray* permissions =  [[NSArray arrayWithObjects:@"email,publish_stream", nil] retain];
 	[facebook authorize:permissions delegate:self];		
 }
 
@@ -273,6 +273,28 @@ static NSString* kAppId = @"206499529382979";
 }
 
 
+-(void) facebookPublishNote:(NSString *)victim message:(NSString *)message url:(NSString *)url attack:(NSString *)attack {
+	NSMutableDictionary* attachment = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+								victim, @"to",
+								@"Attacked!", @"name",
+								[NSString stringWithFormat:@"You just got ambushed by %@", attack], @"caption",
+								@"You know what it is", @"description",
+								message,  @"message",
+								url, @"link", nil];
+	
+	[facebook dialog:@"feed" andParams:attachment andDelegate:self];
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// FBDialogDelegate
+
+/**
+ * Called when a UIServer Dialog successfully return.
+ */
+- (void)dialogDidComplete:(FBDialog *)dialog {
+	NSLog(@"Publish success");
+}
+
 // Organize the friend list into a dictionary that maps a letter to an array of FB User object.  For instance, 'A' -> NSArray of FB Users
 -(void) sortFriends {
 	NSLog(@"Sorting friends");
@@ -303,7 +325,7 @@ static NSString* kAppId = @"206499529382979";
 	}
 	
 	// Clear out the old friend list
-	[friends removeAllObjects];
+	[self.friends removeAllObjects];
 	
 	NSSortDescriptor *sortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"fbName" ascending:YES] autorelease];
 	NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
@@ -317,12 +339,14 @@ static NSString* kAppId = @"206499529382979";
 		NSMutableArray* nameArr = [self.friendData objectForKey:key];
 		
 		// Sort the array
-		NSArray *sortedNames = [nameArr sortedArrayUsingDescriptors:sortDescriptors];
+		nameArr = [nameArr sortedArrayUsingDescriptors:sortDescriptors];
 
 		// Add each name back to the array
-		for(int j=0; j < [sortedNames count]; j++) {
-			[friends addObject:[sortedNames objectAtIndex:j]];
+		for(int j=0; j < [nameArr count]; j++) {
+			[self.friends addObject:[nameArr objectAtIndex:j]];
 		}
+		
+		[self.friendData setObject:nameArr forKey:key];
 	}
 }
 

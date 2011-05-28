@@ -8,6 +8,7 @@
 
 #import "SingleAttackViewController.h"
 #import "PandaAttackAppDelegate.h"
+#import "WeaponScrollerViewController.h"
 
 static NSString *ImageKey = @"imageKey";
 static NSString *NameKey = @"nameKey";
@@ -42,12 +43,31 @@ static NSString *NameKey = @"nameKey";
 	if(numberItem != nil) {
 		self.attackImage.image = [UIImage imageNamed:[numberItem valueForKey:ImageKey]];
 	}
+	
+	// Init the event handlers
+	[attackBackBtn addTarget:self action:@selector(attackBackBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+
+// respond to the Attack button click
+-(void)attackBackBtnClick:(UIView*)clickedButton {
+	
+	// Set data on the History object
+	NSLog(@"Person picked is %@, with ID %@", attackData.contactName, attackData.contactFbID);
+	
+	// Load up the weapon view controller
+	WeaponScrollerViewController *weaponViewController = [[WeaponScrollerViewController alloc] init];
+	weaponViewController.title = @"Weapon";
+	weaponViewController.attackHistory = attackData;
+	[self.navigationController pushViewController:weaponViewController animated:YES];
+	[weaponViewController release];	
 }
 
 
 -(void) addAttackData:(History *)item {
 	self.attackData = [item retain];
 }
+
 
 /*
 // Override to allow orientations other than the default portrait orientation.

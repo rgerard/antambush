@@ -24,5 +24,6 @@
 @property (nonatomic, retain) History *attackData;
 
 -(void) addAttackData:(History *)item;
+-(void) attackBackBtnClick:(UIView*)clickedButton;
 
 @end

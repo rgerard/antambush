@@ -33,7 +33,6 @@
 @property (nonatomic, retain) FacebookWrapper *fbWrapper;
 
 -(id)initWithWrapper:(FacebookWrapper *)wrapper;
--(void)personBtnClick:(UIView*)clickedButton;
 -(void)startBtnClick:(UIView*)clickedButton;
 -(void)changeToWeaponView;
 -(void)attackPickedFromAttackedByTableCallback:(NSIndexPath *)attackRow;
@@ -42,5 +41,6 @@
 -(void)createAttackViewController:(History *)item;
 -(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer attackID:(NSString*)attackID;
 -(void) setFbWrapper:(FacebookWrapper*)wrapper;
+-(void)serverRequestForAttacks;
 
 @end

@@ -90,6 +90,7 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 	// Grab the URL returned in the response string
 	NSString *responseString = [requestCallback responseString];
 	NSLog(@"Response ID: %@", responseString);
+	self.attackHistory.serverID = 0;
 	
 	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
 	[appDelegate addAttack:self.attackHistory sendToServer:YES attackID:responseString];

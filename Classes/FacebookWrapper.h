@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "FBConnect.h"
 
-@interface FacebookWrapper : NSObject<FBSessionDelegate,FBRequestDelegate> {
+@interface FacebookWrapper : NSObject<FBSessionDelegate,FBRequestDelegate,FBDialogDelegate> {
 	Facebook *facebook;
 	bool isLoggedInToFB;
 	NSMutableArray *friends;
@@ -31,6 +31,7 @@
 -(void) facebookLogin:(SEL)appSelector delegate:(id)requestDelegate;
 -(void) facebookLogout:(SEL)appSelector delegate:(id)requestDelegate;
 -(void) facebookAuthorize:(SEL)appSelector delegate:(id)requestDelegate;
+-(void) facebookPublishNote:(NSString *)victim message:(NSString *)message url:(NSString *)url attack:(NSString *)attack;
 -(void) getMeInfo:(SEL)appSelector delegate:(id)requestDelegate;
 -(void) getFriendInfo:(SEL)appSelector delegate:(id)requestDelegate;
 -(void) recordFBUserInfo:(NSDictionary*)info;

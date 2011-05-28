@@ -46,6 +46,11 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 	return self;
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+	
+	NSLog(@"View did appear!");
+}
+
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
@@ -81,7 +86,9 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 	[self.recentAttacksViewController setDelegateCallback:@selector(attackPickedFromAttackedTableCallback:) delegate:self];
 	[self.recentAttacksViewController.view setFrame:recentAttacksViewFrame];
 	[self.view addSubview:self.recentAttacksViewController.view];
-	
+}
+
+-(void)serverRequestForAttacks {
 	// Check to see if we know who this user is
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 	NSString *userEmail = [prefs stringForKey:@"userEmail"];
@@ -110,7 +117,7 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 		self.request = [ASIHTTPRequest requestWithURL:url];
 		[self.request setDelegate:self];
 		[self.request startAsynchronous];
-	}
+	}	
 }
 
 // Callback from the server request asking for new attacks
@@ -140,13 +147,13 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 		
 		NSString *newAttackIdStr = [dictionary objectForKey:@"attack_id"];
 		NSString *attackerName = [dictionary objectForKey:@"attacker_name"];
-		NSString *attackerFbID = [dictionary objectForKey:@"attacker_email"];
+		NSString *attackerFbID = [dictionary objectForKey:@"attacker_fbid"];
 		NSString *attackImage = [dictionary objectForKey:@"attack_image"];
 		NSString *attackMessage = [dictionary objectForKey:@"message"];
 		
 		NSLog(@"ID is %@", newAttackIdStr);
 		NSLog(@"Name is %@", attackerName);
-		NSLog(@"Email is %@", attackerFbID);
+		NSLog(@"FBID is %@", attackerFbID);
 		NSLog(@"Attack image is %@", attackImage);
 		NSLog(@"Message is %@", attackMessage);
 		
@@ -177,7 +184,7 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 				newAttack.message = attackMessage;
 
 				// Add the attack to the DB
-				[self addAttack:newAttack sendToServer:NO emailAttack:YES attackID:newAttackIdStr];
+				[self addAttack:newAttack sendToServer:NO attackID:newAttackIdStr];
 				
 				// Release the history object just created
 				[newAttack release];
@@ -192,10 +199,10 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 	}
 	
 	// Record the new latest attack id
-	//if(newAttackId > lastAttackId) {
-	//	[prefs setObject:[NSString stringWithFormat: @"%d", newAttackId] forKey:@"lastAttackId"];
-	//	[prefs synchronize];
-	//}
+	if(newAttackId > lastAttackId) {
+		[prefs setObject:[NSString stringWithFormat: @"%d", newAttackId] forKey:@"lastAttackId"];
+		[prefs synchronize];
+	}
 	
 	// Start the spinner
 	[self.view addSubview:spinner];
@@ -388,12 +395,29 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 		[appDelegate.dbAttackedBy addObject:historyItem];
 	}
 	
-	/*
+	// Clear out the history item
+	[attackHistory release];
+	attackHistory = [[History alloc] init];
+	
+	// Reload the tables
+	[recentlyAttackedByViewController.tableView reloadData];
+	[recentAttacksViewController.tableView reloadData];
+	
+	
 	if(sendToServer == YES) {
 		
 		NSString *urlToSend = [NSString stringWithFormat:@"%@/user_attacks/%@", rootUrl, attackID];
+		PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
+		NSDictionary *numberItem = [appDelegate findAttackInPList:historyItem.attack];
+		NSString *attackStr = @"something";
 		
-		if([MFMailComposeViewController canSendMail]) {
+		if(numberItem != nil) {
+			attackStr = [numberItem valueForKey:NameKey];
+		}
+		
+		[fbWrapper facebookPublishNote:historyItem.contactFbID message:historyItem.message url:urlToSend attack:attackStr];
+		
+		/*if([MFMailComposeViewController canSendMail]) {
 				
 			MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
 			picker.mailComposeDelegate = self;
@@ -407,8 +431,8 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 				
 			[self presentModalViewController:picker animated:YES];
 			[picker release];
-		} 
-	}*/
+		} */
+	}
 }
 
 

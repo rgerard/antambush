@@ -77,6 +77,7 @@
 
 -(void) facebookFriendsCallback {
 	// Close this view
+	NSLog(@"Got friends, closing this view");
 	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
 	[appDelegate switchFromLoginView];
 }

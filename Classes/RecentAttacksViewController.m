@@ -79,10 +79,10 @@
 	if(appDelegate.dbAttacks != nil) {
 		
 		if(self.loadAttacksFromMe == nil || self.loadAttacksFromMe == NO) {
-			NSLog(@"DB count: %u", appDelegate.dbAttackedBy.count);
+			NSLog(@"DB count attacked by: %u", appDelegate.dbAttackedBy.count);
 			return appDelegate.dbAttackedBy.count;
 		} else {
-			NSLog(@"DB count: %u", appDelegate.dbAttacks.count);
+			NSLog(@"DB count you attacked: %u", appDelegate.dbAttacks.count);
 			return appDelegate.dbAttacks.count;	
 		}
 	} else {

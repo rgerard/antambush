@@ -155,6 +155,7 @@
 		[prefs setObject:@"" forKey:@"fbFirstname"];
 		[prefs setObject:@"" forKey:@"fbUsername"];
 		[prefs setObject:@"" forKey:@"fbLoggedIn"];
+		[prefs setObject:@"" forKey:@"lastAttackId"];
 		[prefs synchronize];
 		
 		// Logout of FB if logged in
