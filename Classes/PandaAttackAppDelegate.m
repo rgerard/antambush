@@ -238,8 +238,10 @@ static NSString *NameKey = @"nameKey";
      */
 	
 	// See if the server has any new attacks
-	NSLog(@"applicationDidBecomeActive: Ask server for attacks");
-	[self.attackViewController serverRequestForAttacks];
+	if([self.fbWrapper isLoggedInToFB]) {
+		NSLog(@"applicationDidBecomeActive: Ask server for attacks");
+		[self.attackViewController serverRequestForAttacks];
+	}
 }
 
 

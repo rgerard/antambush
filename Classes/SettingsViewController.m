@@ -89,7 +89,7 @@
 		if(self.fbWrapper.isLoggedInToFB) {
 			cell.textLabel.text = @"Logout";
 		} else {
-			cell.textLabel.text = @"Logged out";
+			cell.textLabel.text = @"Login";
 		}
 	} else if(indexPath.section == 1) {
 		cell.textLabel.text = @"Clear Data";
@@ -163,7 +163,8 @@
 			NSLog(@"Logging out of Facebook");
 			[self.fbWrapper facebookLogout:@selector(facebookLogoutCallback) delegate:self];
 		} else {
-			[self.tableView reloadData];
+			NSLog(@"Login to Facebook");
+			[self facebookLoginClick];
 		}
 	} else if(indexPath.section == 1) {
 		// Delete all data from the local database
@@ -172,6 +173,36 @@
 	}
 }
 
+
+// respond to the start button click
+-(void)facebookLoginClick {
+	NSLog(@"Asking FB for permission");
+	
+	// Ask for permission to send the person email as well
+	[fbWrapper facebookLogin:@selector(facebookLoginCallback) delegate:self];
+}
+
+// Verify that you're logged in, and then ask for the 'me' info
+-(void) facebookLoginCallback {
+	if([fbWrapper isLoggedInToFB]) {
+		NSLog(@"Asking for me info");
+		[fbWrapper getMeInfo:@selector(facebookMeCallback) delegate:self];
+	}
+}
+
+// Verify that you're logged in, and then ask for the 'friends' info
+-(void) facebookMeCallback {
+	if([fbWrapper isLoggedInToFB]) {
+		NSLog(@"Asking for friends info");
+		[fbWrapper getFriendInfo:@selector(facebookFriendsCallback) delegate:self];
+	}
+}
+
+-(void) facebookFriendsCallback {
+	// Close this view
+	NSLog(@"Got friends, closing this view");
+	[self.tableView reloadData];
+}
 
 -(void) facebookLogoutCallback {
 	NSLog(@"Logged out of Facebook");

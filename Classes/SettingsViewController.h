@@ -18,5 +18,6 @@
 
 -(void) setFbWrapper:(FacebookWrapper*)wrapper;
 -(void) facebookLogoutCallback;
+-(void) facebookLoginClick;
 
 @end
