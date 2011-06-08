@@ -8,6 +8,8 @@
 
 #import "PandaAttackAppDelegate.h"
 #import "History.h"
+#import "UAirship.h"
+#import "UAPush.h"
 
 static NSString *ImageKey = @"imageKey";
 static NSString *NameKey = @"nameKey";
@@ -29,6 +31,22 @@ static NSString *NameKey = @"nameKey";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
+	//Init Airship launch options
+	NSMutableDictionary *takeOffOptions = [[[NSMutableDictionary alloc] init] autorelease];
+	[takeOffOptions setValue:launchOptions forKey:UAirshipTakeOffOptionsLaunchOptionsKey];
+	
+	// Create Airship singleton that's used to talk to Urban Airship servers.
+	// Please replace these with your info from http://go.urbanairship.com
+	[UAirship takeOff:takeOffOptions];
+	
+	[[UAPush shared] enableAutobadge:YES];
+	[[UAPush shared] resetBadge];//zero badge on startup
+	
+	// Register for notifications through UAPush for notification type tracking
+	[[UAPush shared] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+														 UIRemoteNotificationTypeSound |
+														 UIRemoteNotificationTypeAlert)];
+	
 	// Init the DB
 	[self createEditableCopyOfDatabase:@"recentAttacks.db"];
 	[self initializeAttacksDatabase:@"recentAttacks.db"];	
@@ -43,7 +61,7 @@ static NSString *NameKey = @"nameKey";
     // Init the controllers
 	signinViewController = [[SigninViewController alloc] initWithWrapper:fbWrapper];
 	attackViewController = [[AttackViewController alloc] initWithWrapper:fbWrapper];
-	attackViewController.title = @"Panda Attack";
+	attackViewController.title = @"AntAmbush";
 	attackViewController.view.backgroundColor = [[[UIColor alloc] initWithRed:0.1 green:0.2 blue:0.6 alpha:0.5] autorelease];
 	
 	// Setup the controller properties
@@ -101,6 +119,9 @@ static NSString *NameKey = @"nameKey";
 	
 	// Add the tab bar view to the window
 	[window addSubview:attackNavigationController.view];
+	
+	// Ask for the me info
+	[fbWrapper getMeInfo:@selector(facebookMeCallback) delegate:attackViewController];
 	
 	// Subscribe to orientation changes
 	//[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
@@ -237,6 +258,8 @@ static NSString *NameKey = @"nameKey";
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
 	
+	[[UAPush shared] resetBadge];//zero badge
+	
 	// See if the server has any new attacks
 	if([self.fbWrapper isLoggedInToFB]) {
 		NSLog(@"applicationDidBecomeActive: Ask server for attacks");
@@ -250,8 +273,44 @@ static NSString *NameKey = @"nameKey";
      Called when the application is about to terminate.
      See also applicationDidEnterBackground:.
      */
+	[UAirship land];
 }
 
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    NSString* deviceTokenStr = [[[[deviceToken description]
+					stringByReplacingOccurrencesOfString: @"<" withString: @""]
+					stringByReplacingOccurrencesOfString: @">" withString: @""]
+				    stringByReplacingOccurrencesOfString: @" " withString: @""];
+	
+	if(deviceTokenStr != nil) {
+		NSLog(@"Device token: %@", deviceTokenStr);
+		
+		NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+		[prefs setObject:deviceTokenStr forKey:@"deviceToken"];
+		[prefs synchronize];
+	}
+	
+	// Updates the device token and registers the token with UA
+    [[UAPush shared] registerDeviceToken:deviceToken];
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *) error {
+    NSLog(@"Failed To Register For Remote Notifications With Error: %@", error);
+	UALOG(@"Failed To Register For Remote Notifications With Error: %@", error);
+	
+	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+	[prefs setObject:@"-1" forKey:@"deviceToken"];
+	[prefs synchronize];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    NSLog(@"Received remote notification: %@", userInfo);
+    
+    UALOG(@"Received remote notification: %@", userInfo);
+    [[UAPush shared] handleNotification:userInfo applicationState:application.applicationState];
+    [[UAPush shared] resetBadge]; // zero badge after push received
+}
 
 #pragma mark -
 #pragma mark Memory management

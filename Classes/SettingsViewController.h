@@ -12,6 +12,7 @@
 
 @interface SettingsViewController : UITableViewController {
 	FacebookWrapper *fbWrapper;
+	UIActivityIndicatorView *spinner;
 }
 
 @property (nonatomic, retain) FacebookWrapper *fbWrapper;

@@ -9,6 +9,7 @@
 #import "SettingsViewController.h"
 #import "PandaAttackAppDelegate.h"
 #import "History.h"
+#import "UAPushUI.h"
 
 @implementation SettingsViewController
 
@@ -21,6 +22,10 @@
 -(void) viewDidLoad {
     [super viewDidLoad];
 
+	// Init the spinner
+	spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+	[spinner setCenter:CGPointMake(self.view.frame.size.width/2.0, (self.view.frame.size.height-150)/2.0)]; 
+	
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -64,7 +69,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 2;
+    return 3;
 }
 
 
@@ -92,6 +97,8 @@
 			cell.textLabel.text = @"Login";
 		}
 	} else if(indexPath.section == 1) {
+		cell.textLabel.text = @"Modify Push Settings";
+	} else if(indexPath.section == 2) {
 		cell.textLabel.text = @"Clear Data";
 	}
 	
@@ -164,9 +171,17 @@
 			[self.fbWrapper facebookLogout:@selector(facebookLogoutCallback) delegate:self];
 		} else {
 			NSLog(@"Login to Facebook");
+			
+			// Start the spinner
+			[self.view addSubview:spinner];
+			[spinner startAnimating];
+			
 			[self facebookLoginClick];
 		}
 	} else if(indexPath.section == 1) {
+		// Open the UA push settings UI
+		[UAPush openApnsSettings:self animated:YES];
+	} else if(indexPath.section == 2) {
 		// Delete all data from the local database
 		PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
 		[History clearData:appDelegate.attacksDatabase];
@@ -200,7 +215,12 @@
 
 -(void) facebookFriendsCallback {
 	// Close this view
-	NSLog(@"Got friends, closing this view");
+	NSLog(@"Got friends, reloading the table");
+	
+	// Stop the spinner
+	[spinner stopAnimating];
+	[spinner removeFromSuperview];
+	
 	[self.tableView reloadData];
 }
 

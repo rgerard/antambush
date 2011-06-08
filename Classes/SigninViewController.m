@@ -61,23 +61,8 @@
 
 // Verify that you're logged in, and then ask for the 'me' info
 -(void) facebookLoginCallback {
-	if([fbWrapper isLoggedInToFB]) {
-		NSLog(@"Asking for me info");
-		[fbWrapper getMeInfo:@selector(facebookMeCallback) delegate:self];
-	}
-}
-
-// Verify that you're logged in, and then ask for the 'friends' info
--(void) facebookMeCallback {
-	if([fbWrapper isLoggedInToFB]) {
-		NSLog(@"Asking for friends info");
-		[fbWrapper getFriendInfo:@selector(facebookFriendsCallback) delegate:self];
-	}
-}
-
--(void) facebookFriendsCallback {
 	// Close this view
-	NSLog(@"Got friends, closing this view");
+	NSLog(@"Closing the signin view");
 	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
 	[appDelegate switchFromLoginView];
 }

@@ -26,7 +26,5 @@
 -(void) startBtnClick:(UIView*)clickedButton;
 -(void) setFbWrapper:(FacebookWrapper*)wrapper;
 -(void) facebookLoginCallback;
--(void) facebookMeCallback;
--(void) facebookFriendsCallback;
 
 @end

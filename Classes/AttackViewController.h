@@ -32,15 +32,17 @@
 @property (nonatomic, retain) RecentAttacksViewController *recentlyAttackedByViewController;
 @property (nonatomic, retain) FacebookWrapper *fbWrapper;
 
--(id)initWithWrapper:(FacebookWrapper *)wrapper;
--(void)startBtnClick:(UIView*)clickedButton;
--(void)changeToWeaponView;
--(void)attackPickedFromAttackedByTableCallback:(NSIndexPath *)attackRow;
--(void)attackPickedFromAttackedTableCallback:(NSIndexPath *)attackRow;
+-(id) initWithWrapper:(FacebookWrapper *)wrapper;
+-(void) startBtnClick:(UIView*)clickedButton;
+-(void) changeToWeaponView;
+-(void) attackPickedFromAttackedByTableCallback:(NSIndexPath *)attackRow;
+-(void) attackPickedFromAttackedTableCallback:(NSIndexPath *)attackRow;
 -(History *) findAttackDataToUse:(int)row loadAttacksFromMe:(BOOL)loadAttacksFromMe;
--(void)createAttackViewController:(History *)item;
--(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer attackID:(NSString*)attackID;
+-(void) createAttackViewController:(History *)item;
+-(void) addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer attackID:(NSString*)attackID;
 -(void) setFbWrapper:(FacebookWrapper*)wrapper;
--(void)serverRequestForAttacks;
+-(void) serverRequestForAttacks;
+-(void) facebookMeCallback;
+-(void) facebookFriendsCallback;
 
 @end

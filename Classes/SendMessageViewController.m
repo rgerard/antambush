@@ -9,7 +9,7 @@
 #import "SendMessageViewController.h"
 #import "PandaAttackAppDelegate.h"
 
-static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
+static NSString *rootUrl = @"http://www.antambush.com";
 //static NSString *rootUrl = @"http://localhost:3000";
 
 @implementation SendMessageViewController
@@ -68,6 +68,14 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 	
 	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
 	
+	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+	NSString *deviceToken = [prefs stringForKey:@"deviceToken"];
+	
+	// If this is nil or empty string, the backend won't process it
+	if(deviceToken == nil || [deviceToken length] == 0) {
+		deviceToken = @"-2";
+	}
+	
 	// Send the data to the backend
 	//NSURL *url = [NSURL URLWithString:@"http://hollow-river-123.heroku.com/user_attacks/createFromPhone"];
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/user_attacks/createFromPhone", rootUrl]];
@@ -77,6 +85,7 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 	[self.formRequest setPostValue:self.attackHistory.contactName forKey:@"user_attack[victim_name]"];
 	[self.formRequest setPostValue:self.attackHistory.attack forKey:@"user_attack[attack_name]"];
 	[self.formRequest setPostValue:self.attackHistory.message forKey:@"user_attack[message]"];
+	[self.formRequest setPostValue:deviceToken forKey:@"device_token"];
 	[self.formRequest setDelegate:self];
 	[self.formRequest startAsynchronous];
 }

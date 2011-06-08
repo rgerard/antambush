@@ -18,7 +18,7 @@
 
 static NSString *ImageKey = @"imageKey";
 static NSString *NameKey = @"nameKey";
-static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
+static NSString *rootUrl = @"http://www.antambush.com";
 //static NSString *rootUrl = @"http://localhost:3000";
 
 @implementation AttackViewController
@@ -46,15 +46,12 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 	return self;
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-	
-	NSLog(@"View did appear!");
-}
-
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
+	NSLog(@"View did load!");
 	
 	// Init the spinner
 	spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
@@ -93,13 +90,19 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 	NSString *userEmail = [prefs stringForKey:@"userEmail"];
 	NSString *lastAttackId = [prefs stringForKey:@"lastAttackId"];
-	if(lastAttackId == nil) {
+	NSString *deviceToken = [prefs stringForKey:@"deviceToken"];
+	
+	if(lastAttackId == nil || [lastAttackId length] == 0) {
 		lastAttackId = @"-1";
+	}
+	
+	if(deviceToken == nil || [deviceToken length] == 0) {
+		deviceToken = @"-2";
 	}
 	
 	NSString *fbUserID = [prefs stringForKey:@"fbID"];
 	
-	if(fbWrapper != nil && ([fbUserID length] > 0 || [userEmail length] > 0)) {
+	if(fbWrapper != nil && deviceToken != nil && ([fbUserID length] > 0 || [userEmail length] > 0)) {
 		// Start the spinner
 		[self.view addSubview:spinner];
 		[spinner startAnimating];
@@ -108,11 +111,11 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 		NSString *formatUrl;
 		
 		if([fbUserID length] > 0) {
-			formatUrl = [NSString stringWithFormat:@"%@/user_attacks/lookup?fbid=%@&lastid=%@",rootUrl,fbUserID,lastAttackId];
+			formatUrl = [NSString stringWithFormat:@"%@/user_attacks/lookup?fbid=%@&lastid=%@&device_token=%@",rootUrl,fbUserID,lastAttackId,deviceToken];
 		} else {
-			formatUrl = [NSString stringWithFormat:@"%@/user_attacks/lookup?email=%@&lastid=%@",rootUrl,userEmail,lastAttackId];
+			formatUrl = [NSString stringWithFormat:@"%@/user_attacks/lookup?email=%@&lastid=%@&device_token=%@",rootUrl,userEmail,lastAttackId,deviceToken];
 		}
-		
+
 		NSURL *url = [NSURL URLWithString:formatUrl];
 		self.request = [ASIHTTPRequest requestWithURL:url];
 		[self.request setDelegate:self];
@@ -227,6 +230,15 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 	
 	// Ask for permission to send the person email as well
 	[fbWrapper getFriendInfo:@selector(facebookFriendsCallback) delegate:self];
+}
+
+
+// Verify that you're logged in, and then ask for the 'friends' info
+-(void) facebookMeCallback {
+	if([fbWrapper isLoggedInToFB]) {
+		NSLog(@"Asking for friends info");
+		[fbWrapper getFriendInfo:@selector(facebookFriendsCallback) delegate:self];
+	}
 }
 
 
@@ -406,7 +418,10 @@ static NSString *rootUrl = @"http://hollow-river-123.heroku.com";
 	
 	if(sendToServer == YES) {
 		
-		NSString *urlToSend = [NSString stringWithFormat:@"%@/user_attacks/%@", rootUrl, attackID];
+		// Don't send a real URL for now
+		//NSString *urlToSend = [NSString stringWithFormat:@"%@/user_attacks/%@", rootUrl, attackID];
+		NSString *urlToSend = rootUrl;
+		
 		PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
 		NSDictionary *numberItem = [appDelegate findAttackInPList:historyItem.attack];
 		NSString *attackStr = @"something";
