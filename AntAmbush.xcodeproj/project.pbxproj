@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D3623260D0F684500981E51 /* PandaAttackAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */; };
+		1D3623260D0F684500981E51 /* AntAmbushAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AntAmbushAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		2899E5220DE3E06400AC0155 /* PandaAttackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* PandaAttackViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
-		28D7ACF80DDB3853001CB0EB /* PandaAttackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* PandaAttackViewController.m */; };
+		28D7ACF80DDB3853001CB0EB /* AntAmbushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* AntAmbushViewController.m */; };
 		94023D161348EF620075148F /* CFilteringJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 94023D001348EF620075148F /* CFilteringJSONSerializer.m */; };
 		94023D171348EF620075148F /* CJSONDeserializer_BlocksExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 94023D021348EF620075148F /* CJSONDeserializer_BlocksExtensions.m */; };
 		94023D181348EF620075148F /* CJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 94023D041348EF620075148F /* CJSONSerialization.m */; };
@@ -131,15 +131,15 @@
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PandaAttackAppDelegate.h; sourceTree = "<group>"; };
-		1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PandaAttackAppDelegate.m; sourceTree = "<group>"; };
+		1D3623240D0F684500981E51 /* AntAmbushAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AntAmbushAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* AntAmbushAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AntAmbushAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* AntAmbush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AntAmbush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2899E5210DE3E06400AC0155 /* PandaAttackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PandaAttackViewController.xib; sourceTree = "<group>"; };
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		28D7ACF60DDB3853001CB0EB /* PandaAttackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PandaAttackViewController.h; sourceTree = "<group>"; };
-		28D7ACF70DDB3853001CB0EB /* PandaAttackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PandaAttackViewController.m; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* AntAmbushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AntAmbushViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* AntAmbushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AntAmbushViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* AntAmbush_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AntAmbush_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* AntAmbush-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AntAmbush-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
@@ -344,10 +344,10 @@
 			isa = PBXGroup;
 			children = (
 				94A48BD8138A30F200DAB3AC /* Facebook */,
-				1D3623240D0F684500981E51 /* PandaAttackAppDelegate.h */,
-				1D3623250D0F684500981E51 /* PandaAttackAppDelegate.m */,
-				28D7ACF60DDB3853001CB0EB /* PandaAttackViewController.h */,
-				28D7ACF70DDB3853001CB0EB /* PandaAttackViewController.m */,
+				1D3623240D0F684500981E51 /* AntAmbushAppDelegate.h */,
+				1D3623250D0F684500981E51 /* AntAmbushAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* AntAmbushViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* AntAmbushViewController.m */,
 				94B983371345AA0F00090947 /* SigninViewController.h */,
 				94B983381345AA0F00090947 /* SigninViewController.m */,
 				94E933A61322DDEA0046EB0F /* Attacks */,
@@ -837,8 +837,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				1D3623260D0F684500981E51 /* PandaAttackAppDelegate.m in Sources */,
-				28D7ACF80DDB3853001CB0EB /* PandaAttackViewController.m in Sources */,
+				1D3623260D0F684500981E51 /* AntAmbushAppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* AntAmbushViewController.m in Sources */,
 				94E933661322DAB70046EB0F /* AttackViewController.m in Sources */,
 				94E93C9E1331CCB80046EB0F /* WeaponScrollerViewController.m in Sources */,
 				94E93CAF1331CE0C0046EB0F /* SingleWeaponViewController.m in Sources */,

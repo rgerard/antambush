@@ -7,7 +7,7 @@
 //
 
 #import "SigninViewController.h"
-#import "PandaAttackAppDelegate.h"
+#import "AntAmbushAppDelegate.h"
 
 @implementation SigninViewController
 
@@ -63,7 +63,7 @@
 -(void) facebookLoginCallback {
 	// Close this view
 	NSLog(@"Closing the signin view");
-	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
+	AntAmbushAppDelegate *appDelegate = (AntAmbushAppDelegate*)[[UIApplication sharedApplication] delegate];
 	[appDelegate switchFromLoginView];
 }
 
@@ -74,7 +74,7 @@
 	[prefs setObject:inputEmail.text forKey:@"userEmail"];
 	[prefs synchronize];
 	
-	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
+	AntAmbushAppDelegate *appDelegate = (AntAmbushAppDelegate*)[[UIApplication sharedApplication] delegate];
 	[appDelegate switchFromLoginView];
 }
 

@@ -7,7 +7,7 @@
 //
 
 #import "RecentAttacksTableViewCell.h"
-#import "PandaAttackAppDelegate.h"
+#import "AntAmbushAppDelegate.h"
 
 static NSString *ImageKey = @"imageKey";
 static NSString *NameKey = @"nameKey";
@@ -84,7 +84,7 @@ static NSString *NameKey = @"nameKey";
 	Set the data that this cell will show
  */
 -(void)setData:(History *)historyObject {
-	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
+	AntAmbushAppDelegate *appDelegate = (AntAmbushAppDelegate*)[[UIApplication sharedApplication] delegate];
 	NSDictionary *numberItem = [appDelegate findAttackInPList:historyObject.attack];
 	
 	if(numberItem != nil) {

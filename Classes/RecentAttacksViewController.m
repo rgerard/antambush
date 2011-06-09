@@ -7,7 +7,7 @@
 //
 
 #import "RecentAttacksViewController.h"
-#import "PandaAttackAppDelegate.h"
+#import "AntAmbushAppDelegate.h"
 #import "RecentAttacksTableViewCell.h"
 
 @implementation RecentAttacksViewController
@@ -74,7 +74,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
+	AntAmbushAppDelegate *appDelegate = (AntAmbushAppDelegate*)[[UIApplication sharedApplication] delegate];
 	
 	if(appDelegate.dbAttacks != nil) {
 		
@@ -104,7 +104,7 @@
     
     // Configure the cell...
 	NSMutableArray *arrToUse;
-	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
+	AntAmbushAppDelegate *appDelegate = (AntAmbushAppDelegate*)[[UIApplication sharedApplication] delegate];
 	if(self.loadAttacksFromMe == nil || self.loadAttacksFromMe == NO) {
 		arrToUse = appDelegate.dbAttackedBy;
 	} else {

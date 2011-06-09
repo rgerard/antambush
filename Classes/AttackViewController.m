@@ -7,7 +7,7 @@
 //
 
 #import "AttackViewController.h"
-#import "PandaAttackAppDelegate.h"
+#import "AntAmbushAppDelegate.h"
 #import "History.h"
 #import "CJSONDeserializer.h"
 #import "UIImageAlertView.h"
@@ -170,7 +170,7 @@ static NSString *rootUrl = @"http://www.antambush.com";
 			}
 		
 			// Get the image to load from a plist file inside our app bundle
-			PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
+			AntAmbushAppDelegate *appDelegate = (AntAmbushAppDelegate*)[[UIApplication sharedApplication] delegate];
 			NSDictionary *numberItem = [appDelegate findAttackInPList:attackImage];
 		
 			if(numberItem != nil) {
@@ -286,7 +286,7 @@ static NSString *rootUrl = @"http://www.antambush.com";
 
 -(History *) findAttackDataToUse:(int)row loadAttacksFromMe:(BOOL)loadAttacksFromMe {
 	NSMutableArray *arrToUse;
-	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
+	AntAmbushAppDelegate *appDelegate = (AntAmbushAppDelegate*)[[UIApplication sharedApplication] delegate];
 	if(loadAttacksFromMe == NO) {
 		arrToUse = appDelegate.dbAttackedBy;
 	} else {
@@ -392,7 +392,7 @@ static NSString *rootUrl = @"http://www.antambush.com";
 
 -(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer attackID:(NSString*)attackID {
 	NSLog(@"Adding attack from ViewController!");
-	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
+	AntAmbushAppDelegate *appDelegate = (AntAmbushAppDelegate*)[[UIApplication sharedApplication] delegate];
 	NSInteger pk = [historyItem insertNewAttack:appDelegate.attacksDatabase];
 	
 	// Check to make sure it inserted correctly
@@ -422,7 +422,7 @@ static NSString *rootUrl = @"http://www.antambush.com";
 		//NSString *urlToSend = [NSString stringWithFormat:@"%@/user_attacks/%@", rootUrl, attackID];
 		NSString *urlToSend = rootUrl;
 		
-		PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
+		AntAmbushAppDelegate *appDelegate = (AntAmbushAppDelegate*)[[UIApplication sharedApplication] delegate];
 		NSDictionary *numberItem = [appDelegate findAttackInPList:historyItem.attack];
 		NSString *attackStr = @"something";
 		

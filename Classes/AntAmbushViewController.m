@@ -1,14 +1,14 @@
 //
-//  PandaAttackViewController.m
-//  PandaAttack
+//  AntAmbushViewController.m
+//  AntAmbush
 //
 //  Created by Ryan Gerard on 3/5/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "PandaAttackViewController.h"
+#import "AntAmbushViewController.h"
 
-@implementation PandaAttackViewController
+@implementation AntAmbushViewController
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.

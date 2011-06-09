@@ -1,12 +1,12 @@
 //
-//  PandaAttackAppDelegate.m
-//  PandaAttack
+//  AntAmbushAppDelegate.m
+//  AntAmbush
 //
 //  Created by Ryan Gerard on 3/5/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "PandaAttackAppDelegate.h"
+#import "AntAmbushAppDelegate.h"
 #import "History.h"
 #import "UAirship.h"
 #import "UAPush.h"
@@ -14,7 +14,7 @@
 static NSString *ImageKey = @"imageKey";
 static NSString *NameKey = @"nameKey";
 
-@implementation PandaAttackAppDelegate
+@implementation AntAmbushAppDelegate
 
 @synthesize window;
 @synthesize viewController;

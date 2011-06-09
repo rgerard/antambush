@@ -7,7 +7,7 @@
 //
 
 #import "SendMessageViewController.h"
-#import "PandaAttackAppDelegate.h"
+#import "AntAmbushAppDelegate.h"
 
 static NSString *rootUrl = @"http://www.antambush.com";
 //static NSString *rootUrl = @"http://localhost:3000";
@@ -66,7 +66,7 @@ static NSString *rootUrl = @"http://www.antambush.com";
 	[self.view addSubview:spinner];
 	[spinner startAnimating];
 	
-	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
+	AntAmbushAppDelegate *appDelegate = (AntAmbushAppDelegate*)[[UIApplication sharedApplication] delegate];
 	
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 	NSString *deviceToken = [prefs stringForKey:@"deviceToken"];
@@ -101,7 +101,7 @@ static NSString *rootUrl = @"http://www.antambush.com";
 	NSLog(@"Response ID: %@", responseString);
 	self.attackHistory.serverID = 0;
 	
-	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
+	AntAmbushAppDelegate *appDelegate = (AntAmbushAppDelegate*)[[UIApplication sharedApplication] delegate];
 	[appDelegate addAttack:self.attackHistory sendToServer:YES attackID:responseString];
 	
 	// Pop the stack

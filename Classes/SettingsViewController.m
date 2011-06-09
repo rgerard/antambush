@@ -7,7 +7,7 @@
 //
 
 #import "SettingsViewController.h"
-#import "PandaAttackAppDelegate.h"
+#import "AntAmbushAppDelegate.h"
 #import "History.h"
 #import "UAPushUI.h"
 
@@ -183,7 +183,7 @@
 		[UAPush openApnsSettings:self animated:YES];
 	} else if(indexPath.section == 2) {
 		// Delete all data from the local database
-		PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
+		AntAmbushAppDelegate *appDelegate = (AntAmbushAppDelegate*)[[UIApplication sharedApplication] delegate];
 		[History clearData:appDelegate.attacksDatabase];
 	}
 }

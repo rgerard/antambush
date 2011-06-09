@@ -7,7 +7,7 @@
 //
 
 #import "SingleAttackViewController.h"
-#import "PandaAttackAppDelegate.h"
+#import "AntAmbushAppDelegate.h"
 #import "WeaponScrollerViewController.h"
 
 static NSString *ImageKey = @"imageKey";
@@ -37,7 +37,7 @@ static NSString *NameKey = @"nameKey";
 	self.messageLabel.text = [NSString stringWithFormat:@"\"%@\"", self.attackData.message];
 	
 	// Get the image to load from a plist file inside our app bundle
-	PandaAttackAppDelegate *appDelegate = (PandaAttackAppDelegate*)[[UIApplication sharedApplication] delegate];
+	AntAmbushAppDelegate *appDelegate = (AntAmbushAppDelegate*)[[UIApplication sharedApplication] delegate];
 	NSDictionary *numberItem = [appDelegate findAttackInPList:self.attackData.attack];
 	
 	if(numberItem != nil) {
