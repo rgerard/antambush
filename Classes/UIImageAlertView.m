@@ -40,7 +40,7 @@
 
 // Layout the 100px by 100px picture correctly
 - (void)layoutSubviews {
-	CGFloat buttonTop;
+	CGFloat buttonTop = 0;
 	for (UIView *view in self.subviews) {
 		if ([[[view class] description] isEqualToString:@"UIThreePartButton"]) {
 			view.frame = CGRectMake(view.frame.origin.x, self.bounds.size.height - view.frame.size.height - 15, view.frame.size.width, view.frame.size.height);

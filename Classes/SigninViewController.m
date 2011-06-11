@@ -11,8 +11,6 @@
 
 @implementation SigninViewController
 
-@synthesize startBtn;
-@synthesize inputEmail;
 @synthesize facebookBtn, fbWrapper;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -42,7 +40,6 @@
 	
 	// Init the event handlers
 	[facebookBtn addTarget:self action:@selector(facebookBtnClick:) forControlEvents:UIControlEventTouchUpInside];	
-	[startBtn addTarget:self action:@selector(startBtnClick:) forControlEvents:UIControlEventTouchUpInside];	
 }
 
 
@@ -67,20 +64,9 @@
 	[appDelegate switchFromLoginView];
 }
 
-// respond to the start button click
--(void)startBtnClick:(UIView*)clickedButton {
-	// Save the users email address
-	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-	[prefs setObject:inputEmail.text forKey:@"userEmail"];
-	[prefs synchronize];
-	
-	AntAmbushAppDelegate *appDelegate = (AntAmbushAppDelegate*)[[UIApplication sharedApplication] delegate];
-	[appDelegate switchFromLoginView];
-}
-
 
 -(IBAction) backgroundTap:(id) sender{
-	[self.inputEmail resignFirstResponder];
+	//[self.inputEmail resignFirstResponder];
 }
 
 

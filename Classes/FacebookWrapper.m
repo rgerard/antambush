@@ -13,7 +13,7 @@ static NSString* kAppId = @"206499529382979";
 
 @implementation FacebookWrapper
 
-@synthesize facebook, isLoggedInToFB, friends;
+@synthesize facebook, isLoggedInToFB, friends, fbPermissions;
 @synthesize delegate, callback, friendData, friendDataSortedKeys;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -33,6 +33,9 @@ static NSString* kAppId = @"206499529382979";
 		if ([facebook isSessionValid] == NO) {
 			self.isLoggedInToFB = NO;
 		}
+		
+		// Ask for permission to send the person email as well
+		self.fbPermissions =  [[NSArray arrayWithObjects:@"email,publish_stream", nil] retain];
 
 	}
 	return self;
@@ -62,8 +65,7 @@ static NSString* kAppId = @"206499529382979";
 	[self setDelegateCallback:appSelector delegate:requestDelegate];
 	
 	// Ask for permission to send the person email as well
-	NSArray* permissions =  [[NSArray arrayWithObjects:@"email,publish_stream", nil] retain];
-	[facebook authorize:permissions delegate:self];		
+	[facebook authorize:fbPermissions delegate:self];		
 }
 
 -(void) facebookLogout:(SEL)appSelector delegate:(id)requestDelegate {
@@ -352,6 +354,7 @@ static NSString* kAppId = @"206499529382979";
 
 
 -(void)dealloc {
+	[fbPermissions release];
 	[facebook release];
     [super dealloc];
 }
