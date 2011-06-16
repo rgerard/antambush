@@ -32,12 +32,29 @@ static NSString *rootUrl = @"http://www.antambush.com";
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	// Init the spinner
-	spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-	[spinner setCenter:CGPointMake(self.view.frame.size.width/2.0, (self.view.frame.size.height-150)/2.0)]; 
-	
 	self.image.image = [UIImage imageNamed:@"mel-gibson-braveheart.jpg"];
 	[self.attackBtn addTarget:self action:@selector(attackBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+
+-(void)setSpinningMode:(BOOL)isWaiting detailTxt:(NSString *)detailTxt {
+	//when network action, toggle network indicator and activity indicator
+	if (isWaiting) {
+		[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+		
+		UIWindow *window = [UIApplication sharedApplication].keyWindow;
+		spinner = [[MBProgressHUD alloc] initWithWindow:window];
+		[window addSubview:spinner];
+		spinner.labelText = @"Loading";
+		spinner.detailsLabelText = detailTxt;
+		[spinner show:YES];
+	} else {
+		[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+		
+		[spinner hide:YES];
+		[spinner removeFromSuperview];
+		[spinner release];
+	}
 }
 
 
@@ -63,13 +80,23 @@ static NSString *rootUrl = @"http://www.antambush.com";
 	self.attackHistory.message = inputMessage.text;
 	
 	// Start the spinner
-	[self.view addSubview:spinner];
-	[spinner startAnimating];
+	[self setSpinningMode:YES detailTxt:@"Sending Attack"];
 	
 	AntAmbushAppDelegate *appDelegate = (AntAmbushAppDelegate*)[[UIApplication sharedApplication] delegate];
 	
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 	NSString *deviceToken = [prefs stringForKey:@"deviceToken"];
+	
+	
+	int attackCount = 1;
+	
+	if([prefs integerForKey:@"attackCount"]) {
+		attackCount = [prefs integerForKey:@"attackCount"];
+		attackCount++;
+	}
+	
+	[prefs setInteger:attackCount forKey:@"attackCount"];
+	[prefs synchronize];
 	
 	// If this is nil or empty string, the backend won't process it
 	if(deviceToken == nil || [deviceToken length] == 0) {
@@ -93,8 +120,7 @@ static NSString *rootUrl = @"http://www.antambush.com";
 // Callback from the server request asking for new attacks
 -(void)requestFinished:(ASIHTTPRequest *)requestCallback {
 	// Stop the spinner
-	[spinner stopAnimating];
-	[spinner removeFromSuperview];
+	[self setSpinningMode:NO detailTxt:@""];
 	
 	// Grab the URL returned in the response string
 	NSString *responseString = [requestCallback responseString];
@@ -111,8 +137,7 @@ static NSString *rootUrl = @"http://www.antambush.com";
 
 -(void)requestFailed:(ASIHTTPRequest *)requestCallback {
 	// Stop the spinner
-	[spinner stopAnimating];
-	[spinner removeFromSuperview];
+	[self setSpinningMode:NO detailTxt:@""];
 	
 	NSError *error = [requestCallback error];
 	NSLog(@"Error request: %@", [error localizedDescription]);

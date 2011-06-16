@@ -9,13 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "History.h"
 #import "ASIFormDataRequest.h"
+#import "MBProgressHUD.h"
 
 @interface SendMessageViewController : UIViewController<UIAlertViewDelegate> {
 	UIImageView *image;
 	UITextField *inputMessage;
 	UIButton *attackBtn;
 	History *attackHistory;
-	UIActivityIndicatorView *spinner;
+	MBProgressHUD *spinner;
 	ASIFormDataRequest *formRequest;
 }
 
@@ -27,5 +28,6 @@
 
 -(IBAction) backgroundTap:(id) sender;
 -(void)callAppDelegateToAttack;
+-(void) setSpinningMode:(BOOL)isWaiting detailTxt:(NSString *)detailTxt;
 
 @end

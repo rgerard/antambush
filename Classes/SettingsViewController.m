@@ -22,10 +22,6 @@
 -(void) viewDidLoad {
     [super viewDidLoad];
 
-	// Init the spinner
-	spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-	[spinner setCenter:CGPointMake(self.view.frame.size.width/2.0, (self.view.frame.size.height-150)/2.0)]; 
-	
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -163,6 +159,7 @@
 		[prefs setObject:@"" forKey:@"fbUsername"];
 		[prefs setObject:@"" forKey:@"fbLoggedIn"];
 		[prefs setObject:@"" forKey:@"lastAttackId"];
+		[prefs setInteger:0 forKey:@"attackCount"];
 		[prefs synchronize];
 		
 		// Logout of FB if logged in
@@ -173,8 +170,7 @@
 			NSLog(@"Login to Facebook");
 			
 			// Start the spinner
-			[self.view addSubview:spinner];
-			[spinner startAnimating];
+			[self setSpinningMode:YES detailTxt:@"Logging in to Facebook"];
 			
 			[self facebookLoginClick];
 		}
@@ -218,8 +214,7 @@
 	NSLog(@"Got friends, reloading the table");
 	
 	// Stop the spinner
-	[spinner stopAnimating];
-	[spinner removeFromSuperview];
+	[self setSpinningMode:NO detailTxt:@""];
 	
 	[self.tableView reloadData];
 }
@@ -227,6 +222,26 @@
 -(void) facebookLogoutCallback {
 	NSLog(@"Logged out of Facebook");
 	[self.tableView reloadData];
+}
+
+-(void)setSpinningMode:(BOOL)isWaiting detailTxt:(NSString *)detailTxt {
+	//when network action, toggle network indicator and activity indicator
+	if (isWaiting) {
+		[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+		
+		UIWindow *window = [UIApplication sharedApplication].keyWindow;
+		spinner = [[MBProgressHUD alloc] initWithWindow:window];
+		[window addSubview:spinner];
+		spinner.labelText = @"Loading";
+		spinner.detailsLabelText = detailTxt;
+		[spinner show:YES];
+	} else {
+		[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+		
+		[spinner hide:YES];
+		[spinner removeFromSuperview];
+		[spinner release];
+	}
 }
 
 

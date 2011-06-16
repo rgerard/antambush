@@ -276,6 +276,7 @@ static NSString* kAppId = @"206499529382979";
 
 
 -(void) facebookPublishNote:(NSString *)victim message:(NSString *)message url:(NSString *)url attack:(NSString *)attack {
+	
 	NSMutableDictionary* attachment = [NSMutableDictionary dictionaryWithObjectsAndKeys:
 								victim, @"to",
 								@"Attacked!", @"name",
@@ -286,6 +287,7 @@ static NSString* kAppId = @"206499529382979";
 	
 	[facebook dialog:@"feed" andParams:attachment andDelegate:self];
 }
+
 
 ////////////////////////////////////////////////////////////////////////////////
 // FBDialogDelegate

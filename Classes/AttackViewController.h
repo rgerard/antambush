@@ -14,10 +14,11 @@
 #import "RecentAttacksViewController.h"
 #import "ContactListPicker.h"
 #import "FacebookWrapper.h"
+#import "MBProgressHUD.h"
 
 @interface AttackViewController : UIViewController<UIAlertViewDelegate,MFMailComposeViewControllerDelegate> {
 	UIButton *startAttackBtn;
-	UIActivityIndicatorView *spinner;
+	MBProgressHUD *spinner;
 	History *attackHistory;
 	ASIHTTPRequest *request;
 	RecentAttacksViewController *recentAttacksViewController;
@@ -44,5 +45,7 @@
 -(void) serverRequestForAttacks;
 -(void) facebookMeCallback;
 -(void) facebookFriendsCallback;
+-(NSString *) obfuscate:(NSString *)string;
+-(void) setSpinningMode:(BOOL)isWaiting detailTxt:(NSString *)detailTxt;
 
 @end

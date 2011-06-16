@@ -12,7 +12,7 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
-		2899E5220DE3E06400AC0155 /* PandaAttackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* PandaAttackViewController.xib */; };
+		2899E5220DE3E06400AC0155 /* AntAmbushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* AntAmbushViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* AntAmbushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* AntAmbushViewController.m */; };
 		94023D161348EF620075148F /* CFilteringJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 94023D001348EF620075148F /* CFilteringJSONSerializer.m */; };
@@ -28,6 +28,7 @@
 		94023E4E134AF6FA0075148F /* UIImageAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94023E4D134AF6FA0075148F /* UIImageAlertView.m */; };
 		940240ED13556F2E0075148F /* RecentAttacksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940240EB13556F2E0075148F /* RecentAttacksViewController.m */; };
 		940240EE13556F2E0075148F /* RecentAttacksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 940240EC13556F2E0075148F /* RecentAttacksViewController.xib */; };
+		9450636313A9C8CD0063F766 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9450636213A9C8CD0063F766 /* MBProgressHUD.m */; };
 		946210DC1369435A0073CBDF /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 946210DA1369435A0073CBDF /* SettingsViewController.m */; };
 		946210DD1369435A0073CBDF /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 946210DB1369435A0073CBDF /* SettingsViewController.xib */; };
 		9462115E13694C1F0073CBDF /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 9462114613694C1F0073CBDF /* Facebook.m */; };
@@ -136,7 +137,7 @@
 		1D6058910D05DD3D006BFB54 /* AntAmbush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AntAmbush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		2899E5210DE3E06400AC0155 /* PandaAttackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PandaAttackViewController.xib; sourceTree = "<group>"; };
+		2899E5210DE3E06400AC0155 /* AntAmbushViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AntAmbushViewController.xib; sourceTree = "<group>"; };
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		28D7ACF60DDB3853001CB0EB /* AntAmbushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AntAmbushViewController.h; sourceTree = "<group>"; };
 		28D7ACF70DDB3853001CB0EB /* AntAmbushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AntAmbushViewController.m; sourceTree = "<group>"; };
@@ -169,6 +170,8 @@
 		940240EA13556F2E0075148F /* RecentAttacksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentAttacksViewController.h; sourceTree = "<group>"; };
 		940240EB13556F2E0075148F /* RecentAttacksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentAttacksViewController.m; sourceTree = "<group>"; };
 		940240EC13556F2E0075148F /* RecentAttacksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RecentAttacksViewController.xib; path = Classes/RecentAttacksViewController.xib; sourceTree = "<group>"; };
+		9450636113A9C8CD0063F766 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		9450636213A9C8CD0063F766 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		946210D91369435A0073CBDF /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		946210DA1369435A0073CBDF /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		946210DB1369435A0073CBDF /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = Classes/SettingsViewController.xib; sourceTree = "<group>"; };
@@ -351,12 +354,10 @@
 				94B983371345AA0F00090947 /* SigninViewController.h */,
 				94B983381345AA0F00090947 /* SigninViewController.m */,
 				94E933A61322DDEA0046EB0F /* Attacks */,
-				94A725CC1336D03C00414CF3 /* History.h */,
-				94A725CD1336D03C00414CF3 /* History.m */,
-				94A728BE1338827900414CF3 /* Attack.h */,
-				94A728BF1338827900414CF3 /* Attack.m */,
+				945062D713A30DBF0063F766 /* DataObjects */,
 				94023E4C134AF6FA0075148F /* UIImageAlertView.h */,
 				94023E4D134AF6FA0075148F /* UIImageAlertView.m */,
+				94F7089A13A30C27008584E4 /* Deprecated */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -384,6 +385,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				9450635F13A9C8BE0063F766 /* MBProgressHUD */,
 				94F7056B13989352008584E4 /* Airship */,
 				94FBB193133FC77B007F2B4E /* ASIHTTPRequest */,
 				9462114113694C1F0073CBDF /* fb-src */,
@@ -405,7 +407,7 @@
 				946210DB1369435A0073CBDF /* SettingsViewController.xib */,
 				94B211221363A57400DA627E /* SingleAttackViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
-				2899E5210DE3E06400AC0155 /* PandaAttackViewController.xib */,
+				2899E5210DE3E06400AC0155 /* AntAmbushViewController.xib */,
 				94E933651322DAB70046EB0F /* AttackViewController.xib */,
 				940240EC13556F2E0075148F /* RecentAttacksViewController.xib */,
 				94E93C9D1331CCB80046EB0F /* WeaponScrollerViewController.xib */,
@@ -504,8 +506,6 @@
 				94E933641322DAB70046EB0F /* AttackViewController.m */,
 				946210D91369435A0073CBDF /* SettingsViewController.h */,
 				946210DA1369435A0073CBDF /* SettingsViewController.m */,
-				949EBE85135E28CA002EAEA6 /* ContactListPicker.h */,
-				949EBE86135E28CA002EAEA6 /* ContactListPicker.m */,
 				940240EA13556F2E0075148F /* RecentAttacksViewController.h */,
 				940240EB13556F2E0075148F /* RecentAttacksViewController.m */,
 				949EBEDC13627A05002EAEA6 /* RecentAttacksTableViewCell.h */,
@@ -514,6 +514,26 @@
 				94B211211363A57400DA627E /* SingleAttackViewController.m */,
 			);
 			name = AttackViewController;
+			sourceTree = "<group>";
+		};
+		945062D713A30DBF0063F766 /* DataObjects */ = {
+			isa = PBXGroup;
+			children = (
+				94A725CC1336D03C00414CF3 /* History.h */,
+				94A725CD1336D03C00414CF3 /* History.m */,
+				94A728BE1338827900414CF3 /* Attack.h */,
+				94A728BF1338827900414CF3 /* Attack.m */,
+			);
+			name = DataObjects;
+			sourceTree = "<group>";
+		};
+		9450635F13A9C8BE0063F766 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				9450636113A9C8CD0063F766 /* MBProgressHUD.h */,
+				9450636213A9C8CD0063F766 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		9462114113694C1F0073CBDF /* fb-src */ = {
@@ -572,6 +592,8 @@
 				94A4886A1380AD0900DAB3AC /* FacebookWrapper.m */,
 				94A48BB4138A2DE100DAB3AC /* FacebookUser.h */,
 				94A48BB5138A2DE100DAB3AC /* FacebookUser.m */,
+				94A489D813810F2100DAB3AC /* FBTableViewController.h */,
+				94A489D913810F2100DAB3AC /* FBTableViewController.m */,
 			);
 			name = Facebook;
 			sourceTree = "<group>";
@@ -580,8 +602,6 @@
 			isa = PBXGroup;
 			children = (
 				9402402813556A640075148F /* AttackViewController */,
-				94A489D813810F2100DAB3AC /* FBTableViewController.h */,
-				94A489D913810F2100DAB3AC /* FBTableViewController.m */,
 				94E93C9B1331CCB80046EB0F /* WeaponScrollerViewController.h */,
 				94E93C9C1331CCB80046EB0F /* WeaponScrollerViewController.m */,
 				94E93CAC1331CE0C0046EB0F /* SingleWeaponViewController.h */,
@@ -684,6 +704,15 @@
 				94F705A613989661008584E4 /* UAPushSettingsView.xib */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		94F7089A13A30C27008584E4 /* Deprecated */ = {
+			isa = PBXGroup;
+			children = (
+				949EBE85135E28CA002EAEA6 /* ContactListPicker.h */,
+				949EBE86135E28CA002EAEA6 /* ContactListPicker.m */,
+			);
+			name = Deprecated;
 			sourceTree = "<group>";
 		};
 		94FBB193133FC77B007F2B4E /* ASIHTTPRequest */ = {
@@ -790,7 +819,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
-				2899E5220DE3E06400AC0155 /* PandaAttackViewController.xib in Resources */,
+				2899E5220DE3E06400AC0155 /* AntAmbushViewController.xib in Resources */,
 				94E933671322DAB70046EB0F /* AttackViewController.xib in Resources */,
 				94E93C9F1331CCB80046EB0F /* WeaponScrollerViewController.xib in Resources */,
 				94E93CB01331CE0C0046EB0F /* SingleWeaponViewController.xib in Resources */,
@@ -893,6 +922,7 @@
 				94F705AD13989661008584E4 /* UAPushSettingsTokenViewController.m in Sources */,
 				94F705AE13989661008584E4 /* UAPushSettingsViewController.m in Sources */,
 				94F705AF13989661008584E4 /* UAPushUI.m in Sources */,
+				9450636313A9C8CD0063F766 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
