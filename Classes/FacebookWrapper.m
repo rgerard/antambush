@@ -315,6 +315,7 @@ static NSString* kAppId = @"206499529382979";
 		if ([self.friendData objectForKey:firstLetter] == nil) {
 			NSMutableArray *nameArr = [[NSMutableArray alloc] init];
 			[self.friendData setObject:nameArr forKey:firstLetter];
+			[nameArr release];
 		}
 		
 		// Create a FB User object
@@ -326,6 +327,7 @@ static NSString* kAppId = @"206499529382979";
 		NSMutableArray *nameArr = [self.friendData objectForKey:firstLetter];
 		[nameArr addObject:user];
 		[self.friendData setObject:nameArr forKey:firstLetter];
+		[user release];
 	}
 	
 	// Clear out the old friend list

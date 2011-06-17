@@ -151,6 +151,7 @@
 	// Logout User from App
 	if(indexPath.section == 0) {
 		NSLog(@"Clearing out known user data for logout");
+		
 		NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 		[prefs setObject:@"" forKey:@"userEmail"];
 		[prefs setObject:@"" forKey:@"fbID"];
@@ -158,16 +159,16 @@
 		[prefs setObject:@"" forKey:@"fbFirstname"];
 		[prefs setObject:@"" forKey:@"fbUsername"];
 		[prefs setObject:@"" forKey:@"fbLoggedIn"];
-		[prefs setObject:@"" forKey:@"lastAttackId"];
-		[prefs setInteger:0 forKey:@"attackCount"];
 		[prefs synchronize];
 		
 		// Logout of FB if logged in
 		if(self.fbWrapper.isLoggedInToFB) {
 			NSLog(@"Logging out of Facebook");
+			[[LocalyticsSession sharedLocalyticsSession] tagEvent:@"UserManuallyLoggedOut"];
 			[self.fbWrapper facebookLogout:@selector(facebookLogoutCallback) delegate:self];
 		} else {
 			NSLog(@"Login to Facebook");
+			[[LocalyticsSession sharedLocalyticsSession] tagEvent:@"UserManuallyLoggedIn"];
 			
 			// Start the spinner
 			[self setSpinningMode:YES detailTxt:@"Logging in to Facebook"];
@@ -179,6 +180,13 @@
 		[UAPush openApnsSettings:self animated:YES];
 	} else if(indexPath.section == 2) {
 		// Delete all data from the local database
+		[[LocalyticsSession sharedLocalyticsSession] tagEvent:@"UserManuallyClearedData"];
+		
+		NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+		[prefs setObject:@"" forKey:@"lastAttackId"];
+		[prefs setInteger:0 forKey:@"attackCount"];
+		[prefs synchronize];
+		
 		AntAmbushAppDelegate *appDelegate = (AntAmbushAppDelegate*)[[UIApplication sharedApplication] delegate];
 		[History clearData:appDelegate.attacksDatabase];
 	}
@@ -238,9 +246,10 @@
 	} else {
 		[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 		
-		[spinner hide:YES];
-		[spinner removeFromSuperview];
-		[spinner release];
+		if(spinner != nil) {
+			[spinner removeFromSuperview];
+			[spinner release];
+		}
 	}
 }
 

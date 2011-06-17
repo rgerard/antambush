@@ -12,6 +12,7 @@
 #import <sqlite3.h>
 #import "SigninViewController.h"
 #import	"FacebookWrapper.h"
+#import "LocalyticsSession.h"
 
 @interface AntAmbushAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
@@ -38,8 +39,6 @@
 @property (nonatomic, retain) FacebookWrapper *fbWrapper;
 @property (nonatomic) sqlite3 *attacksDatabase;
 
--(void)startTimer;
--(void)viewSwitch;
 -(void)switchFromLoginView;
 -(void)createEditableCopyOfDatabase:(NSString*)fileName;
 -(void)initializeAttacksDatabase:(NSString*)fileName;

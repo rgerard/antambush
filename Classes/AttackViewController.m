@@ -61,9 +61,10 @@ static NSString *rootUrl = @"http://www.antambush.com";
 	} else {
 		[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 		
-		[spinner hide:YES];
-		[spinner removeFromSuperview];
-		[spinner release];
+		if(spinner != nil) {
+			[spinner removeFromSuperview];
+			[spinner release];
+		}
 	}
 }
 
@@ -159,6 +160,7 @@ static NSString *rootUrl = @"http://www.antambush.com";
 	NSEnumerator *e = [attackData objectEnumerator];
 	id object;
 	int newAttackId = lastAttackId;
+	int shownAttacks = 0;
 	while (object = [e nextObject]) {
 		NSDictionary *dictionary = (NSDictionary *)object;
 		
@@ -187,7 +189,8 @@ static NSString *rootUrl = @"http://www.antambush.com";
 			AntAmbushAppDelegate *appDelegate = (AntAmbushAppDelegate*)[[UIApplication sharedApplication] delegate];
 			NSDictionary *numberItem = [appDelegate findAttackInPList:attackImage];
 		
-			if(numberItem != nil) {
+			// Only show 3 recent attacks -- we don't want the user being deluged with attacks
+			if(numberItem != nil && shownAttacks < 3) {
 				
 				// Set the current user to attack
 				attackHistory.contactFbID = attackerFbID;
@@ -211,6 +214,8 @@ static NSString *rootUrl = @"http://www.antambush.com";
 				[alert setImage:[UIImage imageNamed:[numberItem valueForKey:ImageKey]] attackNameStr:[numberItem valueForKey:NameKey]];
 				[alert show];
 				[alert release];
+				
+				shownAttacks++;
 			}
 		}
 	}

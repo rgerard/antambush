@@ -29,6 +29,10 @@
 		940240ED13556F2E0075148F /* RecentAttacksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940240EB13556F2E0075148F /* RecentAttacksViewController.m */; };
 		940240EE13556F2E0075148F /* RecentAttacksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 940240EC13556F2E0075148F /* RecentAttacksViewController.xib */; };
 		9450636313A9C8CD0063F766 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9450636213A9C8CD0063F766 /* MBProgressHUD.m */; };
+		945064F213A9DCC00063F766 /* LocalyticsSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 945064EE13A9DCC00063F766 /* LocalyticsSession.m */; };
+		945064F313A9DCC00063F766 /* UploaderThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 945064F013A9DCC00063F766 /* UploaderThread.m */; };
+		9450659013AB31EB0063F766 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9450658F13AB31EB0063F766 /* Default.png */; };
+		9450659613AB327D0063F766 /* signin_facebook_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 9450659513AB327D0063F766 /* signin_facebook_btn.png */; };
 		946210DC1369435A0073CBDF /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 946210DA1369435A0073CBDF /* SettingsViewController.m */; };
 		946210DD1369435A0073CBDF /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 946210DB1369435A0073CBDF /* SettingsViewController.xib */; };
 		9462115E13694C1F0073CBDF /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 9462114613694C1F0073CBDF /* Facebook.m */; };
@@ -172,6 +176,13 @@
 		940240EC13556F2E0075148F /* RecentAttacksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RecentAttacksViewController.xib; path = Classes/RecentAttacksViewController.xib; sourceTree = "<group>"; };
 		9450636113A9C8CD0063F766 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		9450636213A9C8CD0063F766 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		945064ED13A9DCC00063F766 /* LocalyticsSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalyticsSession.h; sourceTree = "<group>"; };
+		945064EE13A9DCC00063F766 /* LocalyticsSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalyticsSession.m; sourceTree = "<group>"; };
+		945064EF13A9DCC00063F766 /* UploaderThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploaderThread.h; sourceTree = "<group>"; };
+		945064F013A9DCC00063F766 /* UploaderThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploaderThread.m; sourceTree = "<group>"; };
+		945064F113A9DCC00063F766 /* WebserviceConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebserviceConstants.h; sourceTree = "<group>"; };
+		9450658F13AB31EB0063F766 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		9450659513AB327D0063F766 /* signin_facebook_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signin_facebook_btn.png; sourceTree = "<group>"; };
 		946210D91369435A0073CBDF /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		946210DA1369435A0073CBDF /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		946210DB1369435A0073CBDF /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = Classes/SettingsViewController.xib; sourceTree = "<group>"; };
@@ -385,6 +396,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				945064EB13A9DCB40063F766 /* Localytics */,
 				9450635F13A9C8BE0063F766 /* MBProgressHUD */,
 				94F7056B13989352008584E4 /* Airship */,
 				94FBB193133FC77B007F2B4E /* ASIHTTPRequest */,
@@ -399,9 +411,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				94F70656139F2F6C008584E4 /* Icon.png */,
-				94F70657139F2F6C008584E4 /* Icon@2x.png */,
-				94E93D511331D49E0046EB0F /* images */,
+				9450658E13AB31D10063F766 /* images */,
+				94E93D511331D49E0046EB0F /* attack_images */,
 				94A489DA13810F2100DAB3AC /* FBTableViewController.xib */,
 				94B983391345AA0F00090947 /* SigninViewController.xib */,
 				946210DB1369435A0073CBDF /* SettingsViewController.xib */,
@@ -536,6 +547,29 @@
 			name = MBProgressHUD;
 			sourceTree = "<group>";
 		};
+		945064EB13A9DCB40063F766 /* Localytics */ = {
+			isa = PBXGroup;
+			children = (
+				945064ED13A9DCC00063F766 /* LocalyticsSession.h */,
+				945064EE13A9DCC00063F766 /* LocalyticsSession.m */,
+				945064EF13A9DCC00063F766 /* UploaderThread.h */,
+				945064F013A9DCC00063F766 /* UploaderThread.m */,
+				945064F113A9DCC00063F766 /* WebserviceConstants.h */,
+			);
+			name = Localytics;
+			sourceTree = "<group>";
+		};
+		9450658E13AB31D10063F766 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				94F70656139F2F6C008584E4 /* Icon.png */,
+				94F70657139F2F6C008584E4 /* Icon@2x.png */,
+				9450658F13AB31EB0063F766 /* Default.png */,
+				9450659513AB327D0063F766 /* signin_facebook_btn.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		9462114113694C1F0073CBDF /* fb-src */ = {
 			isa = PBXGroup;
 			children = (
@@ -612,7 +646,7 @@
 			name = Attacks;
 			sourceTree = "<group>";
 		};
-		94E93D511331D49E0046EB0F /* images */ = {
+		94E93D511331D49E0046EB0F /* attack_images */ = {
 			isa = PBXGroup;
 			children = (
 				94C41848133328770032B2DA /* mel-gibson-braveheart.jpg */,
@@ -622,7 +656,7 @@
 				94C417E5133321770032B2DA /* cutest_puppies.jpg */,
 				94C417E6133321770032B2DA /* charlie_sheen.jpg */,
 			);
-			name = images;
+			name = attack_images;
 			sourceTree = "<group>";
 		};
 		94F7056B13989352008584E4 /* Airship */ = {
@@ -855,6 +889,8 @@
 				94F705BD13989661008584E4 /* UAPushSettingsView.xib in Resources */,
 				94F70658139F2F6C008584E4 /* Icon.png in Resources */,
 				94F70659139F2F6C008584E4 /* Icon@2x.png in Resources */,
+				9450659013AB31EB0063F766 /* Default.png in Resources */,
+				9450659613AB327D0063F766 /* signin_facebook_btn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -923,6 +959,8 @@
 				94F705AE13989661008584E4 /* UAPushSettingsViewController.m in Sources */,
 				94F705AF13989661008584E4 /* UAPushUI.m in Sources */,
 				9450636313A9C8CD0063F766 /* MBProgressHUD.m in Sources */,
+				945064F213A9DCC00063F766 /* LocalyticsSession.m in Sources */,
+				945064F313A9DCC00063F766 /* UploaderThread.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -955,7 +993,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_ENTITLEMENTS = "~/Projects/PandaAttack/Entitlements.plist";
+				CODE_SIGN_ENTITLEMENTS = "~/Projects/AntAmbush/Entitlements.plist";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -998,7 +1036,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_ENTITLEMENTS = "~/Projects/PandaAttack/Entitlements.plist";
+				CODE_SIGN_ENTITLEMENTS = "~/Projects/AntAmbush/Entitlements.plist";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

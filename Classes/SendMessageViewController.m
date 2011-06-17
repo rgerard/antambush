@@ -51,9 +51,10 @@ static NSString *rootUrl = @"http://www.antambush.com";
 	} else {
 		[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 		
-		[spinner hide:YES];
-		[spinner removeFromSuperview];
-		[spinner release];
+		if(spinner != nil) {
+			[spinner removeFromSuperview];
+			[spinner release];
+		}
 	}
 }
 
@@ -71,6 +72,7 @@ static NSString *rootUrl = @"http://www.antambush.com";
 
 // respond to the attack via email button click
 -(void)attackBtnClick:(UIView*)clickedButton {
+	[self.inputMessage resignFirstResponder];
 	[self callAppDelegateToAttack];
 }
 

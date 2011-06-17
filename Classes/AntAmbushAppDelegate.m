@@ -47,6 +47,9 @@ static NSString *NameKey = @"nameKey";
 														 UIRemoteNotificationTypeSound |
 														 UIRemoteNotificationTypeAlert)];
 	
+	// Start the analytics
+	[[LocalyticsSession sharedLocalyticsSession] startSession:@"a056e6519654482295c3f1a-3f2b4972-97e2-11e0-0023-007f58cb3154"];
+	
 	// Init the DB
 	[self createEditableCopyOfDatabase:@"recentAttacks.db"];
 	[self initializeAttacksDatabase:@"recentAttacks.db"];	
@@ -68,30 +71,6 @@ static NSString *NameKey = @"nameKey";
 	attackNavigationController = [[UINavigationController alloc] initWithRootViewController:attackViewController];
 	attackNavigationController.navigationBar.barStyle = UIBarStyleBlack;
 	
-    // Add the view controller's view to the window and display.
-    [self.window addSubview:viewController.view];
-	
-	[self startTimer];
-    [self.window makeKeyAndVisible];
-
-    return YES;
-}
-
-- (void)startTimer {
-	SEL methodSelector = @selector(viewSwitch);
-	
-	// 2 second timer that will call the tabBarSwitch method
-	[NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:methodSelector userInfo:nil repeats:NO];
-}
-
-/*
- Switches over to the Tab Bar Controller's View
- */
-- (void)viewSwitch {
-	
-	// Remove the opening view controller
-	[viewController.view removeFromSuperview];
-	
 	// Check for a user FB ID -- prompt for signin view if not present
 	if(![self.fbWrapper isLoggedInToFB]) {
 		[window addSubview:signinViewController.view];
@@ -103,6 +82,10 @@ static NSString *NameKey = @"nameKey";
 	// Subscribe to orientation changes
 	//[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
 	//[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(detectOrientation) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
+
+    [self.window makeKeyAndVisible];
+
+    return YES;
 }
 
 
@@ -243,6 +226,9 @@ static NSString *NameKey = @"nameKey";
      Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
      If your application supports background execution, called instead of applicationWillTerminate: when the user quits.
      */
+	
+	[[LocalyticsSession sharedLocalyticsSession] close];
+	[[LocalyticsSession sharedLocalyticsSession] upload];
 }
 
 
@@ -250,6 +236,9 @@ static NSString *NameKey = @"nameKey";
     /*
      Called as part of  transition from the background to the inactive state: here you can undo many of the changes made on entering the background.
      */
+	
+	[[LocalyticsSession sharedLocalyticsSession] resume];
+	[[LocalyticsSession sharedLocalyticsSession] upload];
 }
 
 
@@ -264,6 +253,9 @@ static NSString *NameKey = @"nameKey";
 	if([self.fbWrapper isLoggedInToFB]) {
 		NSLog(@"applicationDidBecomeActive: Ask server for attacks");
 		[self.attackViewController serverRequestForAttacks];
+	} else {
+		NSLog(@"applicationDidBecomeActive: User is not logged in.  Have them sign in.");
+		[window addSubview:signinViewController.view];
 	}
 }
 
@@ -274,6 +266,8 @@ static NSString *NameKey = @"nameKey";
      See also applicationDidEnterBackground:.
      */
 	[UAirship land];
+	[[LocalyticsSession sharedLocalyticsSession] close];
+	[[LocalyticsSession sharedLocalyticsSession] upload];
 }
 
 
