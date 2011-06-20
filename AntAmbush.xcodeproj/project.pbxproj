@@ -31,8 +31,10 @@
 		9450636313A9C8CD0063F766 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9450636213A9C8CD0063F766 /* MBProgressHUD.m */; };
 		945064F213A9DCC00063F766 /* LocalyticsSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 945064EE13A9DCC00063F766 /* LocalyticsSession.m */; };
 		945064F313A9DCC00063F766 /* UploaderThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 945064F013A9DCC00063F766 /* UploaderThread.m */; };
-		9450659013AB31EB0063F766 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9450658F13AB31EB0063F766 /* Default.png */; };
+		9450659013AB31EB0063F766 /* signin_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9450658F13AB31EB0063F766 /* signin_background.png */; };
 		9450659613AB327D0063F766 /* signin_facebook_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 9450659513AB327D0063F766 /* signin_facebook_btn.png */; };
+		9450666613AEF4B80063F766 /* signin_facebook_btn_select.png in Resources */ = {isa = PBXBuildFile; fileRef = 9450666413AEF4B80063F766 /* signin_facebook_btn_select.png */; };
+		9450668113AF23CF0063F766 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9450668013AF23CF0063F766 /* Default.png */; };
 		946210DC1369435A0073CBDF /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 946210DA1369435A0073CBDF /* SettingsViewController.m */; };
 		946210DD1369435A0073CBDF /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 946210DB1369435A0073CBDF /* SettingsViewController.xib */; };
 		9462115E13694C1F0073CBDF /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 9462114613694C1F0073CBDF /* Facebook.m */; };
@@ -181,8 +183,10 @@
 		945064EF13A9DCC00063F766 /* UploaderThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploaderThread.h; sourceTree = "<group>"; };
 		945064F013A9DCC00063F766 /* UploaderThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploaderThread.m; sourceTree = "<group>"; };
 		945064F113A9DCC00063F766 /* WebserviceConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebserviceConstants.h; sourceTree = "<group>"; };
-		9450658F13AB31EB0063F766 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		9450658F13AB31EB0063F766 /* signin_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signin_background.png; sourceTree = "<group>"; };
 		9450659513AB327D0063F766 /* signin_facebook_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signin_facebook_btn.png; sourceTree = "<group>"; };
+		9450666413AEF4B80063F766 /* signin_facebook_btn_select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signin_facebook_btn_select.png; sourceTree = "<group>"; };
+		9450668013AF23CF0063F766 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		946210D91369435A0073CBDF /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		946210DA1369435A0073CBDF /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		946210DB1369435A0073CBDF /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = Classes/SettingsViewController.xib; sourceTree = "<group>"; };
@@ -564,8 +568,10 @@
 			children = (
 				94F70656139F2F6C008584E4 /* Icon.png */,
 				94F70657139F2F6C008584E4 /* Icon@2x.png */,
-				9450658F13AB31EB0063F766 /* Default.png */,
+				9450668013AF23CF0063F766 /* Default.png */,
+				9450658F13AB31EB0063F766 /* signin_background.png */,
 				9450659513AB327D0063F766 /* signin_facebook_btn.png */,
+				9450666413AEF4B80063F766 /* signin_facebook_btn_select.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -889,8 +895,10 @@
 				94F705BD13989661008584E4 /* UAPushSettingsView.xib in Resources */,
 				94F70658139F2F6C008584E4 /* Icon.png in Resources */,
 				94F70659139F2F6C008584E4 /* Icon@2x.png in Resources */,
-				9450659013AB31EB0063F766 /* Default.png in Resources */,
+				9450659013AB31EB0063F766 /* signin_background.png in Resources */,
 				9450659613AB327D0063F766 /* signin_facebook_btn.png in Resources */,
+				9450666613AEF4B80063F766 /* signin_facebook_btn_select.png in Resources */,
+				9450668113AF23CF0063F766 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

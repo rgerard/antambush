@@ -106,7 +106,6 @@ static NSString *rootUrl = @"http://www.antambush.com";
 	}
 	
 	// Send the data to the backend
-	//NSURL *url = [NSURL URLWithString:@"http://hollow-river-123.heroku.com/user_attacks/createFromPhone"];
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/user_attacks/createFromPhone", rootUrl]];
 	self.formRequest = [ASIFormDataRequest requestWithURL:url];
 	[self.formRequest setPostValue:appDelegate.userFbID forKey:@"user_attack[attacker_fbid]"];
