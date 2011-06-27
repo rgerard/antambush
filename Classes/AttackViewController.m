@@ -24,7 +24,7 @@ static NSString *rootUrl = @"http://www.antambush.com";
 
 @implementation AttackViewController
 
-@synthesize recentAttacksViewController, recentlyAttackedByViewController, startAttackBtn, viewHistoryBtn, request, fbWrapper;
+@synthesize startAttackBtn, scrollPunkdBtn, scrollAttackedBtn, request, fbWrapper;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -84,22 +84,8 @@ static NSString *rootUrl = @"http://www.antambush.com";
 	
 	// Init the event handlers
 	[startAttackBtn addTarget:self action:@selector(startBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-	
-	// Create the "recently attacked by" table
-	CGRect recentlyAttackedByViewFrame = CGRectMake(15,100,290,150);
-	self.recentlyAttackedByViewController = [[RecentAttacksViewController alloc] init];
-	self.recentlyAttackedByViewController.loadAttacksFromMe = NO;
-	[self.recentlyAttackedByViewController setDelegateCallback:@selector(attackPickedFromAttackedByTableCallback:) delegate:self];
-	[self.recentlyAttackedByViewController.view setFrame:recentlyAttackedByViewFrame];
-	[self.view addSubview:self.recentlyAttackedByViewController.view];		
-	
-	// Create the recent attacks table
-	CGRect recentAttacksViewFrame = CGRectMake(15,250,290,150);
-	self.recentAttacksViewController = [[RecentAttacksViewController alloc] init];
-	self.recentAttacksViewController.loadAttacksFromMe = YES;
-	[self.recentAttacksViewController setDelegateCallback:@selector(attackPickedFromAttackedTableCallback:) delegate:self];
-	[self.recentAttacksViewController.view setFrame:recentAttacksViewFrame];
-	[self.view addSubview:self.recentAttacksViewController.view];
+	[scrollPunkdBtn addTarget:self action:@selector(scrollPunkdBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [scrollAttackedBtn addTarget:self action:@selector(scrollAttackedBtnClick:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 -(void)serverRequestForAttacks {
@@ -333,6 +319,25 @@ static NSString *rootUrl = @"http://www.antambush.com";
 	[table release];
 }
 
+// respond to the You were punkd button click
+-(void)scrollPunkdBtnClick:(UIView*)clickedButton {
+	// Create the "recently attacked by" table
+    RecentAttacksViewController *recentPunkdViewController = [[RecentAttacksViewController alloc] init];
+	recentPunkdViewController.title = @"Punk'd By";
+    recentPunkdViewController.loadAttacksFromMe = NO;
+	[self.navigationController pushViewController:recentPunkdViewController animated:YES];
+	[recentPunkdViewController release];	
+}
+
+// respond to the You recently attacked button click
+-(void)scrollAttackedBtnClick:(UIView*)clickedButton {
+	// Create the "recently attacked" table
+    RecentAttacksViewController *recentAttackedViewController = [[RecentAttacksViewController alloc] init];
+	recentAttackedViewController.title = @"Punk'd By";
+    recentAttackedViewController.loadAttacksFromMe = YES;
+	[self.navigationController pushViewController:recentAttackedViewController animated:YES];
+	[recentAttackedViewController release];	
+}
 
 // Responds to people saying they want to invite someone
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {  
@@ -421,11 +426,6 @@ static NSString *rootUrl = @"http://www.antambush.com";
 	// Clear out the history item
 	[attackHistory release];
 	attackHistory = [[History alloc] init];
-	
-	// Reload the tables
-	[recentlyAttackedByViewController.tableView reloadData];
-	[recentAttacksViewController.tableView reloadData];
-	
 	
 	if(sendToServer == YES) {
 		
@@ -522,7 +522,6 @@ static NSString *rootUrl = @"http://www.antambush.com";
 
 - (void)dealloc {
 	[fbWrapper release];
-	[recentAttacksViewController release];
 	
 	[request clearDelegatesAndCancel];
 	[request release];	

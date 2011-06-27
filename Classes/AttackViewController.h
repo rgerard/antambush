@@ -18,23 +18,24 @@
 
 @interface AttackViewController : UIViewController<UIAlertViewDelegate,MFMailComposeViewControllerDelegate> {
 	UIButton *startAttackBtn;
+    UIButton *scrollPunkdBtn;
+    UIButton *scrollAttackedBtn;
 	MBProgressHUD *spinner;
 	History *attackHistory;
 	ASIHTTPRequest *request;
-	RecentAttacksViewController *recentAttacksViewController;
-	RecentAttacksViewController *recentlyAttackedByViewController;
 	FacebookWrapper *fbWrapper;
 }
 
 @property (nonatomic, retain) IBOutlet UIButton *startAttackBtn;
-@property (nonatomic, retain) IBOutlet UIButton *viewHistoryBtn;
+@property (nonatomic, retain) IBOutlet UIButton *scrollPunkdBtn;
+@property (nonatomic, retain) IBOutlet UIButton *scrollAttackedBtn;
 @property (nonatomic, retain) ASIHTTPRequest *request;
-@property (nonatomic, retain) RecentAttacksViewController *recentAttacksViewController;
-@property (nonatomic, retain) RecentAttacksViewController *recentlyAttackedByViewController;
 @property (nonatomic, retain) FacebookWrapper *fbWrapper;
 
 -(id) initWithWrapper:(FacebookWrapper *)wrapper;
 -(void) startBtnClick:(UIView*)clickedButton;
+-(void) scrollPunkdBtnClick:(UIView*)clickedButton;
+-(void) scrollAttackedBtnClick:(UIView*)clickedButton;
 -(void) changeToWeaponView;
 -(void) attackPickedFromAttackedByTableCallback:(NSIndexPath *)attackRow;
 -(void) attackPickedFromAttackedTableCallback:(NSIndexPath *)attackRow;

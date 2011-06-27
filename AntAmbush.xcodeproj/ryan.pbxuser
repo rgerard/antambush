@@ -154,8 +154,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 330245130;
-			PBXWorkspaceStateSaveDate = 330245130;
+			PBXPerProjectTemplateStateSaveDate = 330495772;
+			PBXWorkspaceStateSaveDate = 330495772;
 		};
 		perUserProjectItems = {
 			94023D7B1348F4D50075148F /* PBXTextBookmark */ = 94023D7B1348F4D50075148F /* PBXTextBookmark */;
@@ -184,7 +184,6 @@
 			9450655E13AB09830063F766 /* PBXTextBookmark */ = 9450655E13AB09830063F766 /* PBXTextBookmark */;
 			9450655F13AB09830063F766 /* PlistBookmark */ = 9450655F13AB09830063F766 /* PlistBookmark */;
 			9450658613AB0C940063F766 /* PBXTextBookmark */ = 9450658613AB0C940063F766 /* PBXTextBookmark */;
-			9450661813AB36730063F766 /* PBXTextBookmark */ = 9450661813AB36730063F766 /* PBXTextBookmark */;
 			9450661B13AB36730063F766 /* PlistBookmark */ = 9450661B13AB36730063F766 /* PlistBookmark */;
 			9450662E13AB39790063F766 /* PlistBookmark */ = 9450662E13AB39790063F766 /* PlistBookmark */;
 			9450663113AB39790063F766 /* PBXBookmark */ = 9450663113AB39790063F766 /* PBXBookmark */;
@@ -202,8 +201,6 @@
 			947E7FAC13AF29A0006769C7 /* PBXTextBookmark */ = 947E7FAC13AF29A0006769C7 /* PBXTextBookmark */;
 			947E7FAD13AF29A0006769C7 /* PBXBookmark */ = 947E7FAD13AF29A0006769C7 /* PBXBookmark */;
 			947E7FAE13AF29A0006769C7 /* PBXBookmark */ = 947E7FAE13AF29A0006769C7 /* PBXBookmark */;
-			947E7FAF13AF29A0006769C7 /* PBXBookmark */ = 947E7FAF13AF29A0006769C7 /* PBXBookmark */;
-			947E7FB013AF29A0006769C7 /* PBXBookmark */ = 947E7FB013AF29A0006769C7 /* PBXBookmark */;
 			94A487721380339000DAB3AC /* PBXTextBookmark */ = 94A487721380339000DAB3AC /* PBXTextBookmark */;
 			94A487731380339000DAB3AC /* PBXTextBookmark */ = 94A487731380339000DAB3AC /* PBXTextBookmark */;
 			94A487741380339000DAB3AC /* PBXTextBookmark */ = 94A487741380339000DAB3AC /* PBXTextBookmark */;
@@ -212,7 +209,10 @@
 			94A4883013807A7E00DAB3AC /* PBXTextBookmark */ = 94A4883013807A7E00DAB3AC /* PBXTextBookmark */;
 			94A48C4C138B8C1400DAB3AC /* PBXTextBookmark */ = 94A48C4C138B8C1400DAB3AC /* PBXTextBookmark */;
 			94A728C7133883EF00414CF3 /* PBXTextBookmark */ = 94A728C7133883EF00414CF3 /* PBXTextBookmark */;
+			94B52BA713B2F7250099EC65 /* PBXTextBookmark */ = 94B52BA713B2F7250099EC65 /* PBXTextBookmark */;
+			94B52BAD13B7B1390099EC65 /* PBXTextBookmark */ = 94B52BAD13B7B1390099EC65 /* PBXTextBookmark */;
 			94C41851133329770032B2DA /* PBXBookmark */ = 94C41851133329770032B2DA /* PBXBookmark */;
+			94D5307F13AF2A22007CA661 /* PBXBookmark */ = 94D5307F13AF2A22007CA661 /* PBXBookmark */;
 			94F70573139894FD008584E4 /* PlistBookmark */ = 94F70573139894FD008584E4 /* PlistBookmark */;
 			94F7072C139F4268008584E4 /* PBXTextBookmark */ = 94F7072C139F4268008584E4 /* PBXTextBookmark */;
 			94F7072D139F4268008584E4 /* PBXTextBookmark */ = 94F7072D139F4268008584E4 /* PBXTextBookmark */;
@@ -588,16 +588,6 @@
 		vrLen = 1390;
 		vrLoc = 4437;
 	};
-	9450661813AB36730063F766 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 94A488691380AD0900DAB3AC /* FacebookWrapper.h */;
-		name = "FacebookWrapper.h: 32";
-		rLen = 0;
-		rLoc = 897;
-		rType = 0;
-		vrLen = 1370;
-		vrLoc = 180;
-	};
 	9450661B13AB36730063F766 /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = 94E93CD01331CF9B0046EB0F /* iphone_contents.plist */;
@@ -804,14 +794,6 @@
 	947E7FAE13AF29A0006769C7 /* PBXBookmark */ = {
 		isa = PBXBookmark;
 		fRef = 9450668013AF23CF0063F766 /* Default.png */;
-	};
-	947E7FAF13AF29A0006769C7 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = 9450658F13AB31EB0063F766 /* signin_background.png */;
-	};
-	947E7FB013AF29A0006769C7 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = 9450658F13AB31EB0063F766 /* signin_background.png */;
 	};
 	949EBE85135E28CA002EAEA6 /* ContactListPicker.h */ = {
 		uiCtxt = {
@@ -1039,6 +1021,26 @@
 			sepNavWindowFrame = "{{38, 294}, {750, 558}}";
 		};
 	};
+	94B52BA713B2F7250099EC65 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A488691380AD0900DAB3AC /* FacebookWrapper.h */;
+		name = "FacebookWrapper.h: 32";
+		rLen = 0;
+		rLoc = 897;
+		rType = 0;
+		vrLen = 1370;
+		vrLoc = 180;
+	};
+	94B52BAD13B7B1390099EC65 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94A488691380AD0900DAB3AC /* FacebookWrapper.h */;
+		name = "FacebookWrapper.h: 32";
+		rLen = 0;
+		rLoc = 897;
+		rType = 0;
+		vrLen = 1370;
+		vrLoc = 180;
+	};
 	94B983371345AA0F00090947 /* SigninViewController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1099, 548}}";
@@ -1071,6 +1073,10 @@
 	94C41851133329770032B2DA /* PBXBookmark */ = {
 		isa = PBXBookmark;
 		fRef = 94C41848133328770032B2DA /* mel-gibson-braveheart.jpg */;
+	};
+	94D5307F13AF2A22007CA661 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 9450658F13AB31EB0063F766 /* signin_background.png */;
 	};
 	94E933441322DA6A0046EB0F /* AntAmbush */ = {
 		isa = PBXExecutable;
@@ -1202,11 +1208,6 @@
 		name = PandaAttackAppDelegate.m;
 		path = Classes/AntAmbushAppDelegate.m;
 		sourceTree = SOURCE_ROOT;
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1965, 4251}}";
-			sepNavSelRange = "{275, 0}";
-			sepNavVisRange = "{144, 1091}";
-		};
 	};
 	94F7072C139F4268008584E4 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
