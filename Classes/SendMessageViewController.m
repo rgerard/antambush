@@ -42,9 +42,8 @@ static NSString *rootUrl = @"http://www.antambush.com";
 	if (isWaiting) {
 		[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 		
-		UIWindow *window = [UIApplication sharedApplication].keyWindow;
-		spinner = [[MBProgressHUD alloc] initWithWindow:window];
-		[window addSubview:spinner];
+        spinner = [[MBProgressHUD alloc] initWithView:self.view];
+        [self.view addSubview:spinner];
 		spinner.labelText = @"Loading";
 		spinner.detailsLabelText = detailTxt;
 		[spinner show:YES];
@@ -176,7 +175,8 @@ static NSString *rootUrl = @"http://www.antambush.com";
 
 - (void)dealloc {
 	[self.attackHistory release];
-	
+	[spinner release];
+    
 	// Cleaning up
 	[self.formRequest clearDelegatesAndCancel];
 	[self.formRequest release];

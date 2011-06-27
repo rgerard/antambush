@@ -46,7 +46,7 @@
 					<object class="IBUIImageView" id="567692905">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">274</int>
-						<string key="NSFrame">{{-1, 0}, {322, 480}}</string>
+						<string key="NSFrame">{{-1, -2}, {322, 480}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>

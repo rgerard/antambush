@@ -236,10 +236,9 @@
 	//when network action, toggle network indicator and activity indicator
 	if (isWaiting) {
 		[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-		
-		UIWindow *window = [UIApplication sharedApplication].keyWindow;
-		spinner = [[MBProgressHUD alloc] initWithWindow:window];
-		[window addSubview:spinner];
+        
+        spinner = [[MBProgressHUD alloc] initWithView:self.view];
+        [self.view addSubview:spinner];
 		spinner.labelText = @"Loading";
 		spinner.detailsLabelText = detailTxt;
 		[spinner show:YES];
@@ -271,6 +270,7 @@
 
 
 - (void)dealloc {
+    [spinner release];
 	[fbWrapper release];
     [super dealloc];
 }
