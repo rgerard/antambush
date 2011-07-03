@@ -14,7 +14,7 @@ static NSString *rootUrl = @"http://www.antambush.com";
 
 @implementation SendMessageViewController
 
-@synthesize image, inputMessage, attackBtn, attackHistory, formRequest;
+@synthesize image, inputMessage, attackBtn, attackHistory, formRequest, spinner;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -34,6 +34,7 @@ static NSString *rootUrl = @"http://www.antambush.com";
 	
 	self.image.image = [UIImage imageNamed:@"mel-gibson-braveheart.jpg"];
 	[self.attackBtn addTarget:self action:@selector(attackBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    self.spinner = [[MBProgressHUD alloc] initWithView:self.view];
 }
 
 
@@ -42,18 +43,13 @@ static NSString *rootUrl = @"http://www.antambush.com";
 	if (isWaiting) {
 		[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 		
-        spinner = [[MBProgressHUD alloc] initWithView:self.view];
-        [self.view addSubview:spinner];
-		spinner.labelText = @"Loading";
-		spinner.detailsLabelText = detailTxt;
-		[spinner show:YES];
+        [self.view addSubview:self.spinner];
+		self.spinner.labelText = @"Loading";
+		self.spinner.detailsLabelText = detailTxt;
+		[self.spinner show:YES];
 	} else {
 		[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-		
-		if(spinner != nil) {
-			[spinner removeFromSuperview];
-			[spinner release];
-		}
+        [self.spinner removeFromSuperview];
 	}
 }
 
@@ -175,7 +171,9 @@ static NSString *rootUrl = @"http://www.antambush.com";
 
 - (void)dealloc {
 	[self.attackHistory release];
-	[spinner release];
+    
+    [self.spinner release];
+    self.spinner = nil;
     
 	// Cleaning up
 	[self.formRequest clearDelegatesAndCancel];

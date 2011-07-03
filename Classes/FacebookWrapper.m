@@ -278,6 +278,7 @@ static NSString* kAppId = @"206499529382979";
 -(void) facebookPublishNote:(NSString *)victim message:(NSString *)message url:(NSString *)url attack:(NSString *)attack {
 	
 	NSMutableDictionary* attachment = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                kAppId, @"app_id",
 								victim, @"to",
 								@"Attacked!", @"name",
 								[NSString stringWithFormat:@"You just got ambushed by %@", attack], @"caption",
@@ -298,6 +299,35 @@ static NSString* kAppId = @"206499529382979";
 - (void)dialogDidComplete:(FBDialog *)dialog {
 	NSLog(@"Publish success");
 }
+
+/**
+ * Called when the dialog succeeds with a returning url.
+ */
+- (void)dialogCompleteWithUrl:(NSURL *)url {
+	NSLog(@"Publish dialogCompleteWithUrl");
+}
+
+/**
+ * Called when the dialog get canceled by the user.
+ */
+- (void)dialogDidNotCompleteWithUrl:(NSURL *)url {
+	NSLog(@"Publish dialogDidNotCompleteWithUrl");
+}
+
+/**
+ * Called when the dialog is cancelled and is about to be dismissed.
+ */
+- (void)dialogDidNotComplete:(FBDialog *)dialog {
+	NSLog(@"Publish dialogDidNotComplete");
+}
+
+/**
+ * Called when dialog failed to load due to an error.
+ */
+- (void)dialog:(FBDialog*)dialog didFailWithError:(NSError *)error {
+	NSLog(@"Publish didFailWithError: %@", error);
+}
+
 
 // Organize the friend list into a dictionary that maps a letter to an array of FB User object.  For instance, 'A' -> NSArray of FB Users
 -(void) sortFriends {

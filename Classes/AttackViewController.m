@@ -24,7 +24,7 @@ static NSString *rootUrl = @"http://www.antambush.com";
 
 @implementation AttackViewController
 
-@synthesize startAttackBtn, scrollPunkdBtn, scrollAttackedBtn, request, fbWrapper;
+@synthesize startAttackBtn, scrollPunkdBtn, scrollAttackedBtn, request, fbWrapper, spinner;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -52,18 +52,16 @@ static NSString *rootUrl = @"http://www.antambush.com";
 	if (isWaiting) {
 		[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 		
-        spinner = [[MBProgressHUD alloc] initWithView:self.view];
-        [self.view addSubview:spinner];
-		spinner.labelText = @"Loading";
-		spinner.detailsLabelText = detailTxt;
-		[spinner show:YES];
+        self.spinner = [[MBProgressHUD alloc] initWithView:self.view];
+        [self.view addSubview:self.spinner];
+		self.spinner.labelText = @"Loading";
+		self.spinner.detailsLabelText = detailTxt;
+		[self.spinner show:YES];
 	} else {
 		[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-		
-		if(spinner != nil) {
-			[spinner removeFromSuperview];
-			[spinner release];
-		}
+        [self.spinner removeFromSuperview];
+        [self.spinner release];
+        self.spinner = nil;
 	}
 }
 
@@ -520,7 +518,11 @@ static NSString *rootUrl = @"http://www.antambush.com";
 
 
 - (void)dealloc {
-    [spinner release];
+    if(self.spinner != nil) {
+        [self.spinner release];
+        self.spinner = nil;
+    }
+    
 	[fbWrapper release];
 	
 	[request clearDelegatesAndCancel];

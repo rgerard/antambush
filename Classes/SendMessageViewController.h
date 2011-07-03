@@ -25,6 +25,7 @@
 @property (nonatomic, retain) IBOutlet UIButton *attackBtn;
 @property (nonatomic, retain) History *attackHistory;
 @property (nonatomic, retain) ASIFormDataRequest *formRequest;
+@property (nonatomic, retain) MBProgressHUD *spinner;
 
 -(IBAction) backgroundTap:(id) sender;
 -(void)callAppDelegateToAttack;

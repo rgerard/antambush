@@ -31,6 +31,7 @@
 @property (nonatomic, retain) IBOutlet UIButton *scrollAttackedBtn;
 @property (nonatomic, retain) ASIHTTPRequest *request;
 @property (nonatomic, retain) FacebookWrapper *fbWrapper;
+@property (nonatomic, retain) MBProgressHUD *spinner;
 
 -(id) initWithWrapper:(FacebookWrapper *)wrapper;
 -(void) startBtnClick:(UIView*)clickedButton;
