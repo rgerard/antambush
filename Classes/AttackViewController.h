@@ -16,7 +16,7 @@
 #import "FacebookWrapper.h"
 #import "MBProgressHUD.h"
 
-@interface AttackViewController : UIViewController<UIAlertViewDelegate,MFMailComposeViewControllerDelegate> {
+@interface AttackViewController : UIViewController<UIAlertViewDelegate> {
 	UIButton *startAttackBtn;
     UIButton *scrollPunkdBtn;
     UIButton *scrollAttackedBtn;

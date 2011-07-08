@@ -25,8 +25,8 @@
 @property (nonatomic) bool isLoggedInToFB;
 @property (nonatomic, retain) NSMutableArray *friends;
 @property (nonatomic, retain) NSMutableDictionary *friendData;
-@property (nonatomic, retain) NSArray *friendDataSortedKeys;
 @property (nonatomic, retain) NSArray *fbPermissions;
+@property (nonatomic, retain) NSArray *friendDataSortedKeys;
 @property (nonatomic, retain) id delegate;
 @property (nonatomic) SEL callback;
 

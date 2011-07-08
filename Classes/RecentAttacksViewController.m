@@ -95,10 +95,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
     
-    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	RecentAttacksTableViewCell *cell = (RecentAttacksTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        //cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
 		cell = [[[RecentAttacksTableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
     }
     
@@ -113,7 +111,6 @@
 	
 	if(arrToUse != nil) {
 		History *item = [arrToUse objectAtIndex:indexPath.row];
-		//cell.textLabel.text = item.contact;
 		[cell setData:item];
     } else {
 		NSLog(@"Array to use is nil!");

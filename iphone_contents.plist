@@ -4,33 +4,33 @@
 <array>
 	<dict>
 		<key>imageKey</key>
-		<string>gorilla.jpg</string>
+		<string>happy_piglet.jpg</string>
 		<key>nameKey</key>
-		<string>Gorillas in the mist</string>
+		<string>Happy Piglet</string>
 	</dict>
 	<dict>
 		<key>imageKey</key>
-		<string>charlie_sheen.jpg</string>
+		<string>beagle_attack.jpg</string>
 		<key>nameKey</key>
-		<string>Charlie Sheen</string>
+		<string>Angry Beagle</string>
 	</dict>
 	<dict>
 		<key>imageKey</key>
-		<string>poop.gif</string>
+		<string>honey_badger.jpg</string>
 		<key>nameKey</key>
-		<string>Poop</string>
+		<string>Honeybadger!</string>
 	</dict>
 	<dict>
-		<key>nameKey</key>
-		<string>Puppies</string>
 		<key>imageKey</key>
-		<string>maltese-puppies.jpg</string>
+		<string>sad_panda.jpg</string>
+		<key>nameKey</key>
+		<string>Sad Panda</string>
 	</dict>
 	<dict>
-		<key>nameKey</key>
-		<string>More pups</string>
 		<key>imageKey</key>
-		<string>cutest_puppies.jpg</string>
+		<string>high_kittens.jpg</string>
+		<key>nameKey</key>
+		<string>High Kittens</string>
 	</dict>
 </array>
 </plist>

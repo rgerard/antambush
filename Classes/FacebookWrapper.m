@@ -26,8 +26,13 @@ static NSString* kAppId = @"206499529382979";
 		NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 		self.isLoggedInToFB = [prefs boolForKey:@"fbLoggedIn"];
 		
-		facebook.accessToken    = [[NSUserDefaults standardUserDefaults] stringForKey:@"fbAccessToken"];
-		facebook.expirationDate = (NSDate *) [[NSUserDefaults standardUserDefaults] objectForKey:@"fbExpiration"];
+        NSString *token = [[NSUserDefaults standardUserDefaults] stringForKey:@"fbAccessToken"];
+		NSDate *exp = (NSDate *) [[NSUserDefaults standardUserDefaults] objectForKey:@"fbExpiration"];
+        
+        if (token != nil && exp != nil && [token length] > 2) {
+			facebook.accessToken = token;
+            facebook.expirationDate = exp;
+		} 
 		
 		// If the facebook session isn't valid anymore, force the user to authorize again
 		if ([facebook isSessionValid] == NO) {
@@ -35,7 +40,7 @@ static NSString* kAppId = @"206499529382979";
 		}
 		
 		// Ask for permission to send the person email as well
-		self.fbPermissions =  [[NSArray arrayWithObjects:@"email,publish_stream", nil] retain];
+		self.fbPermissions =  [[NSArray arrayWithObjects:@"email,publish_stream,offline_access", nil] retain];
 
 	}
 	return self;
@@ -196,6 +201,8 @@ static NSString* kAppId = @"206499529382979";
 	self.isLoggedInToFB = NO;
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 	[prefs setBool:NO forKey:@"fbLoggedIn"];
+    [prefs setObject:@"" forKey:@"fbAccessToken"];
+	[prefs setObject:nil forKey:@"fbExpiration"];
 	[prefs synchronize];
 	
 	// Call the callback, let it know that the request is done
@@ -277,8 +284,14 @@ static NSString* kAppId = @"206499529382979";
 
 -(void) facebookPublishNote:(NSString *)victim message:(NSString *)message url:(NSString *)url attack:(NSString *)attack {
 	
-	NSMutableDictionary* attachment = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+    // Get ME info
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSString *fbid = [prefs stringForKey:@"fbID"];
+
+    if(fbid != nil && fbid.length > 0) {
+        NSMutableDictionary* attachment = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                 kAppId, @"app_id",
+                                fbid, @"from",
 								victim, @"to",
 								@"Attacked!", @"name",
 								[NSString stringWithFormat:@"You just got ambushed by %@", attack], @"caption",
@@ -286,7 +299,8 @@ static NSString* kAppId = @"206499529382979";
 								message,  @"message",
 								url, @"link", nil];
 	
-	[facebook dialog:@"feed" andParams:attachment andDelegate:self];
+        [facebook dialog:@"stream.publish" andParams:attachment andDelegate:self];
+    }
 }
 
 
@@ -375,7 +389,7 @@ static NSString* kAppId = @"206499529382979";
 		NSMutableArray* nameArr = [self.friendData objectForKey:key];
 		
 		// Sort the array
-		nameArr = [nameArr sortedArrayUsingDescriptors:sortDescriptors];
+		[nameArr sortUsingDescriptors:sortDescriptors];
 
 		// Add each name back to the array
 		for(int j=0; j < [nameArr count]; j++) {

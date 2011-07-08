@@ -183,12 +183,12 @@
 		[[LocalyticsSession sharedLocalyticsSession] tagEvent:@"UserManuallyClearedData"];
 		
 		NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-		[prefs setObject:@"" forKey:@"lastAttackId"];
+		//[prefs setObject:@"" forKey:@"lastAttackId"];
 		[prefs setInteger:0 forKey:@"attackCount"];
 		[prefs synchronize];
 		
 		AntAmbushAppDelegate *appDelegate = (AntAmbushAppDelegate*)[[UIApplication sharedApplication] delegate];
-		[History clearData:appDelegate.attacksDatabase];
+        [appDelegate clearAttacksDB];
 	}
 }
 

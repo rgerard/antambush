@@ -340,27 +340,7 @@ static NSString *rootUrl = @"http://www.antambush.com";
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {  
 	NSString *title = [alertView buttonTitleAtIndex:buttonIndex];  
 	
-    if([title isEqualToString:@"Hell yeah!"]) {  
-        NSLog(@"Please invite");
-		
-		if([MFMailComposeViewController canSendMail]) {
-		
-			MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
-			picker.mailComposeDelegate = self;
-			[picker setSubject:@"Hello iPhone!"];
-		
-			// Set up recipients
-			NSArray *toRecipients = [NSArray arrayWithObject:@"ryan.gerard@gmail.com"];
-			NSString *emailBody = @"Nice  to See you!";
-			[picker setToRecipients:toRecipients];
-			[picker setMessageBody:emailBody isHTML:NO];
-		
-			[self presentModalViewController:picker animated:YES];
-			[picker release];
-		} else {
-			NSLog(@"Device can't send mail!");
-		}
-    } else if([title isEqualToString:@"Attack back"]) {
+    if([title isEqualToString:@"Attack back"]) {
 		NSLog(@"User wants to attack back");
 		[self changeToWeaponView];
 	} else if([title isEqualToString:@"Wuss out"]) {
@@ -377,29 +357,6 @@ static NSString *rootUrl = @"http://www.antambush.com";
 	weaponViewController.attackHistory = attackHistory;
 	[self.navigationController pushViewController:weaponViewController animated:YES];
 	[weaponViewController release];	
-}
-
-
--(void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
-	// Notifies users about errors associated with the interface
-	switch (result) {
-		case MFMailComposeResultCancelled:
-			NSLog(@"Result: canceled");
-			break;
-		case MFMailComposeResultSaved:
-			NSLog(@"Result: saved");
-			break;
-		case MFMailComposeResultSent:
-			NSLog(@"Result: sent");
-			break;
-		case MFMailComposeResultFailed:
-			NSLog(@"Result: failed");
-			break;
-		default:
-			NSLog(@"Result: not sent");
-			break;
-	}
-	[self dismissModalViewControllerAnimated:YES];
 }
 
 

@@ -19,7 +19,8 @@ static sqlite3_stmt *delete_statement = nil;
 
 -(id)initWithPrimaryKey:(NSInteger)pk database:(sqlite3*)db {
 	
-	if(self = [super init]) {
+    self = [super init];
+	if(self) {
 		primaryKey = pk;
 		database = db;
 		

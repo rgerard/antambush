@@ -138,6 +138,7 @@
 */
 
 // respond to the ask button click
+/*
 -(void)personBtnClick:(UIView*)clickedButton {
 	
 	ABAddressBookRef addressBook = ABAddressBookCreate();
@@ -159,6 +160,7 @@
 	CFRelease(aRecord);
 	CFRelease(addressBook);
 }
+*/
 
 - (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier{
     return NO;

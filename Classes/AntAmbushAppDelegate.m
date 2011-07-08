@@ -10,9 +10,9 @@
 #import "History.h"
 #import "UAirship.h"
 #import "UAPush.h"
+#import "History.h"
 
 static NSString *ImageKey = @"imageKey";
-static NSString *NameKey = @"nameKey";
 
 @implementation AntAmbushAppDelegate
 
@@ -174,6 +174,12 @@ static NSString *NameKey = @"nameKey";
 		sqlite3_close(attacksDatabase);
 		NSAssert1(0, @"Failed to open database: %s", sqlite3_errmsg(attacksDatabase));
 	}
+}
+
+-(void)clearAttacksDB {
+    [dbAttacks removeAllObjects];
+    [dbAttackedBy removeAllObjects];
+    [History clearData:self.attacksDatabase];
 }
 
 -(void)addAttack:(History*)historyItem sendToServer:(BOOL)sendToServer attackID:(NSString*)attackID {

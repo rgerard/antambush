@@ -11,7 +11,6 @@
 #import "WeaponScrollerViewController.h"
 
 static NSString *ImageKey = @"imageKey";
-static NSString *NameKey = @"nameKey";
 
 @implementation SingleAttackViewController
 

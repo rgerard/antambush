@@ -9,7 +9,6 @@
 #import "RecentAttacksTableViewCell.h"
 #import "AntAmbushAppDelegate.h"
 
-static NSString *ImageKey = @"imageKey";
 static NSString *NameKey = @"nameKey";
 
 @implementation RecentAttacksTableViewCell
