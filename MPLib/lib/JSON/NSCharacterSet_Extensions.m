@@ -1,9 +1,9 @@
 //
-//  NSDictionary_JSONExtensions.m
+//  NSCharacterSet_Extensions.m
 //  TouchCode
 //
-//  Created by Jonathan Wight on 04/17/08.
-//  Copyright 2008 toxicsoftware.com. All rights reserved.
+//  Created by Jonathan Wight on 12/08/2005.
+//  Copyright 2005 toxicsoftware.com. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person
 //  obtaining a copy of this software and associated documentation
@@ -27,21 +27,22 @@
 //  OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "NSDictionary_JSONExtensions.h"
+#import "NSCharacterSet_Extensions.h"
 
-#import "CJSONDeserializer.h"
+@implementation NSCharacterSet (NSCharacterSet_Extensions)
 
-@implementation NSDictionary (NSDictionary_JSONExtensions)
+#define LF 0x000a // Line Feed
+#define FF 0x000c // Form Feed
+#define CR 0x000d // Carriage Return
+#define NEL 0x0085 // Next Line
+#define LS 0x2028 // Line Separator
+#define PS 0x2029 // Paragraph Separator
 
-+ (id)dictionaryWithJSONData:(NSData *)inData error:(NSError **)outError
-    {
-    return([[CJSONDeserializer deserializer] deserialize:inData error:outError]);
-    }
++ (NSCharacterSet *)linebreaksCharacterSet
+{
+unichar theCharacters[] = { LF, FF, CR, NEL, LS, PS, };
 
-+ (id)dictionaryWithJSONString:(NSString *)inJSON error:(NSError **)outError;
-    {
-    NSData *theData = [inJSON dataUsingEncoding:NSUTF8StringEncoding];
-    return([self dictionaryWithJSONData:theData error:outError]);
-    }
+return([NSCharacterSet characterSetWithCharactersInString:[NSString stringWithCharacters:theCharacters length:sizeof(theCharacters) / sizeof(*theCharacters)]]);
+}
 
 @end

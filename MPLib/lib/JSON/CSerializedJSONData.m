@@ -1,9 +1,9 @@
 //
-//  CDataScanner_Extensions.h
+//  CSerializedJSONData.m
 //  TouchCode
 //
-//  Created by Jonathan Wight on 12/08/2005.
-//  Copyright 2005 toxicsoftware.com. All rights reserved.
+//  Created by Jonathan Wight on 10/23/09.
+//  Copyright 2009 toxicsoftware.com. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person
 //  obtaining a copy of this software and associated documentation
@@ -27,14 +27,28 @@
 //  OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "CDataScanner.h"
+#import "CSerializedJSONData.h"
 
-@interface CDataScanner (CDataScanner_Extensions)
+@implementation CSerializedJSONData
 
-- (BOOL)scanCStyleComment:(NSString **)outComment;
-- (BOOL)scanCPlusPlusStyleComment:(NSString **)outComment;
+@synthesize data;
 
-- (NSUInteger)lineOfScanLocation;
-- (NSDictionary *)userInfoForScanLocation;
+- (id)initWithData:(NSData *)inData;
+{
+if ((self = [self init]) != NULL)
+	{
+	data = inData;
+	}
+return(self);
+}
+
+- (void)dealloc
+{
+[data release];
+data = NULL;
+//
+[super dealloc];
+}
+
 
 @end

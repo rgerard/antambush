@@ -9,6 +9,7 @@
 #import "WeaponScrollerViewController.h"
 #import "SingleWeaponViewController.h"
 #import "SendMessageViewController.h"
+#import "MixpanelAPI.h"
 
 static NSUInteger kNumberOfPages = 5;
 static NSString *NameKey = @"nameKey";
@@ -88,9 +89,13 @@ static NSString *ImageKey = @"imageKey";
 
 // respond to the ask button click
 -(void)imageBtnClick:(UIView*)clickedButton {
-	SingleWeaponViewController *controller = [viewControllers objectAtIndex:pageControl.currentPage];
+    SingleWeaponViewController *controller = [viewControllers objectAtIndex:pageControl.currentPage];
 	NSLog(@"Clicked %@", controller.imageName);
 	
+    MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+	[mixpanel trackFunnel:@"Attack Friend" step:4 goal:@"Weapon Selected" properties:[NSDictionary dictionaryWithObject:controller.imageName forKey:@"weapon"]];
+    [mixpanel track:@"WeaponSelected" properties:[NSDictionary dictionaryWithObject:controller.imageName forKey:@"weapon"]];
+    
 	// Fill the history item
 	attackHistory.attack = controller.imageName;
 	

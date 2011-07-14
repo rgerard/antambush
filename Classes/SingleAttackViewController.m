@@ -9,6 +9,7 @@
 #import "SingleAttackViewController.h"
 #import "AntAmbushAppDelegate.h"
 #import "WeaponScrollerViewController.h"
+#import "MixpanelAPI.h"
 
 static NSString *ImageKey = @"imageKey";
 
@@ -35,6 +36,10 @@ static NSString *ImageKey = @"imageKey";
 	self.attackerLabel.text = self.attackData.contactName;
 	self.messageLabel.text = [NSString stringWithFormat:@"\"%@\"", self.attackData.message];
 	
+    // Position the labels
+    self.attackerLabel.textAlignment = UITextAlignmentCenter;
+    self.messageLabel.textAlignment = UITextAlignmentCenter;
+    
 	// Get the image to load from a plist file inside our app bundle
 	AntAmbushAppDelegate *appDelegate = (AntAmbushAppDelegate*)[[UIApplication sharedApplication] delegate];
 	NSDictionary *numberItem = [appDelegate findAttackInPList:self.attackData.attack];
@@ -54,6 +59,9 @@ static NSString *ImageKey = @"imageKey";
 	// Set data on the History object
 	NSLog(@"Person picked is %@, with ID %@", attackData.contactName, attackData.contactFbID);
 	
+    MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+    [mixpanel track:@"SelectedAttackBackBtn"];
+    
 	// Load up the weapon view controller
 	WeaponScrollerViewController *weaponViewController = [[WeaponScrollerViewController alloc] init];
 	weaponViewController.title = @"Weapon";

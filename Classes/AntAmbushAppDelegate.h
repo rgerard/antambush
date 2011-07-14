@@ -12,7 +12,6 @@
 #import <sqlite3.h>
 #import "SigninViewController.h"
 #import	"FacebookWrapper.h"
-#import "LocalyticsSession.h"
 
 @interface AntAmbushAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;

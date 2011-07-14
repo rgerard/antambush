@@ -8,6 +8,7 @@
 
 #import "SigninViewController.h"
 #import "AntAmbushAppDelegate.h"
+#import "MixpanelAPI.h"
 
 @implementation SigninViewController
 
@@ -51,6 +52,10 @@
 // respond to the start button click
 -(void)facebookBtnClick:(UIView*)clickedButton {
 	NSLog(@"Asking FB for permission");
+    
+    MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+    [mixpanel trackFunnel:@"Login" step:2 goal:@"Clicked Login"];
+	[mixpanel track:@"LoginButtonClicked"];
 	
 	// Ask for permission to send the person email as well
 	[fbWrapper facebookLogin:@selector(facebookLoginCallback) delegate:self];

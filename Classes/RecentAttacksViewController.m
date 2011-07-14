@@ -9,12 +9,11 @@
 #import "RecentAttacksViewController.h"
 #import "AntAmbushAppDelegate.h"
 #import "RecentAttacksTableViewCell.h"
+#import "SingleAttackViewController.h"
 
 @implementation RecentAttacksViewController
 
 @synthesize loadAttacksFromMe;
-@synthesize delegate;
-@synthesize attackSelector;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -27,12 +26,6 @@
 	
 	// Initialization code.
 }
-
--(void) setDelegateCallback:(SEL)appSelector delegate:(id)requestDelegate {
-	self.delegate = requestDelegate;
-	self.attackSelector = appSelector;
-}
-
 
 /*
 - (void)viewWillAppear:(BOOL)animated {
@@ -125,10 +118,51 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-	// Call the callback to open the new attack screen
-	if([self.delegate respondsToSelector:self.attackSelector]) {
-		[self.delegate performSelector:self.attackSelector withObject:indexPath];
+    NSString *loadAttacksStr = @"NO";
+    if(self.loadAttacksFromMe) {
+        loadAttacksStr = @"YES";
+    }
+    
+    MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+    [mixpanel track:@"PickedAttackFromHistory" properties:[NSDictionary dictionaryWithObject:loadAttacksStr forKey:@"loadAttackFromMe"]];
+    
+	// Open the single attack view
+	NSLog(@"AttackedBy Table, Row = %d", indexPath.row);
+	History *item = [self findAttackDataToUse:indexPath.row loadAttacksFromMe:self.loadAttacksFromMe];
+	if(item == nil) {
+		NSLog(@"Can't find attack item");
+		return;
 	}
+	
+	[self createAttackViewController:item];
+}
+
+
+-(History *) findAttackDataToUse:(int)row loadAttacksFromMe:(BOOL)loadAttacksFromMe {
+	NSMutableArray *arrToUse;
+	AntAmbushAppDelegate *appDelegate = (AntAmbushAppDelegate*)[[UIApplication sharedApplication] delegate];
+	if(self.loadAttacksFromMe == NO) {
+		arrToUse = appDelegate.dbAttackedBy;
+	} else {
+		arrToUse = appDelegate.dbAttacks;	
+	}
+	
+	if(arrToUse != nil) {
+		History *item = [arrToUse objectAtIndex:row];
+		return item;
+    } else {
+		NSLog(@"Array to use is nil!");
+		return nil;
+	}
+}
+
+
+-(void)createAttackViewController:(History *)item {
+	SingleAttackViewController *detailViewController = [[SingleAttackViewController alloc] init];
+	[detailViewController addAttackData:item];
+	
+	[self.navigationController pushViewController:detailViewController animated:YES];
+	[detailViewController release];	
 }
 
 

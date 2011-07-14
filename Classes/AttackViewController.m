@@ -11,10 +11,10 @@
 #import "History.h"
 #import "CJSONDeserializer.h"
 #import "UIImageAlertView.h"
-#import "SingleAttackViewController.h"
 #import "SettingsViewController.h"
 #import "FBTableViewController.h"
 #import "WeaponScrollerViewController.h"
+#import "MixpanelAPI.h"
 
 static NSString *key = @"AHYFT36395NN3YD86DH";
 static NSString *ImageKey = @"imageKey";
@@ -71,6 +71,9 @@ static NSString *rootUrl = @"http://www.antambush.com";
 	
 	NSLog(@"View did load!");
 	
+    MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+	[mixpanel trackFunnel:@"Attack Friend" step:1 goal:@"App Loaded"];
+    
 	// Create and track a local History object
 	attackHistory = [[History alloc] init];
 	
@@ -87,9 +90,11 @@ static NSString *rootUrl = @"http://www.antambush.com";
 
 -(void)serverRequestForAttacks {
 
+    // Cancel any current requests
+    [request clearDelegatesAndCancel];
+    
 	// Check to see if we know who this user is
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-	NSString *userEmail = [prefs stringForKey:@"userEmail"];
 	NSString *lastAttackId = [prefs stringForKey:@"lastAttackId"];
 	NSString *deviceToken = [prefs stringForKey:@"deviceToken"];
 	
@@ -103,30 +108,31 @@ static NSString *rootUrl = @"http://www.antambush.com";
 	
 	NSString *fbUserID = [prefs stringForKey:@"fbID"];
 	
-	if(fbWrapper != nil && deviceToken != nil && ([fbUserID length] > 0 || [userEmail length] > 0)) {
+	if(fbWrapper != nil && deviceToken != nil && [fbUserID length] > 0) {
 		
 		// Ask server if there are any new attacks on this user -- use the FB ID if available, otherwise use email
 		NSString *formatUrl;
 		
 		if([fbUserID length] > 0) {
 			formatUrl = [NSString stringWithFormat:@"%@/user_attacks/lookup?fbid=%@&lastid=%@&device_token=%@",rootUrl,fbUserID,lastAttackId,deviceToken];
-		} else {
-			formatUrl = [NSString stringWithFormat:@"%@/user_attacks/lookup?email=%@&lastid=%@&device_token=%@",rootUrl,userEmail,lastAttackId,deviceToken];
-		}
-
-		[self setSpinningMode:YES detailTxt:@"Lookup Attacks"];
-		NSURL *url = [NSURL URLWithString:formatUrl];
-		self.request = [ASIHTTPRequest requestWithURL:url];
-		[self.request setDelegate:self];
-		[self.request startAsynchronous];
-	}	
+            NSURL *url = [NSURL URLWithString:formatUrl];
+            
+            [self setSpinningMode:YES detailTxt:@"Lookup Attacks"];
+            self.request = [ASIHTTPRequest requestWithURL:url];
+            [self.request setDelegate:self];
+            [self.request startAsynchronous];
+        }
+    }	
 }
 
 // Callback from the server request asking for new attacks
 -(void)requestFinished:(ASIHTTPRequest *)requestCallback {
 	// Stop the spinner
 	[self setSpinningMode:NO detailTxt:@""];
-	
+    
+    MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+	[mixpanel track:@"ServerRequestSuccess"];
+    
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 	NSString *lastAttackIdStr = [prefs stringForKey:@"lastAttackId"];
 	int lastAttackId = [lastAttackIdStr intValue];
@@ -144,7 +150,7 @@ static NSString *rootUrl = @"http://www.antambush.com";
 	id object;
 	int newAttackId = lastAttackId;
 	int shownAttacks = 0;
-	while (object = [e nextObject]) {
+	while ((object = [e nextObject])) {
 		NSDictionary *dictionary = (NSDictionary *)object;
 		
 		NSString *newAttackIdStr = [dictionary objectForKey:@"attack_id"];
@@ -193,7 +199,7 @@ static NSString *rootUrl = @"http://www.antambush.com";
 				[newAttack release];
 				
 				// Popup dialog now
-				UIImageAlertView *alert = [[UIImageAlertView alloc] initWithTitle:[NSString stringWithFormat:@"Attacked by %@!", attackerName] message:[NSString stringWithFormat:@"You were attacked with %@, who said '%@'", [numberItem valueForKey:NameKey], attackMessage] delegate:self cancelButtonTitle:@"Wuss out" otherButtonTitles:@"Attack back",nil];
+				UIImageAlertView *alert = [[UIImageAlertView alloc] initWithTitle:[NSString stringWithFormat:@"Attacked by %@!", attackerName] message:[NSString stringWithFormat:@"You were attacked with %@! '%@'", [numberItem valueForKey:NameKey], attackMessage] delegate:self cancelButtonTitle:@"Wuss out" otherButtonTitles:@"Attack back",nil];
 				[alert setImage:[UIImage imageNamed:[numberItem valueForKey:ImageKey]] attackNameStr:[numberItem valueForKey:NameKey]];
 				[alert show];
 				[alert release];
@@ -218,6 +224,9 @@ static NSString *rootUrl = @"http://www.antambush.com";
 -(void)requestFailed:(ASIHTTPRequest *)requestCallback {
 	// Stop the spinner
 	[self setSpinningMode:NO detailTxt:@""];
+    
+    MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+	[mixpanel track:@"ServerRequestFailure"];
 	
 	NSError *error = [requestCallback error];
 	NSLog(@"Error request: %@", [error localizedDescription]);
@@ -243,61 +252,11 @@ static NSString *rootUrl = @"http://www.antambush.com";
 }
 
 
--(void) attackPickedFromAttackedTableCallback:(NSIndexPath *)attackRow {
-	// Open the single attack view
-	NSLog(@"Attacked Table, Row = %d", attackRow.row);
-	History *item = [self findAttackDataToUse:attackRow.row loadAttacksFromMe:YES];
-	if(item == nil) {
-		NSLog(@"Can't find attack item");
-		return;
-	}
-	
-	[self createAttackViewController:item];
-}
-
-
--(void) attackPickedFromAttackedByTableCallback:(NSIndexPath *)attackRow {
-	// Open the single attack view
-	NSLog(@"AttackedBy Table, Row = %d", attackRow.row);
-	History *item = [self findAttackDataToUse:attackRow.row loadAttacksFromMe:NO];
-	if(item == nil) {
-		NSLog(@"Can't find attack item");
-		return;
-	}
-	
-	[self createAttackViewController:item];
-}
-
-
--(void)createAttackViewController:(History *)item {
-	SingleAttackViewController *detailViewController = [[SingleAttackViewController alloc] init];
-	[detailViewController addAttackData:item];
-	
-	[self.navigationController pushViewController:detailViewController animated:YES];
-	[detailViewController release];	
-}
-
-
--(History *) findAttackDataToUse:(int)row loadAttacksFromMe:(BOOL)loadAttacksFromMe {
-	NSMutableArray *arrToUse;
-	AntAmbushAppDelegate *appDelegate = (AntAmbushAppDelegate*)[[UIApplication sharedApplication] delegate];
-	if(loadAttacksFromMe == NO) {
-		arrToUse = appDelegate.dbAttackedBy;
-	} else {
-		arrToUse = appDelegate.dbAttacks;	
-	}
-	
-	if(arrToUse != nil) {
-		History *item = [arrToUse objectAtIndex:row];
-		return item;
-    } else {
-		NSLog(@"Array to use is nil!");
-		return nil;
-	}
-}
-
-
 -(void)settingsBtnClick:(id)sender{
+    
+    MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+	[mixpanel track:@"SettingsButtonClicked"];
+    
 	//Open the settings page
 	SettingsViewController *settingsViewController = [[SettingsViewController alloc] initWithStyle:UITableViewStyleGrouped];
 	settingsViewController.title = @"Settings";
@@ -309,6 +268,11 @@ static NSString *rootUrl = @"http://www.antambush.com";
 
 // respond to the Attack button click
 -(void)startBtnClick:(UIView*)clickedButton {
+    
+    MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+	[mixpanel trackFunnel:@"Attack Friend" step:2 goal:@"Start Button Clicked"];
+    [mixpanel track:@"StartAttackClicked"];
+    
 	FBTableViewController *table = [[FBTableViewController alloc] initWithStyle:UITableViewStylePlain];
 	[table setFbWrapper:fbWrapper];
 	table.attackHistory = attackHistory;
@@ -318,6 +282,9 @@ static NSString *rootUrl = @"http://www.antambush.com";
 
 // respond to the You were punkd button click
 -(void)scrollPunkdBtnClick:(UIView*)clickedButton {
+    MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+    [mixpanel track:@"PunkedBtnClicked"];
+    
 	// Create the "recently attacked by" table
     RecentAttacksViewController *recentPunkdViewController = [[RecentAttacksViewController alloc] init];
 	recentPunkdViewController.title = @"Punk'd By";
@@ -328,6 +295,9 @@ static NSString *rootUrl = @"http://www.antambush.com";
 
 // respond to the You recently attacked button click
 -(void)scrollAttackedBtnClick:(UIView*)clickedButton {
+    MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+    [mixpanel track:@"AttackedBtnClicked"];
+    
 	// Create the "recently attacked" table
     RecentAttacksViewController *recentAttackedViewController = [[RecentAttacksViewController alloc] init];
 	recentAttackedViewController.title = @"Punk'd By";
@@ -341,9 +311,15 @@ static NSString *rootUrl = @"http://www.antambush.com";
 	NSString *title = [alertView buttonTitleAtIndex:buttonIndex];  
 	
     if([title isEqualToString:@"Attack back"]) {
+        MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+        [mixpanel track:@"Attack_AttackBack"];
+        
 		NSLog(@"User wants to attack back");
 		[self changeToWeaponView];
 	} else if([title isEqualToString:@"Wuss out"]) {
+        MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+        [mixpanel track:@"Attack_WussOut"];
+        
 		// Clear out the user to attack if the user says to cancel
 		attackHistory.contactFbID = @"";
 	}

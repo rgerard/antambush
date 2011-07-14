@@ -11,6 +11,7 @@
 #import "UAirship.h"
 #import "UAPush.h"
 #import "History.h"
+#import "MixpanelAPI.h"
 
 static NSString *ImageKey = @"imageKey";
 
@@ -31,6 +32,9 @@ static NSString *ImageKey = @"imageKey";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
+    //Init Mixpanel
+    [MixpanelAPI sharedAPIWithToken:@"d94360a7478ea020b06d1479bd8d07cb"];
+    
 	//Init Airship launch options
 	NSMutableDictionary *takeOffOptions = [[[NSMutableDictionary alloc] init] autorelease];
 	[takeOffOptions setValue:launchOptions forKey:UAirshipTakeOffOptionsLaunchOptionsKey];
@@ -46,9 +50,6 @@ static NSString *ImageKey = @"imageKey";
 	[[UAPush shared] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
 														 UIRemoteNotificationTypeSound |
 														 UIRemoteNotificationTypeAlert)];
-	
-	// Start the analytics
-	[[LocalyticsSession sharedLocalyticsSession] startSession:@"a056e6519654482295c3f1a-3f2b4972-97e2-11e0-0023-007f58cb3154"];
 	
 	// Init the DB
 	[self createEditableCopyOfDatabase:@"recentAttacks.db"];
@@ -73,6 +74,11 @@ static NSString *ImageKey = @"imageKey";
 	
 	// Check for a user FB ID -- prompt for signin view if not present
 	if(![self.fbWrapper isLoggedInToFB]) {
+        
+        // Track people who start the app and login
+        MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+        [mixpanel trackFunnel:@"Login" step:1 goal:@"App Started"];
+        
 		[window addSubview:signinViewController.view];
 	} else {
 		// Add the tab bar view to the window
@@ -93,22 +99,33 @@ static NSString *ImageKey = @"imageKey";
  Switches from login view to the main view
  */
 - (void)switchFromLoginView {
-	// Get the users email address
-	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-	self.userFbID = [prefs stringForKey:@"fbID"];
+    
+    if([self.fbWrapper isLoggedInToFB]) {
+        MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+        [mixpanel trackFunnel:@"Login" step:3 goal:@"Successfully logged-in"];
+        
+        // Get the users email address
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        self.userFbID = [prefs stringForKey:@"fbID"];
 	
-	// Remove the signin view controller
-	[signinViewController.view removeFromSuperview];
+        // Remove the signin view controller
+        [signinViewController.view removeFromSuperview];
 	
-	// Add the tab bar view to the window
-	[window addSubview:attackNavigationController.view];
+        // Add the tab bar view to the window
+        [window addSubview:attackNavigationController.view];
 	
-	// Ask for the me info
-	[fbWrapper getMeInfo:@selector(facebookMeCallback) delegate:attackViewController];
-	
-	// Subscribe to orientation changes
-	//[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-	//[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(detectOrientation) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
+        // Ask for the me info
+        [fbWrapper getMeInfo:@selector(facebookMeCallback) delegate:attackViewController];
+    } else {
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Login Error"  
+                                                message:@"There was an error logging in.  Please try again."  
+                                                delegate:nil  
+                                                cancelButtonTitle:@"OK"  
+                                                otherButtonTitles:nil];  
+        
+        [message show];  
+        [message release];
+    }
 }
 
 
@@ -232,9 +249,6 @@ static NSString *ImageKey = @"imageKey";
      Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
      If your application supports background execution, called instead of applicationWillTerminate: when the user quits.
      */
-	
-	[[LocalyticsSession sharedLocalyticsSession] close];
-	[[LocalyticsSession sharedLocalyticsSession] upload];
 }
 
 
@@ -242,9 +256,6 @@ static NSString *ImageKey = @"imageKey";
     /*
      Called as part of  transition from the background to the inactive state: here you can undo many of the changes made on entering the background.
      */
-	
-	[[LocalyticsSession sharedLocalyticsSession] resume];
-	[[LocalyticsSession sharedLocalyticsSession] upload];
 }
 
 
@@ -272,8 +283,6 @@ static NSString *ImageKey = @"imageKey";
      See also applicationDidEnterBackground:.
      */
 	[UAirship land];
-	[[LocalyticsSession sharedLocalyticsSession] close];
-	[[LocalyticsSession sharedLocalyticsSession] upload];
 }
 
 

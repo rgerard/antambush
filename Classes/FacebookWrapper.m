@@ -8,6 +8,7 @@
 
 #import "FacebookWrapper.h"
 #import "FacebookUser.h"
+#import "MixpanelAPI.h"
 
 static NSString* kAppId = @"206499529382979";
 
@@ -171,6 +172,9 @@ static NSString* kAppId = @"206499529382979";
 	NSLog(@"FB Logged in!");
 	self.isLoggedInToFB = YES;
 	
+    MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+    [mixpanel track:@"FacebookLoginSuccess"];
+    
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 	[prefs setObject:[facebook accessToken] forKey:@"fbAccessToken"];
 	[prefs setObject:[facebook expirationDate] forKey:@"fbExpiration"];
@@ -187,6 +191,9 @@ static NSString* kAppId = @"206499529382979";
 -(void) fbDidNotLogin:(BOOL)cancelled {
 	NSLog(@"FB did not login!");
 	self.isLoggedInToFB = NO;
+    
+    MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+    [mixpanel track:@"FacebookLoginFailure"];
 	
 	// Call the callback, let it know that the request is done
 	if([self.delegate respondsToSelector:self.callback]) {
@@ -197,8 +204,11 @@ static NSString* kAppId = @"206499529382979";
 
 -(void) fbDidLogout {
 	NSLog(@"Logged out of Facebook");
-	
 	self.isLoggedInToFB = NO;
+    
+    MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+    [mixpanel track:@"FacebookLogoutSuccess"];
+    
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 	[prefs setBool:NO forKey:@"fbLoggedIn"];
     [prefs setObject:@"" forKey:@"fbAccessToken"];
@@ -269,6 +279,9 @@ static NSString* kAppId = @"206499529382979";
 -(void) request:(FBRequest *)request didFailWithError:(NSError *)error {
 	NSLog(@"Error making FB request: %@", error);
 	
+    MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+    [mixpanel track:@"FacebookRequestFailure"];
+    
 	// Call the callback, let it know that the request is done
 	if([self.delegate respondsToSelector:self.callback]) {
 		[self.delegate performSelector:self.callback];
@@ -318,7 +331,17 @@ static NSString* kAppId = @"206499529382979";
  * Called when the dialog succeeds with a returning url.
  */
 - (void)dialogCompleteWithUrl:(NSURL *)url {
-	NSLog(@"Publish dialogCompleteWithUrl");
+	NSLog(@"Publish dialogCompleteWithUrl %@", url);
+    NSString* urlStr = [url absoluteString];
+    
+    MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+    if([urlStr rangeOfString:@"post_id"].location == NSNotFound) {
+        [mixpanel trackFunnel:@"Attack Friend" step:6 goal:@"Posted to Facebook" properties:[NSDictionary dictionaryWithObject:@"false" forKey:@"didPost"]];
+        [mixpanel track:@"FacebookPostSkip"];
+    } else {
+        [mixpanel trackFunnel:@"Attack Friend" step:6 goal:@"Posted to Facebook" properties:[NSDictionary dictionaryWithObject:@"true" forKey:@"didPost"]];
+        [mixpanel track:@"FacebookPostSuccess"];
+    }
 }
 
 /**
@@ -332,6 +355,10 @@ static NSString* kAppId = @"206499529382979";
  * Called when the dialog is cancelled and is about to be dismissed.
  */
 - (void)dialogDidNotComplete:(FBDialog *)dialog {
+    MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+	[mixpanel trackFunnel:@"Attack Friend" step:6 goal:@"Posted to Facebook" properties:[NSDictionary dictionaryWithObject:@"false" forKey:@"didPost"]];
+    [mixpanel track:@"FacebookPostCancelled"];
+    
 	NSLog(@"Publish dialogDidNotComplete");
 }
 
@@ -339,6 +366,10 @@ static NSString* kAppId = @"206499529382979";
  * Called when dialog failed to load due to an error.
  */
 - (void)dialog:(FBDialog*)dialog didFailWithError:(NSError *)error {
+    MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+	[mixpanel trackFunnel:@"Attack Friend" step:6 goal:@"Posted to Facebook" properties:[NSDictionary dictionaryWithObject:@"false" forKey:@"didPost"]];
+    [mixpanel track:@"FacebookPostFailed"];
+    
 	NSLog(@"Publish didFailWithError: %@", error);
 }
 

@@ -9,6 +9,7 @@
 #import "FBTableViewController.h"
 #import "FacebookUser.h"
 #import "WeaponScrollerViewController.h"
+#import "MixpanelAPI.h"
 
 @implementation FBTableViewController
 
@@ -150,6 +151,10 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+	[mixpanel trackFunnel:@"Attack Friend" step:3 goal:@"Friend Selected"];
+    [mixpanel track:@"FriendToAttackSelected"];
+    
 	// Get data on the user picked
 	NSString* key = [self.fbWrapper.friendDataSortedKeys objectAtIndex:indexPath.section];
 	NSMutableArray* nameArr = [self.fbWrapper.friendData objectForKey:key];

@@ -10,6 +10,7 @@
 #import "AntAmbushAppDelegate.h"
 #import "History.h"
 #import "UAPushUI.h"
+#import "MixpanelAPI.h"
 
 @implementation SettingsViewController
 
@@ -152,8 +153,10 @@
 	if(indexPath.section == 0) {
 		NSLog(@"Clearing out known user data for logout");
 		
+        MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+        [mixpanel track:@"ClearDataClicked"];
+        
 		NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-		[prefs setObject:@"" forKey:@"userEmail"];
 		[prefs setObject:@"" forKey:@"fbID"];
 		[prefs setObject:@"" forKey:@"fbFullname"];
 		[prefs setObject:@"" forKey:@"fbFirstname"];
@@ -164,11 +167,9 @@
 		// Logout of FB if logged in
 		if(self.fbWrapper.isLoggedInToFB) {
 			NSLog(@"Logging out of Facebook");
-			[[LocalyticsSession sharedLocalyticsSession] tagEvent:@"UserManuallyLoggedOut"];
 			[self.fbWrapper facebookLogout:@selector(facebookLogoutCallback) delegate:self];
 		} else {
 			NSLog(@"Login to Facebook");
-			[[LocalyticsSession sharedLocalyticsSession] tagEvent:@"UserManuallyLoggedIn"];
 			
 			// Start the spinner
 			[self setSpinningMode:YES detailTxt:@"Logging in to Facebook"];
@@ -176,12 +177,16 @@
 			[self facebookLoginClick];
 		}
 	} else if(indexPath.section == 1) {
+        MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+        [mixpanel track:@"ChangePushSettingsClicked"];
+        
 		// Open the UA push settings UI
 		[UAPush openApnsSettings:self animated:YES];
 	} else if(indexPath.section == 2) {
-		// Delete all data from the local database
-		[[LocalyticsSession sharedLocalyticsSession] tagEvent:@"UserManuallyClearedData"];
 		
+        MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+        [mixpanel track:@"LogoutClicked"];
+        
 		NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 		//[prefs setObject:@"" forKey:@"lastAttackId"];
 		[prefs setInteger:0 forKey:@"attackCount"];

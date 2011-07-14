@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "History.h"
+#import "MixpanelAPI.h"
 
 @interface RecentAttacksViewController : UITableViewController {
 	BOOL loadAttacksFromMe;
@@ -16,9 +17,8 @@
 }
 
 @property (nonatomic) BOOL loadAttacksFromMe;
-@property (nonatomic, retain) id delegate;
-@property (nonatomic) SEL attackSelector;
 
--(void) setDelegateCallback:(SEL)appSelector delegate:(id)requestDelegate;
+-(History *) findAttackDataToUse:(int)row loadAttacksFromMe:(BOOL)loadAttacksFromMe;
+-(void) createAttackViewController:(History *)item;
 
 @end

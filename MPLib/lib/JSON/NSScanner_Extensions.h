@@ -1,9 +1,9 @@
 //
-//  NSDictionary_JSONExtensions.h
+//  NSScanner_Extensions.h
 //  TouchCode
 //
-//  Created by Jonathan Wight on 04/17/08.
-//  Copyright 2008 toxicsoftware.com. All rights reserved.
+//  Created by Jonathan Wight on 12/08/2005.
+//  Copyright 2005 toxicsoftware.com. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person
 //  obtaining a copy of this software and associated documentation
@@ -29,9 +29,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSDictionary (NSDictionary_JSONExtensions)
+@interface NSScanner (NSScanner_Extensions)
 
-+ (id)dictionaryWithJSONData:(NSData *)inData error:(NSError **)outError;
-+ (id)dictionaryWithJSONString:(NSString *)inJSON error:(NSError **)outError;
+- (NSString *)remainingString;
+
+- (unichar)currentCharacter;
+- (unichar)scanCharacter;
+- (BOOL)scanCharacter:(unichar)inCharacter;
+- (void)backtrack:(unsigned)inCount;
+
+- (BOOL)scanCStyleComment:(NSString **)outComment;
+- (BOOL)scanCPlusPlusStyleComment:(NSString **)outComment;
 
 @end

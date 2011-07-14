@@ -8,6 +8,7 @@
 
 #import "SendMessageViewController.h"
 #import "AntAmbushAppDelegate.h"
+#import "MixpanelAPI.h"
 
 static NSString *rootUrl = @"http://www.antambush.com";
 //static NSString *rootUrl = @"http://localhost:3000";
@@ -67,6 +68,15 @@ static NSString *rootUrl = @"http://www.antambush.com";
 
 // respond to the attack via email button click
 -(void)attackBtnClick:(UIView*)clickedButton {
+    NSString *hasMessage = @"true";
+    if(inputMessage.text.length == 0) {
+        hasMessage = @"false";
+    }
+    
+    MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+	[mixpanel trackFunnel:@"Attack Friend" step:5 goal:@"Attack Sent" properties:[NSDictionary dictionaryWithObject:hasMessage forKey:@"hasMessage"]];
+    [mixpanel track:@"FriendAttacked" properties:[NSDictionary dictionaryWithObject:hasMessage forKey:@"hasMessage"]];
+    
 	[self.inputMessage resignFirstResponder];
 	[self callAppDelegateToAttack];
 }
@@ -76,6 +86,9 @@ static NSString *rootUrl = @"http://www.antambush.com";
 	// Save the message
 	self.attackHistory.message = inputMessage.text;
 	
+    // Make sure to cancel any current running requests
+	[self.formRequest clearDelegatesAndCancel];
+    
 	// Start the spinner
 	[self setSpinningMode:YES detailTxt:@"Sending Attack"];
 	
@@ -101,9 +114,11 @@ static NSString *rootUrl = @"http://www.antambush.com";
 	}
 	
 	// Send the data to the backend
+    NSString *name = [prefs stringForKey:@"fbFullname"];
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/user_attacks/createFromPhone", rootUrl]];
 	self.formRequest = [ASIFormDataRequest requestWithURL:url];
 	[self.formRequest setPostValue:appDelegate.userFbID forKey:@"user_attack[attacker_fbid]"];
+    [self.formRequest setPostValue:name forKey:@"user_attack[attacker_name]"];
 	[self.formRequest setPostValue:self.attackHistory.contactFbID forKey:@"user_attack[victim_fbid]"];
 	[self.formRequest setPostValue:self.attackHistory.contactName forKey:@"user_attack[victim_name]"];
 	[self.formRequest setPostValue:self.attackHistory.attack forKey:@"user_attack[attack_name]"];

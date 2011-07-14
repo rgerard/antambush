@@ -33,7 +33,7 @@
 
 // Tell the UIAlertView frame to have a larger height, to accomodate the picture
 - (void)setFrame:(CGRect)rect {
-	[super setFrame:CGRectMake(0, 0, rect.size.width, 280)];
+	[super setFrame:CGRectMake(0, 0, rect.size.width, 320)];
 	self.center = CGPointMake(320/2, 480/2);
 }
 
