@@ -295,11 +295,12 @@ static NSString* kAppId = @"206499529382979";
 }
 
 
--(void) facebookPublishNote:(NSString *)victim message:(NSString *)message url:(NSString *)url attack:(NSString *)attack {
+-(void) facebookPublishNote:(NSString *)victim message:(NSString *)message url:(NSString *)url attack:(NSString *)attack attackImage:(NSString *)attackImage {
 	
     // Get ME info
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSString *fbid = [prefs stringForKey:@"fbID"];
+    NSString *image = [NSString stringWithFormat:@"http://www.antambush.com/images/%@", attackImage];
 
     if(fbid != nil && fbid.length > 0) {
         NSMutableDictionary* attachment = [NSMutableDictionary dictionaryWithObjectsAndKeys:
@@ -310,6 +311,7 @@ static NSString* kAppId = @"206499529382979";
 								[NSString stringWithFormat:@"You just got ambushed by %@", attack], @"caption",
 								@"You know what it is", @"description",
 								message,  @"message",
+                                image, @"picture",
 								url, @"link", nil];
 	
         [facebook dialog:@"stream.publish" andParams:attachment andDelegate:self];

@@ -366,12 +366,14 @@ static NSString *rootUrl = @"http://www.antambush.com";
 		AntAmbushAppDelegate *appDelegate = (AntAmbushAppDelegate*)[[UIApplication sharedApplication] delegate];
 		NSDictionary *numberItem = [appDelegate findAttackInPList:historyItem.attack];
 		NSString *attackStr = @"something";
+        NSString *attackImage = @"nothing.jpg";
 		
 		if(numberItem != nil) {
 			attackStr = [numberItem valueForKey:NameKey];
+            attackImage = [numberItem valueForKey:ImageKey];
 		}
 		
-		[fbWrapper facebookPublishNote:historyItem.contactFbID message:historyItem.message url:urlToSend attack:attackStr];
+		[fbWrapper facebookPublishNote:historyItem.contactFbID message:historyItem.message url:urlToSend attack:attackStr attackImage:attackImage];
 		
 		/*if([MFMailComposeViewController canSendMail]) {
 				

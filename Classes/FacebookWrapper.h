@@ -33,7 +33,7 @@
 -(void) facebookLogin:(SEL)appSelector delegate:(id)requestDelegate;
 -(void) facebookLogout:(SEL)appSelector delegate:(id)requestDelegate;
 -(void) facebookAuthorize:(SEL)appSelector delegate:(id)requestDelegate;
--(void) facebookPublishNote:(NSString *)victim message:(NSString *)message url:(NSString *)url attack:(NSString *)attack;
+-(void) facebookPublishNote:(NSString *)victim message:(NSString *)message url:(NSString *)url attack:(NSString *)attack attackImage:(NSString *)attackImage;
 -(void) getMeInfo:(SEL)appSelector delegate:(id)requestDelegate;
 -(void) getFriendInfo:(SEL)appSelector delegate:(id)requestDelegate;
 -(void) recordFBUserInfo:(NSDictionary*)info;
