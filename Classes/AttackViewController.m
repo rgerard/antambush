@@ -184,20 +184,6 @@ static NSString *rootUrl = @"http://www.antambush.com";
 				// Set the current user to attack
 				attackHistory.contactFbID = attackerFbID;
 				
-				// Create a new history object to record this in the DB
-				History *newAttack = [[History alloc] init];
-				newAttack.serverID = [newAttackIdStr intValue];
-				newAttack.contactFbID = attackerFbID;
-				newAttack.contactName = attackerName;
-				newAttack.attack = attackImage;
-				newAttack.message = attackMessage;
-
-				// Add the attack to the DB
-				[self addAttack:newAttack sendToServer:NO attackID:newAttackIdStr];
-				
-				// Release the history object just created
-				[newAttack release];
-				
 				// Popup dialog now
 				UIImageAlertView *alert = [[UIImageAlertView alloc] initWithTitle:[NSString stringWithFormat:@"Attacked by %@!", attackerName] message:[NSString stringWithFormat:@"You were attacked with %@! '%@'", [numberItem valueForKey:NameKey], attackMessage] delegate:self cancelButtonTitle:@"Wuss out" otherButtonTitles:@"Attack back",nil];
 				[alert setImage:[UIImage imageNamed:[numberItem valueForKey:ImageKey]] attackNameStr:[numberItem valueForKey:NameKey]];
@@ -206,6 +192,20 @@ static NSString *rootUrl = @"http://www.antambush.com";
 				
 				shownAttacks++;
 			}
+            
+            // Create a new history object to record this in the DB
+            History *newAttack = [[History alloc] init];
+            newAttack.serverID = [newAttackIdStr intValue];
+            newAttack.contactFbID = attackerFbID;
+            newAttack.contactName = attackerName;
+            newAttack.attack = attackImage;
+            newAttack.message = attackMessage;
+            
+            // Add the attack to the DB
+            [self addAttack:newAttack sendToServer:NO attackID:newAttackIdStr];
+            
+            // Release the history object just created
+            [newAttack release];
 		}
 	}
 	

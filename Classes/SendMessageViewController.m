@@ -96,7 +96,7 @@ static NSString *rootUrl = @"http://www.antambush.com";
 	
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 	NSString *deviceToken = [prefs stringForKey:@"deviceToken"];
-	
+	NSString *userFbID = [prefs stringForKey:@"fbID"];
 	
 	int attackCount = 1;
 	
@@ -117,7 +117,7 @@ static NSString *rootUrl = @"http://www.antambush.com";
     NSString *name = [prefs stringForKey:@"fbFullname"];
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/user_attacks/createFromPhone", rootUrl]];
 	self.formRequest = [ASIFormDataRequest requestWithURL:url];
-	[self.formRequest setPostValue:appDelegate.userFbID forKey:@"user_attack[attacker_fbid]"];
+	[self.formRequest setPostValue:userFbID forKey:@"user_attack[attacker_fbid]"];
     [self.formRequest setPostValue:name forKey:@"user_attack[attacker_name]"];
 	[self.formRequest setPostValue:self.attackHistory.contactFbID forKey:@"user_attack[victim_fbid]"];
 	[self.formRequest setPostValue:self.attackHistory.contactName forKey:@"user_attack[victim_name]"];

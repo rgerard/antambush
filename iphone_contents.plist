@@ -32,5 +32,23 @@
 		<key>nameKey</key>
 		<string>High Kittens</string>
 	</dict>
+	<dict>
+		<key>imageKey</key>
+		<string>trout.jpg</string>
+		<key>nameKey</key>
+		<string>Flying Trout</string>
+	</dict>
+	<dict>
+		<key>imageKey</key>
+		<string>easter_chick.jpg</string>
+		<key>nameKey</key>
+		<string>Easter Chick</string>
+	</dict>
+	<dict>
+		<key>imageKey</key>
+		<string>lochness.jpg</string>
+		<key>nameKey</key>
+		<string>Lochness Monster</string>
+	</dict>
 </array>
 </plist>

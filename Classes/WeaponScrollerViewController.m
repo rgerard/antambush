@@ -11,7 +11,7 @@
 #import "SendMessageViewController.h"
 #import "MixpanelAPI.h"
 
-static NSUInteger kNumberOfPages = 5;
+static NSUInteger kNumberOfPages = 8;
 static NSString *NameKey = @"nameKey";
 static NSString *ImageKey = @"imageKey";
 

@@ -93,6 +93,9 @@
 		94E93CAF1331CE0C0046EB0F /* SingleWeaponViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E93CAD1331CE0C0046EB0F /* SingleWeaponViewController.m */; };
 		94E93CB01331CE0C0046EB0F /* SingleWeaponViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94E93CAE1331CE0C0046EB0F /* SingleWeaponViewController.xib */; };
 		94E93CD11331CF9B0046EB0F /* iphone_contents.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94E93CD01331CF9B0046EB0F /* iphone_contents.plist */; };
+		94EBD8DE13DFD6BD00A0D5C2 /* easter_chick.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94EBD8DB13DFD6BD00A0D5C2 /* easter_chick.jpg */; };
+		94EBD8DF13DFD6BD00A0D5C2 /* trout.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94EBD8DC13DFD6BD00A0D5C2 /* trout.jpg */; };
+		94EBD8E013DFD6BD00A0D5C2 /* lochness.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94EBD8DD13DFD6BD00A0D5C2 /* lochness.jpg */; };
 		94F7052713989157008584E4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F7052613989157008584E4 /* AudioToolbox.framework */; };
 		94F7052B13989184008584E4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F7052A13989184008584E4 /* Security.framework */; };
 		94F7052F139891A0008584E4 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F7052E139891A0008584E4 /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -284,6 +287,9 @@
 		94E93CAD1331CE0C0046EB0F /* SingleWeaponViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleWeaponViewController.m; sourceTree = "<group>"; };
 		94E93CAE1331CE0C0046EB0F /* SingleWeaponViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SingleWeaponViewController.xib; path = Classes/SingleWeaponViewController.xib; sourceTree = "<group>"; };
 		94E93CD01331CF9B0046EB0F /* iphone_contents.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = iphone_contents.plist; sourceTree = "<group>"; };
+		94EBD8DB13DFD6BD00A0D5C2 /* easter_chick.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = easter_chick.jpg; sourceTree = "<group>"; };
+		94EBD8DC13DFD6BD00A0D5C2 /* trout.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trout.jpg; sourceTree = "<group>"; };
+		94EBD8DD13DFD6BD00A0D5C2 /* lochness.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lochness.jpg; sourceTree = "<group>"; };
 		94F7052613989157008584E4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		94F7052A13989184008584E4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		94F7052E139891A0008584E4 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -678,6 +684,9 @@
 		94E93D511331D49E0046EB0F /* attack_images */ = {
 			isa = PBXGroup;
 			children = (
+				94EBD8DB13DFD6BD00A0D5C2 /* easter_chick.jpg */,
+				94EBD8DC13DFD6BD00A0D5C2 /* trout.jpg */,
+				94EBD8DD13DFD6BD00A0D5C2 /* lochness.jpg */,
 				94BD8AE913C6D0AB005B35E1 /* happy_piglet.jpg */,
 				94BD8AEA13C6D0AB005B35E1 /* beagle_attack.jpg */,
 				94BD8AEB13C6D0AB005B35E1 /* honey_badger.jpg */,
@@ -934,6 +943,9 @@
 				94BD8AFA13C8F9B9005B35E1 /* signin_background.png in Resources */,
 				94BD8AFC13C8F9D2005B35E1 /* signin_facebook_btn.png in Resources */,
 				94BD8AFE13C8FA33005B35E1 /* signin_facebook_btn_select.png in Resources */,
+				94EBD8DE13DFD6BD00A0D5C2 /* easter_chick.jpg in Resources */,
+				94EBD8DF13DFD6BD00A0D5C2 /* trout.jpg in Resources */,
+				94EBD8E013DFD6BD00A0D5C2 /* lochness.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
