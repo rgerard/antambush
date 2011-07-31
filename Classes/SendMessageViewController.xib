@@ -82,7 +82,7 @@
 						</object>
 						<object class="NSCustomResource" key="IBUINormalImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">main_attack_btn.png</string>
+							<string key="NSResourceName">send_attack_btn.png</string>
 						</object>
 					</object>
 					<object class="IBUITextField" id="280085064">
@@ -590,8 +590,8 @@
 			<bool key="EncodedWithXMLCoder">YES</bool>
 			<object class="NSArray" key="dict.sortedKeys">
 				<bool key="EncodedWithXMLCoder">YES</bool>
-				<string>main_attack_btn.png</string>
 				<string>main_background.png</string>
+				<string>send_attack_btn.png</string>
 			</object>
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>

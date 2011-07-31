@@ -91,9 +91,7 @@ static NSString *rootUrl = @"http://www.antambush.com";
     
 	// Start the spinner
 	[self setSpinningMode:YES detailTxt:@"Sending Attack"];
-	
-	AntAmbushAppDelegate *appDelegate = (AntAmbushAppDelegate*)[[UIApplication sharedApplication] delegate];
-	
+
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 	NSString *deviceToken = [prefs stringForKey:@"deviceToken"];
 	NSString *userFbID = [prefs stringForKey:@"fbID"];
