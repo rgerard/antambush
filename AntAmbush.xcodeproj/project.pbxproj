@@ -30,7 +30,6 @@
 		944E13EE13C569580084B889 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E13EC13C569570084B889 /* Default.png */; };
 		944E13EF13C569580084B889 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E13ED13C569570084B889 /* Default@2x.png */; };
 		944E13F313C56A5B0084B889 /* main_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E13F213C56A5A0084B889 /* main_background@2x.png */; };
-		9450636313A9C8CD0063F766 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9450636213A9C8CD0063F766 /* MBProgressHUD.m */; };
 		946210DC1369435A0073CBDF /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 946210DA1369435A0073CBDF /* SettingsViewController.m */; };
 		946210DD1369435A0073CBDF /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 946210DB1369435A0073CBDF /* SettingsViewController.xib */; };
 		949EBE87135E28CA002EAEA6 /* ContactListPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 949EBE86135E28CA002EAEA6 /* ContactListPicker.m */; };
@@ -107,6 +106,7 @@
 		94EBD93E13FB8E9700A0D5C2 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 94EBD93413FB8E9700A0D5C2 /* ASIInputStream.m */; };
 		94EBD93F13FB8E9700A0D5C2 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 94EBD93613FB8E9700A0D5C2 /* ASINetworkQueue.m */; };
 		94EBD94213FB8EB600A0D5C2 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 94EBD94113FB8EB600A0D5C2 /* Reachability.m */; };
+		94EBD94613FB8F8E00A0D5C2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 94EBD94513FB8F8E00A0D5C2 /* MBProgressHUD.m */; };
 		94F7052713989157008584E4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F7052613989157008584E4 /* AudioToolbox.framework */; };
 		94F7052B13989184008584E4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F7052A13989184008584E4 /* Security.framework */; };
 		94F7052F139891A0008584E4 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F7052E139891A0008584E4 /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -184,8 +184,6 @@
 		944E13EC13C569570084B889 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		944E13ED13C569570084B889 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		944E13F213C56A5A0084B889 /* main_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_background@2x.png"; sourceTree = "<group>"; };
-		9450636113A9C8CD0063F766 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		9450636213A9C8CD0063F766 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		946210D91369435A0073CBDF /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		946210DA1369435A0073CBDF /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		946210DB1369435A0073CBDF /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = Classes/SettingsViewController.xib; sourceTree = "<group>"; };
@@ -316,6 +314,8 @@
 		94EBD93713FB8E9700A0D5C2 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIProgressDelegate.h; path = External/asihttprequest/Classes/ASIProgressDelegate.h; sourceTree = "<group>"; };
 		94EBD94013FB8EB600A0D5C2 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = External/asihttprequest/External/Reachability/Reachability.h; sourceTree = "<group>"; };
 		94EBD94113FB8EB600A0D5C2 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = External/asihttprequest/External/Reachability/Reachability.m; sourceTree = "<group>"; };
+		94EBD94413FB8F8E00A0D5C2 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = External/mbprogresshud/MBProgressHUD.h; sourceTree = "<group>"; };
+		94EBD94513FB8F8E00A0D5C2 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = External/mbprogresshud/MBProgressHUD.m; sourceTree = "<group>"; };
 		94F7052613989157008584E4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		94F7052A13989184008584E4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		94F7052E139891A0008584E4 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -434,7 +434,6 @@
 			isa = PBXGroup;
 			children = (
 				94BD8AFF13CD6D93005B35E1 /* MPLib */,
-				9450635F13A9C8BE0063F766 /* MBProgressHUD */,
 				94F7056B13989352008584E4 /* Airship */,
 				32CA4F630368D1EE00C91783 /* AntAmbush_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
@@ -517,15 +516,6 @@
 				94A728BF1338827900414CF3 /* Attack.m */,
 			);
 			name = DataObjects;
-			sourceTree = "<group>";
-		};
-		9450635F13A9C8BE0063F766 /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				9450636113A9C8CD0063F766 /* MBProgressHUD.h */,
-				9450636213A9C8CD0063F766 /* MBProgressHUD.m */,
-			);
-			name = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		9450658E13AB31D10063F766 /* images */ = {
@@ -656,6 +646,7 @@
 		94EBD8F413FB8BD700A0D5C2 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				94EBD94313FB8F6600A0D5C2 /* MBProgressHUD */,
 				94EBD92313FB8DC200A0D5C2 /* ASIHTTPRequest */,
 				94EBD8F513FB8C0C00A0D5C2 /* Facebook */,
 			);
@@ -738,6 +729,15 @@
 				94EBD93713FB8E9700A0D5C2 /* ASIProgressDelegate.h */,
 			);
 			name = ASIHTTPRequest;
+			sourceTree = "<group>";
+		};
+		94EBD94313FB8F6600A0D5C2 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				94EBD94413FB8F8E00A0D5C2 /* MBProgressHUD.h */,
+				94EBD94513FB8F8E00A0D5C2 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		94F7056B13989352008584E4 /* Airship */ = {
@@ -991,7 +991,6 @@
 				94F705AD13989661008584E4 /* UAPushSettingsTokenViewController.m in Sources */,
 				94F705AE13989661008584E4 /* UAPushSettingsViewController.m in Sources */,
 				94F705AF13989661008584E4 /* UAPushUI.m in Sources */,
-				9450636313A9C8CD0063F766 /* MBProgressHUD.m in Sources */,
 				94BD8B1B13CD6D93005B35E1 /* CDataScanner.m in Sources */,
 				94BD8B1C13CD6D93005B35E1 /* CDataScanner_Extensions.m in Sources */,
 				94BD8B1D13CD6D93005B35E1 /* CJSONDataSerializer.m in Sources */,
@@ -1023,6 +1022,7 @@
 				94EBD93E13FB8E9700A0D5C2 /* ASIInputStream.m in Sources */,
 				94EBD93F13FB8E9700A0D5C2 /* ASINetworkQueue.m in Sources */,
 				94EBD94213FB8EB600A0D5C2 /* Reachability.m in Sources */,
+				94EBD94613FB8F8E00A0D5C2 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

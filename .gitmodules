@@ -4,3 +4,6 @@
 [submodule "External/asihttprequest"]
 	path = External/asihttprequest
 	url = git://github.com/pokeb/asi-http-request.git
+[submodule "External/mbprogresshud"]
+	path = External/mbprogresshud
+	url = git://github.com/jdg/MBProgressHUD.git
