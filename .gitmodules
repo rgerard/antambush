@@ -1,0 +1,3 @@
+[submodule "External/facebook"]
+	path = External/facebook
+	url = git://github.com/facebook/facebook-ios-sdk.git

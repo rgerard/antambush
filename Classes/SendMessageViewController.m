@@ -35,7 +35,6 @@ static NSString *rootUrl = @"http://www.antambush.com";
 	
 	self.image.image = [UIImage imageNamed:@"mel-gibson-braveheart.jpg"];
 	[self.attackBtn addTarget:self action:@selector(attackBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-    self.spinner = [[MBProgressHUD alloc] initWithView:self.view];
 }
 
 
@@ -44,6 +43,7 @@ static NSString *rootUrl = @"http://www.antambush.com";
 	if (isWaiting) {
 		[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 		
+        self.spinner = [[MBProgressHUD alloc] initWithView:self.view];
         [self.view addSubview:self.spinner];
 		self.spinner.labelText = @"Loading";
 		self.spinner.detailsLabelText = detailTxt;
@@ -51,6 +51,8 @@ static NSString *rootUrl = @"http://www.antambush.com";
 	} else {
 		[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         [self.spinner removeFromSuperview];
+        [self.spinner release];
+        self.spinner = nil;
 	}
 }
 
@@ -185,8 +187,10 @@ static NSString *rootUrl = @"http://www.antambush.com";
 - (void)dealloc {
 	[self.attackHistory release];
     
-    [self.spinner release];
-    self.spinner = nil;
+    if(self.spinner != nil) {
+        [self.spinner release];
+        self.spinner = nil;
+    }
     
 	// Cleaning up
 	[self.formRequest clearDelegatesAndCancel];
