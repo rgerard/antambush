@@ -1,3 +1,6 @@
 [submodule "External/facebook"]
 	path = External/facebook
 	url = git://github.com/facebook/facebook-ios-sdk.git
+[submodule "External/asihttprequest"]
+	path = External/asihttprequest
+	url = git://github.com/pokeb/asi-http-request.git
