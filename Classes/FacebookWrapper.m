@@ -309,7 +309,7 @@ static NSString* kAppId = @"206499529382979";
 								victim, @"to",
 								@"Attacked!", @"name",
 								[NSString stringWithFormat:@"You just got ambushed by %@", attack], @"caption",
-								@"You know what it is", @"description",
+								@"What are you going to do about it?", @"description",
 								message,  @"message",
                                 image, @"picture",
 								url, @"link", nil];
