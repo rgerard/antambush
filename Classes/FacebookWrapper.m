@@ -22,7 +22,7 @@ static NSString* kAppId = @"206499529382979";
 	self = [super init];
 	if (self) {
 		// Custom initialization.
-		facebook = [[Facebook alloc] initWithAppId:kAppId];
+        facebook = [[Facebook alloc] initWithAppId:kAppId andDelegate:self];
 		
 		NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 		self.isLoggedInToFB = [prefs boolForKey:@"fbLoggedIn"];
