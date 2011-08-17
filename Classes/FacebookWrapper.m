@@ -71,7 +71,7 @@ static NSString* kAppId = @"206499529382979";
 	[self setDelegateCallback:appSelector delegate:requestDelegate];
 	
 	// Ask for permission to send the person email as well
-	[facebook authorize:fbPermissions delegate:self];		
+	[facebook authorize:fbPermissions];		
 }
 
 -(void) facebookLogout:(SEL)appSelector delegate:(id)requestDelegate {
