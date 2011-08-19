@@ -113,12 +113,36 @@ static NSString* kAppId = @"206499529382979";
 
 -(void) getFriendInfo:(SEL)appSelector delegate:(id)requestDelegate {
 	[self setDelegateCallback:appSelector delegate:requestDelegate];
-	
+	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    
 	if(self.isLoggedInToFB) {
 		// Set the callback
 		self.delegate = requestDelegate;
 		self.callback = appSelector;
 		
+        // If user is logged in, has a set of friends saved, and it's been less than a day since last requested, don't request
+        id result = [prefs objectForKey:@"fbFriendsInfo"];
+        NSDate *requestDate = [[NSUserDefaults standardUserDefaults] objectForKey:@"fbFriendsInfoRequestDate"];
+        
+        if(result != nil && requestDate != nil) {
+            NSTimeInterval interval = fabs([requestDate timeIntervalSinceNow]);
+            
+            // If less than 24 hours since you last checked, just use the saved data
+            if(interval < 86400) {
+                if(self.friends == nil) {
+                    self.friends = [result objectForKey:@"data"];
+                    [self sortFriends];
+                }
+            
+                // Call the callback, let it know that the request is done
+                if([self.delegate respondsToSelector:self.callback]) {
+                    [self.delegate performSelector:self.callback];
+                }
+                
+                return;
+            }
+        }
+        
 		//Get information about the current users friends
 		NSLog(@"Making request for FB friends");
 		[facebook requestWithGraphPath:@"me/friends" andDelegate:self];	
@@ -244,7 +268,8 @@ static NSString* kAppId = @"206499529382979";
  */
 -(void) request:(FBRequest *)request didLoad:(id)result {
 	NSLog(@"FB response received");
-	
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    
 	if ([result isKindOfClass:[NSArray class]]) {
 		result = [result objectAtIndex:0];
 	}
@@ -252,12 +277,19 @@ static NSString* kAppId = @"206499529382979";
 	if([result objectForKey:@"name"]) {
 		// Record the me info
 		[self recordFBUserInfo:result];
-		
+        
 	} else if([result objectForKey:@"data"]) {
 		// Record the FB friends list
 		NSLog(@"Got list of FB friends");
 		
 		if ([[result objectForKey:@"data"] isKindOfClass:[NSArray class]]) {
+            // Save this info into the user settings
+            [prefs setObject:result forKey:@"fbFriendsInfo"];
+            
+            NSDate *date = [[NSDate alloc] init];
+            [prefs setObject:date forKey:@"fbFriendsInfoRequestDate"];
+            [date release];
+            
 			self.friends = [result objectForKey:@"data"];
 			[self sortFriends];
 		} else {
@@ -265,6 +297,8 @@ static NSString* kAppId = @"206499529382979";
 		}
 	}
 	
+    [prefs synchronize];
+    
 	// Call the callback, let it know that the request is done
 	if([self.delegate respondsToSelector:self.callback]) {
 		[self.delegate performSelector:self.callback];
@@ -435,6 +469,9 @@ static NSString* kAppId = @"206499529382979";
 
 
 -(void)dealloc {
+    [friends release];
+    [friendDataSortedKeys release];
+    [friendData release];
 	[fbPermissions release];
 	[facebook release];
     [super dealloc];
