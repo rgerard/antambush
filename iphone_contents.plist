@@ -50,5 +50,17 @@
 		<key>nameKey</key>
 		<string>Lochness Monster</string>
 	</dict>
+	<dict>
+		<key>imageKey</key>
+		<string>gorilla.jpg</string>
+		<key>nameKey</key>
+		<string>Quizzical Gorilla</string>
+	</dict>
+	<dict>
+		<key>imageKey</key>
+		<string>xmas_pups.jpg</string>
+		<key>nameKey</key>
+		<string>Christmas Pups</string>
+	</dict>
 </array>
 </plist>
